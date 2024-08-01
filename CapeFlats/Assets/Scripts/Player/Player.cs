@@ -25,6 +25,8 @@ public class Player : Character
     protected override void Update()
     {
         base.Update();
+
+
         InputHandler.CheckInput();
     }
 }

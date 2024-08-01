@@ -7,6 +7,7 @@ public class CharacterMover
     private Character character;
     private Transform transform;
     private const float TIME_TO_MOVE_CELL = .375f;
+    private Vector2Int currentCell => Map.grid.GetCell2D(character.gameObject);
 
     public bool IsMoving { get; private set; }
 
@@ -19,16 +20,18 @@ public class CharacterMover
 
     public void Move(Vector2Int direction)
     {
-        if(direction.IsBasic() || IsMoving ==false) 
+        if(direction.IsBasic() && IsMoving ==false) 
         {
             character.StartCoroutine(Co_Move(direction));
         }
 
     }
 
-    public IEnumerator Co_Move(Vector2Int direction)
+    private IEnumerator Co_Move(Vector2Int direction)
     {
         IsMoving = true;
+
+        character.Turn.Turn(direction);
         Vector2Int startingCell = Map.grid.GetCell2D(character.gameObject);
         Vector2Int endingCell = startingCell +direction;
 
