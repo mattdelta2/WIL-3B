@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 731121635}
   - component: {fileID: 731121637}
   m_Layer: 0
-  m_Name: Virtual Camera
+  m_Name: CM vCam1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -206,7 +206,7 @@ MonoBehaviour:
   m_StreamingVersion: 20170927
   m_Priority: 10
   m_StandbyUpdate: 2
-  m_LookAt: {fileID: 2038388759256404967}
+  m_LookAt: {fileID: 0}
   m_Follow: {fileID: 2038388759256404967}
   m_Lens:
     FieldOfView: 60
