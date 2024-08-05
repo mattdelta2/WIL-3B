@@ -10,6 +10,8 @@ public class playerController : MonoBehaviour
     public float moveSpeed = 1f;
     public float collisionOffset = 0.05f;
     public ContactFilter2D movementFilter;
+    public bool isInteracting = false;
+
     
 
     List<RaycastHit2D> castCollisions = new List<RaycastHit2D>();
