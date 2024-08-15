@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "CapeFlats.sln"
+    "dotnet.defaultSolution": "CapeFlats.sln",
+    "CodeGPT.apiKey": "CodeGPT Plus Beta"
 }
