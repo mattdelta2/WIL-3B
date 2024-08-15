@@ -8,4 +8,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 2d5434692bd17b844a14def0ed649f96
+  - enabled: 1
+    path: Assets/Scenes/GameScene Test.unity
+    guid: 8f43835f0d4f2e643b2340f7f6a1ab29
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 66bbfcdb1a35e56438071bc6886954e7
+  - enabled: 1
+    path: Assets/Scenes/New Scene(New Mechanics).unity
+    guid: 25019e086f2d0e746b6c8ad698aadcbb
   m_configObjects: {}

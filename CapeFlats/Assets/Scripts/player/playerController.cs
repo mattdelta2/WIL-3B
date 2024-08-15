@@ -69,31 +69,44 @@ public class playerController : MonoBehaviour
         }
     }
 
-    private bool TryMove(Vector2 direction)
+   private bool TryMove(Vector2 direction)
+{
+    if (direction != Vector2.zero)
     {
-        if (direction != Vector2.zero)
-        {
-            int count = rb.Cast(
-                direction,
-                movementFilter,
-                castCollisions,
-                moveSpeed * Time.fixedDeltaTime + collisionOffset);
+        int count = rb.Cast(
+            direction,
+            movementFilter,
+            castCollisions,
+            moveSpeed * Time.fixedDeltaTime + collisionOffset);
 
-            if (count == 0)
+        bool isBlocked = false;
+
+        foreach (RaycastHit2D hit in castCollisions)
+        {
+            if (hit.collider.CompareTag("NPC"))
             {
-                rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
-                return true;
+                Debug.Log("Collision detected with NPC: " + hit.collider.name);
+                isBlocked = true;
+                break;
             }
-            else
-            {
-                return false;
-            }
+        }
+
+        if (!isBlocked && count == 0)
+        {
+            rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+            return true;
         }
         else
         {
             return false;
         }
     }
+    else
+    {
+        return false;
+    }
+}
+
 
     void OnMove(InputValue movementValue)
     {
@@ -102,30 +115,51 @@ public class playerController : MonoBehaviour
 
     void OnInteract(InputValue interactValue)
     {
-        if (interactableNPC != null && !isInteracting)
-        {
-            interactableNPC.Interact();
-            isInteracting = true;  // Prevent movement during interaction
-        }
+    if (interactable != null && !isInteracting)
+    {
+        Debug.Log("Interacting with: " + interactable.GetType().Name);
+        interactable.Interact();
+        isInteracting = true;  // Prevent movement during interaction
+    }
+    else
+    {
+        Debug.Log("No interactable object or already interacting.");
+    }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        NPC potentialInteractable = collision.GetComponent<NPC>();
+        Debug.Log("Trigger entered with: " + collision.name);
+
+     IInteractable potentialInteractable = collision.GetComponent<IInteractable>();
         if (potentialInteractable != null)
         {
-            interactableNPC = potentialInteractable;
+         Debug.Log("Interactable found: " + potentialInteractable.GetType().Name);
+            interactable = potentialInteractable;  // Set the interactable object
         }
+        else
+    {
+        Debug.Log("Non-interactable found: " + collision.name);
+    }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Interacting with: " + interactable.GetType().Name);
-        NPC potentialInteractable = collision.GetComponent<NPC>();
-        if (potentialInteractable != null && potentialInteractable == interactableNPC)
+    Debug.Log("Trigger exited with: " + collision.name);
+
+    IInteractable potentialInteractable = collision.GetComponent<IInteractable>();
+    if (potentialInteractable != null)
+    {
+        if (interactable != null && potentialInteractable == interactable)
         {
-            interactableNPC = null;
+            Debug.Log("Exited trigger with interactable: " + potentialInteractable.GetType().Name);
+            interactable = null;  // Clear the interactable reference
         }
+    }
+    else
+    {
+        Debug.Log("Trigger exited with non-interactable: " + collision.name);
+    }
     }
 
     // This method is called when the dialogue ends

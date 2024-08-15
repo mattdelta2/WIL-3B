@@ -461,7 +461,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2038388759256404971}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: EndInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   NodeID: 8
   TMPFont: {fileID: 0}
   Icon: {fileID: 0}
@@ -4211,6 +4223,7 @@ GameObject:
   - component: {fileID: 1422054991}
   - component: {fileID: 1422054990}
   - component: {fileID: 1422054994}
+  - component: {fileID: 1422054995}
   m_Layer: 0
   m_Name: NPC
   m_TagString: NPC
@@ -4230,7 +4243,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c9c306c4e63f248ac1e5ee2619d89f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myconversation: {fileID: 1422054991}
+  conversations:
+  - {fileID: 1422054991}
+  - {fileID: 1422054991}
 --- !u!114 &1422054991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4244,8 +4259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 10
-  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":175,"yPos":392},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes\n","parentUIDs":[6],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":631,"yPos":378},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"No\n","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":372,"yPos":101},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
-    Player","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":390,"yPos":271},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
+  json: '{"Options":[{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":213,"yPos":410},"ID":8,"ParamActions":[],"TMPFontGUID":null,"Text":"Yes\n","parentUIDs":[6],"SpeechUID":-1},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":669,"yPos":396},"ID":9,"ParamActions":[],"TMPFontGUID":null,"Text":"No\n","parentUIDs":[6],"SpeechUID":-1}],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":6}],"EditorInfo":{"isRoot":true,"xPos":410,"yPos":119},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"Hello
+    Player","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Tutorial","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":8},{"__type":"EditableOptionConnection:#DialogueEditor","Conditions":[],"NodeUID":9}],"EditorInfo":{"isRoot":false,"xPos":428,"yPos":289},"ID":6,"ParamActions":[],"TMPFontGUID":null,"Text":"Do
     you know how to play?\n","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"NPC","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: NPC
@@ -4260,7 +4275,19 @@ MonoBehaviour:
   EndConversationFont: {fileID: 0}
   Event:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2038388759256404971}
+        m_TargetAssemblyTypeName: playerController, Assembly-CSharp
+        m_MethodName: EndInteraction
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!212 &1422054992
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4374,6 +4401,33 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 2.4437795, y: 2}
   m_EdgeRadius: 0
+--- !u!50 &1422054995
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1422054988}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1611634250
 GameObject:
   m_ObjectHideFlags: 3
@@ -5917,6 +5971,63 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1402227794949542624
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 106516918878103359, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_Name
+      value: SceneChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.518
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.897
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.046299856
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8552629540451726820, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fb4cf84101c6f26489953e5acbdcd464, type: 3}
 --- !u!1001 &2038388759256404963
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6005,6 +6116,34 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 0.21
       objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_Mass
+      value: 0.005645793
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_AngularDrag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_UseAutoMass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280765234618468648, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+      propertyPath: m_UseFullKinematicContacts
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6015,6 +6154,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1721535144529668483, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
   m_PrefabInstance: {fileID: 2038388759256404963}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2038388759256404971 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3535079192395384498, guid: 66a5d09f63d9c484b92978af61eb81e4, type: 3}
+  m_PrefabInstance: {fileID: 2038388759256404963}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54d3b9cca48a8dc4ca538b9851b9e09d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -6026,3 +6176,4 @@ SceneRoots:
   - {fileID: 1422054993}
   - {fileID: 1265536544}
   - {fileID: 1735657169}
+  - {fileID: 1402227794949542624}
