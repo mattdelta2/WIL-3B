@@ -4245,7 +4245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversations:
   - {fileID: 1422054991}
-  - {fileID: 1422054991}
 --- !u!114 &1422054991
 MonoBehaviour:
   m_ObjectHideFlags: 0
