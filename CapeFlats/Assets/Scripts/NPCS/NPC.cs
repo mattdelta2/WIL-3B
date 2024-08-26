@@ -1,4 +1,4 @@
-using System.Collections;
+ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using DialogueEditor;  // Assuming you're using Dialogue Editor for conversations
@@ -10,7 +10,14 @@ public class NPC : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        // Initialize or set up anything if needed
+        transform.position = SnapToGrid(transform.position, 0.16f);
+    }
+
+    public Vector2 SnapToGrid(Vector2 originalPosition, float tileSize)
+    {
+        float snappedX = Mathf.Round(originalPosition.x / tileSize) * tileSize;
+        float snappedY = Mathf.Round(originalPosition.y / tileSize) * tileSize;
+        return new Vector2(snappedX, snappedY);
     }
 
     public void Interact()
