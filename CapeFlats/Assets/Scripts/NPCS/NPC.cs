@@ -10,20 +10,8 @@ public class NPC : MonoBehaviour, IInteractable
 
     private void Start()
     {
-        
-    // Assuming the tile size is 1 unit
-    transform.position = SnapToGrid(transform.position, 0.16f);
-
+        // Initialize or set up anything if needed
     }
-
-    public Vector2 SnapToGrid(Vector2 originalPosition, float tileSize)
-    {
-        float snappedX = Mathf.Round(originalPosition.x / tileSize) * tileSize;
-        float snappedY = Mathf.Round(originalPosition.y / tileSize) * tileSize;
-        return new Vector2(snappedX, snappedY);
-    }
-
-
 
     public void Interact()
     {
