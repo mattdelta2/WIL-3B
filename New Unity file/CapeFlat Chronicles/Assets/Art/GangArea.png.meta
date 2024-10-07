@@ -1,0 +1,5196 @@
+fileFormatVersion: 2
+guid: 94c6f7177ffb9ae4da6fec078b6f6d8b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 1
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: GangArea_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 236322a0a8438de4fad4001d0394a737
+      internalID: -263734189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9078e1861cb19074db0d084bcf665d69
+      internalID: 696637241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 987ebac83ac6ce4419bf6953ad880c5c
+      internalID: -535656615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_3
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71fba75605bcda44699bc6fe4d55ef18
+      internalID: -526879551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_4
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d365027be3d980a4c93ef79b4b447e85
+      internalID: -2026782961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_5
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4e41bd105d5526459336cbe9a5a5e9a
+      internalID: 1022004954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_6
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63168a1d48af7cf4d8659fbfca1752e2
+      internalID: 1530842207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_7
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b33ef5e089dd254894ffc1615c6fb78
+      internalID: 23118662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_8
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb4112911eec88147bd34827f94b758d
+      internalID: -1723201245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_9
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b384fa4430070647bacdb49358a1f4c
+      internalID: 1572103213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_10
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f3da1706416934c88f1f49a857ccb8
+      internalID: 588029562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_11
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd3081ab22c38bd43a7a28140a4c132f
+      internalID: 2051616305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_12
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9411ef7da9a1e4d4a9fcb5c27953b442
+      internalID: -1525949518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_13
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343997d00a2d7d84697ae92ad9235b69
+      internalID: 812028212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_14
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba033e352d5000d4ba0406023708166b
+      internalID: 1662286649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_15
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad71cbb67d7fdc24aa6bcaf8c0baf931
+      internalID: 580298915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_16
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05e84ed996fa92849ad04768c37018b9
+      internalID: -751964000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_17
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259bcd40a48b7e049bd147ca117ef2d2
+      internalID: 987210772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_18
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0630549eb7b2b094cb2b873af908d085
+      internalID: 615099032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_19
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497e46f4beecd85459d61c72003e3030
+      internalID: -1872388546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_20
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 455
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd97d77424f75c4095a9ccbb95d86d1
+      internalID: -656058889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e53912503f98bcb468dd8f6ab14c54de
+      internalID: -550047280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_22
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 718bfa33a1eaab04fb9e3ef0d626b8cb
+      internalID: -1567208265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_23
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 479412d0794df2042b7f207a453cf9db
+      internalID: 1777687413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_24
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03aa5a20cb0b39d4c8710aca6459167a
+      internalID: 1740841174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_25
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b083a90c150aa474280437f5e15b008d
+      internalID: 17334890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_26
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3973e15c477ea4c8cbbb7375229b9a
+      internalID: -115344331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_27
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21fe8d75b53a7c14c96bcc568bbd56f6
+      internalID: 759213653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_28
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d8aed997d0633a458c28cc813767c1a
+      internalID: -1780038789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_29
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5d8dd374cc151e4bb8fd9c3e94b8495
+      internalID: 258281444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_30
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35b6cc8a11af358408662917ed119c49
+      internalID: 380191944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_31
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c681c97935479a84f9b26aedfd7d686d
+      internalID: -458441837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_32
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297782dee8721694b84fbe1285f71675
+      internalID: 1579279435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_33
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73fa03bff489575468a5322fe6c9e789
+      internalID: -659981212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_34
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b385eba603752ba4b81ad9da8a9cde04
+      internalID: -597948736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_35
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4eafa45ed2076b4cbadfe6c2f41bc66
+      internalID: 187159711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_36
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d799c257485702549b195f62cf613524
+      internalID: 995611260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_37
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ec55553e7d35ad488567cb04c1ec658
+      internalID: 1762413306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_38
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd030ab9d6cb84742a3888af7f09ae9b
+      internalID: 947559107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_39
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6178b6a231bc8694db1cbaafe4186d2b
+      internalID: 1678728650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_40
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63182d5fd4649024e876e4496e51311c
+      internalID: -694156573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_41
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 410
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c23e34166e037b544b636e39f57749a8
+      internalID: 818875185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a740511889b0a4388efcaca0b6afcf
+      internalID: 700809226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_43
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e9c13675596be74ca34b0c7b3ec049f
+      internalID: -1909105706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_44
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1707cd0432c913f4489aba4f40c3a3e8
+      internalID: 1830892318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_45
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 692db1ea6e51e4b40aea4f2837f6e07c
+      internalID: -228953301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_46
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 043ed731f80ec354180ebd6bce770a71
+      internalID: -968562826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_47
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a2af9a61ca523846aa21d09f9a6709c
+      internalID: 1226604628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_48
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a7943fe15613a448012a063eb19a0c
+      internalID: 250103996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_49
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02f39f5506140ad4d800057177123837
+      internalID: 1975638046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_50
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1674659c488fb24ea2425871de51b0d
+      internalID: -607788844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_51
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa7d12a7faf03a4c9a83156adf01152
+      internalID: -252288652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_52
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990cb4ab031edcb479a5ab4c42f088d5
+      internalID: -2141963126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_53
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3cbb82c57d23644e8359b22072194c9
+      internalID: -342362896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_54
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f46a9706312a78b4a9793664da8ddafd
+      internalID: -115986449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_55
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bade404ae838b814db56d0f70e5af3e9
+      internalID: 68782640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_56
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e231e1d98a973b40897bc63247f0986
+      internalID: -1367329026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_57
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0295fa1a82d15f64ea5ade1a72bfac44
+      internalID: -1575175255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_58
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c89a4761e7d165479170e33f8eb36a2
+      internalID: -1645535862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_59
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686a42a6ecb286f4cbd0eff104be4498
+      internalID: 311980492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_60
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 318f916bdd8032f4d847e558cc700c02
+      internalID: -1379628241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_61
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5173553287306b24b92b21760696ec56
+      internalID: 397119254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_62
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 365
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b24b592153cf27f4f9192ca1267a6c92
+      internalID: 1386459915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd21e6ced54d6764ea11889d23efc635
+      internalID: -1173619242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_64
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b557181c805d5a9439fbc764167c4c59
+      internalID: 1685231801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_65
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6740f2c074937cd41827d9f31ed4d52b
+      internalID: 1287216117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_66
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5ce846f711ed645a48491694e7049f
+      internalID: -1681109090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_67
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f807fd261855d4592aa767880a157b
+      internalID: 1502680261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_68
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95de85f0acdb6c244b09be40b49ed18d
+      internalID: -686448768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_69
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebf5486773b2f8445bd96086bde4c337
+      internalID: 249528979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_70
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b86a1572e1fcccc43aebcab600943745
+      internalID: 1825515110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_71
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55e8e3899cab95146bb0272b4c751eb8
+      internalID: -1036836622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_72
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2987a4fcce8bddf4c9221e728d61a8ba
+      internalID: 1065916658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_73
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cd305ebfe9e3e4fa53fe48a5610841
+      internalID: 919903392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_74
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fff032ca5f2cda48b8b90ba90d99805
+      internalID: 268544795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_75
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e19da44c7f64354c9ef1fbaed676d2b
+      internalID: 1927174443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_76
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52da513dfd68fac49a97c9f5f2b2e6b2
+      internalID: -516852372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_77
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43a9844e3940b2a44abe48b15207590e
+      internalID: 1652132486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_78
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6742e27172ab74241823eac218e7b174
+      internalID: 72756917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_79
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769f3a1e7f59c1c41ba7584ef6918652
+      internalID: -1114904474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_80
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec6f8a59ab06f5489ec05d8600ad504
+      internalID: 604102953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_81
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7249b66843edce45931a0b8a8f69e71
+      internalID: 644224744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_82
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5550c8540254e844093993d54c4b2c4b
+      internalID: -1240492531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_83
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 320
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9451935db76083c4faaa83fd72f98197
+      internalID: -459978974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcedab091cf622a45b359df6e9118b72
+      internalID: -783422585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_85
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bdb7c9e1a4d3824aa05eeb4b36a2f39
+      internalID: -1366596770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_86
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48226f074a824dc4b815f04d94619f85
+      internalID: -499460522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_87
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a2796727b5027140b73bb183f9483d3
+      internalID: -351984074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_88
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f6307e3fd153e048919fe363f4b8051
+      internalID: -543831343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_89
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142dc2ad5f555bb4f9f0fcb91785286e
+      internalID: 1357576298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_90
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 747a9a6904d8fbc4bb7dde4ad78cb0f4
+      internalID: 610645033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_91
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec586d80fcb25d4c9ec06f6b8fcbe8b
+      internalID: -2110198015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_92
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b52ba188f634c349a3f5478b227a73a
+      internalID: 1493146409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_93
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab012e11cdd58a4795f2cee6c8ed2bc
+      internalID: 675140163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_94
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23ace4f9c25259541b738523258a9554
+      internalID: 838432129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_95
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5dbcb0873dd2041ad9bc86661d0d80
+      internalID: 1605354813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_96
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e14b54c17962084bac75ca524150877
+      internalID: -1641445799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_97
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6576f50c19896d48b87b721b5fa4f41
+      internalID: -1498780643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_98
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855b8d1d9f692b64f98efa2635e2299b
+      internalID: -1999280327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_99
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32aaaa2e4bc92f8409f3ecc3b5514b6f
+      internalID: -1328107456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_100
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c96856ec51a1c941ae8df46d6c1b3d5
+      internalID: -1108960759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_101
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a9422690f386ea499d6ff5093fd8c41
+      internalID: 1413718476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_102
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 230de9f078b42b041b0d8e4dfc2ceea9
+      internalID: -1869863049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_103
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5891da2283297c340ba0e48e2941e177
+      internalID: -1735168509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_104
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 275
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fde0b068fc7e8149b40dd076b046b06
+      internalID: -1744444822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_105
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d4af32f2636e34fab02277a58cb4b8
+      internalID: 1140152132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_106
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6783cd2e006e08841a2cc93470827133
+      internalID: -1569075940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_107
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef74a418fe4c9b845aa989032a403efc
+      internalID: -22150222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_108
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f1e9ca38c53fc4dad3b9f1d8fbe067
+      internalID: -332595761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_109
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6d62d1ff0ab9b40bffb1b0d30622fd
+      internalID: -1543050846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_110
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db0bc10d8c834842ad839cfe1526897
+      internalID: -1950871724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_111
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c260b3ff1cfbd24db66f29c8b8db681
+      internalID: 1870574638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_112
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86b99f64fd157fe4cbf1911cdfc32775
+      internalID: -1178296618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_113
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e06cd9c9ab1fe0d4ea9f34fb2be365e4
+      internalID: 1092710456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_114
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4ac946c2f38b042943384a9810df2b
+      internalID: -376863261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_115
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a7f64a9883e994c9540844a65db66b
+      internalID: -1539947480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_116
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df02bd314e3ae2a48a71f8cace193985
+      internalID: 708790417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_117
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bf880f377966e748ae8bb7b117c99d5
+      internalID: -2013834439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_118
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228423ec26eec11478cbad458801b885
+      internalID: 1992804475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_119
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9881e1827b78f0145b2b9bb929090b04
+      internalID: -246664783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_120
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebdccc10b99fbe48bdc71aabbe457dd
+      internalID: -939285329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_121
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bc87934f82d6f4ca0aa98c1d568d8a
+      internalID: -163738809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_122
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab821485fbdedf469b0c6c58802db43
+      internalID: -1383172548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_123
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15565662714ab9b458298bc026bc13a4
+      internalID: 1089808441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_124
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d98eb2f3ee75b4eb08bc9505ccc894
+      internalID: -1983181832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_125
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 230
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 973c6b71a7a759a4a8a1da91aa201ec4
+      internalID: -1028236369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd0c637b831831439c3a4e9fac8f591
+      internalID: 1424212485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_127
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84d31c8b5fe99754485144cb6c49c10e
+      internalID: 81670367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_128
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2972d815832f8cd4abade0cc0bc97b00
+      internalID: 619785184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_129
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92839edfe2519fc4fbcf21967dae6a99
+      internalID: 1550390423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_130
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a6c1feec1422e3449d8e06626b8ac80
+      internalID: -2099038502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_131
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac905b976702e144a1358abacf55516
+      internalID: -9525918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_132
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ca3f4b86a6a224458a90083bdc4c40e
+      internalID: -126515139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_133
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeb4741fdbd352748ac9d4972f46aff8
+      internalID: -756034647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_134
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d06604fe85848a45b3ad422602c23f9
+      internalID: -306628501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_135
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9f3c5f3d7c18134ead45da7060be461
+      internalID: -2011050691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_136
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a90c798a8359164fbfb4409c670c394
+      internalID: -1204123524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_137
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ea9b622405fbf4fb5b478bd7768505
+      internalID: 116912801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_138
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26a9092d04d478f4c9ccf66d4155e50f
+      internalID: -1013638142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_139
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af5ce24db9fe1de46b160461836b0de0
+      internalID: -28995713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_140
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f33eab9f8b62b24694c86fa98451b13
+      internalID: 158449836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_141
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f978ebfe27ab524fbdcbc996793b93f
+      internalID: -136983207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_142
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a6729dc288e15f4fa9992f206693a4f
+      internalID: 1786253419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_143
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42b4d25627b7fb43871e18bdd9ac8bb
+      internalID: 1062292189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_144
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 436006c4ffa28af4083535c2e8293d6c
+      internalID: 133816861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_145
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d47a3c9e85e4b44db96ad816f6eedf0
+      internalID: 1267184163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_146
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 185
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae89fcaf8b02c74d9ff0c33de3b47ca
+      internalID: 977562461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_147
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96260b7e70bd7ac40a832c07a5e73e2c
+      internalID: -2042889768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_148
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9176995f7e48024db1b373df1d1241c
+      internalID: -781943257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_149
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a845f68cb85a5409e181a4dbf240e5
+      internalID: 1524003220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_150
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9600529d108d2bb42ad0a5d474678d78
+      internalID: 113532777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_151
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7b6696cd1762b4ea46d9d509b71332
+      internalID: -1827387196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_152
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d124d66e3ecd07d438c65243ff87497c
+      internalID: -1495770398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_153
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cad42225ab298040a11e9b5611ec5b3
+      internalID: 761402785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_154
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48a959186f18c7d4fb499610b667e62e
+      internalID: 91200074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_155
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5aa8161a078967f4f8b57ee4ba925050
+      internalID: 1800653953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_156
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1bcb6f35cf7554dbec693e0c2cc730
+      internalID: 1925723954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_157
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5620735afc584dc4ea3bc642782bafbe
+      internalID: -757034401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_158
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 252517ecaa96f9f4992d19ce8f852869
+      internalID: 1516253757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_159
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b84b9854130a3349b935021ca1e4863
+      internalID: 2054399438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_160
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a662ea0497e5a4981ae8e547da475d
+      internalID: 1543152527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_161
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c1097e7091625439be9f977141e308
+      internalID: -647373614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_162
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e72af9257d0f774d923b558af694a06
+      internalID: 495882464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_163
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2030c09d5e90a645ac769014c44e8ff
+      internalID: -1523531799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_164
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f11fefcd9c689d408b4e8edb5de9b17
+      internalID: 1215605946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_165
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c2070bd27d5c7b49adfbfb68a69eaf2
+      internalID: 135981412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_166
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c6a6bcecc76fd45a687e5da23c7426
+      internalID: -160862224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_167
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 140
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 824e23e1d8c3ff94998accc276644c42
+      internalID: -191337313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_168
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c548003a1aef7cc4ea493ca4d12403aa
+      internalID: 1162819398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_169
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b47b8221b396b439a79f4c2797b958
+      internalID: 399829618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_170
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758263a286d6af540978852990007414
+      internalID: 122023106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_171
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a14dade2f96f7c740968406711f88cb8
+      internalID: 2142519220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_172
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83aa867c06c6595489c1a28506004c6d
+      internalID: 101991072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_173
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660083aacb77d874cac0a9624e0a799b
+      internalID: -1180822806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_174
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828b688ad7586494198439a21a0c0ae4
+      internalID: 748728257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_175
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f97b2beae8c0ea34bb3eb7fc3db76ff6
+      internalID: -415195255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_176
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b7713e3cc528ec4885240764db4c8d1
+      internalID: 861386021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_177
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c582615fca70a5748928dcd7b8dfe11c
+      internalID: -1232747725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_178
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da22d68966ab640a320c3b61a8038e
+      internalID: -1672833019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_179
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f0c2fb2d9668f04bbf7a58573f2564d
+      internalID: -1000293071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_180
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcfb4be06eff8249858155c4ae58983
+      internalID: 1621952551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_181
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f91df658f221be44b460930ed860aa4
+      internalID: 2137941112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_182
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab98ade03b33114abd3b24826b21ed1
+      internalID: -1992596987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_183
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0be8572a742ac41990a23cb28db940
+      internalID: -1281584157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_184
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977e95570518b5c45a5edf5a2760d8f6
+      internalID: 994479926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_185
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28560ebfa98ee494d9b381e30cb6075b
+      internalID: -1486697543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_186
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe320bb786a3884599ea244354f6fb4
+      internalID: 563633446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_187
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51fcb2f6662ded64abfb31e945a79db6
+      internalID: 1019953961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_188
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 95
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3682e7dd8b024764c96c910bef9893f1
+      internalID: -1175955171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_189
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6675ae0a83e3994289946f5075becec
+      internalID: -841772709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_190
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4feee4fa8bfebc24e9dacb288393b9b4
+      internalID: 2096761906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_191
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a7cf1d55fea8e54b84386f9d866eba5
+      internalID: -1073115570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_192
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af495425fe2ffd4db07943586f50998
+      internalID: -1117628804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_193
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcda74607f3badf4385d85742d273153
+      internalID: 1063876301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_194
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b07b4563189ec89478ace3e80a0a332d
+      internalID: -1754657315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_195
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c520dd06cdd22842b08141c136d39c6
+      internalID: -227049097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_196
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 852e380adfc5624439cb7f01495b80e6
+      internalID: -716638146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_197
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5b3c9f7c9552e408335bd6f9dcf77f
+      internalID: 1434303788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_198
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca90871774fe1594aa86f11b55b7f386
+      internalID: -1410401468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_199
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f34c4764af6fc44ba8678f281fcd79
+      internalID: 1789204299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_200
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a4a1513ca96ba143874d041fa2ba28f
+      internalID: 1921023292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_201
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f4c3f6f6f53c994baee004f1bb48e98
+      internalID: -2119505880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_202
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa8d431b229189d4c8c65c3e2e50d765
+      internalID: 596522799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_203
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0e501305717a642927c0404ae669fe
+      internalID: 1327438605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_204
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92ea6b8b79099f44ba0196c4d3b2299c
+      internalID: -483164864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_205
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d753993c84e2844c8cd42466959a94f
+      internalID: 186327207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_206
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6351af40b64be1940b48e701e6a8e1ba
+      internalID: 625617027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_207
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094da7a625914744489282610a680b13
+      internalID: 1466836902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_208
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8148cc81b3e447f4cbd85f6a3f6de627
+      internalID: 1743566124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_209
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 50
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e11e556cadffdb45a1d78c0fdde347d
+      internalID: -1017984160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d3644ce86f6144d9c060c391c54af8
+      internalID: 845704818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_211
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d43c6f7847dd6541b15a79d1e98db47
+      internalID: -1697559547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_212
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fefb98698470f447a33735f4351d210
+      internalID: -834039198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_213
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8f0726112371348837903d32a60a11
+      internalID: 1903201571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_214
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54ee00699a5267c4eb43f88b90b5d8d9
+      internalID: -1409968969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_215
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2aa3d20f89e40a40a5e5a23902d9d26
+      internalID: 1605318760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_216
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 103efcd6628fec64ba5cc3f72b611542
+      internalID: 611356166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_217
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c5c2027d1597b4eb5fc84514c2792d
+      internalID: 2042324359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_218
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efffe60f597b5554fbeeef07f099d481
+      internalID: -652766265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_219
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e98f7c09d7e730489b6077f369bbbac
+      internalID: 1800626874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_220
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e73976a91651ac40b335d1a679c7512
+      internalID: -740781901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_221
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02894c2e8b544284697613f263e28b2f
+      internalID: 1867576800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_222
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf6f13b3384d36b458ed9fae221b1ece
+      internalID: -766870420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_223
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ddcadde2efcf549ae143032d4ce460
+      internalID: 780639612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_224
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70a667d18fc812441b8c568fd7aab212
+      internalID: -1343887101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_225
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b7f87632fbf9cb4a920a47a8b0c3c0c
+      internalID: 1225179851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_226
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b66434d45f7c274299386e0f351c5bd
+      internalID: -1180439429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_227
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de349eaf211026a4ab97201e5c7c0f70
+      internalID: -1920378140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_228
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c55c4eeb12a39045af4219ab4739308
+      internalID: -593680635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_229
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5b2cf55c407a7a4c9b360e3f054d47f
+      internalID: 1013821388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GangArea_230
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 5
+        width: 30
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d98eafe0b0bcb845b88a10e28c245c1
+      internalID: 1652083909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      GangArea_0: -263734189
+      GangArea_1: 696637241
+      GangArea_10: 588029562
+      GangArea_100: -1108960759
+      GangArea_101: 1413718476
+      GangArea_102: -1869863049
+      GangArea_103: -1735168509
+      GangArea_104: -1744444822
+      GangArea_105: 1140152132
+      GangArea_106: -1569075940
+      GangArea_107: -22150222
+      GangArea_108: -332595761
+      GangArea_109: -1543050846
+      GangArea_11: 2051616305
+      GangArea_110: -1950871724
+      GangArea_111: 1870574638
+      GangArea_112: -1178296618
+      GangArea_113: 1092710456
+      GangArea_114: -376863261
+      GangArea_115: -1539947480
+      GangArea_116: 708790417
+      GangArea_117: -2013834439
+      GangArea_118: 1992804475
+      GangArea_119: -246664783
+      GangArea_12: -1525949518
+      GangArea_120: -939285329
+      GangArea_121: -163738809
+      GangArea_122: -1383172548
+      GangArea_123: 1089808441
+      GangArea_124: -1983181832
+      GangArea_125: -1028236369
+      GangArea_126: 1424212485
+      GangArea_127: 81670367
+      GangArea_128: 619785184
+      GangArea_129: 1550390423
+      GangArea_13: 812028212
+      GangArea_130: -2099038502
+      GangArea_131: -9525918
+      GangArea_132: -126515139
+      GangArea_133: -756034647
+      GangArea_134: -306628501
+      GangArea_135: -2011050691
+      GangArea_136: -1204123524
+      GangArea_137: 116912801
+      GangArea_138: -1013638142
+      GangArea_139: -28995713
+      GangArea_14: 1662286649
+      GangArea_140: 158449836
+      GangArea_141: -136983207
+      GangArea_142: 1786253419
+      GangArea_143: 1062292189
+      GangArea_144: 133816861
+      GangArea_145: 1267184163
+      GangArea_146: 977562461
+      GangArea_147: -2042889768
+      GangArea_148: -781943257
+      GangArea_149: 1524003220
+      GangArea_15: 580298915
+      GangArea_150: 113532777
+      GangArea_151: -1827387196
+      GangArea_152: -1495770398
+      GangArea_153: 761402785
+      GangArea_154: 91200074
+      GangArea_155: 1800653953
+      GangArea_156: 1925723954
+      GangArea_157: -757034401
+      GangArea_158: 1516253757
+      GangArea_159: 2054399438
+      GangArea_16: -751964000
+      GangArea_160: 1543152527
+      GangArea_161: -647373614
+      GangArea_162: 495882464
+      GangArea_163: -1523531799
+      GangArea_164: 1215605946
+      GangArea_165: 135981412
+      GangArea_166: -160862224
+      GangArea_167: -191337313
+      GangArea_168: 1162819398
+      GangArea_169: 399829618
+      GangArea_17: 987210772
+      GangArea_170: 122023106
+      GangArea_171: 2142519220
+      GangArea_172: 101991072
+      GangArea_173: -1180822806
+      GangArea_174: 748728257
+      GangArea_175: -415195255
+      GangArea_176: 861386021
+      GangArea_177: -1232747725
+      GangArea_178: -1672833019
+      GangArea_179: -1000293071
+      GangArea_18: 615099032
+      GangArea_180: 1621952551
+      GangArea_181: 2137941112
+      GangArea_182: -1992596987
+      GangArea_183: -1281584157
+      GangArea_184: 994479926
+      GangArea_185: -1486697543
+      GangArea_186: 563633446
+      GangArea_187: 1019953961
+      GangArea_188: -1175955171
+      GangArea_189: -841772709
+      GangArea_19: -1872388546
+      GangArea_190: 2096761906
+      GangArea_191: -1073115570
+      GangArea_192: -1117628804
+      GangArea_193: 1063876301
+      GangArea_194: -1754657315
+      GangArea_195: -227049097
+      GangArea_196: -716638146
+      GangArea_197: 1434303788
+      GangArea_198: -1410401468
+      GangArea_199: 1789204299
+      GangArea_2: -535656615
+      GangArea_20: -656058889
+      GangArea_200: 1921023292
+      GangArea_201: -2119505880
+      GangArea_202: 596522799
+      GangArea_203: 1327438605
+      GangArea_204: -483164864
+      GangArea_205: 186327207
+      GangArea_206: 625617027
+      GangArea_207: 1466836902
+      GangArea_208: 1743566124
+      GangArea_209: -1017984160
+      GangArea_21: -550047280
+      GangArea_210: 845704818
+      GangArea_211: -1697559547
+      GangArea_212: -834039198
+      GangArea_213: 1903201571
+      GangArea_214: -1409968969
+      GangArea_215: 1605318760
+      GangArea_216: 611356166
+      GangArea_217: 2042324359
+      GangArea_218: -652766265
+      GangArea_219: 1800626874
+      GangArea_22: -1567208265
+      GangArea_220: -740781901
+      GangArea_221: 1867576800
+      GangArea_222: -766870420
+      GangArea_223: 780639612
+      GangArea_224: -1343887101
+      GangArea_225: 1225179851
+      GangArea_226: -1180439429
+      GangArea_227: -1920378140
+      GangArea_228: -593680635
+      GangArea_229: 1013821388
+      GangArea_23: 1777687413
+      GangArea_230: 1652083909
+      GangArea_24: 1740841174
+      GangArea_25: 17334890
+      GangArea_26: -115344331
+      GangArea_27: 759213653
+      GangArea_28: -1780038789
+      GangArea_29: 258281444
+      GangArea_3: -526879551
+      GangArea_30: 380191944
+      GangArea_31: -458441837
+      GangArea_32: 1579279435
+      GangArea_33: -659981212
+      GangArea_34: -597948736
+      GangArea_35: 187159711
+      GangArea_36: 995611260
+      GangArea_37: 1762413306
+      GangArea_38: 947559107
+      GangArea_39: 1678728650
+      GangArea_4: -2026782961
+      GangArea_40: -694156573
+      GangArea_41: 818875185
+      GangArea_42: 700809226
+      GangArea_43: -1909105706
+      GangArea_44: 1830892318
+      GangArea_45: -228953301
+      GangArea_46: -968562826
+      GangArea_47: 1226604628
+      GangArea_48: 250103996
+      GangArea_49: 1975638046
+      GangArea_5: 1022004954
+      GangArea_50: -607788844
+      GangArea_51: -252288652
+      GangArea_52: -2141963126
+      GangArea_53: -342362896
+      GangArea_54: -115986449
+      GangArea_55: 68782640
+      GangArea_56: -1367329026
+      GangArea_57: -1575175255
+      GangArea_58: -1645535862
+      GangArea_59: 311980492
+      GangArea_6: 1530842207
+      GangArea_60: -1379628241
+      GangArea_61: 397119254
+      GangArea_62: 1386459915
+      GangArea_63: -1173619242
+      GangArea_64: 1685231801
+      GangArea_65: 1287216117
+      GangArea_66: -1681109090
+      GangArea_67: 1502680261
+      GangArea_68: -686448768
+      GangArea_69: 249528979
+      GangArea_7: 23118662
+      GangArea_70: 1825515110
+      GangArea_71: -1036836622
+      GangArea_72: 1065916658
+      GangArea_73: 919903392
+      GangArea_74: 268544795
+      GangArea_75: 1927174443
+      GangArea_76: -516852372
+      GangArea_77: 1652132486
+      GangArea_78: 72756917
+      GangArea_79: -1114904474
+      GangArea_8: -1723201245
+      GangArea_80: 604102953
+      GangArea_81: 644224744
+      GangArea_82: -1240492531
+      GangArea_83: -459978974
+      GangArea_84: -783422585
+      GangArea_85: -1366596770
+      GangArea_86: -499460522
+      GangArea_87: -351984074
+      GangArea_88: -543831343
+      GangArea_89: 1357576298
+      GangArea_9: 1572103213
+      GangArea_90: 610645033
+      GangArea_91: -2110198015
+      GangArea_92: 1493146409
+      GangArea_93: 675140163
+      GangArea_94: 838432129
+      GangArea_95: 1605354813
+      GangArea_96: -1641445799
+      GangArea_97: -1498780643
+      GangArea_98: -1999280327
+      GangArea_99: -1328107456
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
