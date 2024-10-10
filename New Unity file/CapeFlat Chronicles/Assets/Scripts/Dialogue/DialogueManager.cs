@@ -1,51 +1,72 @@
 using UnityEngine;
-using TMPro;  // Import TextMeshPro namespace
+using TMPro;  // For handling UI text
+using UnityEngine.UI;  // For handling buttons
 
 public class DialogueManager : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;  // Reference to the dialogue text UI
-    public GameObject dialoguePanel;      // Panel that holds the dialogue elements
-    public string[] dialogueLines;        // Array of dialogue lines
-    private int currentLineIndex = 0;     // Tracks the current line
+    public TextMeshProUGUI npcTextUI;
+    public Button[] choiceButtons;
+    private DialogueNode currentNode;
 
-    void Start()
+    public void StartDialogue(DialogueNode startNode)
     {
-        dialoguePanel.SetActive(false);  // Hide dialogue at start
+        currentNode = startNode;
+        DisplayDialogue();
     }
 
-    // This method is called to start the dialogue
-    public void StartDialogue(string[] lines)
+    public void DisplayDialogue()
     {
-        dialogueLines = lines;
-        currentLineIndex = 0;
-        dialoguePanel.SetActive(true);   // Show the dialogue UI
-        ShowNextLine();
-    }
+        npcTextUI.text = currentNode.npcText;  // Display the NPC’s text
 
-    // Show the next line in the dialogue
-    public void ShowNextLine()
-    {
-        if (currentLineIndex < dialogueLines.Length)
+        for (int i = 0; i < choiceButtons.Length; i++)
         {
-            dialogueText.text = dialogueLines[currentLineIndex];
-            currentLineIndex++;
+            if (i < currentNode.playerChoices.Length)
+            {
+                choiceButtons[i].gameObject.SetActive(true);
+                choiceButtons[i].GetComponentInChildren<TextMeshProUGUI>().text = currentNode.playerChoices[i];
+                int choiceIndex = i;  // Capture the index for the button click
+                choiceButtons[i].onClick.RemoveAllListeners();
+                choiceButtons[i].onClick.AddListener(() => ChooseOption(choiceIndex));
+            }
+            else
+            {
+                choiceButtons[i].gameObject.SetActive(false);  // Hide unused buttons
+            }
         }
-        else
+    }
+
+    public void ChooseOption(int index)
+    {
+        currentNode = currentNode.nextNodes[index];  // Move to the next node
+        DisplayDialogue();
+
+        // Modify stats based on the choice (optional)
+        if (!string.IsNullOrEmpty(currentNode.statToChange))
+        {
+            ModifyStat(currentNode.statToChange);
+        }
+
+        // Check if it's the end of the conversation
+        if (currentNode.isEndNode)
         {
             EndDialogue();
         }
     }
 
-    // This method is called to end the dialogue
-    public void EndDialogue()
+    void ModifyStat(string stat)
     {
-        dialoguePanel.SetActive(false);  // Hide the dialogue UI
-        dialogueText.text = "";  // Clear the dialogue text
+        if (stat == "Education") { /* Increase education stat */ }
+        else if (stat == "Gang") { /* Increase gang stat */ }
+        else if (stat == "Neutral") { /* Handle neutral response */ }
     }
 
-    // This method can be hooked to the Continue Button
-    public void OnContinueButtonPressed()
+    void EndDialogue()
     {
-        ShowNextLine();
+        // Handle ending the dialogue
+        npcTextUI.text = "End of conversation.";
+        foreach (Button button in choiceButtons)
+        {
+            button.gameObject.SetActive(false);  // Hide all buttons
+        }
     }
 }

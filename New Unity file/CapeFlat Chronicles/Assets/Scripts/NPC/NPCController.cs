@@ -3,9 +3,9 @@ using UnityEngine;
 public class NPCController : MonoBehaviour
 {
     public string npcName;  // Name of the NPC (can be displayed in dialogues)
-    public string[] npcDialogueLines;
+    public DialogueNode startDialogueNode;  // Assign the starting DialogueNode in the Inspector
     private SpriteRenderer childSpriteRenderer;
-     private DialogueManager dialogueManager;
+    private DialogueManager dialogueManager;
 
     void Start()
     {
@@ -17,9 +17,14 @@ public class NPCController : MonoBehaviour
     // This method can be used to trigger NPC interaction, like dialogue
     public void Interact()
     {
-        
-        Debug.Log("Interacting with " + npcName);
-        // Start the dialogue when interacting with the NPC
-        dialogueManager.StartDialogue(npcDialogueLines);
+        // Start the dialogue if not already completed
+        if (!GameManager.instance.HasCompletedDialogue(npcName))
+        {
+            dialogueManager.StartDialogue(startDialogueNode);
+        }
+        else
+        {
+            Debug.Log("Player has already completed this dialogue.");
+        }
     }
 }
