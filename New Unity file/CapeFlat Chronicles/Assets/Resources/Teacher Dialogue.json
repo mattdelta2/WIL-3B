@@ -1,0 +1,1750 @@
+{
+    "npc": "Teacher",
+    "dialogues": [
+        {
+            "title": "Why Education Matters",
+            "lines": [
+                {
+                    "npc": "Do you know why education matters? It’s not just about passing tests. It’s about building your future, giving yourself options. Do you understand that?",
+                    "options": [
+                        {
+                            "player": "I get it, miss. I’m trying to focus and learn as much as I can.",
+                            "npc_response": "Good. Focus will take you far. What are you enjoying most about your studies?",
+                            "next_options": [
+                                {
+                                    "player": "Math, because it feels like it’s building a foundation for my future.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s the spirit. You’ll need that kind of mindset to succeed."
+                                },
+                                {
+                                    "player": "I’m still figuring it out, but I’m doing my best.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "You don’t need to have it all figured out yet, but keep pushing forward."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "Honestly, it feels like a waste of time sometimes.",
+                            "npc_response": "A waste? You think the streets will give you a better future? Where do you think you’ll end up if you don’t commit to your education?",
+                            "next_options": [
+                                {
+                                    "player": "I guess I’ll end up like everyone else around here, stuck.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "That’s exactly what will happen if you don’t change your mindset."
+                                },
+                                {
+                                    "player": "I’m just trying to survive, miss.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Surviving isn’t enough. You have to think about what comes next."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I understand it’s important, but it’s hard to stay motivated.",
+                            "npc_response": "I get that. Motivation isn’t always easy to find, but you need to push through. What’s been holding you back?",
+                            "next_options": [
+                                {
+                                    "player": "It’s hard to see the point sometimes.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "If you can’t see the point, then you need to change your perspective."
+                                },
+                                {
+                                    "player": "I feel overwhelmed by everything.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s normal, but don’t let it stop you from moving forward."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Setting Goals",
+            "lines": [
+                {
+                    "npc": "It’s important to set goals for yourself. Without goals, you’re just drifting. Do you have any goals right now?",
+                    "options": [
+                        {
+                            "player": "I want to graduate and get a job that helps me leave this place.",
+                            "npc_response": "That’s a solid goal. What kind of job are you aiming for?",
+                            "next_options": [
+                                {
+                                    "player": "Something in engineering, maybe. I like building things.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s a great goal. Engineering can open many doors for you."
+                                },
+                                {
+                                    "player": "I’m not sure yet, but I’ll figure it out.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s okay. What matters is that you’re thinking about the future."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I don’t really have any goals. I’m just trying to get through the day.",
+                            "npc_response": "That’s dangerous thinking. If you don’t have goals, you’re letting life happen to you. Why don’t you have any goals?",
+                            "next_options": [
+                                {
+                                    "player": "I don’t see the point. Nothing ever changes here.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Nothing changes because too many people think like that. Be different."
+                                },
+                                {
+                                    "player": "It feels like setting goals won’t matter.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Every goal matters. Without them, you’ll never move forward."
+                                },
+                                {
+                                    "player": "I have some ideas, but I’m not sure how to make them happen.",
+                                    "npc_response": "That’s normal. Most people don’t know how to achieve their goals at first. What’s your idea?",
+                                    "next_options": [
+                                        {
+                                            "player": "I want to start my own business one day.",
+                                            "result": "Right – Gain education stat",
+                                            "npc_response": "That’s an excellent idea. Education will give you the tools to make that happen."
+                                        },
+                                        {
+                                            "player": "I want to help people in the community.",
+                                            "result": "Neutral – Add both or remove both",
+                                            "npc_response": "Helping others is a noble goal. But you need to help yourself first."
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Facing Challenges",
+            "lines": [
+                {
+                    "npc": "Life’s full of challenges. What matters is how you respond to them. Are you facing any challenges right now?",
+                    "options": [
+                        {
+                            "player": "I’m struggling with keeping up with my studies.",
+                            "npc_response": "That’s understandable. School isn’t easy, but you have to push through. What are you struggling with the most?",
+                            "next_options": [
+                                {
+                                    "player": "I’m having trouble with math. It’s so hard to understand.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "Math can be tough, but once you break it down, it gets easier. Don’t give up."
+                                },
+                                {
+                                    "player": "I’m just feeling overwhelmed by everything.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s a common feeling, but don’t let it paralyze you. Take things one step at a time."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I’m dealing with stuff outside of school. It’s hard to focus.",
+                            "npc_response": "I understand that life outside of school can be tough. But remember, education is your way out. What’s distracting you?",
+                            "next_options": [
+                                {
+                                    "player": "I’ve got friends pulling me in the wrong direction.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Those kinds of friends will drag you down. You need to focus on what’s best for you."
+                                },
+                                {
+                                    "player": "I’m just trying to keep my head above water.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s all you can do sometimes, but don’t lose sight of what’s important."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I don’t feel like I’m good enough to succeed.",
+                            "npc_response": "That’s a dangerous mindset. You are good enough, but you need to believe that. What’s making you feel this way?",
+                            "next_options": [
+                                {
+                                    "player": "I feel like I’m always behind everyone else.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Everyone moves at their own pace. Don’t compare yourself to others."
+                                },
+                                {
+                                    "player": "I’ve made too many mistakes to turn things around.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Mistakes don’t define you. What you do after them does."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Time Management",
+            "lines": [
+                {
+                    "npc": "Managing your time is crucial. It’s one of the most important skills you can develop. How are you managing your time lately?",
+                    "options": [
+                        {
+                            "player": "I’m trying to balance school and everything else. It’s hard, but I’m doing my best.",
+                            "npc_response": "That’s good to hear. Time management is difficult, but it’s key to success. How are you organizing your time?",
+                            "next_options": [
+                                {
+                                    "player": "I’ve started using a planner to keep track of everything.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s an excellent strategy. Keep it up and you’ll notice the difference."
+                                },
+                                {
+                                    "player": "I’m just taking it day by day.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That works for now, but as things get busier, you’ll need a better system."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I’m not managing my time well. Everything feels like it’s piling up.",
+                            "npc_response": "That’s common when you don’t have a plan. What’s taking up most of your time?",
+                            "next_options": [
+                                {
+                                    "player": "I’m distracted by things outside of school.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Distractions are the enemy of success. You need to cut them out if you want to move forward."
+                                },
+                                {
+                                    "player": "I just don’t know how to balance everything.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "It’s a skill that takes time to develop, but you need to start now."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I don’t think time management is my biggest problem.",
+                            "npc_response": "What do you think your biggest problem is, then?",
+                            "next_options": [
+                                {
+                                    "player": "I’m not motivated enough to care about my schedule.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Motivation is important, but sometimes you have to create discipline. Even when you don’t feel like it, you need to stick to a routine."
+                                },
+                                {
+                                    "player": "I don’t have a clear plan for what I’m working towards.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s part of the problem. You need a vision for your future. Once you know what you’re working toward, managing your time becomes easier."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Choosing Your Path",
+            "lines": [
+                {
+                    "npc": "The choices you make now will affect your future. Have you thought about what path you want to take?",
+                    "options": [
+                        {
+                            "player": "I want to go to university and study something I’m passionate about.",
+                            "npc_response": "That’s an excellent goal. Have you thought about what you want to study?",
+                            "next_options": [
+                                {
+                                    "player": "I’m thinking about studying medicine. I want to help people.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s a noble goal. Medicine requires dedication, but I believe you have the potential."
+                                },
+                                {
+                                    "player": "I’m still exploring my options.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s okay. Take your time to explore your interests, but don’t lose focus."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I don’t think university is for me. I’m not sure what else I’d do.",
+                            "npc_response": "Not everyone has to go to university, but you need to have a plan. What are your other interests?",
+                            "next_options": [
+                                {
+                                    "player": "I don’t know. Maybe I’ll just work with my hands, like construction or mechanics.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "There’s nothing wrong with a trade. If that’s what you want, make sure you’re skilled and dedicated."
+                                },
+                                {
+                                    "player": "I’m not sure if I care enough to make a plan.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "That kind of thinking will leave you stuck. You need to take control of your future."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I haven’t thought that far ahead yet.",
+                            "npc_response": "That’s common, but you need to start thinking now. What do you see yourself doing in 5 years?",
+                            "next_options": [
+                                {
+                                    "player": "I want to have a stable job and be supporting my family.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s a good goal. Start building the foundation for that now."
+                                },
+                                {
+                                    "player": "I’m not sure. I’ll figure it out along the way.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Figuring it out as you go is risky. It’s better to have a plan, even if it changes later."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Handling Failure",
+            "lines": [
+                {
+                    "npc": "Everyone fails at some point. What matters is how you handle that failure. How do you feel about failure?",
+                    "options": [
+                        {
+                            "player": "Failure is just a learning opportunity. I try to learn from my mistakes.",
+                            "npc_response": "That’s a great mindset to have. What’s a recent failure you’ve learned from?",
+                            "next_options": [
+                                {
+                                    "player": "I failed a math test, but I reviewed my mistakes, and I’m ready for the next one.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s exactly how you should approach it. Mistakes are just steps toward success."
+                                },
+                                {
+                                    "player": "I didn’t do well on a project, but I know what to improve.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s a healthy approach. It’s important to focus on growth, not perfection."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "Failure just feels like proof that I’m not good enough.",
+                            "npc_response": "That’s not true. Failure is a part of life. What matters is what you do next. What’s making you feel this way?",
+                            "next_options": [
+                                {
+                                    "player": "I’ve failed too many times. I don’t think I can bounce back.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "You’re stronger than you think. The number of times you fail doesn’t matter as long as you keep trying."
+                                },
+                                {
+                                    "player": "I just don’t see the point in trying if I keep failing.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "The point is growth. Every failure is an opportunity to get better. Don’t give up."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I try not to think about failure. I just focus on what’s next.",
+                            "npc_response": "That’s a good attitude, but it’s important to learn from your mistakes. Are you reflecting on what went wrong?",
+                            "next_options": [
+                                {
+                                    "player": "Sometimes, but I’m more focused on moving forward.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Moving forward is good, but don’t forget to learn from the past."
+                                },
+                                {
+                                    "player": "Not really. I don’t want to dwell on my mistakes.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "If you don’t learn from your mistakes, you’re bound to repeat them."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Peer Pressure",
+            "lines": [
+                {
+                    "npc": "It’s hard to stay focused when you’re surrounded by people who don’t share your goals. How do you deal with peer pressure?",
+                    "options": [
+                        {
+                            "player": "I try to stay focused on what’s important to me, no matter what others say.",
+                            "npc_response": "That’s a mature attitude. How do you avoid getting dragged into what others are doing?",
+                            "next_options": [
+                                {
+                                    "player": "I just remind myself of my goals. They keep me grounded.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s the best way to stay on track. Keep your eyes on your future."
+                                },
+                                {
+                                    "player": "I keep my distance from people who don’t share my values.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s smart. Surrounding yourself with like-minded people will help you stay focused."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "Sometimes I give in. It’s hard to resist when everyone’s doing the same thing.",
+                            "npc_response": "That’s understandable, but you need to learn to stand on your own. What’s pulling you in?",
+                            "next_options": [
+                                {
+                                    "player": "My friends. They’re not interested in school, and it’s hard to keep up with both.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "You might need to reconsider who you’re spending time with. Friends should lift you up, not pull you down."
+                                },
+                                {
+                                    "player": "I just want to fit in, even if it means going along with things I shouldn’t.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Fitting in isn’t worth sacrificing your future. Think about what’s more important in the long run."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I haven’t figured out how to handle peer pressure yet.",
+                            "npc_response": "It’s a tough skill to develop, but it’s important. How do you feel when you’re being pressured?",
+                            "next_options": [
+                                {
+                                    "player": "I feel like I’m letting myself down when I give in.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s a good realization. Use that feeling to motivate you to make better choices."
+                                },
+                                {
+                                    "player": "I feel like I can’t say no, even when I want to.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "Learning to say no is hard, but it’s a skill you need to build. You don’t owe anyone your future."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Discipline Over Motivation",
+            "lines": [
+                {
+                    "npc": "Motivation is important, but it’s discipline that will carry you through when motivation fades. How are you building your discipline?",
+                    "options": [
+                        {
+                            "player": "I’m working on sticking to a schedule, even when I don’t feel like it.",
+                            "npc_response": "That’s great. Discipline is about consistency. How are you managing your time?",
+                            "next_options": [
+                                {
+                                    "player": "I make sure to set aside time for studying every day.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s the key. Daily habits lead to long-term success. Keep it up."
+                                },
+                                {
+                                    "player": "I’m still figuring out my routine, but I’m trying.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s a good start. It’s okay to adjust as you go, just make sure you stick with it."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I rely more on motivation, but sometimes it’s hard to stay motivated.",
+                            "npc_response": "That’s normal. Motivation comes and goes, but discipline is what keeps you moving forward even on the hard days. How do you handle it when motivation fades?",
+                            "next_options": [
+                                {
+                                    "player": "I push myself to get things done, but it’s tough.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s a good start. Building discipline means doing what needs to be done, even when you don’t feel like it."
+                                },
+                                {
+                                    "player": "I tend to give up or procrastinate when I’m not motivated.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "That’s where discipline comes in. You can’t rely on feeling motivated all the time. Discipline will help you push through those moments."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I haven’t figured out how to build discipline yet.",
+                            "npc_response": "Discipline is built over time, through daily habits and consistency. What’s one habit you could start building?",
+                            "next_options": [
+                                {
+                                    "player": "I could start studying at the same time every day.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s a great way to start. Consistency is key, and over time it will become a natural part of your routine."
+                                },
+                                {
+                                    "player": "I’m not sure, but I’ll think about it.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "It’s okay to start small. The important thing is that you’re thinking about it and taking steps in the right direction."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "Prioritizing Education",
+            "lines": [
+                {
+                    "npc": "You’ve got a lot of distractions around you, but education should always be a top priority. How are you balancing everything?",
+                    "options": [
+                        {
+                            "player": "I’m trying to stay focused on school, even with all the distractions.",
+                            "npc_response": "That’s good to hear. What strategies are you using to stay on track?",
+                            "next_options": [
+                                {
+                                    "player": "I’ve set some personal goals for my grades and stick to a study schedule.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s a smart approach. Goals give you direction, and a schedule keeps you disciplined."
+                                },
+                                {
+                                    "player": "I’m just taking it one day at a time.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That works for now, but make sure you have a clear plan for the future. It will help you stay on course."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "It’s hard to focus when there’s so much going on outside of school.",
+                            "npc_response": "I understand that life can be overwhelming, but you need to prioritize your education if you want to have options for the future. What’s been pulling your focus away?",
+                            "next_options": [
+                                {
+                                    "player": "Friends and life outside of school. It feels like school is the least of my worries.",
+                                    "result": "Wrong – Gain gang stat",
+                                    "npc_response": "That’s dangerous thinking. If you don’t focus on school now, you’ll regret it later. Education gives you options."
+                                },
+                                {
+                                    "player": "Just everything. I feel like I’m being pulled in too many directions.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "That’s understandable, but you need to start setting boundaries. Not everything requires your attention."
+                                }
+                            ]
+                        },
+                        {
+                            "player": "I’m not sure how to balance everything right now.",
+                            "npc_response": "That’s okay. Finding balance takes time, but it’s something you need to work on. What can you start with?",
+                            "next_options": [
+                                {
+                                    "player": "I’ll try to focus more on my studies, even if it means cutting back on other things.",
+                                    "result": "Right – Gain education stat",
+                                    "npc_response": "That’s the right mindset. You’ll find that making small changes now will lead to big results later."
+                                },
+                                {
+                                    "player": "I guess I’ll figure it out as I go.",
+                                    "result": "Neutral – Add both or remove both",
+                                    "npc_response": "Take your time, but don’t let things pile up. The sooner you find balance, the better."
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+    "title": "Building Confidence",
+    "lines": [
+        {
+            "npc": "Confidence is key to success. If you don’t believe in yourself, no one else will. How confident are you in your abilities?",
+            "options": [
+                {
+                    "player": "I’m starting to feel more confident, especially in my studies.",
+                    "npc_response": "That’s great to hear. Confidence comes from knowing you’ve put in the work. What have you been working on that’s boosting your confidence?",
+                    "next_options": [
+                        {
+                            "player": "I’ve been studying harder and seeing results, especially in math.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s fantastic. Hard work leads to results, and those results will continue to build your confidence."
+                        },
+                        {
+                            "player": "I’m focusing on small wins, like getting my homework done on time.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a smart approach. Each small victory builds toward bigger ones."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t feel confident at all. I’m always second-guessing myself.",
+                    "npc_response": "That’s a common feeling, but confidence comes with time and practice. What’s been making you doubt yourself?",
+                    "next_options": [
+                        {
+                            "player": "I feel like I’m always behind everyone else.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "It’s important to remember that everyone has their own pace. Don’t compare yourself to others, focus on your own growth."
+                        },
+                        {
+                            "player": "I don’t think I’m good enough to succeed.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s not true. You have the ability to succeed, but you need to start believing that."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t really thought about my confidence.",
+                    "npc_response": "It’s something you should start thinking about. Confidence doesn’t just come from success, it comes from knowing you’re prepared. How prepared do you feel?",
+                    "next_options": [
+                        {
+                            "player": "I feel prepared when I study hard, but not always.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s normal. The more you prepare, the more confident you’ll feel."
+                        },
+                        {
+                            "player": "I don’t feel prepared for much.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Then it’s time to start preparing. Confidence will come when you’ve put in the work."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Dealing with Setbacks",
+    "lines": [
+        {
+            "npc": "Setbacks are a part of life, but they don’t define you. What matters is how you recover from them. How do you deal with setbacks?",
+            "options": [
+                {
+                    "player": "I try to learn from them and move on.",
+                    "npc_response": "That’s the right attitude. Every setback is a lesson. What’s something you’ve learned from a recent setback?",
+                    "next_options": [
+                        {
+                            "player": "I failed a test, but I realized I needed to change my study habits.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s an important realization. Adjusting your habits will lead to better results in the future."
+                        },
+                        {
+                            "player": "I missed a homework deadline, but I’ve become more organized since then.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s good. Organization is key to staying on top of your responsibilities."
+                        }
+                    ]
+                },
+                {
+                    "player": "I get discouraged when things don’t go my way.",
+                    "npc_response": "It’s natural to feel discouraged, but you can’t let setbacks stop you. What’s been discouraging you?",
+                    "next_options": [
+                        {
+                            "player": "It feels like no matter how hard I try, I can’t keep up.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "That mindset will hold you back. Everyone faces challenges, but the key is persistence. Don’t give up."
+                        },
+                        {
+                            "player": "I’m trying, but it feels like I’m not making any progress.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Progress isn’t always obvious, but as long as you’re putting in the effort, you’re moving forward."
+                        }
+                    ]
+                },
+                {
+                    "player": "I usually just ignore setbacks and move on to the next thing.",
+                    "npc_response": "Ignoring setbacks might seem like a way to move forward, but it’s important to reflect on them. What do you think happens when you don’t learn from your setbacks?",
+                    "next_options": [
+                        {
+                            "player": "I guess I just repeat the same mistakes.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Exactly. Reflection is a crucial part of growth. Take time to think about what went wrong so you can improve."
+                        },
+                        {
+                            "player": "I don’t think about it much. I just move on.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "That’s dangerous. If you don’t learn from your mistakes, they’ll keep holding you back."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Building Resilience",
+    "lines": [
+        {
+            "npc": "Resilience is the ability to keep going when things get tough. How resilient do you think you are?",
+            "options": [
+                {
+                    "player": "I’ve had some tough times, but I always get back up.",
+                    "npc_response": "That’s the spirit. Resilience is key to long-term success. What’s something tough you’ve had to overcome?",
+                    "next_options": [
+                        {
+                            "player": "I had to deal with a family issue that made it hard to focus on school, but I pushed through.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great example of resilience. Life will always throw challenges at you, but as long as you keep pushing forward, you’ll be fine."
+                        },
+                        {
+                            "player": "I’ve had trouble with my grades, but I’ve kept working on them.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s good. Resilience isn’t about never facing challenges—it’s about overcoming them."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t feel very resilient. It’s hard to bounce back when things go wrong.",
+                    "npc_response": "It’s okay to feel that way, but resilience is something you can build. What’s been knocking you down?",
+                    "next_options": [
+                        {
+                            "player": "I keep facing failures, and it feels like I’m never getting anywhere.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Failure is part of the process. Each failure brings you closer to success, but only if you keep going."
+                        },
+                        {
+                            "player": "I’m just tired of always having to deal with problems.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Everyone gets tired sometimes, but resilience is about finding the strength to keep going, even when you’re exhausted."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t thought much about resilience.",
+                    "npc_response": "It’s something you’ll need as you move through life. How do you usually handle tough situations?",
+                    "next_options": [
+                        {
+                            "player": "I try to stay positive and look for solutions.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great approach. Positivity and problem-solving are key to building resilience."
+                        },
+                        {
+                            "player": "I just take things as they come and deal with them one at a time.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good starting point, but try to think about how you can actively build resilience over time."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    },
+    {
+    "title": "Taking Responsibility",
+    "lines": [
+        {
+            "npc": "Taking responsibility for your actions is an important part of growing up. How do you feel about responsibility?",
+            "options": [
+                {
+                    "player": "I take responsibility for my choices, good or bad.",
+                    "npc_response": "That’s exactly what you need to do. What’s a time when you had to take responsibility for something?",
+                    "next_options": [
+                        {
+                            "player": "I missed a deadline for a project, but I owned up to it and asked for help to get back on track.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a mature response. Asking for help when you need it shows strength, not weakness."
+                        },
+                        {
+                            "player": "I made a mistake with a group project, but I admitted it and helped fix it.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s the right thing to do. Taking responsibility means owning up to your mistakes and doing what you can to make things right."
+                        }
+                    ]
+                },
+                {
+                    "player": "Sometimes I try to avoid responsibility when things go wrong.",
+                    "npc_response": "That’s understandable, but it’s important to face the consequences of your actions. What do you think happens when you avoid responsibility?",
+                    "next_options": [
+                        {
+                            "player": "I guess the problem gets worse.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Exactly. Avoiding responsibility only delays the inevitable, and it often makes things harder in the long run."
+                        },
+                        {
+                            "player": "It feels easier to avoid it than to deal with the consequences.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "It might seem easier at first, but avoiding responsibility will only create bigger problems down the road."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t really thought much about responsibility.",
+                    "npc_response": "It’s something you should start thinking about. Taking responsibility is about owning your choices and their outcomes. How do you handle situations where you make a mistake?",
+                    "next_options": [
+                        {
+                            "player": "I try to fix it if I can, but I’m not always great at owning up to it.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good start, but owning up to mistakes is an important part of growth."
+                        },
+                        {
+                            "player": "I usually just ignore it and hope it goes away.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "That’s not a good approach. Problems rarely go away on their own—you need to take responsibility and deal with them."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Asking for Help",
+    "lines": [
+        {
+            "npc": "It’s okay to ask for help when you need it. No one can do everything on their own. Do you feel comfortable asking for help?",
+            "options": [
+                {
+                    "player": "Yes, I ask for help when I need it.",
+                    "npc_response": "That’s good. Asking for help is a sign of strength, not weakness. What’s something you’ve needed help with recently?",
+                    "next_options": [
+                        {
+                            "player": "I’ve been struggling with a subject, so I asked a classmate for help.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a smart move. Collaborating with others can help you understand things from a new perspective."
+                        },
+                        {
+                            "player": "I needed help organizing my time, so I asked my parents for advice.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s great. Reaching out to people who care about you is a good way to get the support you need."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t like asking for help. It makes me feel weak.",
+                    "npc_response": "I understand why you might feel that way, but asking for help shows maturity. Why do you think it makes you feel weak?",
+                    "next_options": [
+                        {
+                            "player": "Because I should be able to handle things on my own.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Everyone needs help sometimes. It doesn’t make you weak—it shows you’re smart enough to know when you need assistance."
+                        },
+                        {
+                            "player": "I feel like I should be able to figure things out by myself.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Figuring things out on your own is admirable, but don’t be afraid to ask for help when you’re stuck. No one expects you to do it all alone."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’ve never really thought about asking for help.",
+                    "npc_response": "It’s something you should consider. Everyone needs help at some point. What’s something you’ve struggled with that you could have asked for help on?",
+                    "next_options": [
+                        {
+                            "player": "I’ve struggled with time management, but I didn’t think to ask for advice.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a common issue. Next time, try asking someone for advice—they might have tips that can help you improve."
+                        },
+                        {
+                            "player": "I’ve been falling behind in class, but I didn’t want to bother anyone.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Don’t ever think of asking for help as bothering someone. Teachers, friends, and family are there to support you."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Overcoming Procrastination",
+    "lines": [
+        {
+            "npc": "Procrastination is the enemy of progress. How do you manage to get things done when you feel like putting them off?",
+            "options": [
+                {
+                    "player": "I push myself to do a little every day so I don’t fall behind.",
+                    "npc_response": "That’s a great strategy. Breaking things down into smaller tasks makes everything more manageable. What’s your next step?",
+                    "next_options": [
+                        {
+                            "player": "I’m going to stay on top of my assignments and not let them pile up.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s the key. Consistency is what keeps procrastination at bay."
+                        },
+                        {
+                            "player": "I’ll take things one day at a time.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good approach, but make sure you don’t let things build up too much."
+                        }
+                    ]
+                },
+                {
+                    "player": "I always wait until the last minute. I can’t help it.",
+                    "npc_response": "That’s a bad habit. The pressure might motivate you now, but it’s not sustainable. Why do you think you keep putting things off?",
+                    "next_options": [
+                        {
+                            "player": "I guess I just get distracted easily.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Distractions are a big problem. You need to eliminate them if you want to stay on track."
+                        },
+                        {
+                            "player": "I don’t feel like doing the work until it’s urgent.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "You need to find a way to motivate yourself before it becomes urgent. That’s how you avoid stress."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure how to stop procrastinating.",
+                    "npc_response": "The first step is recognizing when you’re procrastinating. Once you’re aware of it, what’s the hardest part for you?",
+                    "next_options": [
+                        {
+                            "player": "Getting started is the hardest part for me.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s common. Try starting with small tasks to build momentum."
+                        },
+                        {
+                            "player": "I always find something else to do.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "You need to learn to prioritize what’s important. Procrastination will only cause more stress down the line."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+    },
+    {
+    "title": "Balancing Fun and Responsibility",
+    "lines": [
+        {
+            "npc": "It’s important to have fun, but you also need to balance that with responsibility. How do you manage your time between fun and work?",
+            "options": [
+                {
+                    "player": "I try to get my work done first so I can enjoy my free time guilt-free.",
+                    "npc_response": "That’s the right mindset. What do you do to stay focused when you’d rather be having fun?",
+                    "next_options": [
+                        {
+                            "player": "I remind myself that the fun will be better if I’ve done the work.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great way to think about it. Hard work makes your downtime more rewarding."
+                        },
+                        {
+                            "player": "I make a deal with myself to work for a set amount of time before taking a break.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a smart strategy. Breaking work into chunks makes it easier to handle."
+                        }
+                    ]
+                },
+                {
+                    "player": "I tend to have fun first and deal with the work later.",
+                    "npc_response": "That’s a dangerous habit. Fun is important, but if you let it take priority, your responsibilities will suffer. Why do you think you do that?",
+                    "next_options": [
+                        {
+                            "player": "Because I’d rather not think about the work until I have to.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Avoiding work might seem easier, but it’ll catch up with you eventually."
+                        },
+                        {
+                            "player": "It’s hard to focus when I know I have free time waiting.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s understandable, but you need to learn to prioritize. Free time is more enjoyable when you’ve earned it."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t found a balance yet. It’s either all work or all fun.",
+                    "npc_response": "Balance is hard to find, but it’s important. What do you think would help you manage your time better?",
+                    "next_options": [
+                        {
+                            "player": "Maybe I need to set stricter limits on my fun time.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a good idea. Limits help you stay on track while still enjoying yourself."
+                        },
+                        {
+                            "player": "I’ll just try to figure it out as I go.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a start, but having a plan will make things easier in the long run."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Staying Organized",
+    "lines": [
+        {
+            "npc": "Staying organized is key to keeping track of everything. How organized are you?",
+            "options": [
+                {
+                    "player": "I’m pretty organized. I use a planner to keep track of my assignments.",
+                    "npc_response": "That’s excellent. Organization helps reduce stress and keeps you on top of things. What’s your system like?",
+                    "next_options": [
+                        {
+                            "player": "I write down all my tasks and check them off as I complete them.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great system. Checking things off gives you a sense of accomplishment."
+                        },
+                        {
+                            "player": "I plan out my week and make sure I know what’s coming up.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s smart. Planning ahead helps you stay prepared for anything."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not very organized. I just try to remember everything.",
+                    "npc_response": "That’s risky. Relying on memory can lead to missed deadlines and stress. Have you considered using a planner or a to-do list?",
+                    "next_options": [
+                        {
+                            "player": "I’ve thought about it, but I haven’t started yet.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "It’s worth trying. A little organization goes a long way in reducing stress."
+                        },
+                        {
+                            "player": "I don’t think I need it. I manage well enough without one.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "It might seem like you’re managing, but things can slip through the cracks without a system."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m trying to get more organized, but it’s hard.",
+                    "npc_response": "That’s a good start. Organization is a habit that takes time to build. What’s been the hardest part for you?",
+                    "next_options": [
+                        {
+                            "player": "I get overwhelmed when I have too many things to keep track of.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s common, but breaking things down into smaller tasks can help you manage everything."
+                        },
+                        {
+                            "player": "I’m not sure where to start with getting organized.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Start small. Begin with one area, like your schoolwork, and build from there."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Dealing with Criticism",
+    "lines": [
+        {
+            "npc": "Criticism can be hard to handle, but it’s important for growth. How do you deal with criticism?",
+            "options": [
+                {
+                    "player": "I try to take it as feedback and learn from it.",
+                    "npc_response": "That’s the best approach. Criticism isn’t meant to tear you down, it’s meant to help you improve. What’s something you’ve learned from criticism recently?",
+                    "next_options": [
+                        {
+                            "player": "I was told I needed to be more thorough in my work, and I’ve started paying more attention to detail.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a valuable lesson. Attention to detail is important in everything you do."
+                        },
+                        {
+                            "player": "I was criticized for not being prepared, so I’ve started planning ahead.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s great. Planning ahead will help you avoid those kinds of mistakes in the future."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t take criticism well. It feels like an attack.",
+                    "npc_response": "It’s natural to feel that way, but try to remember that most criticism is meant to help you. Why do you think you take it personally?",
+                    "next_options": [
+                        {
+                            "player": "I guess it makes me feel like I’m not good enough.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Criticism isn’t a reflection of your worth. It’s just a tool to help you improve."
+                        },
+                        {
+                            "player": "It’s hard to hear that I’ve made mistakes.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Mistakes are a part of learning. If you accept criticism, you can turn those mistakes into strengths."
+                        }
+                    ]
+                },
+                {
+                    "player": "I usually just ignore criticism.",
+                    "npc_response": "That’s not a good approach. Ignoring criticism won’t help you grow. What do you think happens when you don’t listen to feedback?",
+                    "next_options": [
+                        {
+                            "player": "I guess I keep making the same mistakes.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Exactly. Feedback helps you learn and avoid repeating the same errors."
+                        },
+                        {
+                            "player": "I don’t know. I just move on without thinking about it.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "If you keep ignoring feedback, you’ll miss opportunities to improve."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Handling Pressure",
+    "lines": [
+        {
+            "npc": "Pressure can be overwhelming, but learning to handle it is crucial. How do you deal with pressure?",
+            "options": [
+                {
+                    "player": "I try to stay calm and focus on one thing at a time.",
+                    "npc_response": "That’s a great approach. Staying calm under pressure is a valuable skill. What’s something that’s helped you stay calm?",
+                    "next_options": [
+                        {
+                            "player": "I take deep breaths and remind myself that I can handle it.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a simple but effective technique. Staying composed makes everything more manageable."
+                        },
+                        {
+                            "player": "I focus on the most important task first and take it step by step.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a smart way to prioritize. Tackling the biggest challenge first helps relieve pressure."
+                        }
+                    ]
+                },
+                {
+                    "player": "I get overwhelmed when I’m under pressure. It’s hard to focus.",
+                    "npc_response": "That’s common, but learning to manage stress is important. What’s been overwhelming you lately?",
+                    "next_options": [
+                        {
+                            "player": "I have too many assignments, and I don’t know where to start.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Breaking your tasks into smaller steps will help make them more manageable. Start with one thing and build momentum."
+                        },
+                        {
+                            "player": "I feel like I have too much going on at once.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a sign that you need to prioritize and focus on one thing at a time. Don’t try to do everything at once."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t think I handle pressure well.",
+                    "npc_response": "It’s something you can improve over time. What’s the hardest part for you when you’re feeling pressure?",
+                    "next_options": [
+                        {
+                            "player": "I get anxious and freeze up.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Anxiety is normal under pressure, but it’s important to keep moving forward, even if it’s slow."
+                        },
+                        {
+                            "player": "I avoid the task and try to distract myself.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Avoiding tasks only adds more pressure later. Facing the problem head-on, even if it’s difficult, will help you relieve that stress."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Handling Distractions",
+    "lines": [
+        {
+            "npc": "Distractions are everywhere, but they can derail your progress if you’re not careful. How do you manage distractions?",
+            "options": [
+                {
+                    "player": "I try to set limits for myself and stay focused on what’s important.",
+                    "npc_response": "That’s great. Setting boundaries with distractions is crucial. What’s been distracting you the most?",
+                    "next_options": [
+                        {
+                            "player": "Social media. I limit my time on it to stay productive.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a wise choice. Social media can take up a lot of time without you even realizing it."
+                        },
+                        {
+                            "player": "Friends, mostly. I try to balance hanging out and getting work done.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "It’s important to balance your social life and responsibilities. Keep prioritizing your work."
+                        }
+                    ]
+                },
+                {
+                    "player": "I get distracted easily, especially when things get boring.",
+                    "npc_response": "That’s normal, but you need to learn how to manage it. How do you think distractions affect your performance?",
+                    "next_options": [
+                        {
+                            "player": "They make me fall behind, and it’s hard to catch up.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Exactly. Distractions steal your time and make everything harder. You need to stay focused."
+                        },
+                        {
+                            "player": "I know it slows me down, but I get back to work eventually.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "It’s good that you get back on track, but cutting down on distractions will make things easier in the long run."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure how to deal with distractions.",
+                    "npc_response": "You can start by identifying what distracts you the most. What’s your biggest distraction?",
+                    "next_options": [
+                        {
+                            "player": "My phone. I always end up scrolling through it instead of working.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Try setting your phone aside during study time. You’ll be surprised how much more you can get done."
+                        },
+                        {
+                            "player": "I always find something else to do instead of focusing on my work.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "That’s a habit you need to break. Prioritizing your work will help you stay ahead."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Making Sacrifices",
+    "lines": [
+        {
+            "npc": "Sometimes you have to make sacrifices to achieve your goals. What have you had to give up to stay focused?",
+            "options": [
+                {
+                    "player": "I’ve given up some of my free time to make sure I keep up with my studies.",
+                    "npc_response": "That’s a smart choice. Sacrificing short-term fun for long-term success is the way to go. How do you manage your time?",
+                    "next_options": [
+                        {
+                            "player": "I plan my week in advance and stick to my schedule.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great strategy. Planning ahead helps you stay on top of your responsibilities."
+                        },
+                        {
+                            "player": "I set aside time for work and time for fun to keep things balanced.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Balance is important. As long as you’re staying focused on your priorities, you’re on the right track."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t made any sacrifices yet. I’m not sure what I’d give up.",
+                    "npc_response": "That’s understandable, but sometimes giving up a little now can pay off in the future. What do you think you could sacrifice to improve your focus?",
+                    "next_options": [
+                        {
+                            "player": "Maybe less time hanging out with friends.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "It’s tough to cut back on social time, but sometimes it’s necessary to stay on track."
+                        },
+                        {
+                            "player": "I could probably spend less time playing games.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good place to start. Making small sacrifices can lead to big results."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure I’m ready to make sacrifices yet.",
+                    "npc_response": "That’s okay, but remember that success often requires trade-offs. What’s holding you back?",
+                    "next_options": [
+                        {
+                            "player": "I don’t want to give up my free time.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "It’s hard, but sometimes you have to let go of a little free time to reach your goals."
+                        },
+                        {
+                            "player": "I don’t think it’s worth it right now.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "You might not see the benefits now, but sacrificing a little can make a big difference in the long run."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Dealing with Peer Pressure",
+    "lines": [
+        {
+            "npc": "Peer pressure can push you in the wrong direction. How do you deal with it when your friends are pulling you away from your goals?",
+            "options": [
+                {
+                    "player": "I try to stick to my values, even when my friends are pressuring me.",
+                    "npc_response": "That’s the best way to stay true to yourself. What’s something you’ve said no to recently?",
+                    "next_options": [
+                        {
+                            "player": "I turned down going out one night because I had an important test the next day.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great example of prioritizing your responsibilities. You made the right choice."
+                        },
+                        {
+                            "player": "I stayed home to finish my homework instead of hanging out.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a smart decision. Staying focused on your work will help you reach your goals."
+                        }
+                    ]
+                },
+                {
+                    "player": "It’s hard to say no when my friends are all doing something.",
+                    "npc_response": "I understand, but you need to think about what’s more important—your future or fitting in with the crowd. What’s been the hardest thing to say no to?",
+                    "next_options": [
+                        {
+                            "player": "Skipping school to hang out with them.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Skipping school might seem fun now, but it’s not worth falling behind in your studies."
+                        },
+                        {
+                            "player": "Going out when I know I have work to do.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a tough choice, but remember, your work will pay off in the long run."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure how to handle peer pressure.",
+                    "npc_response": "It can be hard, but staying true to your goals is more important than following the crowd. What’s something you’ve struggled with?",
+                    "next_options": [
+                        {
+                            "player": "I don’t want to feel left out, but I also don’t want to fall behind.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a tough balance, but sticking to your goals will benefit you in the long run."
+                        },
+                        {
+                            "player": "I usually just go along with what my friends are doing.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Following the crowd will only hold you back. It’s important to learn how to stand on your own."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Motivation",
+    "lines": [
+        {
+            "npc": "Motivation can be hard to maintain, but it’s crucial to your success. What motivates you to keep going?",
+            "options": [
+                {
+                    "player": "I’m motivated by my future. I want to build a better life for myself.",
+                    "npc_response": "That’s a powerful motivator. Focusing on your future will help you push through tough times. What’s your biggest goal right now?",
+                    "next_options": [
+                        {
+                            "player": "I want to graduate and go to university.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s an excellent goal. Keep working hard, and you’ll get there."
+                        },
+                        {
+                            "player": "I want to get a good job so I can support my family.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a noble goal. Education will give you the tools you need to succeed."
+                        }
+                    ]
+                },
+                {
+                    "player": "Sometimes it’s hard to stay motivated. I feel like giving up.",
+                    "npc_response": "It’s normal to feel that way, but you need to remind yourself why you started. What’s been bringing you down?",
+                    "next_options": [
+                        {
+                            "player": "I feel like I’m not making any progress, no matter how hard I try.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Progress takes time. Don’t get discouraged by slow progress—it’s still progress."
+                        },
+                        {
+                            "player": "I’m just tired of working so hard with no immediate results.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Results will come if you stay consistent. Don’t give up when you’re so close to your goals."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t found my motivation yet.",
+                    "npc_response": "It’s important to find something that drives you. What do you want most for your future?",
+                    "next_options": [
+                        {
+                            "player": "I want to make a difference in my community.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great motivator. Education can help you create positive change."
+                        },
+                        {
+                            "player": "I just want to live a better life than what I have now.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good goal. Keep that in mind when things get tough."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Seeking Improvement",
+    "lines": [
+        {
+            "npc": "It’s important to always look for ways to improve. What are you working on improving right now?",
+            "options": [
+                {
+                    "player": "I’m working on improving my grades. I’ve been studying more.",
+                    "npc_response": "That’s great. Studying consistently will pay off. What’s been helping you the most?",
+                    "next_options": [
+                        {
+                            "player": "I’ve started reviewing my notes every day instead of cramming before tests.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s an excellent habit. Consistent studying helps retain information better."
+                        },
+                        {
+                            "player": "I’ve been asking more questions in class to make sure I understand the material.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s smart. Engaging with the material in class will help you improve faster."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t really been working on improving anything.",
+                    "npc_response": "That’s okay, but it’s important to always be looking for ways to get better. What do you think you could improve?",
+                    "next_options": [
+                        {
+                            "player": "Maybe my time management. I’m always rushing to finish things at the last minute.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a good place to start. Better time management will help you stay ahead of your responsibilities."
+                        },
+                        {
+                            "player": "I could probably do better with staying focused.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a great goal. Focusing on your work will help you improve in every area."
+                        }
+                    ]
+                },
+                {
+                    "player": "I don’t know what I need to improve.",
+                    "npc_response": "It’s important to take a step back and reflect. What’s something you’ve struggled with recently?",
+                    "next_options": [
+                        {
+                            "player": "I’ve been falling behind in class, but I’m not sure why.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a sign you might need to change your approach. Try breaking your work into smaller tasks."
+                        },
+                        {
+                            "player": "I don’t know. I’ve just been coasting along.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Coasting might seem easier now, but it’ll hold you back in the long run."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Overcoming Obstacles",
+    "lines": [
+        {
+            "npc": "Everyone faces obstacles, but what matters is how you overcome them. What’s something you’ve had to overcome recently?",
+            "options": [
+                {
+                    "player": "I’ve been struggling with a subject, but I asked for help and worked through it.",
+                    "npc_response": "That’s a great way to handle it. Asking for help shows strength. Which subject are you improving in?",
+                    "next_options": [
+                        {
+                            "player": "Math. I’ve been putting in extra time to make sure I understand it.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s smart. Math is challenging, but with enough practice, you’ll get there."
+                        },
+                        {
+                            "player": "Science. I’ve been working with a friend who’s good at it.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a great way to collaborate. Working with others can help you see things in a new way."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m struggling to stay motivated. It feels like everything is piling up.",
+                    "npc_response": "That’s a common feeling, but you can overcome it by taking small steps. What’s overwhelming you the most?",
+                    "next_options": [
+                        {
+                            "player": "I have too much on my plate, and I don’t know where to start.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Start with the most important thing, and work your way through. Prioritizing will help."
+                        },
+                        {
+                            "player": "I feel like no matter how hard I try, I’m not getting anywhere.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Progress can feel slow, but as long as you’re trying, you’re moving forward."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t really faced anything that feels like an obstacle.",
+                    "npc_response": "That’s lucky, but challenges are bound to come. How do you think you’ll handle them when they do?",
+                    "next_options": [
+                        {
+                            "player": "I’ll try to stay calm and think of solutions instead of panicking.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a great approach. Staying calm helps you see things clearly."
+                        },
+                        {
+                            "player": "I don’t know. I’ll just deal with them as they come.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "That’s not the best approach. Planning and preparing for challenges can make a big difference."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Staying Consistent",
+    "lines": [
+        {
+            "npc": "Consistency is key to success. How consistent have you been with your work lately?",
+            "options": [
+                {
+                    "player": "I’ve been trying to stick to a routine and do a little bit each day.",
+                    "npc_response": "That’s a great way to stay on track. Consistency leads to long-term progress. What’s been helping you stay consistent?",
+                    "next_options": [
+                        {
+                            "player": "I’ve set a schedule and stuck to it, even on days when I don’t feel like working.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s excellent. A schedule helps you build discipline."
+                        },
+                        {
+                            "player": "I make sure to do at least one thing toward my goals every day.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good habit. Even small steps each day will lead to big results over time."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’ve been inconsistent. Some days I’m focused, and others I’m not.",
+                    "npc_response": "That’s understandable, but you need to work on building consistency. What’s been throwing you off?",
+                    "next_options": [
+                        {
+                            "player": "I get distracted easily, and it’s hard to stay on track.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Distractions are normal, but you need to minimize them if you want to stay focused."
+                        },
+                        {
+                            "player": "I don’t feel motivated all the time, so I skip some days.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Motivation comes and goes, but consistency is what keeps you moving forward even on the tough days."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t been able to stick to a routine.",
+                    "npc_response": "That’s okay. Building a routine takes time. What’s been holding you back?",
+                    "next_options": [
+                        {
+                            "player": "I’ve been trying, but things keep coming up that throw me off.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s normal, but the key is to get back on track after disruptions."
+                        },
+                        {
+                            "player": "I don’t really have a plan, so I just go with the flow.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Without a plan, it’s easy to lose focus. Try setting small goals for yourself each day."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Perseverance",
+    "lines": [
+        {
+            "npc": "Perseverance is what separates those who succeed from those who give up. How do you keep going when things get tough?",
+            "options": [
+                {
+                    "player": "I remind myself why I’m working hard, and that keeps me pushing forward.",
+                    "npc_response": "That’s a great way to stay motivated. What’s your biggest motivation right now?",
+                    "next_options": [
+                        {
+                            "player": "I want to graduate and make something of myself.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a strong motivation. Keep that in mind when things get hard."
+                        },
+                        {
+                            "player": "I want to prove to myself that I can succeed.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a good motivator. Proving something to yourself is the most important goal."
+                        }
+                    ]
+                },
+                {
+                    "player": "Sometimes it feels like it’s easier to give up.",
+                    "npc_response": "It might feel that way, but giving up won’t get you where you want to be. What’s been making you want to give up?",
+                    "next_options": [
+                        {
+                            "player": "I feel like no matter how hard I try, things don’t get better.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Progress takes time. You might not see it now, but if you keep going, things will improve."
+                        },
+                        {
+                            "player": "I’m just tired of always trying and not seeing results.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Results don’t always come quickly, but perseverance will help you get there in the end."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure how to stay motivated when things get tough.",
+                    "npc_response": "It helps to focus on your long-term goals. What’s something you want to achieve?",
+                    "next_options": [
+                        {
+                            "player": "I want to build a better future for myself.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great goal. Keep it in mind, and use it to push through the tough times."
+                        },
+                        {
+                            "player": "I don’t really know what I want yet.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s okay, but start thinking about what you want for your future. It’ll help you stay focused."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Time Management",
+    "lines": [
+        {
+            "npc": "Managing your time wisely is one of the most important skills you can develop. How are you handling your time lately?",
+            "options": [
+                {
+                    "player": "I’ve been sticking to a schedule and trying to stay on top of everything.",
+                    "npc_response": "That’s great. A schedule helps you stay organized and reduces stress. What’s been working best for you?",
+                    "next_options": [
+                        {
+                            "player": "I block out time for each task, so I know exactly what I need to do.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great strategy. Keeping your tasks organized will help you avoid last-minute stress."
+                        },
+                        {
+                            "player": "I prioritize my most important tasks first, then tackle the rest.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s smart. Prioritizing ensures you get the most important things done."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’ve been struggling to manage my time. It feels like there’s too much to do.",
+                    "npc_response": "That’s understandable, but time management is a skill you can improve. What’s been overwhelming you the most?",
+                    "next_options": [
+                        {
+                            "player": "I have too many assignments and not enough time to finish them.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Breaking down your tasks into smaller, manageable pieces can help. Start with the most important one."
+                        },
+                        {
+                            "player": "It feels like no matter how hard I try, I can’t keep up.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a sign that you might need to adjust your routine. Focus on one thing at a time, and don’t overwhelm yourself."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t been managing my time well.",
+                    "npc_response": "That’s okay, but it’s something you should work on. What’s been throwing you off?",
+                    "next_options": [
+                        {
+                            "player": "I haven’t been prioritizing my tasks, so things pile up.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a common issue. Prioritizing helps you stay on track and avoid feeling overwhelmed."
+                        },
+                        {
+                            "player": "I’ve been procrastinating a lot lately.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Procrastination only makes things harder in the long run. Try starting small to build momentum."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Self-Reflection",
+    "lines": [
+        {
+            "npc": "Self-reflection is important for growth. Do you take time to reflect on your actions and choices?",
+            "options": [
+                {
+                    "player": "Yes, I think about my decisions and how I can improve.",
+                    "npc_response": "That’s a great habit. Reflection helps you learn from your experiences. What’s something you’ve learned from reflecting?",
+                    "next_options": [
+                        {
+                            "player": "I’ve realized I need to stay more organized to avoid last-minute stress.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s an important realization. Staying organized will help you stay ahead of your work."
+                        },
+                        {
+                            "player": "I’ve learned that I need to ask for help when I’m struggling.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a valuable lesson. Asking for help is a sign of strength, not weakness."
+                        }
+                    ]
+                },
+                {
+                    "player": "Not really. I just go through the motions and keep moving forward.",
+                    "npc_response": "That’s understandable, but taking time to reflect can help you grow. What do you think you could gain from reflecting?",
+                    "next_options": [
+                        {
+                            "player": "I could probably avoid repeating the same mistakes.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Exactly. Reflection helps you learn from your experiences and avoid making the same mistakes twice."
+                        },
+                        {
+                            "player": "I don’t know. I’ve never thought about it much.",
+                            "result": "Wrong – Gain gang stat",
+                            "npc_response": "Reflection is a tool that helps you grow. Try taking some time to think about your choices and how they’ve affected you."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure how to reflect on my actions.",
+                    "npc_response": "It’s simple. Think about what you did, why you did it, and what the outcome was. What’s a decision you’ve made recently?",
+                    "next_options": [
+                        {
+                            "player": "I decided to spend more time studying instead of going out with friends.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a smart decision. Reflecting on your actions helps you see the benefits of your choices."
+                        },
+                        {
+                            "player": "I don’t really make big decisions, so I don’t think about it much.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "Even small decisions matter. Taking time to think about your choices will help you grow."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+},
+{
+    "title": "Planning for the Future",
+    "lines": [
+        {
+            "npc": "Planning for the future is important. Have you thought about what you want to do after school?",
+            "options": [
+                {
+                    "player": "I want to go to university and study something that interests me.",
+                    "npc_response": "That’s a great plan. What field are you thinking about studying?",
+                    "next_options": [
+                        {
+                            "player": "I’m interested in engineering. I like building things.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "Engineering is a great field. Keep working hard, and you’ll get there."
+                        },
+                        {
+                            "player": "I’m thinking about studying business so I can start my own company.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s a smart choice. Studying business will give you the tools to build something of your own."
+                        }
+                    ]
+                },
+                {
+                    "player": "I’m not sure yet. I’m still figuring it out.",
+                    "npc_response": "That’s okay. It’s important to take your time and explore your options. What’s something you’re interested in?",
+                    "next_options": [
+                        {
+                            "player": "I’m interested in helping people, so maybe something in healthcare.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a noble goal. Healthcare is a rewarding field where you can make a difference."
+                        },
+                        {
+                            "player": "I’m not sure. I have a lot of different interests.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s normal. Take your time to explore different fields and find what excites you."
+                        }
+                    ]
+                },
+                {
+                    "player": "I haven’t thought about it at all.",
+                    "npc_response": "It’s never too early to start thinking about your future. What do you enjoy doing?",
+                    "next_options": [
+                        {
+                            "player": "I like working with my hands, so maybe a trade or craft.",
+                            "result": "Right – Gain education stat",
+                            "npc_response": "That’s a great path. Trades are valuable, and you can build a solid career with those skills."
+                        },
+                        {
+                            "player": "I don’t know. I haven’t found anything I’m passionate about yet.",
+                            "result": "Neutral – Add both or remove both",
+                            "npc_response": "That’s okay. Keep exploring your options. You’ll find something that excites you in time."
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
+
+
+
+
+
+]
+}
