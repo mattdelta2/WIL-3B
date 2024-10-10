@@ -9,10 +9,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: acee840a36510b644af6a27febe27ebe
   - enabled: 1
-    path: Assets/Scenes/Gran house.unity
+    path: Assets/Scenes/Gang Area.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Gang Area.unity
+    path: Assets/Scenes/Grans House.unity
     guid: de9f0fb27a8f96c4bb2c885f6cfeedd5
   - enabled: 1
     path: Assets/Scenes/School.unity
