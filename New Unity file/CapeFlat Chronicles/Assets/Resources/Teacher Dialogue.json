@@ -14,12 +14,14 @@
                                 {
                                     "player": "Math, because it feels like it’s building a foundation for my future.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s the spirit. You’ll need that kind of mindset to succeed."
+                                    "npc_response": "That’s the spirit. You’ll need that kind of mindset to succeed.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m still figuring it out, but I’m doing my best.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "You don’t need to have it all figured out yet, but keep pushing forward."
+                                    "npc_response": "You don’t need to have it all figured out yet, but keep pushing forward.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -30,12 +32,14 @@
                                 {
                                     "player": "I guess I’ll end up like everyone else around here, stuck.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "That’s exactly what will happen if you don’t change your mindset."
+                                    "npc_response": "That’s exactly what will happen if you don’t change your mindset.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m just trying to survive, miss.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Surviving isn’t enough. You have to think about what comes next."
+                                    "npc_response": "Surviving isn’t enough. You have to think about what comes next.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -46,12 +50,14 @@
                                 {
                                     "player": "It’s hard to see the point sometimes.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "If you can’t see the point, then you need to change your perspective."
+                                    "npc_response": "If you can’t see the point, then you need to change your perspective.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I feel overwhelmed by everything.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s normal, but don’t let it stop you from moving forward."
+                                    "npc_response": "That’s normal, but don’t let it stop you from moving forward.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -72,12 +78,14 @@
                                 {
                                     "player": "Something in engineering, maybe. I like building things.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s a great goal. Engineering can open many doors for you."
+                                    "npc_response": "That’s a great goal. Engineering can open many doors for you.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m not sure yet, but I’ll figure it out.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s okay. What matters is that you’re thinking about the future."
+                                    "npc_response": "That’s okay. What matters is that you’re thinking about the future.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -88,12 +96,14 @@
                                 {
                                     "player": "I don’t see the point. Nothing ever changes here.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Nothing changes because too many people think like that. Be different."
+                                    "npc_response": "Nothing changes because too many people think like that. Be different.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "It feels like setting goals won’t matter.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Every goal matters. Without them, you’ll never move forward."
+                                    "npc_response": "Every goal matters. Without them, you’ll never move forward.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I have some ideas, but I’m not sure how to make them happen.",
@@ -102,12 +112,14 @@
                                         {
                                             "player": "I want to start my own business one day.",
                                             "result": "Right – Gain education stat",
-                                            "npc_response": "That’s an excellent idea. Education will give you the tools to make that happen."
+                                            "npc_response": "That’s an excellent idea. Education will give you the tools to make that happen.",
+                                            "nextLineIndex" : -1
                                         },
                                         {
                                             "player": "I want to help people in the community.",
                                             "result": "Neutral – Add both or remove both",
-                                            "npc_response": "Helping others is a noble goal. But you need to help yourself first."
+                                            "npc_response": "Helping others is a noble goal. But you need to help yourself first.",
+                                            "nextLineIndex" : -1
                                         }
                                     ]
                                 }
@@ -130,12 +142,14 @@
                                 {
                                     "player": "I’m having trouble with math. It’s so hard to understand.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "Math can be tough, but once you break it down, it gets easier. Don’t give up."
+                                    "npc_response": "Math can be tough, but once you break it down, it gets easier. Don’t give up.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m just feeling overwhelmed by everything.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s a common feeling, but don’t let it paralyze you. Take things one step at a time."
+                                    "npc_response": "That’s a common feeling, but don’t let it paralyze you. Take things one step at a time.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -146,12 +160,14 @@
                                 {
                                     "player": "I’ve got friends pulling me in the wrong direction.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Those kinds of friends will drag you down. You need to focus on what’s best for you."
+                                    "npc_response": "Those kinds of friends will drag you down. You need to focus on what’s best for you.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m just trying to keep my head above water.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s all you can do sometimes, but don’t lose sight of what’s important."
+                                    "npc_response": "That’s all you can do sometimes, but don’t lose sight of what’s important.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -162,12 +178,14 @@
                                 {
                                     "player": "I feel like I’m always behind everyone else.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Everyone moves at their own pace. Don’t compare yourself to others."
+                                    "npc_response": "Everyone moves at their own pace. Don’t compare yourself to others.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’ve made too many mistakes to turn things around.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Mistakes don’t define you. What you do after them does."
+                                    "npc_response": "Mistakes don’t define you. What you do after them does.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -188,12 +206,14 @@
                                 {
                                     "player": "I’ve started using a planner to keep track of everything.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s an excellent strategy. Keep it up and you’ll notice the difference."
+                                    "npc_response": "That’s an excellent strategy. Keep it up and you’ll notice the difference.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m just taking it day by day.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That works for now, but as things get busier, you’ll need a better system."
+                                    "npc_response": "That works for now, but as things get busier, you’ll need a better system.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -204,12 +224,14 @@
                                 {
                                     "player": "I’m distracted by things outside of school.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Distractions are the enemy of success. You need to cut them out if you want to move forward."
+                                    "npc_response": "Distractions are the enemy of success. You need to cut them out if you want to move forward.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I just don’t know how to balance everything.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "It’s a skill that takes time to develop, but you need to start now."
+                                    "npc_response": "It’s a skill that takes time to develop, but you need to start now.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -220,12 +242,14 @@
                                 {
                                     "player": "I’m not motivated enough to care about my schedule.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Motivation is important, but sometimes you have to create discipline. Even when you don’t feel like it, you need to stick to a routine."
+                                    "npc_response": "Motivation is important, but sometimes you have to create discipline. Even when you don’t feel like it, you need to stick to a routine.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I don’t have a clear plan for what I’m working towards.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s part of the problem. You need a vision for your future. Once you know what you’re working toward, managing your time becomes easier."
+                                    "npc_response": "That’s part of the problem. You need a vision for your future. Once you know what you’re working toward, managing your time becomes easier.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -246,12 +270,14 @@
                                 {
                                     "player": "I’m thinking about studying medicine. I want to help people.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s a noble goal. Medicine requires dedication, but I believe you have the potential."
+                                    "npc_response": "That’s a noble goal. Medicine requires dedication, but I believe you have the potential.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m still exploring my options.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s okay. Take your time to explore your interests, but don’t lose focus."
+                                    "npc_response": "That’s okay. Take your time to explore your interests, but don’t lose focus.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -262,12 +288,14 @@
                                 {
                                     "player": "I don’t know. Maybe I’ll just work with my hands, like construction or mechanics.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "There’s nothing wrong with a trade. If that’s what you want, make sure you’re skilled and dedicated."
+                                    "npc_response": "There’s nothing wrong with a trade. If that’s what you want, make sure you’re skilled and dedicated.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m not sure if I care enough to make a plan.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "That kind of thinking will leave you stuck. You need to take control of your future."
+                                    "npc_response": "That kind of thinking will leave you stuck. You need to take control of your future.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -278,12 +306,14 @@
                                 {
                                     "player": "I want to have a stable job and be supporting my family.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s a good goal. Start building the foundation for that now."
+                                    "npc_response": "That’s a good goal. Start building the foundation for that now.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m not sure. I’ll figure it out along the way.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Figuring it out as you go is risky. It’s better to have a plan, even if it changes later."
+                                    "npc_response": "Figuring it out as you go is risky. It’s better to have a plan, even if it changes later.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -304,12 +334,14 @@
                                 {
                                     "player": "I failed a math test, but I reviewed my mistakes, and I’m ready for the next one.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s exactly how you should approach it. Mistakes are just steps toward success."
+                                    "npc_response": "That’s exactly how you should approach it. Mistakes are just steps toward success.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I didn’t do well on a project, but I know what to improve.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s a healthy approach. It’s important to focus on growth, not perfection."
+                                    "npc_response": "That’s a healthy approach. It’s important to focus on growth, not perfection.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -320,12 +352,14 @@
                                 {
                                     "player": "I’ve failed too many times. I don’t think I can bounce back.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "You’re stronger than you think. The number of times you fail doesn’t matter as long as you keep trying."
+                                    "npc_response": "You’re stronger than you think. The number of times you fail doesn’t matter as long as you keep trying.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I just don’t see the point in trying if I keep failing.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "The point is growth. Every failure is an opportunity to get better. Don’t give up."
+                                    "npc_response": "The point is growth. Every failure is an opportunity to get better. Don’t give up.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -336,12 +370,14 @@
                                 {
                                     "player": "Sometimes, but I’m more focused on moving forward.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Moving forward is good, but don’t forget to learn from the past."
+                                    "npc_response": "Moving forward is good, but don’t forget to learn from the past.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "Not really. I don’t want to dwell on my mistakes.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "If you don’t learn from your mistakes, you’re bound to repeat them."
+                                    "npc_response": "If you don’t learn from your mistakes, you’re bound to repeat them.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -362,12 +398,14 @@
                                 {
                                     "player": "I just remind myself of my goals. They keep me grounded.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s the best way to stay on track. Keep your eyes on your future."
+                                    "npc_response": "That’s the best way to stay on track. Keep your eyes on your future.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I keep my distance from people who don’t share my values.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s smart. Surrounding yourself with like-minded people will help you stay focused."
+                                    "npc_response": "That’s smart. Surrounding yourself with like-minded people will help you stay focused.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -378,12 +416,14 @@
                                 {
                                     "player": "My friends. They’re not interested in school, and it’s hard to keep up with both.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "You might need to reconsider who you’re spending time with. Friends should lift you up, not pull you down."
+                                    "npc_response": "You might need to reconsider who you’re spending time with. Friends should lift you up, not pull you down.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I just want to fit in, even if it means going along with things I shouldn’t.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Fitting in isn’t worth sacrificing your future. Think about what’s more important in the long run."
+                                    "npc_response": "Fitting in isn’t worth sacrificing your future. Think about what’s more important in the long run.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -394,12 +434,14 @@
                                 {
                                     "player": "I feel like I’m letting myself down when I give in.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s a good realization. Use that feeling to motivate you to make better choices."
+                                    "npc_response": "That’s a good realization. Use that feeling to motivate you to make better choices.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I feel like I can’t say no, even when I want to.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "Learning to say no is hard, but it’s a skill you need to build. You don’t owe anyone your future."
+                                    "npc_response": "Learning to say no is hard, but it’s a skill you need to build. You don’t owe anyone your future.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -420,12 +462,14 @@
                                 {
                                     "player": "I make sure to set aside time for studying every day.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s the key. Daily habits lead to long-term success. Keep it up."
+                                    "npc_response": "That’s the key. Daily habits lead to long-term success. Keep it up.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m still figuring out my routine, but I’m trying.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s a good start. It’s okay to adjust as you go, just make sure you stick with it."
+                                    "npc_response": "That’s a good start. It’s okay to adjust as you go, just make sure you stick with it.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -436,12 +480,14 @@
                                 {
                                     "player": "I push myself to get things done, but it’s tough.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s a good start. Building discipline means doing what needs to be done, even when you don’t feel like it."
+                                    "npc_response": "That’s a good start. Building discipline means doing what needs to be done, even when you don’t feel like it.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I tend to give up or procrastinate when I’m not motivated.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "That’s where discipline comes in. You can’t rely on feeling motivated all the time. Discipline will help you push through those moments."
+                                    "npc_response": "That’s where discipline comes in. You can’t rely on feeling motivated all the time. Discipline will help you push through those moments.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -452,12 +498,14 @@
                                 {
                                     "player": "I could start studying at the same time every day.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s a great way to start. Consistency is key, and over time it will become a natural part of your routine."
+                                    "npc_response": "That’s a great way to start. Consistency is key, and over time it will become a natural part of your routine.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m not sure, but I’ll think about it.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "It’s okay to start small. The important thing is that you’re thinking about it and taking steps in the right direction."
+                                    "npc_response": "It’s okay to start small. The important thing is that you’re thinking about it and taking steps in the right direction.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -478,12 +526,14 @@
                                 {
                                     "player": "I’ve set some personal goals for my grades and stick to a study schedule.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s a smart approach. Goals give you direction, and a schedule keeps you disciplined."
+                                    "npc_response": "That’s a smart approach. Goals give you direction, and a schedule keeps you disciplined.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I’m just taking it one day at a time.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That works for now, but make sure you have a clear plan for the future. It will help you stay on course."
+                                    "npc_response": "That works for now, but make sure you have a clear plan for the future. It will help you stay on course.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -494,12 +544,14 @@
                                 {
                                     "player": "Friends and life outside of school. It feels like school is the least of my worries.",
                                     "result": "Wrong – Gain gang stat",
-                                    "npc_response": "That’s dangerous thinking. If you don’t focus on school now, you’ll regret it later. Education gives you options."
+                                    "npc_response": "That’s dangerous thinking. If you don’t focus on school now, you’ll regret it later. Education gives you options.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "Just everything. I feel like I’m being pulled in too many directions.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "That’s understandable, but you need to start setting boundaries. Not everything requires your attention."
+                                    "npc_response": "That’s understandable, but you need to start setting boundaries. Not everything requires your attention.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         },
@@ -510,12 +562,14 @@
                                 {
                                     "player": "I’ll try to focus more on my studies, even if it means cutting back on other things.",
                                     "result": "Right – Gain education stat",
-                                    "npc_response": "That’s the right mindset. You’ll find that making small changes now will lead to big results later."
+                                    "npc_response": "That’s the right mindset. You’ll find that making small changes now will lead to big results later.",
+                                    "nextLineIndex" : -1
                                 },
                                 {
                                     "player": "I guess I’ll figure it out as I go.",
                                     "result": "Neutral – Add both or remove both",
-                                    "npc_response": "Take your time, but don’t let things pile up. The sooner you find balance, the better."
+                                    "npc_response": "Take your time, but don’t let things pile up. The sooner you find balance, the better.",
+                                    "nextLineIndex" : -1
                                 }
                             ]
                         }
@@ -536,12 +590,14 @@
                         {
                             "player": "I’ve been studying harder and seeing results, especially in math.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s fantastic. Hard work leads to results, and those results will continue to build your confidence."
+                            "npc_response": "That’s fantastic. Hard work leads to results, and those results will continue to build your confidence.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I’m focusing on small wins, like getting my homework done on time.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s a smart approach. Each small victory builds toward bigger ones."
+                            "npc_response": "That’s a smart approach. Each small victory builds toward bigger ones.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -552,12 +608,14 @@
                         {
                             "player": "I feel like I’m always behind everyone else.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "It’s important to remember that everyone has their own pace. Don’t compare yourself to others, focus on your own growth."
+                            "npc_response": "It’s important to remember that everyone has their own pace. Don’t compare yourself to others, focus on your own growth.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I don’t think I’m good enough to succeed.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s not true. You have the ability to succeed, but you need to start believing that."
+                            "npc_response": "That’s not true. You have the ability to succeed, but you need to start believing that.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -568,12 +626,14 @@
                         {
                             "player": "I feel prepared when I study hard, but not always.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s normal. The more you prepare, the more confident you’ll feel."
+                            "npc_response": "That’s normal. The more you prepare, the more confident you’ll feel.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I don’t feel prepared for much.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "Then it’s time to start preparing. Confidence will come when you’ve put in the work."
+                            "npc_response": "Then it’s time to start preparing. Confidence will come when you’ve put in the work.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 }
@@ -594,12 +654,14 @@
                         {
                             "player": "I failed a test, but I realized I needed to change my study habits.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s an important realization. Adjusting your habits will lead to better results in the future."
+                            "npc_response": "That’s an important realization. Adjusting your habits will lead to better results in the future.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I missed a homework deadline, but I’ve become more organized since then.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s good. Organization is key to staying on top of your responsibilities."
+                            "npc_response": "That’s good. Organization is key to staying on top of your responsibilities.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -610,12 +672,14 @@
                         {
                             "player": "It feels like no matter how hard I try, I can’t keep up.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "That mindset will hold you back. Everyone faces challenges, but the key is persistence. Don’t give up."
+                            "npc_response": "That mindset will hold you back. Everyone faces challenges, but the key is persistence. Don’t give up.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I’m trying, but it feels like I’m not making any progress.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "Progress isn’t always obvious, but as long as you’re putting in the effort, you’re moving forward."
+                            "npc_response": "Progress isn’t always obvious, but as long as you’re putting in the effort, you’re moving forward.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -626,12 +690,14 @@
                         {
                             "player": "I guess I just repeat the same mistakes.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "Exactly. Reflection is a crucial part of growth. Take time to think about what went wrong so you can improve."
+                            "npc_response": "Exactly. Reflection is a crucial part of growth. Take time to think about what went wrong so you can improve.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I don’t think about it much. I just move on.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "That’s dangerous. If you don’t learn from your mistakes, they’ll keep holding you back."
+                            "npc_response": "That’s dangerous. If you don’t learn from your mistakes, they’ll keep holding you back.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 }
@@ -652,12 +718,14 @@
                         {
                             "player": "I had to deal with a family issue that made it hard to focus on school, but I pushed through.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s a great example of resilience. Life will always throw challenges at you, but as long as you keep pushing forward, you’ll be fine."
+                            "npc_response": "That’s a great example of resilience. Life will always throw challenges at you, but as long as you keep pushing forward, you’ll be fine.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I’ve had trouble with my grades, but I’ve kept working on them.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s good. Resilience isn’t about never facing challenges—it’s about overcoming them."
+                            "npc_response": "That’s good. Resilience isn’t about never facing challenges—it’s about overcoming them.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -668,12 +736,14 @@
                         {
                             "player": "I keep facing failures, and it feels like I’m never getting anywhere.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "Failure is part of the process. Each failure brings you closer to success, but only if you keep going."
+                            "npc_response": "Failure is part of the process. Each failure brings you closer to success, but only if you keep going.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I’m just tired of always having to deal with problems.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "Everyone gets tired sometimes, but resilience is about finding the strength to keep going, even when you’re exhausted."
+                            "npc_response": "Everyone gets tired sometimes, but resilience is about finding the strength to keep going, even when you’re exhausted.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -684,12 +754,14 @@
                         {
                             "player": "I try to stay positive and look for solutions.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s a great approach. Positivity and problem-solving are key to building resilience."
+                            "npc_response": "That’s a great approach. Positivity and problem-solving are key to building resilience.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I just take things as they come and deal with them one at a time.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s a good starting point, but try to think about how you can actively build resilience over time."
+                            "npc_response": "That’s a good starting point, but try to think about how you can actively build resilience over time.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 }
@@ -710,12 +782,14 @@
                         {
                             "player": "I missed a deadline for a project, but I owned up to it and asked for help to get back on track.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s a mature response. Asking for help when you need it shows strength, not weakness."
+                            "npc_response": "That’s a mature response. Asking for help when you need it shows strength, not weakness.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I made a mistake with a group project, but I admitted it and helped fix it.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s the right thing to do. Taking responsibility means owning up to your mistakes and doing what you can to make things right."
+                            "npc_response": "That’s the right thing to do. Taking responsibility means owning up to your mistakes and doing what you can to make things right.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -726,12 +800,14 @@
                         {
                             "player": "I guess the problem gets worse.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "Exactly. Avoiding responsibility only delays the inevitable, and it often makes things harder in the long run."
+                            "npc_response": "Exactly. Avoiding responsibility only delays the inevitable, and it often makes things harder in the long run.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "It feels easier to avoid it than to deal with the consequences.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "It might seem easier at first, but avoiding responsibility will only create bigger problems down the road."
+                            "npc_response": "It might seem easier at first, but avoiding responsibility will only create bigger problems down the road.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -742,12 +818,14 @@
                         {
                             "player": "I try to fix it if I can, but I’m not always great at owning up to it.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s a good start, but owning up to mistakes is an important part of growth."
+                            "npc_response": "That’s a good start, but owning up to mistakes is an important part of growth.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I usually just ignore it and hope it goes away.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "That’s not a good approach. Problems rarely go away on their own—you need to take responsibility and deal with them."
+                            "npc_response": "That’s not a good approach. Problems rarely go away on their own—you need to take responsibility and deal with them.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 }
@@ -768,12 +846,14 @@
                         {
                             "player": "I’ve been struggling with a subject, so I asked a classmate for help.",
                             "result": "Right – Gain education stat",
-                            "npc_response": "That’s a smart move. Collaborating with others can help you understand things from a new perspective."
+                            "npc_response": "That’s a smart move. Collaborating with others can help you understand things from a new perspective.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I needed help organizing my time, so I asked my parents for advice.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "That’s great. Reaching out to people who care about you is a good way to get the support you need."
+                            "npc_response": "That’s great. Reaching out to people who care about you is a good way to get the support you need.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
@@ -784,12 +864,14 @@
                         {
                             "player": "Because I should be able to handle things on my own.",
                             "result": "Wrong – Gain gang stat",
-                            "npc_response": "Everyone needs help sometimes. It doesn’t make you weak—it shows you’re smart enough to know when you need assistance."
+                            "npc_response": "Everyone needs help sometimes. It doesn’t make you weak—it shows you’re smart enough to know when you need assistance.",
+                            "nextLineIndex" : -1
                         },
                         {
                             "player": "I feel like I should be able to figure things out by myself.",
                             "result": "Neutral – Add both or remove both",
-                            "npc_response": "Figuring things out on your own is admirable, but don’t be afraid to ask for help when you’re stuck. No one expects you to do it all alone."
+                            "npc_response": "Figuring things out on your own is admirable, but don’t be afraid to ask for help when you’re stuck. No one expects you to do it all alone.",
+                            "nextLineIndex" : -1
                         }
                     ]
                 },
