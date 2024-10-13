@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Dictionary<string, bool> dialogueProgress = new Dictionary<string, bool>();
+    public Dictionary<string, int> npcDialogueProgress = new Dictionary<string, int>();
 
     void Awake()
     {
@@ -19,16 +19,30 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void RecordDialogue(string npcName)
+    public void RecordDialogueProgress(string npcName, int lineIndex)
     {
-        if (!dialogueProgress.ContainsKey(npcName))
+        if (npcDialogueProgress.ContainsKey(npcName))
         {
-            dialogueProgress[npcName] = true;  // Record that dialogue has been completed
+            npcDialogueProgress[npcName] = lineIndex;  // Update the progress
+        }
+        else
+        {
+            npcDialogueProgress.Add(npcName, lineIndex);  // Record progress for the NPC dialogue
         }
     }
 
+
     public bool HasCompletedDialogue(string npcName)
     {
-        return dialogueProgress.ContainsKey(npcName) && dialogueProgress[npcName];
+        // If progress is 0, it means the dialogue has not been started or completed.
+        return npcDialogueProgress.ContainsKey(npcName) && npcDialogueProgress[npcName] > 0;
+    }
+
+
+    public int GetDialogueProgress(string npcName)
+    {
+        if (npcDialogueProgress.ContainsKey(npcName))
+            return npcDialogueProgress[npcName];
+        return 0; // Default to the beginning if no progress recorded
     }
 }
