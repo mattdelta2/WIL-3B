@@ -2196,7 +2196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6362389012464183757, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_Name
-      value: NPCGran
+      value: Teacher
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
