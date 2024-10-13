@@ -13,7 +13,6 @@ public class Dialogue
 public class Line
 {
     public string npc;
-    public string player;
     public List<Option> options;
 }
 
@@ -23,6 +22,7 @@ public class Option
     public string player;
     public string result;
     public string npc_response;
+    public int nextLineIndex; // Add this to control which line comes next
 }
 
 [System.Serializable]

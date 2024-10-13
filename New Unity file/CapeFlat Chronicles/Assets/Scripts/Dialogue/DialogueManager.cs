@@ -118,20 +118,30 @@ public class DialogueManager : MonoBehaviour
 
     public void ChooseOption(int index)
     {
-        Debug.Log("Choosing option: " + index);
+        Debug.Log("Choosing option: " + (index + 1)); // Display choice number starting from 1
         Debug.Log("Current line index before increment: " + currentLineIndex);
         Debug.Log("Total lines available: " + currentLines.Count);
 
-        // Check if the chosen option leads to another line in the dialogue
-        if (currentLineIndex < currentLines.Count - 1)
+        if (index < currentLine.options.Count)
         {
-            currentLineIndex++;
-            DisplayDialogue();
-        }
-        else
-        {
-            Debug.Log("Ending dialogue.");
-            EndDialogue();
+            // Move to the next line based on the chosen option
+            string npcResponse = currentLine.options[index].npc_response;
+            if (!string.IsNullOrEmpty(npcResponse))
+            {
+                npcTextUI.text = npcResponse; // Update the dialogue with the NPC's response
+            }
+
+            // Check if there's a next line
+            if (currentLineIndex + 1 < currentLines.Count)
+            {
+                currentLineIndex++;
+                DisplayDialogue();
+            }
+            else
+            {
+                Debug.Log("Ending dialogue.");
+                EndDialogue(); // End dialogue when no valid next line
+            }
         }
     }
 
