@@ -110,7 +110,7 @@ public class DialogueManager : MonoBehaviour
 
             // Set up the button's onClick event
             Button buttonComponent = newButton.GetComponent<Button>();
-            int choiceIndex = i; // Capture the index for the button click
+            int choiceIndex = i; // Correctly index choices starting from 0
             buttonComponent.onClick.RemoveAllListeners(); // Ensure no old listeners
             buttonComponent.onClick.AddListener(() => ChooseOption(choiceIndex));
         }
@@ -122,16 +122,26 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Current line index before increment: " + currentLineIndex);
         Debug.Log("Total lines available: " + currentLines.Count);
 
-        if (index < currentLine.options.Count)
+        if (currentLine.options != null && currentLine.options.Count > index)
         {
-            // Move to the next line based on the chosen option
             string npcResponse = currentLine.options[index].npc_response;
+
             if (!string.IsNullOrEmpty(npcResponse))
             {
-                npcTextUI.text = npcResponse; // Update the dialogue with the NPC's response
+                // Show the NPC response
+                npcTextUI.text = npcResponse;
+                Debug.Log("NPC says: " + npcResponse);
+
+                // Check if there are additional options after the NPC response
+                if (currentLine.options[index].next_options != null && currentLine.options[index].next_options.Count > 0)
+                {
+                    List<Option> nextOptions = currentLine.options[index].next_options;
+                    DisplayNextOptions(nextOptions);
+                    return;
+                }
             }
 
-            // Check if there's a next line
+            // Move to the next line if available
             if (currentLineIndex + 1 < currentLines.Count)
             {
                 currentLineIndex++;
@@ -142,6 +152,78 @@ public class DialogueManager : MonoBehaviour
                 Debug.Log("Ending dialogue.");
                 EndDialogue(); // End dialogue when no valid next line
             }
+        }
+    }
+
+    void DisplayNextOptions(List<Option> nextOptions)
+    {
+        // Clear previous buttons safely
+        if (buttonContainer != null)
+        {
+            for (int i = buttonContainer.childCount - 1; i >= 0; i--)
+            {
+                Transform child = buttonContainer.GetChild(i);
+                if (child != null)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+
+        // Create new buttons for the next options
+        for (int i = 0; i < nextOptions.Count; i++)
+        {
+            GameObject newButton = Instantiate(buttonPrefab, buttonContainer);
+            RectTransform buttonRect = newButton.GetComponent<RectTransform>();
+            buttonRect.localScale = Vector3.one;
+
+            // Set button properties to ensure text fits properly
+            LayoutElement layoutElement = newButton.GetComponent<LayoutElement>();
+            if (layoutElement == null)
+            {
+                layoutElement = newButton.AddComponent<LayoutElement>();
+            }
+
+            layoutElement.minHeight = 60;  // Adjust the height as needed
+            layoutElement.preferredHeight = 60;
+
+            // Set the button text
+            TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = nextOptions[i].player;
+            buttonText.fontSize = 26; // Adjust font size for readability
+
+            // Adjust button width based on the text length to avoid truncation
+            float textWidth = buttonText.preferredWidth;
+            buttonRect.sizeDelta = new Vector2(Mathf.Max(200, textWidth + 20), buttonRect.sizeDelta.y);
+
+            // Set up the button's onClick event
+            Button buttonComponent = newButton.GetComponent<Button>();
+            int choiceIndex = i; // Correctly index choices starting from 0
+            buttonComponent.onClick.RemoveAllListeners(); // Ensure no old listeners
+            buttonComponent.onClick.AddListener(() => ChooseOptionFromNextOptions(nextOptions, choiceIndex));
+        }
+    }
+
+    void ChooseOptionFromNextOptions(List<Option> nextOptions, int index)
+    {
+        Debug.Log("Choosing next option: " + (index + 1));
+        string npcResponse = nextOptions[index].npc_response;
+        if (!string.IsNullOrEmpty(npcResponse))
+        {
+            npcTextUI.text = npcResponse;
+            Debug.Log("NPC says: " + npcResponse);
+        }
+
+        // If there are more options after this, display them. Otherwise, end the dialogue.
+        if (currentLineIndex + 1 < currentLines.Count)
+        {
+            currentLineIndex++;
+            DisplayDialogue();
+        }
+        else
+        {
+            Debug.Log("Ending dialogue.");
+            EndDialogue();
         }
     }
 
