@@ -4,7 +4,6 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Collections;
 
-
 public class DialogueManager : MonoBehaviour
 {
     public GameObject buttonPrefab; // Prefab for the choice button
@@ -15,11 +14,12 @@ public class DialogueManager : MonoBehaviour
     private Line currentLine;
     private int currentLineIndex = 0;
     private List<Line> currentLines;
-
+    public PlayerMovement playerMovement;
     public DialogueLoader dialogueLoader; // Reference to DialogueLoader
 
     public void StartDialogue(string dialogueTitle)
     {
+        playerMovement.SetCanMove(false);
         CreateDialoguePanel(); // Dynamically create the panel
 
         Dialogue dialogue = dialogueLoader.GetDialogueByTitle(dialogueTitle);
@@ -40,7 +40,7 @@ public class DialogueManager : MonoBehaviour
         // Add and set RectTransform
         RectTransform panelRect = dialoguePanel.AddComponent<RectTransform>();
         panelRect.sizeDelta = new Vector2(600, 200);
-        panelRect.anchoredPosition = new Vector2(0, 150); // Adjusted position to be above the buttons
+        panelRect.anchoredPosition = new Vector2(0, -209); // Adjusted position to be above the buttons
         panelRect.anchorMin = new Vector2(0.5f, 0.5f);
         panelRect.anchorMax = new Vector2(0.5f, 0.5f);
         panelRect.pivot = new Vector2(0.5f, 0.5f);
@@ -105,6 +105,14 @@ public class DialogueManager : MonoBehaviour
             TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
             buttonText.text = currentLine.options[i].player;
             buttonText.fontSize = 26; // Adjust font size for readability
+            buttonText.color = Color.white; // Set button text color to white
+
+            // Set the button background color to black
+            Image buttonImage = newButton.GetComponent<Image>();
+            if (buttonImage != null)
+            {
+                buttonImage.color = Color.black;
+            }
 
             // Adjust button width based on the text length to avoid truncation
             float textWidth = buttonText.preferredWidth;
@@ -117,6 +125,7 @@ public class DialogueManager : MonoBehaviour
             buttonComponent.onClick.AddListener(() => ChooseOption(choiceIndex));
         }
     }
+
 
     public void ChooseOption(int index)
     {
@@ -136,33 +145,104 @@ public class DialogueManager : MonoBehaviour
             }
 
             // Delay the next step to allow the player to see the NPC response
-            StartCoroutine(ProceesToNextLine(index));
+            StartCoroutine(ProceedToNextLine(index));
         }
     }
 
-    private IEnumerator ProceesToNextLine(int index)
+    private IEnumerator ProceedToNextLine(int index)
     {
+        // Wait for a brief moment to display the NPC response (e.g., 1.5 seconds)
+        yield return new WaitForSeconds(0.5f);
 
-    // Wait for a brief moment to display the NPC response (e.g., 1.5 seconds)
-    yield return new WaitForSeconds(1.5f);
-
-    // Move to the next line if specified
-    int nextLineIndex = currentLine.options[index].nextLineIndex;
-    if (nextLineIndex >= 0 && nextLineIndex < currentLines.Count)
-    {
-        currentLineIndex = nextLineIndex;
-        DisplayDialogue();
+        // Check if there are next options to display
+        if (currentLine.options[index].next_options != null && currentLine.options[index].next_options.Count > 0)
+        {
+            DisplayNextOptions(currentLine.options[index].next_options);
+        }
+        else
+        {
+            // Move to the next line if specified
+            int nextLineIndex = currentLine.options[index].nextLineIndex;
+            if (nextLineIndex >= 0 && nextLineIndex < currentLines.Count)
+            {
+                currentLineIndex = nextLineIndex;
+                DisplayDialogue();
+            }
+            else
+            {
+                Debug.Log("Ending dialogue.");
+                EndDialogue(); // End dialogue when no valid next line
+            }
+        }
     }
-    else
+
+    void DisplayNextOptions(List<Option> nextOptions)
     {
+        // Clear previous buttons safely
+        if (buttonContainer != null)
+        {
+            for (int i = buttonContainer.childCount - 1; i >= 0; i--)
+            {
+                Transform child = buttonContainer.GetChild(i);
+                if (child != null)
+                {
+                    Destroy(child.gameObject);
+                }
+            }
+        }
+
+        // Create new buttons for the next options
+        for (int i = 0; i < nextOptions.Count; i++)
+        {
+            GameObject newButton = Instantiate(buttonPrefab, buttonContainer);
+            RectTransform buttonRect = newButton.GetComponent<RectTransform>();
+            buttonRect.localScale = Vector3.one;
+
+            // Set button properties to ensure text fits properly
+            LayoutElement layoutElement = newButton.GetComponent<LayoutElement>();
+            if (layoutElement == null)
+            {
+                layoutElement = newButton.AddComponent<LayoutElement>();
+            }
+
+            layoutElement.minHeight = 60;  // Adjust the height as needed
+            layoutElement.preferredHeight = 60;
+
+            // Set the button text
+            TextMeshProUGUI buttonText = newButton.GetComponentInChildren<TextMeshProUGUI>();
+            buttonText.text = nextOptions[i].player;
+            buttonText.fontSize = 26; // Adjust font size for readability
+
+            // Adjust button width based on the text length to avoid truncation
+            float textWidth = buttonText.preferredWidth;
+            buttonRect.sizeDelta = new Vector2(Mathf.Max(200, textWidth + 20), buttonRect.sizeDelta.y);
+
+            // Set up the button's onClick event
+            Button buttonComponent = newButton.GetComponent<Button>();
+            int choiceIndex = i; // Correctly index choices starting from 0
+            buttonComponent.onClick.RemoveAllListeners(); // Ensure no old listeners
+            buttonComponent.onClick.AddListener(() => ChooseOptionFromNextOptions(nextOptions, choiceIndex));
+        }
+    }
+
+    void ChooseOptionFromNextOptions(List<Option> nextOptions, int index)
+    {
+        Debug.Log("Choosing next option: " + (index + 1));
+        string npcResponse = nextOptions[index].npc_response;
+        if (!string.IsNullOrEmpty(npcResponse))
+        {
+            npcTextUI.text = npcResponse;
+            Debug.Log("NPC says: " + npcResponse);
+        }
+
+        // If no more options are available, end the dialogue
         Debug.Log("Ending dialogue.");
-        EndDialogue(); // End dialogue when no valid next line
+        EndDialogue();
     }
-    }
-
 
     void EndDialogue()
     {
+        playerMovement.SetCanMove(true);
         if (npcTextUI != null)
         {
             npcTextUI.text = ""; // Clear the NPC text

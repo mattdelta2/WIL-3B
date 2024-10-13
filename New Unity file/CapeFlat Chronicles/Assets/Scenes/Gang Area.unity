@@ -679,6 +679,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 453085365}
   smoothing: 1
+--- !u!114 &548878645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2566120992909346566, guid: 4c13b5d2adffc0e4b8f8c1a8c67395a9, type: 3}
+  m_PrefabInstance: {fileID: 7851468915498147718}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c554d8c5ed40b24c8a1b1fb230e0da3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &576171594
 GameObject:
   m_ObjectHideFlags: 0
@@ -788,6 +799,7 @@ MonoBehaviour:
   buttonPrefab: {fileID: 4405816016446729714, guid: 22b73df814916404a806613d8937435e, type: 3}
   canvas: {fileID: 1104730019}
   buttonContainer: {fileID: 249262823}
+  playerMovement: {fileID: 548878645}
   dialogueLoader: {fileID: 1108096141}
 --- !u!4 &632907503
 Transform:

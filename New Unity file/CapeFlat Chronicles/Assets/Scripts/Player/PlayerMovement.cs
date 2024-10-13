@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     private NPCController nearbyNPC;  // Reference to the nearby NPC
+    private bool canMove = true;  // Flag to control player movement
 
     void Start()
     {
@@ -15,9 +16,16 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Capture player movement input
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        if (canMove)
+        {
+            // Capture player movement input
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.y = Input.GetAxisRaw("Vertical");
+        }
+        else
+        {
+            movement = Vector2.zero; // Stop player movement
+        }
 
         // Detect interaction input (e.g., pressing "E")
         if (Input.GetKeyDown(KeyCode.E) && nearbyNPC != null)
@@ -51,5 +59,11 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("Player exited NPC area: " + nearbyNPC.npcName);
             nearbyNPC = null;
         }
+    }
+
+    // Method to set whether the player can move or not
+    public void SetCanMove(bool value)
+    {
+        canMove = value;
     }
 }

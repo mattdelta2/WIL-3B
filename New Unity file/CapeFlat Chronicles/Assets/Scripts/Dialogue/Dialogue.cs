@@ -23,8 +23,9 @@ public class Option
     public string result;
     public string npc_response;
     public int nextLineIndex; // Add this to control which line comes next
-    
+    public List<Option> next_options; // Add this to handle branching options
 }
+
 
 
 [System.Serializable]
