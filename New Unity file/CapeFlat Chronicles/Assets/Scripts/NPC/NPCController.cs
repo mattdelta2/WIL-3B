@@ -2,31 +2,43 @@ using UnityEngine;
 
 public class NPCController : MonoBehaviour
 {
-    public string npcName;  // Name of the NPC (can be displayed in dialogues)
-    public string startDialogueTitle;  // The title of the starting dialogue (replace DialogueNode with string)
-    private SpriteRenderer childSpriteRenderer;
-    private DialogueManager dialogueManager;
+    public string npcName;
+    public TextAsset inkJSON; // Reference to the Ink JSON file for this NPC
 
-
-    void Start()
+    // This method starts the interaction and dialogue
+    public void StartInteraction()
     {
-        // Find the sprite renderer on the child capsule
-        childSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
-        dialogueManager = FindObjectOfType<DialogueManager>();
-    }
-
-    // This method can be used to trigger NPC interaction, like dialogue
-    public void Interact()
-    {
-        // Start the dialogue if not already completed
-        if (!GameManager.instance.HasCompletedDialogue(npcName))
+        // Start the dialogue using DialogueManager
+        if (DialogueManager.Instance != null)
         {
-            dialogueManager.StartDialogue(startDialogueTitle);
+            Debug.Log("Starting interaction with NPC: " + npcName);
+            DialogueManager.Instance.StartDialogue(inkJSON, npcName);
         }
         else
         {
-            Debug.Log("Player has already completed this dialogue.");
+            Debug.LogWarning("DialogueManager instance not found.");
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player entered range of NPC: " + npcName);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("Player exited range of NPC: " + npcName);
+
+            // End dialogue if player leaves the range and if dialogue is playing
+            if (DialogueManager.Instance != null && DialogueManager.Instance.IsDialoguePlaying())
+            {
+                DialogueManager.Instance.EndDialogue();
+            }
+        }
+    }
 }

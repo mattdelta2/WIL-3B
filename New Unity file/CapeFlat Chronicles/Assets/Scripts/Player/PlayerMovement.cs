@@ -27,11 +27,12 @@ public class PlayerMovement : MonoBehaviour
             movement = Vector2.zero; // Stop player movement
         }
 
-        // Detect interaction input (e.g., pressing "E")
+        // Detect interaction input (e.g., pressing "E") and call NPC interaction
         if (Input.GetKeyDown(KeyCode.E) && nearbyNPC != null)
         {
             Debug.Log("Player pressed E");
-            nearbyNPC.Interact();  // Trigger interaction with the NPC
+            nearbyNPC.StartInteraction();  // Trigger interaction with the NPC
+            SetCanMove(false);  // Stop player movement while interacting
         }
     }
 
@@ -54,7 +55,7 @@ public class PlayerMovement : MonoBehaviour
     // When the player exits the NPC's trigger area, clear the NPC reference
     void OnTriggerExit2D(Collider2D other)
     {
-        if (other.CompareTag("NPC"))
+        if (other.CompareTag("NPC") && nearbyNPC != null)
         {
             Debug.Log("Player exited NPC area: " + nearbyNPC.npcName);
             nearbyNPC = null;
