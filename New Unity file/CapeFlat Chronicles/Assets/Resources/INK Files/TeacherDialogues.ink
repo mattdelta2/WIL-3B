@@ -1,37 +1,37 @@
 // Declare the dialogue index variable
-VAR npc1DialogueIndex =0
+VAR TeacherDialogueIndex  =0
 
--> NPC_1_Dialogue_Sequence
+-> Teacher_dialogue_Sequence
 
-= NPC_1_Dialogue_Sequence
-{npc1DialogueIndex == 0: -> Why_Education_Matters}
+= Teacher_dialogue_Sequence
+{TeacherDialogueIndex  == 0: -> Why_Education_Matters}
  
-{npc1DialogueIndex == 1: -> Setting_Goals}
+{TeacherDialogueIndex  == 1: -> Setting_Goals}
 
-{npc1DialogueIndex ==2: -> Facing_Challenges}
-{npc1DialogueIndex == 3: -> Making_Choices}
-{npc1DialogueIndex == 4: -> Overcoming_Challenges}
-{npc1DialogueIndex == 5: -> Dealing_With_Setbacks}
-{npc1DialogueIndex == 6: -> Balancing_Life_And_School}
-{npc1DialogueIndex == 7: -> Finding_Motivation}
-{npc1DialogueIndex == 8: -> Dealing_With_Peer_Pressure}
-{npc1DialogueIndex == 9: -> Coping_With_Stress}
-{npc1DialogueIndex == 10: ->Building_Confidence }
-{npc1DialogueIndex == 11: -> Understanding_Empathy}
-{npc1DialogueIndex == 12: -> Building_Resilience}
-{npc1DialogueIndex == 13: -> Understanding_Emotions}
-{npc1DialogueIndex == 14: -> Setting_Priorities}
-{npc1DialogueIndex == 15: -> Time_Management_Skills}
-{npc1DialogueIndex == 16: -> Handling_Criticism}
-{npc1DialogueIndex == 17: -> Managing_Time}
-{npc1DialogueIndex == 18: -> Understanding_Personal_Strengths}
-{npc1DialogueIndex == 19: -> Managing_Expectations}
-{npc1DialogueIndex == 20: -> Dealing_With_Disappointment}
-{npc1DialogueIndex == 21: -> Building_Healthy_Habits}
-{npc1DialogueIndex == 22: -> Developing_Leadership_Skills}
-{npc1DialogueIndex == 23: -> Setting_Boundaries}
-{npc1DialogueIndex == 24: -> Developing_Healthy_Habits}
-{npc1DialogueIndex == 25: -> Building_Relationships}
+{TeacherDialogueIndex  ==2: -> Facing_Challenges}
+{TeacherDialogueIndex  == 3: -> Making_Choices}
+{TeacherDialogueIndex  == 4: -> Overcoming_Challenges}
+{TeacherDialogueIndex  == 5: -> Dealing_With_Setbacks}
+{TeacherDialogueIndex  == 6: -> Balancing_Life_And_School}
+{TeacherDialogueIndex  == 7: -> Finding_Motivation}
+{TeacherDialogueIndex  == 8: -> Dealing_With_Peer_Pressure}
+{TeacherDialogueIndex  == 9: -> Coping_With_Stress}
+{TeacherDialogueIndex  == 10: ->Building_Confidence }
+{TeacherDialogueIndex  == 11: -> Understanding_Empathy}
+{TeacherDialogueIndex  == 12: -> Building_Resilience}
+{TeacherDialogueIndex  == 13: -> Understanding_Emotions}
+{TeacherDialogueIndex  == 14: -> Setting_Priorities}
+{TeacherDialogueIndex  == 15: -> Time_Management_Skills}
+{TeacherDialogueIndex  == 16: -> Handling_Criticism}
+{TeacherDialogueIndex  == 17: -> Managing_Time}
+{TeacherDialogueIndex  == 18: -> Understanding_Personal_Strengths}
+{TeacherDialogueIndex  == 19: -> Managing_Expectations}
+{TeacherDialogueIndex  == 20: -> Dealing_With_Disappointment}
+{TeacherDialogueIndex  == 21: -> Building_Healthy_Habits}
+{TeacherDialogueIndex  == 22: -> Developing_Leadership_Skills}
+{TeacherDialogueIndex  == 23: -> Setting_Boundaries}
+{TeacherDialogueIndex  == 24: -> Developing_Healthy_Habits}
+{TeacherDialogueIndex  == 25: -> Building_Relationships}
 
 // Add more checks for additional dialogues if necessary
 
@@ -60,12 +60,12 @@ Teacher: Good. Focus will take you far. What are you enjoying most about your st
 
 = MATH
 Teacher: That’s the spirit. You’ll need that kind of mindset to succeed.
-~ npc1DialogueIndex++
+
 -> END
 
 = Unsure
 Teacher: You don’t need to have it all figured out yet, but keep pushing forward.
-~ npc1DialogueIndex++
+
 -> END
 
 = Waste_Of_Time
@@ -153,7 +153,7 @@ Teacher: Nothing changes because too many people think like that. Be different.
 = No_Matter
 Teacher: Every goal matters. Without them, you’ll never move forward.
 -> END
-
+->END
 
 //3rd dialogues
 = Facing_Challenges
@@ -219,7 +219,7 @@ Teacher: Everyone moves at their own pace. Don’t compare yourself to others.
 Teacher: Mistakes don’t define you. What you do after them does.
 -> END
 
-
+->END
 
 //Making Choices
 = Making_Choices
@@ -284,7 +284,7 @@ Teacher: Planning doesn’t guarantee success, but it does help you stay prepare
 = No_Plans
 Teacher: Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
 -> END
-
+->END
 
 //Overcoming Challenges
 = Overcoming_Challenges
@@ -350,7 +350,7 @@ Teacher: Having friends you can rely on is a great source of strength. Don’t b
 Teacher: Family support can be invaluable. Always remember that seeking help when needed is a sign of strength, not weakness.
 -> END
 
-
+->END
 //Dealing with Setbacks
 = Dealing_With_Setbacks
 Teacher: Setbacks happen to everyone, but how we react to them defines our path. How do you usually deal with setbacks?
@@ -389,7 +389,7 @@ Teacher: I understand. Doubt can be powerful, but you’re capable of more than 
 Teacher: Taking time to regroup can be wise. Sometimes, stepping away gives us the clarity we need to succeed.
 -> END
 
-
+->END
 
 
 //Balancing life and school
@@ -430,7 +430,7 @@ Teacher: I understand, but remember that everyone needs help sometimes. It’s o
 Teacher: That’s a great first step. Support from others can make all the difference when you’re feeling overwhelmed.
 -> END
 
-
+->END
 
 //Finding Motivation
 = Finding_Motivation
@@ -470,7 +470,7 @@ Teacher: It might seem pointless, but achieving even the smallest goals can give
 Teacher: That’s the spirit. Start small, and you’ll build momentum. Even tiny steps will bring you closer to your goals.
 -> END
 
-
+->END
 
 //Dealing with peer pressure
 = Dealing_With_Peer_Pressure
@@ -511,7 +511,7 @@ Teacher: That’s the attitude. It takes time, but every little bit of resistanc
 -> END
 
 
-
+->END
 
 
 //Coping with stress
@@ -554,7 +554,7 @@ Teacher: Talking to someone you trust can be one of the best ways to handle stre
 
 
 
-
+->END
 
 
 //Building Confidence
@@ -622,7 +622,7 @@ Teacher: Confidence starts within. You have to remind yourself of your strengths
 -> END
 
 
-
+->END
 
 //Understanding Empathy
 = Understanding_Empathy
@@ -689,7 +689,7 @@ Teacher: That’s a great approach. Even small acts of kindness can make a big d
 -> END    
 
 
-
+->END
 
 
 
@@ -758,7 +758,7 @@ Teacher: Time management is a crucial skill. It’s great that you’ve identifi
 Teacher: Knowing when to ask for help is a sign of strength, not weakness. Remember, no one gets through life alone.
 -> END
 
-
+->END
 
 
 //Understanding Emotions
@@ -826,7 +826,7 @@ Teacher: Friends can be a great source of comfort. It’s important to have peop
 Teacher: Family can provide support that helps you through tough times. Keep leaning on them when you need to.
 -> END
 
-
+->END
 
 //Setting Priorities
 = Setting_Priorities
@@ -854,7 +854,7 @@ Teacher: It’s helpful to come up with a plan for prioritizing. Even something 
 -> END
 
 
-
+->END
 
 //Time Management
 = Time_Management_Skills
@@ -946,7 +946,7 @@ Teacher: Creating a space dedicated to work or study could help. It doesn’t ha
 Teacher: That’s understandable. Eliminating distractions takes practice, but keep at it. Each effort makes a difference.
 -> END
 
-
+->END
 
 //Handling cristicism
 
@@ -1013,7 +1013,7 @@ Teacher: It takes a lot of courage to admit when we’re wrong, but it’s also 
 Teacher: Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
 -> END
 
-
+->END
 
 //Managing Time
 = Managing_Time
@@ -1079,7 +1079,7 @@ Teacher: Sticking to plans can be challenging, but the more you practice, the ea
 Teacher: Planning can be as simple as making a list of what you need to do. Start with a few key tasks and add more as you go.
 -> END
 
-
+->END
 
 
 
@@ -1150,7 +1150,7 @@ Teacher: Maybe it’s time to ask. Sometimes others see things in us that we don
 
 
 
-
+->END
 
 
 //Managing expectations
@@ -1219,7 +1219,7 @@ Teacher: It’s important to set expectations for yourself, even if they’re sm
 -> END
 
 
-
+->END
 
 //Dealing with Dissapointment
 = Dealing_With_Disappointment
@@ -1285,7 +1285,7 @@ Teacher: Feeling like you’ve let others down is tough, but people who care abo
 Teacher: Feeling like you let yourself down can be even harder, but remember, setbacks are a part of life. What matters is how you get back up and keep going.
 -> END
 
-
+->END
 
 
 //Building healthy habbites
@@ -1351,7 +1351,7 @@ Teacher: Eating healthier can make a big difference in how you feel. Start small
 = More_Sleep
 Teacher: Sleep is crucial for your health and well-being. Try setting a bedtime and sticking to it—it will help you feel more rested.
 -> END
-
+->END
 
 //Developing leadership
 = Developing_Leadership_Skills
@@ -1443,7 +1443,7 @@ Teacher: Teamwork is at the heart of leadership. Learning how to bring people to
 Teacher: Planning can be tough, but it’s what makes an event successful. Being detail-oriented and adaptable are key skills in leadership.
 -> END
 
-
+->END
 
 
 
@@ -1511,7 +1511,7 @@ Teacher: Being direct and honest is the best way to communicate boundaries. It l
 Teacher: Giving reasons can help others understand why the boundary is important to you. Just remember, you don’t always owe an explanation—it’s enough that it’s your boundary.
 -> END
 
-
+->END
 
 //Developing Healthy Habits
 = Developing_Healthy_Habits
@@ -1592,7 +1592,7 @@ Teacher: Procrastination is something we all struggle with. Start by tackling sm
 -> END
 
 
-
+->END
 
 
 //Building Relationships
@@ -1661,7 +1661,7 @@ Teacher: Trust is hard, especially if you’ve been hurt before. Building trust 
 
 
 
-
+->END
 
 
 
@@ -1728,3 +1728,6 @@ Teacher: Feeling blamed can trigger defensiveness, but try to focus on the issue
 = Dont_Like_Being_Wrong
 Teacher: Nobody likes being wrong, but admitting when you’re wrong is a sign of strength. It shows you’re willing to learn and grow.
 -> END
+
+
+->END
