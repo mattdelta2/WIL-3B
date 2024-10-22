@@ -10,14 +10,14 @@
     -> No_System
 
 = Focus_On_Urgent
-Teacher: That’s a good way to stay organized. Just make sure you don’t get overwhelmed by too much urgency.
+ That’s a good way to stay organized. Just make sure you don’t get overwhelmed by too much urgency.
 -> END
 
 = Easiest_First
-Teacher: Sometimes starting with the easiest task can get the ball rolling, but make sure you don’t neglect the important stuff.
+ Sometimes starting with the easiest task can get the ball rolling, but make sure you don’t neglect the important stuff.
 -> END
 
 = No_System
-Teacher: It’s helpful to come up with a plan for prioritizing. Even something simple, like a to-do list, can keep you organized.
+ It’s helpful to come up with a plan for prioritizing. Even something simple, like a to-do list, can keep you organized.
 -> END
 

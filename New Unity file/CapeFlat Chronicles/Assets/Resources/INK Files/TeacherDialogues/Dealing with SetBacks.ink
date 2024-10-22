@@ -10,11 +10,11 @@
     -> Take_Time
 
 = Learn_From_Mistakes
-Teacher: That’s a great mindset to have. Learning from your mistakes will only make you stronger in the future.
+ That’s a great mindset to have. Learning from your mistakes will only make you stronger in the future.
 -> END
 
 = Give_Up
-Teacher: Giving up may feel easier, but it won’t get you anywhere. What if you tried pushing yourself just a little further each time?
+ Giving up may feel easier, but it won’t get you anywhere. What if you tried pushing yourself just a little further each time?
 
 * I suppose I could give it a try.
     -> Give_It_A_Try
@@ -23,14 +23,14 @@ Teacher: Giving up may feel easier, but it won’t get you anywhere. What if you
     -> Doubt_Myself
 
 = Give_It_A_Try
-Teacher: That's the spirit! Even the smallest effort counts towards progress.
+ That's the spirit! Even the smallest effort counts towards progress.
 -> END
 
 = Doubt_Myself
-Teacher: I understand. Doubt can be powerful, but you’re capable of more than you realize. Believe in yourself.
+ I understand. Doubt can be powerful, but you’re capable of more than you realize. Believe in yourself.
 -> END
 
 = Take_Time
-Teacher: Taking time to regroup can be wise. Sometimes, stepping away gives us the clarity we need to succeed.
+ Taking time to regroup can be wise. Sometimes, stepping away gives us the clarity we need to succeed.
 -> END
 

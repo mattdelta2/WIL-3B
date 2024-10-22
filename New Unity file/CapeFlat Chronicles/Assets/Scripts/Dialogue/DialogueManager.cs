@@ -4,7 +4,6 @@ using Ink.Runtime;
 using System.Collections.Generic;
 using TMPro;
 using System.Collections;
-using System.Linq;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -15,12 +14,13 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI npcNameText;
     public TextMeshProUGUI dialogueText;
     public List<Button> optionButtons;
+    public TextMeshProUGUI gangStatText;
+    public TextMeshProUGUI educationStatText;
+    public NPCController nPCController;
 
     private Story currentStory;
     private bool dialogueIsPlaying;
     private bool awaitingPlayerChoice;
-    private string savedStoryState;
-    private bool dialogueEnded;
 
     [Header("Auto-Advance Settings")]
     public float autoAdvanceDelay = 2f;
@@ -40,156 +40,88 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueIsPlaying = false;
-        dialogueEnded = false;
 
-        // Check if it's the first time the game is being run
-        if (!PlayerPrefs.HasKey("FirstRun"))
+        if (dialogueUI != null)
         {
-            // Reset PlayerPrefs if this is the first run
-            ResetPlayerPrefs();
-
-            // Set a flag to indicate that the reset has been done
-            PlayerPrefs.SetInt("FirstRun", 1);
-            PlayerPrefs.Save();
+            dialogueUI.SetActive(false);
         }
 
-        // Deactivate the UI and buttons
-        if (dialogueUI != null) dialogueUI.SetActive(false);
         foreach (Button button in optionButtons)
         {
             button.gameObject.SetActive(false);
         }
     }
 
-    void ResetPlayerPrefs()
-    {
-        // Reset specific dialogue-related keys or all PlayerPrefs (choose one option)
-
-        // Option 1: Reset all PlayerPrefs
-        // PlayerPrefs.DeleteAll();
-
-        // Option 2: Reset only dialogue-related keys (replace "DialogueIndex" with actual keys)
-        PlayerPrefs.DeleteKey("TeacherDialogueIndex");
-        
-        // Add more keys if needed
-
-        PlayerPrefs.Save();  // Ensure the changes are saved
-        Debug.Log("PlayerPrefs have been reset.");
-    }
-
-
     public void StartDialogue(TextAsset inkJSON, string npcName)
     {
-        Debug.Log("Starting dialogue with NPC: " + npcName);
-
-        // Always initialize the story, even if the previous one ended
         currentStory = new Story(inkJSON.text);
-
-        // Load saved index for this NPC from PlayerPrefs or reset to 0 if it's the first interaction
-        int loadedIndex = LoadDialogueIndex(npcName);
-
-        // If no index is saved or it's the first time, ensure it's set to 0
-        if (loadedIndex == 0)
-        {
-            SetInkVariable(npcName + "DialogueIndex", 0);
-            SaveDialogueIndex(npcName, 0);
-            Debug.Log($"Set {npcName}DialogueIndex to 0 at the start.");
-        }
-        else
-        {
-            SetInkVariable(npcName + "DialogueIndex", loadedIndex);
-            Debug.Log($"{npcName} dialogue index is: {loadedIndex}");
-        }
-
-        LoadStoryState(); // Load saved state if available
-
-        // Ensure the dialogue UI is active
-        if (dialogueUI != null)
-        {
-            dialogueUI.SetActive(true);
-            Debug.Log("Dialogue UI activated for NPC: " + npcName);
-        }
-        else
-        {
-            Debug.LogError("Dialogue UI reference is missing.");
-        }
-
         dialogueIsPlaying = true;
+        dialogueUI.SetActive(true);
 
-        // Set the NPC name text
         npcNameText.text = npcName;
 
-        // Disable player movement while dialogue is active
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
         if (playerMovement != null)
         {
             playerMovement.SetCanMove(false);
         }
 
+        // Debugging stats at the start of the dialogue
+        DebugStats("Dialogue Started");
+
         ContinueStory();
     }
 
-
-
-    public void EndDialogue(string npcName)
+    public void EndDialogue()
     {
-        if (!dialogueIsPlaying || dialogueEnded) return;
+        dialogueIsPlaying = false;
 
-        dialogueEnded = true;
-        Debug.Log($"Ending dialogue for NPC: {npcName}");
+        // Debugging stats at the end of the dialogue before clearing the story
+        DebugStats("Dialogue Ended");
 
-        // Deactivate the dialogue UI
         if (dialogueUI != null)
         {
             dialogueUI.SetActive(false);
-            Debug.Log("Dialogue UI deactivated.");
         }
 
-        dialogueIsPlaying = false;
-        currentStory = null;
+        // Clear buttons for next dialogue
+        ClearButtons();
 
-        // Re-enable player movement
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
         if (playerMovement != null)
         {
             playerMovement.SetCanMove(true);
+            nPCController.currentDialogueIndex += 1;
         }
 
-        // Increment the dialogue index only when the dialogue has completely finished
-        int currentIndex = GetInkVariable(npcName + "DialogueIndex");
-        IncrementDialogueIndex(npcName, currentIndex);
+        currentStory = null;
     }
 
     private void ContinueStory()
     {
-        if (currentStory != null)
+        if (currentStory != null && currentStory.canContinue)
         {
-            if (currentStory.canContinue)
+            dialogueText.text = currentStory.Continue();
+
+            ClearButtons();
+
+            DisplayChoices();
+
+            if (currentStory.currentChoices.Count == 0)
             {
-                dialogueText.text = currentStory.Continue();
-                Debug.Log("Continuing story: " + dialogueText.text);
-
-                ClearButtons();  // Clear previous choices
-                DisplayChoices();  // Show new choices
-
-                if (currentStory.currentChoices.Count == 0)
-                {
-                    StartCoroutine(AutoAdvanceDialogue());  // Auto-advance if no choices
-                }
-                else
-                {
-                    awaitingPlayerChoice = true;
-                }
+                StartCoroutine(AutoAdvanceDialogue());
             }
             else
             {
-                EndDialogue(npcNameText.text);
+                awaitingPlayerChoice = true;
             }
+
+            // Always update stats after continuing the story
+            UpdateStats();
         }
         else
         {
-            Debug.LogWarning("No current story found.");
-            EndDialogue(npcNameText.text);
+            EndDialogue();
         }
     }
 
@@ -198,52 +130,106 @@ public class DialogueManager : MonoBehaviour
         awaitingPlayerChoice = false;
         yield return new WaitForSeconds(autoAdvanceDelay);
 
-        if (dialogueIsPlaying && currentStory.canContinue && !awaitingPlayerChoice)
+        if (dialogueIsPlaying && !awaitingPlayerChoice)
         {
             ContinueStory();
-        }
-        else
-        {
-            Debug.Log("AutoAdvanceDialogue - Ending dialogue.");
-            EndDialogue(npcNameText.text);
         }
     }
 
     private void DisplayChoices()
     {
-        if (currentStory == null) return;
+        if (currentStory == null)
+        {
+            Debug.LogError("Current story is null in DisplayChoices().");
+            return;
+        }
 
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        for (int i = 0; i < optionButtons.Count; i++)
+        if (currentChoices.Count > optionButtons.Count)
         {
-            if (i < currentChoices.Count)
-            {
-                optionButtons[i].gameObject.SetActive(true);
-                TextMeshProUGUI buttonText = optionButtons[i].GetComponentInChildren<TextMeshProUGUI>();
-                buttonText.text = currentChoices[i].text;
+            Debug.LogWarning("More choices than buttons. Limit to 3 choices.");
+        }
 
-                int choiceIndex = i;
-                optionButtons[i].onClick.RemoveAllListeners();
-                optionButtons[i].onClick.AddListener(() =>
-                {
-                    ChooseStoryChoice(choiceIndex);
-                });
-            }
-            else
+        for (int i = 0; i < currentChoices.Count; i++)
+        {
+            Button button = optionButtons[i];
+            button.gameObject.SetActive(true);
+
+            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
+            if (buttonText != null)
             {
-                optionButtons[i].gameObject.SetActive(false);
+                buttonText.text = currentChoices[i].text;
             }
+
+            int choiceIndex = i;
+            button.onClick.RemoveAllListeners();
+            button.onClick.AddListener(() =>
+            {
+                ChooseStoryChoice(choiceIndex);
+            });
+        }
+
+        for (int i = currentChoices.Count; i < optionButtons.Count; i++)
+        {
+            optionButtons[i].gameObject.SetActive(false);
         }
     }
 
     private void ChooseStoryChoice(int choiceIndex)
     {
-        if (currentStory != null)
+        currentStory.ChooseChoiceIndex(choiceIndex);
+        awaitingPlayerChoice = false;
+
+        UpdateStats();  // Update stats immediately after making a choice
+
+        ContinueStory();
+    }
+
+    private void UpdateStats()
+    {
+        if (currentStory.variablesState != null)
         {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            awaitingPlayerChoice = false;
-            ContinueStory();
+            // Update Gang Stat
+            if (currentStory.variablesState["GangStat"] != null)
+            {
+                int gangValue = Mathf.Max((int)currentStory.variablesState["GangStat"], 0); // Ensure GangStat is not below 0
+                gangStatText.text = $"Gang: {gangValue}";
+            }
+
+            // Update Education Stat
+            if (currentStory.variablesState["EduStat"] != null)
+            {
+                int educationValue = Mathf.Max((int)currentStory.variablesState["EduStat"], 0); // Ensure EduStat is not below 0
+                educationStatText.text = $"Education: {educationValue}";
+            }
+        }
+    }
+
+    // Debug stats for GangStat and EduStat
+    private void DebugStats(string context)
+    {
+        if (currentStory != null && currentStory.variablesState != null)
+        {
+            Debug.Log($"{context}:");
+
+            // Debug Gang Stat
+            if (currentStory.variablesState["GangStat"] != null)
+            {
+                int gangValue = Mathf.Max((int)currentStory.variablesState["GangStat"], 0); // Ensure GangStat is not below 0
+                Debug.Log($"Gang Stat: {gangValue}");
+            }
+
+            // Debug Education Stat
+            if (currentStory.variablesState["EduStat"] != null)
+            {
+                int educationValue = Mathf.Max((int)currentStory.variablesState["EduStat"], 0); // Ensure EduStat is not below 0
+                Debug.Log($"Education Stat: {educationValue}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Cannot debug stats: No currentStory or variablesState.");
         }
     }
 
@@ -259,82 +245,5 @@ public class DialogueManager : MonoBehaviour
     public bool IsDialoguePlaying()
     {
         return dialogueIsPlaying;
-    }
-
-    // Increment dialogue index in Ink and save it
-    public void IncrementDialogueIndex(string npcName, int currentIndex)
-    {
-        int newIndex = currentIndex + 1;
-        SetInkVariable(npcName + "DialogueIndex", newIndex);
-        SaveDialogueIndex(npcName, newIndex);
-        Debug.Log($"Updated {npcName} dialogue index to: {newIndex}");
-    }
-
-    public void SetInkVariable(string variableName, int value)
-    {
-        if (currentStory != null && currentStory.variablesState != null)
-        {
-            if (currentStory.variablesState.Contains(variableName))
-            {
-                currentStory.variablesState[variableName] = value;
-                Debug.Log($"Set {variableName} to {value} in Ink.");
-            }
-            else
-            {
-                Debug.LogError($"Variable {variableName} does not exist in Ink.");
-            }
-        }
-    }
-
-    public int GetInkVariable(string variableName)
-    {
-        if (currentStory != null && currentStory.variablesState != null)
-        {
-            if (currentStory.variablesState.Contains(variableName) && currentStory.variablesState[variableName] is int value)
-            {
-                Debug.Log($"{variableName} is: {value}");
-                return value;
-            }
-            else
-            {
-                Debug.LogError($"Variable {variableName} does not exist or is not an int.");
-                return 0;
-            }
-        }
-        return 0;
-    }
-
-    public void SaveDialogueIndex(string npcName, int dialogueIndex)
-    {
-        PlayerPrefs.SetInt(npcName + "DialogueIndex", dialogueIndex);
-        PlayerPrefs.Save();
-        Debug.Log($"Saved dialogue index for {npcName}: {dialogueIndex}");
-    }
-
-    public int LoadDialogueIndex(string npcName)
-    {
-        return PlayerPrefs.GetInt(npcName + "DialogueIndex", 0);
-    }
-
-    public void LoadStoryState()
-    {
-        if (currentStory != null && !string.IsNullOrEmpty(savedStoryState))
-        {
-            currentStory.state.LoadJson(savedStoryState);
-            Debug.Log("Story state loaded.");
-        }
-        else
-        {
-            Debug.Log("No saved story state to load.");
-        }
-    }
-
-    public void SaveStoryState()
-    {
-        if (currentStory != null)
-        {
-            savedStoryState = currentStory.state.ToJson();
-            Debug.Log("Story state saved.");
-        }
     }
 }

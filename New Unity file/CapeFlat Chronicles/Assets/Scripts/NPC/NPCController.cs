@@ -3,7 +3,8 @@ using UnityEngine;
 public class NPCController : MonoBehaviour
 {
     public string npcName;
-    public TextAsset inkJSON; // Reference to the Ink JSON file for this NPC
+    public TextAsset[] dialogues; // Array of Ink JSON files for this NPC
+    public int currentDialogueIndex = 0;
 
     private bool isPlayerInRange = false;
 
@@ -23,15 +24,17 @@ public class NPCController : MonoBehaviour
     public void StartInteraction()
     {
         // Start the dialogue using DialogueManager
-        if (DialogueManager.Instance != null)
+        if (DialogueManager.Instance != null && currentDialogueIndex < dialogues.Length)
         {
-            DialogueManager.Instance.StartDialogue(inkJSON, npcName);
+            DialogueManager.Instance.StartDialogue(dialogues[currentDialogueIndex], npcName);
         }
         else
         {
-            Debug.LogWarning("DialogueManager instance not found.");
+            Debug.LogWarning("DialogueManager instance not found or no more dialogues left.");
         }
     }
+
+
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -49,9 +52,8 @@ public class NPCController : MonoBehaviour
 
             if (DialogueManager.Instance.IsDialoguePlaying())  // Only call if dialogue is still playing
             {
-                DialogueManager.Instance.EndDialogue(npcName);
+                DialogueManager.Instance.EndDialogue();
             }
         }
     }
-
 }

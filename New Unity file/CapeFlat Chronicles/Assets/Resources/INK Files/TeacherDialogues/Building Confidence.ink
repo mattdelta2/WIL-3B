@@ -10,7 +10,7 @@
     -> Fake_Confidence
 
 = Confident_Most_Of_Time
-Teacher: That’s great to hear. Confidence will take you far, especially if you keep believing in yourself. What makes you feel most confident?
+ That’s great to hear. Confidence will take you far, especially if you keep believing in yourself. What makes you feel most confident?
 
 * When I succeed in something I’ve worked hard at.
     -> Success_Makes_Confident
@@ -19,15 +19,15 @@ Teacher: That’s great to hear. Confidence will take you far, especially if you
     -> Encouragement_Makes_Confident
 
 = Success_Makes_Confident
-Teacher: Hard work pays off, and the success that follows is well-deserved. Keep working hard, and confidence will continue to grow.
+ Hard work pays off, and the success that follows is well-deserved. Keep working hard, and confidence will continue to grow.
 -> END
 
 = Encouragement_Makes_Confident
-Teacher: Having a good support system can work wonders for confidence. Remember to surround yourself with positive influences.
+ Having a good support system can work wonders for confidence. Remember to surround yourself with positive influences.
 -> END
 
 = Struggle_With_Confidence
-Teacher: Struggling with confidence is normal, especially when you’re facing new challenges. What situations make you feel the least confident?
+ Struggling with confidence is normal, especially when you’re facing new challenges. What situations make you feel the least confident?
 
 * When I have to speak in front of people.
     -> Public_Speaking
@@ -36,15 +36,15 @@ Teacher: Struggling with confidence is normal, especially when you’re facing n
     -> New_Experiences
 
 = Public_Speaking
-Teacher: Public speaking can be nerve-wracking, but it’s a skill that can be learned over time. Practice and preparation can make all the difference.
+ Public speaking can be nerve-wracking, but it’s a skill that can be learned over time. Practice and preparation can make all the difference.
 -> END
 
 = New_Experiences
-Teacher: New experiences are always challenging, but each one helps you grow. With each new thing you try, your confidence will increase bit by bit.
+ New experiences are always challenging, but each one helps you grow. With each new thing you try, your confidence will increase bit by bit.
 -> END
 
 = Fake_Confidence
-Teacher: Pretending to be confident can sometimes help you feel more confident, but it’s important to build true self-belief. What would help you feel more genuinely confident?
+ Pretending to be confident can sometimes help you feel more confident, but it’s important to build true self-belief. What would help you feel more genuinely confident?
 
 * Having more successes to show for my efforts.
     -> More_Successes
@@ -53,10 +53,10 @@ Teacher: Pretending to be confident can sometimes help you feel more confident, 
     -> Feel_Better_About_Myself
 
 = More_Successes
-Teacher: Success is a great confidence builder, but remember that failures are a part of success too. Every setback is just a step towards your next success.
+ Success is a great confidence builder, but remember that failures are a part of success too. Every setback is just a step towards your next success.
 -> END
 
 = Feel_Better_About_Myself
-Teacher: Confidence starts within. You have to remind yourself of your strengths and accept your weaknesses. That’s the first step toward building genuine confidence.
+ Confidence starts within. You have to remind yourself of your strengths and accept your weaknesses. That’s the first step toward building genuine confidence.
 -> END
 

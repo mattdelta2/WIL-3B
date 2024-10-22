@@ -10,7 +10,7 @@
     -> Focused_On_Self
 
 = Try_To_Understand
-Teacher: That’s a good mindset. Being willing to try makes a big difference. When was the last time you showed empathy towards someone?
+ That’s a good mindset. Being willing to try makes a big difference. When was the last time you showed empathy towards someone?
 
 * I listened to a friend who was having a tough time.
     -> Listened_To_Friend
@@ -19,15 +19,15 @@ Teacher: That’s a good mindset. Being willing to try makes a big difference. W
     -> Tried_To_Help
 
 = Listened_To_Friend
-Teacher: Listening can mean the world to someone in pain. You don’t always have to solve the problem—sometimes, just being there is enough.
+ Listening can mean the world to someone in pain. You don’t always have to solve the problem—sometimes, just being there is enough.
 -> END
 
 = Tried_To_Help
-Teacher: Trying to help others is admirable, but remember, sometimes listening is the best help you can give. Keep it up.
+ Trying to help others is admirable, but remember, sometimes listening is the best help you can give. Keep it up.
 -> END
 
 = Struggle_With_Empathy
-Teacher: That’s okay, empathy doesn’t come easily to everyone. It’s something you can build with practice. What do you find most challenging about it?
+ That’s okay, empathy doesn’t come easily to everyone. It’s something you can build with practice. What do you find most challenging about it?
 
 * I don’t always know what to say.
     -> Not_Know_What_To_Say
@@ -36,15 +36,15 @@ Teacher: That’s okay, empathy doesn’t come easily to everyone. It’s someth
     -> Not_Understand_Why
 
 = Not_Know_What_To_Say
-Teacher: You don’t always have to say anything. Just being there and showing you care is often enough. Words aren’t always necessary.
+ You don’t always have to say anything. Just being there and showing you care is often enough. Words aren’t always necessary.
 -> END
 
 = Not_Understand_Why
-Teacher: People are complicated, and their feelings aren’t always logical. The key to empathy is to accept their feelings without needing to fully understand them.
+ People are complicated, and their feelings aren’t always logical. The key to empathy is to accept their feelings without needing to fully understand them.
 -> END
 
 = Focused_On_Self
-Teacher: It’s natural to focus on yourself, especially when things are tough. But helping others can also help you feel better. Have you ever tried putting someone else first?
+ It’s natural to focus on yourself, especially when things are tough. But helping others can also help you feel better. Have you ever tried putting someone else first?
 
 * Not really. I’m too focused on my own problems.
     -> Too_Focused_On_Self
@@ -53,10 +53,10 @@ Teacher: It’s natural to focus on yourself, especially when things are tough. 
     -> Try_Putting_Others_First
 
 = Too_Focused_On_Self
-Teacher: That’s understandable. It’s hard to think about others when you’re struggling. But empathy can bring perspective and even help you solve your own problems.
+ That’s understandable. It’s hard to think about others when you’re struggling. But empathy can bring perspective and even help you solve your own problems.
 -> END
 
 = Try_Putting_Others_First
-Teacher: That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
+ That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
 -> END    
 

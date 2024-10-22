@@ -12,7 +12,7 @@
     -> Hard_To_Stay_Motivated
 
 = I_Get_It
-Teacher: Good. Focus will take you far. What are you enjoying most about your studies?
+ Good. Focus will take you far. What are you enjoying most about your studies?
 
 * Math, because it feels like it’s building a foundation for my future.
     -> MATH
@@ -21,17 +21,17 @@ Teacher: Good. Focus will take you far. What are you enjoying most about your st
     -> Unsure
 
 = MATH
-Teacher: That’s the spirit. You’ll need that kind of mindset to succeed.
+ That’s the spirit. You’ll need that kind of mindset to succeed.
 
 -> END
 
 = Unsure
-Teacher: You don’t need to have it all figured out yet, but keep pushing forward.
+ You don’t need to have it all figured out yet, but keep pushing forward.
 
 -> END
 
 = Waste_Of_Time
-Teacher: A waste? You think the streets will give you a better future? Where do you think you’ll end up if you don’t commit to your education?
+ A waste? You think the streets will give you a better future? Where do you think you’ll end up if you don’t commit to your education?
 
 * I guess I’ll end up like everyone else around here, stuck.
     -> Stuck
@@ -40,17 +40,17 @@ Teacher: A waste? You think the streets will give you a better future? Where do 
     -> Survive
 
 = Stuck
-Teacher: That’s exactly what will happen if you don’t change your mindset.
+ That’s exactly what will happen if you don’t change your mindset.
 
 -> END
 
 = Survive
-Teacher: Surviving isn’t enough. You have to think about what comes next.
+ Surviving isn’t enough. You have to think about what comes next.
 
 -> END
 
 = Hard_To_Stay_Motivated
-Teacher: I get that. Motivation isn’t always easy to find, but you need to push through. What’s been holding you back?
+ I get that. Motivation isn’t always easy to find, but you need to push through. What’s been holding you back?
 
 * It’s hard to see the point sometimes.
     -> Hard_To_See_Point
@@ -59,12 +59,12 @@ Teacher: I get that. Motivation isn’t always easy to find, but you need to pus
     -> Overwhelmed
 
 = Hard_To_See_Point
-Teacher: If you can’t see the point, then you need to change your perspective.
+ If you can’t see the point, then you need to change your perspective.
 
 -> END
 
 = Overwhelmed
-Teacher: That’s normal, but don’t let it stop you from moving forward.
+ That’s normal, but don’t let it stop you from moving forward.
 
 
 -> END

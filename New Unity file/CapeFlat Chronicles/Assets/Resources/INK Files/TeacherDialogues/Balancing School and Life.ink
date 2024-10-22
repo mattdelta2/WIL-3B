@@ -1,3 +1,6 @@
+INCLUDE Global.ink
+ 
+ 
  Balancing life and school can be challenging. How do you manage everything on your plate?
 
 * I try to make a schedule and stick to it.
@@ -10,15 +13,17 @@
     -> Constantly_Overwhelmed
 
 = Make_Schedule
-Teacher: That’s a solid approach. Having a plan can keep you on track even when things get tough. Just remember to adjust if things don’t go as expected.
+ That’s a solid approach. Having a plan can keep you on track even when things get tough. Just remember to adjust if things don’t go as expected.
+ ->AddEdu
 -> END
 
 = No_Plan
-Teacher: Living in the moment has its perks, but it can also create chaos. Setting a few goals or having a basic plan might help you find more balance.
+ Living in the moment has its perks, but it can also create chaos. Setting a few goals or having a basic plan might help you find more balance.
+ ->AddGang
 -> END
 
 = Constantly_Overwhelmed
-Teacher: Feeling overwhelmed is normal when there’s too much on your plate. Have you tried reaching out to others for support?
+ Feeling overwhelmed is normal when there’s too much on your plate. Have you tried reaching out to others for support?
 
 * I’m not good at asking for help.
     -> Not_Ask_Help
@@ -27,9 +32,25 @@ Teacher: Feeling overwhelmed is normal when there’s too much on your plate. Ha
     -> Try_Asking
 
 = Not_Ask_Help
-Teacher: I understand, but remember that everyone needs help sometimes. It’s okay to lean on others.
+ I understand, but remember that everyone needs help sometimes. It’s okay to lean on others.
+ ->AddGang
 -> END
 
 = Try_Asking
-Teacher: That’s a great first step. Support from others can make all the difference when you’re feeling overwhelmed.
+ That’s a great first step. Support from others can make all the difference when you’re feeling overwhelmed.
+ ->AddEdu
 -> END
+
+
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

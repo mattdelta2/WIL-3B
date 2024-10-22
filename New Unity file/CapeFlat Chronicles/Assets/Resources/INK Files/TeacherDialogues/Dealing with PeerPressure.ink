@@ -10,15 +10,15 @@
     -> Give_In
 
 = Stay_Away
-Teacher: That’s a good strategy. Surrounding yourself with positive influences can make all the difference.
+ That’s a good strategy. Surrounding yourself with positive influences can make all the difference.
 -> END
 
 = Trying_To_Handle
-Teacher: That’s all anyone can ask of you. Just keep trying and don’t be afraid to seek support when you need it.
+ That’s all anyone can ask of you. Just keep trying and don’t be afraid to seek support when you need it.
 -> END
 
 = Give_In
-Teacher: I understand, but giving in won’t get you where you want to go. You have to learn to stand up for yourself, even when it’s hard.
+ I understand, but giving in won’t get you where you want to go. You have to learn to stand up for yourself, even when it’s hard.
 
 * It’s just too difficult sometimes.
     -> Too_Difficult
@@ -27,10 +27,10 @@ Teacher: I understand, but giving in won’t get you where you want to go. You h
     -> Work_On_That
 
 = Too_Difficult
-Teacher: I know it’s tough. But remember, you’re stronger than you think. You don’t have to face this alone—there are people who want to help.
+ I know it’s tough. But remember, you’re stronger than you think. You don’t have to face this alone—there are people who want to help.
 -> END
 
 = Work_On_That
-Teacher: That’s the attitude. It takes time, but every little bit of resistance helps you grow stronger.
+ That’s the attitude. It takes time, but every little bit of resistance helps you grow stronger.
 -> END
 

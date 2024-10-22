@@ -10,7 +10,7 @@
     -> Learn_From_Situation
 
 = Stay_Positive
-Teacher: That’s a great mindset to have. Staying positive makes it easier to handle difficulties. How do you keep yourself motivated?
+ That’s a great mindset to have. Staying positive makes it easier to handle difficulties. How do you keep yourself motivated?
 
 * I remind myself why I started in the first place.
     -> Remind_Why_Started
@@ -19,15 +19,15 @@ Teacher: That’s a great mindset to have. Staying positive makes it easier to h
     -> Think_About_Reward
 
 = Remind_Why_Started
-Teacher: Remembering your reasons for starting is powerful. It keeps you focused on what’s truly important.
+ Remembering your reasons for starting is powerful. It keeps you focused on what’s truly important.
 -> END
 
 = Think_About_Reward
-Teacher: Visualizing success is a powerful motivator. Keep that vision in mind, and you’ll find the strength to push through.
+ Visualizing success is a powerful motivator. Keep that vision in mind, and you’ll find the strength to push through.
 -> END
 
 = Get_Discouraged
-Teacher: It’s natural to feel discouraged sometimes. The important thing is not to stay down. What helps you get back up?
+ It’s natural to feel discouraged sometimes. The important thing is not to stay down. What helps you get back up?
 
 * I talk to people who encourage me.
     -> Encouraging_People
@@ -36,15 +36,15 @@ Teacher: It’s natural to feel discouraged sometimes. The important thing is no
     -> Take_Break
 
 = Encouraging_People
-Teacher: Having people who lift you up is invaluable. Don’t hesitate to reach out when you need them.
+ Having people who lift you up is invaluable. Don’t hesitate to reach out when you need them.
 -> END
 
 = Take_Break
-Teacher: Taking a break is sometimes the best thing you can do. Just remember to come back stronger.
+ Taking a break is sometimes the best thing you can do. Just remember to come back stronger.
 -> END
 
 = Learn_From_Situation
-Teacher: Learning from setbacks makes you stronger. Every failure has a lesson if you look for it. What have you learned from your most recent setback?
+ Learning from setbacks makes you stronger. Every failure has a lesson if you look for it. What have you learned from your most recent setback?
 
 * I learned that I need to manage my time better.
     -> Time_Management
@@ -53,11 +53,11 @@ Teacher: Learning from setbacks makes you stronger. Every failure has a lesson i
     -> Ask_For_HelP
 
 = Time_Management
-Teacher: Time management is a crucial skill. It’s great that you’ve identified it as an area for improvement.
+ Time management is a crucial skill. It’s great that you’ve identified it as an area for improvement.
 -> END
 
 = Ask_For_HelP
-Teacher: Knowing when to ask for help is a sign of strength, not weakness. Remember, no one gets through life alone.
+ Knowing when to ask for help is a sign of strength, not weakness. Remember, no one gets through life alone.
 -> END
 
 

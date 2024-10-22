@@ -10,7 +10,7 @@
     -> Get_Defensive
 
 = Learn_And_Improve
-Teacher: That’s a healthy approach. Learning from criticism will help you grow faster. What’s one piece of criticism that helped you the most?
+ That’s a healthy approach. Learning from criticism will help you grow faster. What’s one piece of criticism that helped you the most?
 
 * I was told I needed to work on my focus.
     -> Work_On_Focus
@@ -19,15 +19,15 @@ Teacher: That’s a healthy approach. Learning from criticism will help you grow
     -> AskFor_Help
 
 = Work_On_Focus
-Teacher: Focus is an important skill, and working on it shows maturity. Keep at it—it’ll take you far.
+ Focus is an important skill, and working on it shows maturity. Keep at it—it’ll take you far.
 -> END
 
 = AskFor_Help
-Teacher: Knowing when to ask for help is a strength, not a weakness. It takes courage to reach out, so keep practicing that.
+ Knowing when to ask for help is a strength, not a weakness. It takes courage to reach out, so keep practicing that.
 -> END
 
 = Feel_Upset
-Teacher: Feeling upset is natural, but it’s important not to let it stop you from listening. What makes criticism feel upsetting to you?
+ Feeling upset is natural, but it’s important not to let it stop you from listening. What makes criticism feel upsetting to you?
 
 * It feels like I’m being told I’m not good enough.
     -> NotGood_Enough
@@ -36,15 +36,15 @@ Teacher: Feeling upset is natural, but it’s important not to let it stop you f
     -> Pointing_Out_Flaws
 
 = NotGood_Enough
-Teacher: Remember, criticism isn’t about your worth—it’s about helping you improve. The people who criticize often want to see you succeed.
+ Remember, criticism isn’t about your worth—it’s about helping you improve. The people who criticize often want to see you succeed.
 -> END
 
 = Pointing_Out_Flaws
-Teacher: Nobody likes hearing about their flaws, but being aware of them is the first step to overcoming them. It’s all about growth.
+ Nobody likes hearing about their flaws, but being aware of them is the first step to overcoming them. It’s all about growth.
 -> END
 
 = Get_Defensive
-Teacher: It’s easy to feel defensive when someone points out what we need to work on, but try to see it as an opportunity to grow. Why do you think you react defensively?
+ It’s easy to feel defensive when someone points out what we need to work on, but try to see it as an opportunity to grow. Why do you think you react defensively?
 
 * I don’t like admitting when I’m wrong.
     -> Dont_Like_Admitting
@@ -53,9 +53,9 @@ Teacher: It’s easy to feel defensive when someone points out what we need to w
     -> Feel_Attacked
 
 = Dont_Like_Admitting
-Teacher: It takes a lot of courage to admit when we’re wrong, but it’s also the key to getting better. Mistakes are part of learning.
+ It takes a lot of courage to admit when we’re wrong, but it’s also the key to getting better. Mistakes are part of learning.
 -> END
 
 = Feel_Attacked
-Teacher: Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
+ Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
 -> END

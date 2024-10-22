@@ -9,7 +9,7 @@ It’s important to set goals for yourself. Without goals, you’re just driftin
     -> No_Goals
 
 = Graduate_Job
-Teacher: That’s a solid goal. What kind of job are you aiming for?
+ That’s a solid goal. What kind of job are you aiming for?
 
 * Something in engineering, maybe. I like building things.
     -> Engineering
@@ -18,15 +18,15 @@ Teacher: That’s a solid goal. What kind of job are you aiming for?
     -> Not_Sure_Yet
 
 = Engineering
-Teacher: That’s a great goal. Engineering can open many doors for you.
+ That’s a great goal. Engineering can open many doors for you.
 -> END
 
 = Not_Sure_Yet
-Teacher: That’s okay. What matters is that you’re thinking about the future.
+ That’s okay. What matters is that you’re thinking about the future.
 -> END
 
 = No_Goals
-Teacher: That’s dangerous thinking. If you don’t have goals, you’re letting life happen to you. Why don’t you have any goals?
+ That’s dangerous thinking. If you don’t have goals, you’re letting life happen to you. Why don’t you have any goals?
 
 * I don’t see the point. Nothing ever changes here.
     -> Nothing_Changes
@@ -35,11 +35,11 @@ Teacher: That’s dangerous thinking. If you don’t have goals, you’re lettin
     -> No_Matter
 
 = Nothing_Changes
-Teacher: Nothing changes because too many people think like that. Be different.
+ Nothing changes because too many people think like that. Be different.
 -> END
 
 = No_Matter
-Teacher: Every goal matters. Without them, you’ll never move forward.
+ Every goal matters. Without them, you’ll never move forward.
 -> END
 
 

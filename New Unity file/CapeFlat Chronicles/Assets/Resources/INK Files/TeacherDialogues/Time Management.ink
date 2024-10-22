@@ -10,7 +10,7 @@
     -> Procrastinate
 
 = Schedule_And_Stick
-Teacher: That’s a great approach. It helps you stay organized and reduces stress. What do you usually schedule first?
+ That’s a great approach. It helps you stay organized and reduces stress. What do you usually schedule first?
 
 * Schoolwork, because it’s my top priority.
     -> Schoolwork_First
@@ -19,15 +19,15 @@ Teacher: That’s a great approach. It helps you stay organized and reduces stre
     -> Balance_Between
 
 = Schoolwork_First
-Teacher: That’s a smart move. Focusing on schoolwork first means you’re giving it the importance it deserves.
+ That’s a smart move. Focusing on schoolwork first means you’re giving it the importance it deserves.
 -> END
 
 = Balance_Between
-Teacher: It’s important to balance responsibilities and relaxation. Taking breaks helps you stay productive in the long run.
+ It’s important to balance responsibilities and relaxation. Taking breaks helps you stay productive in the long run.
 -> END
 
 = Do_When_I_Can
-Teacher: It’s good that you’re getting things done, but planning ahead could make your life a lot easier. Have you tried setting small goals?
+ It’s good that you’re getting things done, but planning ahead could make your life a lot easier. Have you tried setting small goals?
 
 * I’ve tried, but it’s hard to keep up with them.
     -> Hard_To_Keep_Up
@@ -36,15 +36,15 @@ Teacher: It’s good that you’re getting things done, but planning ahead could
     -> Think_It_Might_Help
 
 = Hard_To_Keep_Up
-Teacher: It can be challenging, but remember, small progress is still progress. Don’t be too hard on yourself.
+ It can be challenging, but remember, small progress is still progress. Don’t be too hard on yourself.
 -> END
 
 = Think_It_Might_Help
-Teacher: That’s a great attitude. Setting achievable goals could help you create a routine that works for you.
+ That’s a great attitude. Setting achievable goals could help you create a routine that works for you.
 -> END
 
 = Procrastinate
-Teacher: Procrastination is something everyone struggles with from time to time. What makes you put things off?
+ Procrastination is something everyone struggles with from time to time. What makes you put things off?
 
 * I feel overwhelmed by how much there is to do.
     -> Feel_Overwhelmed
@@ -53,7 +53,7 @@ Teacher: Procrastination is something everyone struggles with from time to time.
     -> Easily_Distracted
 
 = Feel_Overwhelmed
-Teacher: When things feel overwhelming, breaking tasks into smaller steps can make them more manageable. Have you tried that?
+ When things feel overwhelming, breaking tasks into smaller steps can make them more manageable. Have you tried that?
 
 * Not really. It all feels like too much.
     -> Feels_Too_Much
@@ -62,15 +62,15 @@ Teacher: When things feel overwhelming, breaking tasks into smaller steps can ma
     -> Hard_To_Get_Started
 
 = Feels_Too_Much
-Teacher: I understand. Start small and build from there. Even completing one tiny step can help you feel more in control.
+ I understand. Start small and build from there. Even completing one tiny step can help you feel more in control.
 -> END
 
 = Hard_To_Get_Started
-Teacher: Getting started is often the hardest part. Try giving yourself a small reward after each task—it might help motivate you.
+ Getting started is often the hardest part. Try giving yourself a small reward after each task—it might help motivate you.
 -> END
 
 = Easily_Distracted
-Teacher: Distractions are hard to avoid, especially with everything going on. Have you tried creating a space or time where you can focus?
+ Distractions are hard to avoid, especially with everything going on. Have you tried creating a space or time where you can focus?
 
 * I haven’t really thought about it.
     -> Havent_Thought
@@ -79,10 +79,10 @@ Teacher: Distractions are hard to avoid, especially with everything going on. Ha
     -> Try_But_Hard
 
 = Havent_Thought
-Teacher: Creating a space dedicated to work or study could help. It doesn’t have to be perfect, just somewhere you feel comfortable focusing.
+ Creating a space dedicated to work or study could help. It doesn’t have to be perfect, just somewhere you feel comfortable focusing.
 -> END
 
 = Try_But_Hard
-Teacher: That’s understandable. Eliminating distractions takes practice, but keep at it. Each effort makes a difference.
+ That’s understandable. Eliminating distractions takes practice, but keep at it. Each effort makes a difference.
 -> END
 
