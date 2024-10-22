@@ -220,7 +220,6 @@ Teacher: Everyone moves at their own pace. Don’t compare yourself to others.
 Teacher: Mistakes don’t define you. What you do after them does.
 -> END
 
--> END
 
 //Making Choices
 = Making_Choices
