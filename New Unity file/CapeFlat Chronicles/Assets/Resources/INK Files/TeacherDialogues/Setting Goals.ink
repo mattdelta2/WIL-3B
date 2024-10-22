@@ -1,4 +1,4 @@
-
+INCLUDE Global.ink
 // Second dialogue: Setting Goals
 It’s important to set goals for yourself. Without goals, you’re just drifting. Do you have any goals right now?
 

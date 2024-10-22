@@ -1,3 +1,5 @@
+ INCLUDE Global.ink
+ 
  Setbacks happen to everyone, but how we react to them defines our path. How do you usually deal with setbacks?
 
 * I try to learn from my mistakes and do better next time.

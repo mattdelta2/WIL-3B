@@ -1,4 +1,8 @@
- Finding motivation is tough, especially when things seem hopeless. What keeps you motivated?
+INCLUDE Global.ink
+.
+
+
+Finding motivation is tough, especially when things seem hopeless. What keeps you motivated?
 
 * I think about my family and how much they want me to succeed.
     -> Family_Motivation

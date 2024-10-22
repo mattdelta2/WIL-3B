@@ -1,3 +1,5 @@
+INCLUDE Global.ink 
+ 
  Building healthy habits is key to success. What are some habits you’re working on?
 
 * I’m trying to get better at managing my time.
@@ -54,6 +56,7 @@
 
 = Eating_Healthier
  Eating healthier can make a big difference in how you feel. Start small—maybe add more fruits and vegetables to your meals. Every step counts.
+ ->AddEdu 
 -> END
 
 = More_Sleep

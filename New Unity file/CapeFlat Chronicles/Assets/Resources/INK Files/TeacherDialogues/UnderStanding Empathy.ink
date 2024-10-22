@@ -1,3 +1,6 @@
+INCLUDE Global.ink 
+ 
+ 
  Empathy is about understanding what others are going through. It can be hard, but it’s a key skill in life. How empathetic do you think you are?
 
 * I try my best to understand what others are feeling.

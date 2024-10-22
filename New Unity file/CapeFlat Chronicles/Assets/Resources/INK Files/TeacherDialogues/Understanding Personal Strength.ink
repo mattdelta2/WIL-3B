@@ -1,3 +1,7 @@
+ INCLUDE Global.ink
+ 
+ 
+ 
  Understanding your strengths is important. It helps you know what you’re good at and where you can grow. What do you think your greatest strength is?
 
 * I’m a good listener, and people trust me.

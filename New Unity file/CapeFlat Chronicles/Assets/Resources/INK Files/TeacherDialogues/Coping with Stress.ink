@@ -1,3 +1,5 @@
+ INCLUDE Global.ink
+ 
  Stress is something we all have to deal with, but how you handle it can make all the difference. What do you do when you’re stressed?
 
 * I go for a walk or exercise to clear my mind.

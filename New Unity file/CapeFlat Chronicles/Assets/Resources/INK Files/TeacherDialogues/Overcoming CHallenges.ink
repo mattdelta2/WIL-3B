@@ -1,3 +1,5 @@
+INCLUDE Global.ink
+
  Everyone faces challenges, and the way we deal with them defines who we are. How do you deal with difficult situations?
 
 * I try to stay calm and think things through.

@@ -1,3 +1,6 @@
+INCLUDE Global.ink 
+ 
+ 
  Managing your time well is essential, especially with everything you’re juggling. How do you usually manage your time?
 
 * I try to make a schedule and stick to it.

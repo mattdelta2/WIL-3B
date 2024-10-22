@@ -1,3 +1,6 @@
+ INCLUDE Global.ink
+ 
+ 
  Setting boundaries is important for your well-being, whether it’s with friends, family, or work. How do you handle setting boundaries?
 
 * I struggle with saying no to people.

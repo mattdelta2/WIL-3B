@@ -1,3 +1,5 @@
+INCLUDE Global.ink 
+ 
  Managing expectations is important, both those you set for yourself and those others set for you. How do you feel about the expectations people have for you?
 
 * I think they expect too much from me.

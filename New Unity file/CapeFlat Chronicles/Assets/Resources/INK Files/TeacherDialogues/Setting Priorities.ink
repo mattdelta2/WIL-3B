@@ -1,3 +1,5 @@
+INCLUDE Global.ink
+
  Setting priorities is important to stay on track. How do you set your priorities?
 
 * I focus on what’s most urgent and important.

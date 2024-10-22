@@ -1,3 +1,6 @@
+ INCLUDE Global.ink
+ 
+ 
  Criticism can be hard to take, but it’s a big part of growing and improving. How do you usually handle criticism?
 
 * I try to learn from it and improve.

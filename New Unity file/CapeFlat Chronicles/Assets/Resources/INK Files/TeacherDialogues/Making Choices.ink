@@ -1,3 +1,5 @@
+INCLUDE Global.ink
+
  Life is full of choices, and every decision you make can affect your future. How do you decide what's the right choice?
 
 * I weigh the pros and cons before making a decision.

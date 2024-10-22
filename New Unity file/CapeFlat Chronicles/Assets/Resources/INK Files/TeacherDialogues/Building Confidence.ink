@@ -1,3 +1,5 @@
+ INCLUDE Global.ink
+ 
  Confidence isn’t something that just happens; it’s built over time. How do you feel about your confidence levels?
 
 * I feel pretty confident in myself, most of the time.

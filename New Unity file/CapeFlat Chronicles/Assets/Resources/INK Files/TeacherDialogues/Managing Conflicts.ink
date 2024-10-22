@@ -1,3 +1,5 @@
+INCLUDE Global.ink 
+ 
  Conflict is a part of life, but how you manage it can make all the difference. How do you usually deal with conflicts?
 
 * I try to talk it out calmly.

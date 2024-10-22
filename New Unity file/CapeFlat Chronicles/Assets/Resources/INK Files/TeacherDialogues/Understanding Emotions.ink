@@ -1,3 +1,5 @@
+INCLUDE Global.ink 
+ 
  Understanding your emotions is important. How do you usually deal with your emotions?
 
 * I bottle them up and try not to think about them.

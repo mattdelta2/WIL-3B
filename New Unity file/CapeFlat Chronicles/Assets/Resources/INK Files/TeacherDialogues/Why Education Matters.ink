@@ -1,3 +1,4 @@
+INCLUDE Global.ink
 // First dialogue: Why Education Matters
  Do you know why education matters? It’s not just about passing tests. It’s about building your future, giving yourself options. Do you understand that?
 

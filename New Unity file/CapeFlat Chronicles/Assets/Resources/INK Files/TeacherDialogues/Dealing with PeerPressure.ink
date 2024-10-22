@@ -1,3 +1,6 @@
+INCLUDE Global.ink
+
+
  Peer pressure can be tough, especially around here. How do you handle it?
 
 * I try to stay away from people who bring me down.

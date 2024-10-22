@@ -1,3 +1,6 @@
+ INCLUDE Global.ink
+ 
+ 
  Developing healthy habits can make a big difference in your daily life. What habits are you trying to develop?
 
 * I’m trying to exercise regularly.

@@ -1,3 +1,6 @@
+ INCLUDE Global.ink
+ 
+ 
  Leadership is an important skill, even if you don’t see yourself in a formal leadership role. How do you feel about being a leader?
 
 * I’d like to be a leader, but I’m not sure how.

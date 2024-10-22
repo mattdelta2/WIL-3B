@@ -1,3 +1,5 @@
+INCLUDE Global.ink 
+ 
  Managing your time well is crucial for success. How do you usually manage your time?
 
 * I make a schedule and try to stick to it.

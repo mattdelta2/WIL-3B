@@ -1,3 +1,5 @@
+ INCLUDE Global.ink
+ 
  Disappointment is something we all face at one point or another. It’s how we handle it that matters. How do you usually deal with disappointment?
 
 * I try to move on as quickly as possible.

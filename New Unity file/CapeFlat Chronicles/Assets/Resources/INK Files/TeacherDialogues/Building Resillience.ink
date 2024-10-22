@@ -1,3 +1,6 @@
+INCLUDE Global.ink
+
+
  Life will always have setbacks. Resilience is about bouncing back even when things get tough. How do you deal with setbacks?
 
 * I try to stay positive and keep pushing forward.

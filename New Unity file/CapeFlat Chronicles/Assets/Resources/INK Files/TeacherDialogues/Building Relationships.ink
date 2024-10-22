@@ -1,3 +1,6 @@
+INCLUDE Global.ink
+
+
  Building strong relationships with the people around you can help you succeed in life. How do you feel about your relationships?
 
 * I have a few close friends I can rely on.
