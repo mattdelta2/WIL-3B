@@ -60,3 +60,15 @@
  Maybe it’s time to ask. Sometimes others see things in us that we don’t see in ourselves. You might be surprised by the answers.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

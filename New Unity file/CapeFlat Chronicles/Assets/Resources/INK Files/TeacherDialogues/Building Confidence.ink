@@ -60,3 +60,15 @@
  Confidence starts within. You have to remind yourself of your strengths and accept your weaknesses. That’s the first step toward building genuine confidence.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

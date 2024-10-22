@@ -86,3 +86,15 @@
  Planning can be tough, but it’s what makes an event successful. Being detail-oriented and adaptable are key skills in leadership.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

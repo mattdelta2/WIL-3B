@@ -60,3 +60,15 @@
  Giving reasons can help others understand why the boundary is important to you. Just remember, you don’t always owe an explanation—it’s enough that it’s your boundary.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

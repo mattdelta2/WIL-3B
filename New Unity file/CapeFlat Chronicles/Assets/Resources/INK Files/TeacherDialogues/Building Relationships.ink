@@ -60,3 +60,15 @@
  Trust is hard, especially if you’ve been hurt before. Building trust takes time, and that’s okay. Start by letting people earn your trust little by little.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

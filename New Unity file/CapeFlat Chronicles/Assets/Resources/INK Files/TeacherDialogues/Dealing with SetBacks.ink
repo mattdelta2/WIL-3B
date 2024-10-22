@@ -34,3 +34,15 @@
  Taking time to regroup can be wise. Sometimes, stepping away gives us the clarity we need to succeed.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

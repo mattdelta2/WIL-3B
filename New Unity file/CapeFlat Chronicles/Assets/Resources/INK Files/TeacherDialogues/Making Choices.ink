@@ -59,3 +59,15 @@
 = No_Plans
  Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
 -> END
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

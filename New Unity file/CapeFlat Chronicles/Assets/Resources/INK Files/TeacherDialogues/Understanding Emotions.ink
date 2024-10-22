@@ -59,3 +59,15 @@
 = Talk_To_Family
  Family can provide support that helps you through tough times. Keep leaning on them when you need to.
 -> END
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

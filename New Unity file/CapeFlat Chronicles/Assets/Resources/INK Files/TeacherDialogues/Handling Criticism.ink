@@ -59,3 +59,15 @@
 = Feel_Attacked
  Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
 -> END
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

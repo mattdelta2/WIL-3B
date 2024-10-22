@@ -59,3 +59,16 @@ Teacher: Feeling blamed can trigger defensiveness, but try to focus on the issue
 = Dont_Like_Being_Wrong
 Teacher: Nobody likes being wrong, but admitting when you’re wrong is a sign of strength. It shows you’re willing to learn and grow.
 -> END
+
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

@@ -60,3 +60,15 @@
  That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
 -> END    
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

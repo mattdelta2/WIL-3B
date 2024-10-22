@@ -86,3 +86,15 @@
  That’s understandable. Eliminating distractions takes practice, but keep at it. Each effort makes a difference.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

@@ -59,3 +59,15 @@
 = More_Sleep
  Sleep is crucial for your health and well-being. Try setting a bedtime and sticking to it—it will help you feel more rested.
 -> END
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

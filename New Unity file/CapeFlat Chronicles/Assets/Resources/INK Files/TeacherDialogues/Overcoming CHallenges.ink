@@ -59,3 +59,15 @@
 = Family_Support
  Family support can be invaluable. Always remember that seeking help when needed is a sign of strength, not weakness.
 -> END
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END

@@ -34,3 +34,15 @@
  That’s the spirit. Start small, and you’ll build momentum. Even tiny steps will bring you closer to your goals.
 -> END
 
+
+=AddEdu
+~EduStat += 1
+~GangStat -= 1
+~ GangStat = MIN(GangStat,0)
+->END
+
+=AddGang
+~EduStat -= 1
+~ EduStat = MIN(EduStat,0)
+~GangStat += 1
+->END
