@@ -59,6 +59,11 @@ Good. Take it one step at a time. You have potential, and there are people who c
 That’s alright. You don’t have to make every decision today. Just keep an open mind about where you’re headed.
 -> END
 
+// Sub-Branch: Need_To_Belong
+= Need_To_Belong
+Everyone wants to feel like they belong somewhere, but make sure it’s a place that lifts you up, not holds you back.
+-> END
+
 // Branch: Handle_My_Way
 = Handle_My_Way
 You think I don’t understand? I’ve lived through this longer than you can imagine. The same streets you walk now, I walked when I was your age. What is it you think you’re handling?
