@@ -61,10 +61,10 @@ Better hurry up. Die game wait vir niks.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+
 -> END

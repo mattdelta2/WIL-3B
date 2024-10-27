@@ -9,6 +9,9 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
+    // Reference to GameManager set via the Inspector
+    [SerializeField] private GameManager gameManager;
+
     [Header("UI Elements")]
     public GameObject dialogueUI;
     public TextMeshProUGUI npcNameText;
@@ -40,16 +43,22 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = false;
         if (dialogueUI != null) dialogueUI.SetActive(false);
         foreach (Button button in optionButtons) button.gameObject.SetActive(false);
+
+        // Check if GameManager reference is assigned
+        if (gameManager == null)
+        {
+            Debug.LogWarning("GameManager is not assigned in DialogueManager. Please assign it in the Inspector.");
+        }
     }
 
     public void StartDialogue(TextAsset inkJSON, string npcName)
     {
         currentStory = new Story(inkJSON.text);
+        questManager.SetCurrentStory(currentStory);
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
         npcNameText.text = npcName;
 
-        // Inject saved stats back into the Ink story
         InjectStatsIntoInk();
 
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
@@ -62,18 +71,21 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialogueIsPlaying = false;
+        SaveStatsToGameManager();
         DebugStats("Dialogue Ended");
 
         if (dialogueUI != null) dialogueUI.SetActive(false);
         ClearButtons();
 
-        PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null) playerMovement.SetCanMove(true);
-
-        // Save final story state to GameManager
-        SaveStatsToGameManager();
+        NPCController npcController = FindObjectOfType<NPCController>();
+        if (npcController != null && npcController.currentDialogueIndex < npcController.dialogues.Length - 1)
+        {
+            npcController.currentDialogueIndex++;
+        }
 
         currentStory = null;
+        PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
+        if (playerMovement != null) playerMovement.SetCanMove(true);
     }
 
     private void ContinueStory()
@@ -129,6 +141,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count) return;
 
+        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
+        Debug.Log($"Player selected choice: {selectedChoice.text}");
+
+        if (selectedChoice.text == "I’ll get it done.")
+        {
+            questManager.StartQuest("gangQuest");
+            Debug.Log("Quest initiation choice detected, starting 'gangQuest'.");
+        }
+
         currentStory.ChooseChoiceIndex(choiceIndex);
         awaitingPlayerChoice = false;
 
@@ -136,21 +157,40 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
-    private void UpdateStats()
+    public void UpdateStats()
     {
-        if (currentStory.variablesState != null)
+        if (currentStory != null && currentStory.variablesState != null)
         {
             int gangValue = GetInkVariable("GangStat");
             int eduValue = GetInkVariable("EduStat");
 
-            gangStatText.text = $"Gang: {gangValue}";
-            educationStatText.text = $"Education: {eduValue}";
+            if (gangStatText != null)
+                gangStatText.text = $"Gang: {gangValue}";
+            else
+                Debug.LogWarning("gangStatText is not assigned.");
+
+            if (educationStatText != null)
+                educationStatText.text = $"Education: {eduValue}";
+            else
+                Debug.LogWarning("educationStatText is not assigned.");
 
             // Update GameManager stats
-            GameManager.instance.SetStat("GangStat", gangValue);
-            GameManager.instance.SetStat("EduStat", eduValue);
+            if (gameManager != null)
+            {
+                gameManager.SetStat("GangStat", gangValue);
+                gameManager.SetStat("EduStat", eduValue);
+            }
+            else
+            {
+                Debug.LogWarning("GameManager instance is null in UpdateStats.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("currentStory or variablesState is null in UpdateStats.");
         }
     }
+
 
     private int GetInkVariable(string variableName)
     {
@@ -166,19 +206,28 @@ public class DialogueManager : MonoBehaviour
 
     private void InjectStatsIntoInk()
     {
-        currentStory.variablesState["GangStat"] = GameManager.instance.GetStat("GangStat");
-        currentStory.variablesState["EduStat"] = GameManager.instance.GetStat("EduStat");
+        if (gameManager != null)
+        {
+            currentStory.variablesState["GangStat"] = gameManager.GetStat("GangStat");
+            currentStory.variablesState["EduStat"] = gameManager.GetStat("EduStat");
+        }
     }
 
     private void SaveStatsToGameManager()
     {
-        GameManager.instance.SetStat("GangStat", GetInkVariable("GangStat"));
-        GameManager.instance.SetStat("EduStat", GetInkVariable("EduStat"));
+        if (gameManager != null)
+        {
+            gameManager.SetStat("GangStat", GetInkVariable("GangStat"));
+            gameManager.SetStat("EduStat", GetInkVariable("EduStat"));
+        }
     }
 
     private void DebugStats(string context)
     {
-        Debug.Log($"{context}: GangStat: {GameManager.instance.GetStat("GangStat")}, EduStat: {GameManager.instance.GetStat("EduStat")}");
+        if (gameManager != null)
+        {
+            Debug.Log($"{context}: GangStat: {gameManager.GetStat("GangStat")}, EduStat: {gameManager.GetStat("EduStat")}");
+        }
     }
 
     private void ClearButtons()
@@ -190,11 +239,30 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public Story GetCurrentStory()
+    private void OnEnable()
     {
-        return currentStory;
+        if (gangStatText == null)
+            Debug.LogWarning("gangStatText is not assigned in the DialogueManager.");
+        if (educationStatText == null)
+            Debug.LogWarning("educationStatText is not assigned in the DialogueManager.");
+        if (gameManager == null)
+            Debug.LogWarning("GameManager is not assigned in the DialogueManager. Please assign it in the Inspector.");
+        if (questManager == null)
+            Debug.LogWarning("QuestManager is not assigned in the DialogueManager.");
+
+        if (gameManager != null)
+        {
+            if (gangStatText != null)
+                gangStatText.text = $"Gang: {gameManager.GetStat("GangStat")}";
+            if (educationStatText != null)
+                educationStatText.text = $"Education: {gameManager.GetStat("EduStat")}";
+        }
     }
 
+    void OnDisable()
+    {
+        gameManager.OnStatsUpdated -= UpdateStats;
+    }
 
     public bool IsDialoguePlaying() => dialogueIsPlaying;
 }

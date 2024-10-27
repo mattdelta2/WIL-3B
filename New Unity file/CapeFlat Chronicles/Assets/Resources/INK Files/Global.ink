@@ -6,3 +6,4 @@ VAR gangQuestStarted = false
 VAR gangQuestCompleted = false
 VAR communityQuestStarted = false
 VAR communityQuestCompleted = false
+

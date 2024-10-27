@@ -7,6 +7,7 @@ Hey bru, jy weet die life hier on the Flats is tough, né? You gotta keep your h
     -> Keep_Out_Of_Trouble
 
 * The streets are calling me. I’m ready for whatever.
+~ gangQuestStarted = false
     -> Streets_Calling
 
 * I’m not sure what to do.

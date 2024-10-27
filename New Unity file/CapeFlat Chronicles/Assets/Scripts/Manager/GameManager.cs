@@ -1,9 +1,13 @@
 using UnityEngine;
+using System;
 using System.Collections.Generic;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+
+    // Event to notify UI updates for stats
+    public event Action OnStatsUpdated;
 
     // Store NPC dialogue progress
     public Dictionary<string, int> npcDialogueProgress = new Dictionary<string, int>();
@@ -28,34 +32,6 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    // Method to record dialogue progress
-    public void RecordDialogueProgress(string npcName, int lineIndex)
-    {
-        if (npcDialogueProgress.ContainsKey(npcName))
-        {
-            npcDialogueProgress[npcName] = lineIndex;  // Update the progress
-        }
-        else
-        {
-            npcDialogueProgress.Add(npcName, lineIndex);  // Record progress for the NPC dialogue
-        }
-    }
-
-    // Method to check if dialogue has been completed
-    public bool HasCompletedDialogue(string npcName)
-    {
-        return npcDialogueProgress.ContainsKey(npcName) && npcDialogueProgress[npcName] > 0;
-    }
-
-    // Method to get dialogue progress
-    public int GetDialogueProgress(string npcName)
-    {
-        if (npcDialogueProgress.ContainsKey(npcName))
-            return npcDialogueProgress[npcName];
-        return 0; // Default to the beginning if no progress recorded
-    }
-
-    // Method to get a game stat
     public int GetStat(string statName)
     {
         if (gameStats.ContainsKey(statName))
@@ -63,16 +39,30 @@ public class GameManager : MonoBehaviour
         return 0; // Default to 0 if the stat does not exist
     }
 
-    // Method to set a game stat
     public void SetStat(string statName, int value)
     {
         if (gameStats.ContainsKey(statName))
         {
-            gameStats[statName] = value; // Update the stat
+            gameStats[statName] = value;
         }
         else
         {
-            gameStats.Add(statName, value); // Initialize the stat if it doesn't exist
+            gameStats.Add(statName, value);
         }
+        OnStatsUpdated?.Invoke();  // Trigger the event to update UI
+    }
+
+    public void IncrementStat(string statName)
+    {
+        if (gameStats.ContainsKey(statName))
+        {
+            gameStats[statName]++;
+        }
+        else
+        {
+            gameStats[statName] = 1;
+        }
+        Debug.Log($"{statName} incremented. New value: {gameStats[statName]}");
+        OnStatsUpdated?.Invoke();  // Trigger the event to update UI
     }
 }
