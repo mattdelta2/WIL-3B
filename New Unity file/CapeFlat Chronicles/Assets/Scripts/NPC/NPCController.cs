@@ -49,6 +49,7 @@ public class NPCController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Player exited NPC area: " + npcName);
+            isPlayerInRange = false;
 
             if (DialogueManager.Instance.IsDialoguePlaying())  // Only call if dialogue is still playing
             {

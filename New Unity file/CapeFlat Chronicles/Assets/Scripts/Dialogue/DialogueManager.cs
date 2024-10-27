@@ -16,14 +16,11 @@ public class DialogueManager : MonoBehaviour
     public List<Button> optionButtons;
     public TextMeshProUGUI gangStatText;
     public TextMeshProUGUI educationStatText;
-    public NPCController nPCController;
-    public QuestManager questManager; // Reference to QuestManager
+    public QuestManager questManager;
 
     private Story currentStory;
     private bool dialogueIsPlaying;
     private bool awaitingPlayerChoice;
-
-    [Header("Auto-Advance Settings")]
     public float autoAdvanceDelay = 2f;
 
     void Awake()
@@ -41,16 +38,8 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueIsPlaying = false;
-
-        if (dialogueUI != null)
-        {
-            dialogueUI.SetActive(false);
-        }
-
-        foreach (Button button in optionButtons)
-        {
-            button.gameObject.SetActive(false);
-        }
+        if (dialogueUI != null) dialogueUI.SetActive(false);
+        foreach (Button button in optionButtons) button.gameObject.SetActive(false);
     }
 
     public void StartDialogue(TextAsset inkJSON, string npcName)
@@ -58,45 +47,31 @@ public class DialogueManager : MonoBehaviour
         currentStory = new Story(inkJSON.text);
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
-
         npcNameText.text = npcName;
 
-        // Set the current story in QuestManager to access variables
-        questManager.SetCurrentStory(currentStory);
+        // Inject saved stats back into the Ink story
+        InjectStatsIntoInk();
 
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null)
-        {
-            playerMovement.SetCanMove(false);
-        }
+        if (playerMovement != null) playerMovement.SetCanMove(false);
 
-        // Debugging stats at the start of the dialogue
         DebugStats("Dialogue Started");
-
         ContinueStory();
     }
 
     public void EndDialogue()
     {
         dialogueIsPlaying = false;
-
-        // Debugging stats at the end of the dialogue before clearing the story
         DebugStats("Dialogue Ended");
 
-        if (dialogueUI != null)
-        {
-            dialogueUI.SetActive(false);
-        }
-
-        // Clear buttons for next dialogue
+        if (dialogueUI != null) dialogueUI.SetActive(false);
         ClearButtons();
 
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null)
-        {
-            playerMovement.SetCanMove(true);
-            nPCController.currentDialogueIndex += 1;
-        }
+        if (playerMovement != null) playerMovement.SetCanMove(true);
+
+        // Save final story state to GameManager
+        SaveStatsToGameManager();
 
         currentStory = null;
     }
@@ -106,25 +81,13 @@ public class DialogueManager : MonoBehaviour
         if (currentStory != null && currentStory.canContinue)
         {
             dialogueText.text = currentStory.Continue();
-
             ClearButtons();
-
             DisplayChoices();
 
-            if (currentStory.currentChoices.Count == 0)
-            {
-                StartCoroutine(AutoAdvanceDialogue());
-            }
-            else
-            {
-                awaitingPlayerChoice = true;
-            }
+            awaitingPlayerChoice = currentStory.currentChoices.Count > 0;
+            if (!awaitingPlayerChoice) StartCoroutine(AutoAdvanceDialogue());
 
-            // Always update stats after continuing the story
             UpdateStats();
-
-            // Check for quest conditions
-            CheckForQuestUpdates();
         }
         else
         {
@@ -136,27 +99,12 @@ public class DialogueManager : MonoBehaviour
     {
         awaitingPlayerChoice = false;
         yield return new WaitForSeconds(autoAdvanceDelay);
-
-        if (dialogueIsPlaying && !awaitingPlayerChoice)
-        {
-            ContinueStory();
-        }
+        if (dialogueIsPlaying && !awaitingPlayerChoice) ContinueStory();
     }
 
     private void DisplayChoices()
     {
-        if (currentStory == null)
-        {
-            Debug.LogError("Current story is null in DisplayChoices().");
-            return;
-        }
-
         List<Choice> currentChoices = currentStory.currentChoices;
-
-        if (currentChoices.Count > optionButtons.Count)
-        {
-            Debug.LogWarning("More choices than buttons. Limit to 3 choices.");
-        }
 
         for (int i = 0; i < currentChoices.Count; i++)
         {
@@ -164,17 +112,11 @@ public class DialogueManager : MonoBehaviour
             button.gameObject.SetActive(true);
 
             TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            if (buttonText != null)
-            {
-                buttonText.text = currentChoices[i].text;
-            }
+            if (buttonText != null) buttonText.text = currentChoices[i].text;
 
             int choiceIndex = i;
             button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() =>
-            {
-                ChooseStoryChoice(choiceIndex);
-            });
+            button.onClick.AddListener(() => ChooseStoryChoice(choiceIndex));
         }
 
         for (int i = currentChoices.Count; i < optionButtons.Count; i++)
@@ -185,11 +127,12 @@ public class DialogueManager : MonoBehaviour
 
     private void ChooseStoryChoice(int choiceIndex)
     {
+        if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count) return;
+
         currentStory.ChooseChoiceIndex(choiceIndex);
         awaitingPlayerChoice = false;
 
-        UpdateStats();  // Update stats immediately after making a choice
-
+        UpdateStats();
         ContinueStory();
     }
 
@@ -197,67 +140,45 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentStory.variablesState != null)
         {
-            // Update Gang Stat
-            if (currentStory.variablesState["GangStat"] != null)
-            {
-                int gangValue = Mathf.Max((int)currentStory.variablesState["GangStat"], 0); // Ensure GangStat is not below 0
-                gangStatText.text = $"Gang: {gangValue}";
-            }
+            int gangValue = GetInkVariable("GangStat");
+            int eduValue = GetInkVariable("EduStat");
 
-            // Update Education Stat
-            if (currentStory.variablesState["EduStat"] != null)
-            {
-                int educationValue = Mathf.Max((int)currentStory.variablesState["EduStat"], 0); // Ensure EduStat is not below 0
-                educationStatText.text = $"Education: {educationValue}";
-            }
+            gangStatText.text = $"Gang: {gangValue}";
+            educationStatText.text = $"Education: {eduValue}";
+
+            // Update GameManager stats
+            GameManager.instance.SetStat("GangStat", gangValue);
+            GameManager.instance.SetStat("EduStat", eduValue);
         }
     }
 
-    // Debug stats for GangStat and EduStat
+    private int GetInkVariable(string variableName)
+    {
+        try
+        {
+            return (int)currentStory.variablesState[variableName];
+        }
+        catch
+        {
+            return 0;
+        }
+    }
+
+    private void InjectStatsIntoInk()
+    {
+        currentStory.variablesState["GangStat"] = GameManager.instance.GetStat("GangStat");
+        currentStory.variablesState["EduStat"] = GameManager.instance.GetStat("EduStat");
+    }
+
+    private void SaveStatsToGameManager()
+    {
+        GameManager.instance.SetStat("GangStat", GetInkVariable("GangStat"));
+        GameManager.instance.SetStat("EduStat", GetInkVariable("EduStat"));
+    }
+
     private void DebugStats(string context)
     {
-        if (currentStory != null && currentStory.variablesState != null)
-        {
-            Debug.Log($"{context}:");
-
-            // Debug Gang Stat
-            if (currentStory.variablesState["GangStat"] != null)
-            {
-                int gangValue = Mathf.Max((int)currentStory.variablesState["GangStat"], 0); // Ensure GangStat is not below 0
-                Debug.Log($"Gang Stat: {gangValue}");
-            }
-
-            // Debug Education Stat
-            if (currentStory.variablesState["EduStat"] != null)
-            {
-                int educationValue = Mathf.Max((int)currentStory.variablesState["EduStat"], 0); // Ensure EduStat is not below 0
-                Debug.Log($"Education Stat: {educationValue}");
-            }
-        }
-        else
-        {
-            Debug.LogWarning("Cannot debug stats: No currentStory or variablesState.");
-        }
-    }
-
-    // Check and update quest status based on current dialogue conditions
-    private void CheckForQuestUpdates()
-    {
-        // Example: Starting the Teacher Quest
-        if (currentStory.variablesState["teacherQuestStarted"] != null &&
-            (bool)currentStory.variablesState["teacherQuestStarted"] == true &&
-            questManager.IsQuestStarted("teacherQuest") == false)
-        {
-            questManager.StartQuest("teacherQuest");
-        }
-
-        // Example: Completing the Teacher Quest
-        if (currentStory.variablesState["teacherQuestCompleted"] != null &&
-            (bool)currentStory.variablesState["teacherQuestCompleted"] == true &&
-            questManager.IsQuestCompleted("teacherQuest") == false)
-        {
-            questManager.CompleteQuest("teacherQuest");
-        }
+        Debug.Log($"{context}: GangStat: {GameManager.instance.GetStat("GangStat")}, EduStat: {GameManager.instance.GetStat("EduStat")}");
     }
 
     private void ClearButtons()
@@ -269,8 +190,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public bool IsDialoguePlaying()
+    public Story GetCurrentStory()
     {
-        return dialogueIsPlaying;
+        return currentStory;
     }
+
+
+    public bool IsDialoguePlaying() => dialogueIsPlaying;
 }

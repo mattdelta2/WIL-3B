@@ -24,7 +24,7 @@ Aweh, that’s the plan. But maak ‘n plan quick quick, 'cause trouble don’t 
 
 // Sub-Branch: Focused_On_School
 = Focused_On_School
-Good good, maar don’t let them catch you slipping, bru.
+Good good, maar don’t let them catch you slipping, bru. 
 -> AddEdu
 -> END
 
@@ -40,9 +40,11 @@ Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t 
 * I’m ready for anything.
     -> Ready_For_Anything
 
-// Start Gang Quest option (quest only starts if it's not already started)
 * {gangQuestStarted == false} How can I prove myself?
     -> Start_Gang_Quest
+
+* {gangQuestStarted == true} What’s next in proving myself?
+    -> Next_Steps_In_Quest
 
 // Sub-Branch: Ready_For_Anything
 = Ready_For_Anything
@@ -67,15 +69,27 @@ Better do it soon, anders jy gaan klaar wees.
 = Start_Gang_Quest
 Aweh, I like that spirit. If jy really want to join us, I have a small job for you. Let’s see if jy kan handle die pressure.
 ~ gangQuestStarted = true
+* What’s next in proving myself?
+    -> Next_Steps_In_Quest
+-> END
+
+// Branch: Next Steps in Quest
+= Next_Steps_In_Quest
+Good, so you’re in. You’ll need to show some skills. I want you to go get something for me. Go find the white box for me 
+* I’ll get it done.
+    -> Quest_In_Progress
+
+// Quest In Progress
+= Quest_In_Progress
+Just remember, loyalty is key. Don’t let anyone down. Return to me once you’re finished.
+-> AddGang
 -> END
 
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
 -> END
