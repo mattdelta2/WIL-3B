@@ -496,19 +496,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: -4.3
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -516,7 +516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.1
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 1785151231008898802, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -865,6 +865,7 @@ GameObject:
   m_Component:
   - component: {fileID: 484459483}
   - component: {fileID: 484459482}
+  - component: {fileID: 484459484}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -899,6 +900,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &484459484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 484459481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d769b72d2f9a544b1db5eba84310a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 0}
 --- !u!114 &515463151 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 102365014590017661, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
@@ -910,6 +924,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &605415140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 605415141}
+  m_Layer: 0
+  m_Name: Teleporters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &605415141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605415140}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 25.199894, y: -14.027369, z: -0.35038543}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1353147700}
+  - {fileID: 939745941}
+  - {fileID: 1390943901}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &688814247
 GameObject:
   m_ObjectHideFlags: 0
@@ -986,6 +1034,97 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.9614038, y: 2.7570486}
+  m_EdgeRadius: 0
+--- !u!1 &939745940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 939745941}
+  - component: {fileID: 939745943}
+  - component: {fileID: 939745942}
+  m_Layer: 0
+  m_Name: Grans House
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &939745941
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939745940}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.0041132914, w: 0.99999154}
+  m_LocalPosition: {x: -76.8, y: 4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 605415141}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.471}
+--- !u!114 &939745942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939745940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec03b891069c4704faa8187058123d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Grans House
+--- !u!61 &939745943
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 939745940}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.326622, y: -8.777268}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.653244, y: 25.697416}
   m_EdgeRadius: 0
 --- !u!1 &981453228
 GameObject:
@@ -1180,6 +1319,188 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1353147699
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1353147700}
+  - component: {fileID: 1353147702}
+  - component: {fileID: 1353147701}
+  m_Layer: 0
+  m_Name: Gang Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353147700
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353147699}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 23.7, y: -9.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 605415141}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1353147701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353147699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec03b891069c4704faa8187058123d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Gang Area
+--- !u!61 &1353147702
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353147699}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.326622, y: -7.343424}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.653244, y: 28.565105}
+  m_EdgeRadius: 0
+--- !u!1 &1390943900
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1390943901}
+  - component: {fileID: 1390943903}
+  - component: {fileID: 1390943902}
+  m_Layer: 0
+  m_Name: Community Center
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1390943901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390943900}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: 0.7059063, w: 0.7083053}
+  m_LocalPosition: {x: -58.4, y: -36.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 605415141}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 89.806}
+--- !u!114 &1390943902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390943900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec03b891069c4704faa8187058123d08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneName: Community Center
+--- !u!61 &1390943903
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1390943900}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.326622, y: -8.777268}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.653244, y: 25.697416}
+  m_EdgeRadius: 0
 --- !u!1001 &1556997245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1190,15 +1511,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 677873509336748313, guid: 4c13b5d2adffc0e4b8f8c1a8c67395a9, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 677873509336748313, guid: 4c13b5d2adffc0e4b8f8c1a8c67395a9, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 677873509336748313, guid: 4c13b5d2adffc0e4b8f8c1a8c67395a9, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.4419
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 677873509336748313, guid: 4c13b5d2adffc0e4b8f8c1a8c67395a9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1419,6 +1740,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd913b08d9c2334c9d159364e8bde04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 484459482}
   dialogueUI: {fileID: 1741945038}
   npcNameText: {fileID: 1668182294}
   dialogueText: {fileID: 249313008}
@@ -1428,7 +1750,7 @@ MonoBehaviour:
   - {fileID: 392538673}
   gangStatText: {fileID: 2054773220}
   educationStatText: {fileID: 181823156}
-  nPCController: {fileID: 1883520760}
+  questManager: {fileID: 484459484}
   autoAdvanceDelay: 2
 --- !u!4 &1838309270
 Transform:
@@ -1445,17 +1767,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1883520760 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
-  m_PrefabInstance: {fileID: 397012828}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c51a0552f9b8f64192d2c95a5218f4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1909690881
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1983,3 +2294,4 @@ SceneRoots:
   - {fileID: 1799430743}
   - {fileID: 397012828}
   - {fileID: 211176884}
+  - {fileID: 605415141}
