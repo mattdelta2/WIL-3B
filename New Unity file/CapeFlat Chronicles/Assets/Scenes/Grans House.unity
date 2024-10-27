@@ -634,43 +634,43 @@ PrefabInstance:
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[0]
       value: 
-      objectReference: {fileID: 4900000, guid: b540931482b104844934181135d75708, type: 3}
+      objectReference: {fileID: 4900000, guid: 3afebf3e093c4a34ab0436d73b943a12, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[1]
       value: 
-      objectReference: {fileID: 4900000, guid: f260da5554ddd70409a1be01e2262a8e, type: 3}
+      objectReference: {fileID: 4900000, guid: f024b709d9b04104cbae180dbab5528c, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[2]
       value: 
-      objectReference: {fileID: 4900000, guid: 38a42ed9c72566943970f4d07bc71695, type: 3}
+      objectReference: {fileID: 4900000, guid: 93a6898139b07904aae0f1bcbbe042a0, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[3]
       value: 
-      objectReference: {fileID: 4900000, guid: 17284a0c345753140938831606bd6cc5, type: 3}
+      objectReference: {fileID: 4900000, guid: a411c68c197ec0b4cb9a671419cfd083, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[4]
       value: 
-      objectReference: {fileID: 4900000, guid: 92f5c77ce33a16d46819b65007bd7290, type: 3}
+      objectReference: {fileID: 4900000, guid: 2ec22721582203442a32081ed7b8e5f0, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[5]
       value: 
-      objectReference: {fileID: 4900000, guid: 57d10267d2b39884f9c889d1e11437e2, type: 3}
+      objectReference: {fileID: 4900000, guid: e86202aa7687e6043a735f8dcfbc7cd3, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[6]
       value: 
-      objectReference: {fileID: 4900000, guid: 2cbf25fe820551b41814959fae69f83b, type: 3}
+      objectReference: {fileID: 4900000, guid: b93fd00b68d76994c9d8fc1b1e77a323, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[7]
       value: 
-      objectReference: {fileID: 4900000, guid: ddbee1191b188b84792840fd2aa42e0b, type: 3}
+      objectReference: {fileID: 4900000, guid: 87908fb0cc41aee4b998ef79e7d6bfe6, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[8]
       value: 
-      objectReference: {fileID: 4900000, guid: 617eae51e0a41ec4fa5db307d97ffb85, type: 3}
+      objectReference: {fileID: 4900000, guid: 92f72065a932c1449b86c3cddf76979f, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[9]
       value: 
-      objectReference: {fileID: 4900000, guid: e6460a4bd7ea4194a959b2961816e3fd, type: 3}
+      objectReference: {fileID: 4900000, guid: cca4ecb407364604d96fc5f565be3256, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: inkDialogues.Array.size
       value: 25
@@ -678,11 +678,11 @@ PrefabInstance:
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[10]
       value: 
-      objectReference: {fileID: 4900000, guid: 0352cad57a7ed974bac64f8e016abc68, type: 3}
+      objectReference: {fileID: 4900000, guid: 06cd510802bee7d4c90841a2dab57536, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[11]
       value: 
-      objectReference: {fileID: 4900000, guid: ff46f524b7bcfb246aba77181029f2b4, type: 3}
+      objectReference: {fileID: 4900000, guid: f52b38c520ec8fe4488457947b3a106d, type: 3}
     - target: {fileID: 5276033086572203672, guid: fb3a76b498cfcb1409838f516ee3d05d, type: 3}
       propertyPath: dialogues.Array.data[12]
       value: 
