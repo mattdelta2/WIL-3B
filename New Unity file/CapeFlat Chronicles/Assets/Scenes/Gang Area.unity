@@ -719,6 +719,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd913b08d9c2334c9d159364e8bde04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1407618144}
   dialogueUI: {fileID: 1021790057}
   npcNameText: {fileID: 679022290}
   dialogueText: {fileID: 498477448}
