@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI gangStatText;
     public TextMeshProUGUI educationStatText;
     public NPCController nPCController;
+    public QuestManager questManager; // Reference to QuestManager
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -59,6 +60,9 @@ public class DialogueManager : MonoBehaviour
         dialogueUI.SetActive(true);
 
         npcNameText.text = npcName;
+
+        // Set the current story in QuestManager to access variables
+        questManager.SetCurrentStory(currentStory);
 
         PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
         if (playerMovement != null)
@@ -118,6 +122,9 @@ public class DialogueManager : MonoBehaviour
 
             // Always update stats after continuing the story
             UpdateStats();
+
+            // Check for quest conditions
+            CheckForQuestUpdates();
         }
         else
         {
@@ -230,6 +237,26 @@ public class DialogueManager : MonoBehaviour
         else
         {
             Debug.LogWarning("Cannot debug stats: No currentStory or variablesState.");
+        }
+    }
+
+    // Check and update quest status based on current dialogue conditions
+    private void CheckForQuestUpdates()
+    {
+        // Example: Starting the Teacher Quest
+        if (currentStory.variablesState["teacherQuestStarted"] != null &&
+            (bool)currentStory.variablesState["teacherQuestStarted"] == true &&
+            questManager.IsQuestStarted("teacherQuest") == false)
+        {
+            questManager.StartQuest("teacherQuest");
+        }
+
+        // Example: Completing the Teacher Quest
+        if (currentStory.variablesState["teacherQuestCompleted"] != null &&
+            (bool)currentStory.variablesState["teacherQuestCompleted"] == true &&
+            questManager.IsQuestCompleted("teacherQuest") == false)
+        {
+            questManager.CompleteQuest("teacherQuest");
         }
     }
 

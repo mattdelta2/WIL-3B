@@ -729,6 +729,7 @@ MonoBehaviour:
   gangStatText: {fileID: 1158570036}
   educationStatText: {fileID: 964812950}
   nPCController: {fileID: 2010115405}
+  questManager: {fileID: 1407618146}
   autoAdvanceDelay: 2
 --- !u!4 &632907503
 Transform:
@@ -2129,6 +2130,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1407618145}
   - component: {fileID: 1407618144}
+  - component: {fileID: 1407618146}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2163,6 +2165,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1407618146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1407618143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d769b72d2f9a544b1db5eba84310a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1437841306 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 102365014590017661, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}

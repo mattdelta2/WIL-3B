@@ -40,6 +40,10 @@ Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t 
 * I’m ready for anything.
     -> Ready_For_Anything
 
+// Start Gang Quest option (quest only starts if it's not already started)
+* {gangQuestStarted == false} How can I prove myself?
+    -> Start_Gang_Quest
+
 // Sub-Branch: Ready_For_Anything
 = Ready_For_Anything
 Jy praat mos nou, but jy moet prove it, ek sê.
@@ -57,6 +61,12 @@ Tsek with the doubt, my bru. Jy moet focus, anders jy gaan net drown in die chao
 = Figure_It_Out
 Better do it soon, anders jy gaan klaar wees.
 -> AddGang
+-> END
+
+// Quest Start: Gang Quest
+= Start_Gang_Quest
+Aweh, I like that spirit. If jy really want to join us, I have a small job for you. Let’s see if jy kan handle die pressure.
+~ gangQuestStarted = true
 -> END
 
 // Stat Adjustments
