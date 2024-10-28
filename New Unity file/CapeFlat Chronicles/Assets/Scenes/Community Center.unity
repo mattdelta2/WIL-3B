@@ -694,7 +694,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: edd913b08d9c2334c9d159364e8bde04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameManager: {fileID: 0}
+  gameManager: {fileID: 1715300187}
   dialogueUI: {fileID: 510311986}
   npcNameText: {fileID: 510311985}
   dialogueText: {fileID: 510311984}
@@ -704,7 +704,7 @@ MonoBehaviour:
   - {fileID: 510311981}
   gangStatText: {fileID: 187291449}
   educationStatText: {fileID: 1108910672}
-  questManager: {fileID: 0}
+  questManager: {fileID: 1715300189}
   autoAdvanceDelay: 2
 --- !u!4 &413588074
 Transform:
@@ -2699,6 +2699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1715300188}
   - component: {fileID: 1715300187}
+  - component: {fileID: 1715300189}
   m_Layer: 0
   m_Name: Game Manager
   m_TagString: Untagged
@@ -2733,6 +2734,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715300189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1715300186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78d769b72d2f9a544b1db5eba84310a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 0}
 --- !u!1 &1930195193
 GameObject:
   m_ObjectHideFlags: 0
