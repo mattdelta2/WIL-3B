@@ -53,6 +53,9 @@ You think the streets care about you? The streets only take. I know you think yo
 * I’ve got to make my own way, Gran. No one’s handing me anything.
     -> Make_Own_Way
 
+* I don’t know if I can handle it all.
+    -> Dont_Know_If_Handle
+
 // Sub-Branch: Make_Own_Way
 = Make_Own_Way
 Your own way? I understand that, but you need to think about the long term. The streets will swallow you whole if you’re not careful. Do you think they care about your future?
@@ -61,12 +64,36 @@ Your own way? I understand that, but you need to think about the long term. The 
     -> Can_Handle
 
 * Maybe you’re right, but it feels like the only option sometimes.
+~ communityQuestStarted = false
     -> Feels_Only_Option
 
 // Sub-Branch: Can_Handle
 = Can_Handle
 The streets can seem like a quick way, but they come with their own costs. You’re worth more than what they offer.
 -> AddGang
+-> END
+
+// Sub-Branch: Dont_Know_If_Handle
+= Dont_Know_If_Handle
+It’s okay to feel unsure, but you can’t let doubt control your path. Sometimes, taking a step back to reassess things can make a big difference.
+
+* Maybe I need to go to the Community Center and clear my head.
+~ communityQuestStarted = true
+    -> Start_Community_Center_Quest
+-> END
+
+// Branch: Not_Sure_What_To_Do
+= Not_Sure_What_To_Do
+It’s okay not to have all the answers. You’re still figuring things out. But you need to start making decisions, otherwise, the world will make them for you.
+
+* Maybe I need to visit the Community Center for some guidance.
+~ communityQuestStarted = true
+    -> Start_Community_Center_Quest
+
+// Quest Start: Community Center Quest
+= Start_Community_Center_Quest
+I think that’s a good idea. The people there might be able to give you a different perspective. Go and see what they have to say at the Community Center.
+-> AddEdu
 -> END
 
 // Sub-Branch: Feels_Only_Option
@@ -76,31 +103,19 @@ I get that. The world can feel like it’s closing in on you. But you’ve got t
 * I’m just trying to survive, Gran.
     -> Just_Survive
 
-// Sub-Branch: Just_Survive
-= Just_Survive
-Survival is one thing, but you need to think beyond just surviving. You’ve got more potential than that. What do you want for yourself, really?
-
 * I want a better life, I just don’t know how to get there.
     -> Better_Life
 
 * I don’t know. I’m just taking it one day at a time.
     -> One_Day_At_A_Time
 
-* I’m not sure yet, Gran. I’ll figure it out along the way.
-    -> Figure_Out_Along
-
-// Sub-Branch: Figure_Out_Along
-= Figure_Out_Along
-You say that, but every day you don’t make a choice, the world makes one for you. You can’t afford to drift, my child. What’s stopping you from making a decision now?
-
-* I’m scared of making the wrong choice.
-    -> Scared_Of_Failure
-
-* I don’t want to feel trapped by one path.
-    -> Trapped_By_Path
-
+// Sub-Branch: Just_Survive
+= Just_Survive
+Survival is a start, but there’s more to life than just surviving. You have a chance to build something for yourself. Don't lose sight of that.
+-> AddGang
 -> END
 
+// Sub-Branch: Better_Life
 = Better_Life
 I’m glad to hear that. You don’t need to have it all figured out, but having a goal can help guide your choices.
 -> AddEdu
@@ -113,15 +128,15 @@ You say that, but every day you don’t make a choice, the world makes one for y
 * I’m scared of making the wrong choice.
     -> Scared_Of_Failure
 
+* I don’t want to feel trapped by one path.
+    -> Trapped_By_Path
+
 // Sub-Branch: Scared_Of_Failure
 = Scared_Of_Failure
 That’s understandable. Everyone’s afraid of failure. But making no decision is the same as making the wrong one. You need to face that fear.
 
 * I guess you’re right. I’ll think about it.
     -> Think_About_It
-
-* I don’t want to feel trapped by one path.
-    -> Trapped_By_Path
 
 // Sub-Branch: Think_About_It
 = Think_About_It
@@ -138,10 +153,10 @@ I get that. But sometimes committing to a path, even if it feels limiting, is wh
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0)  // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0)  // Ensures EduStat doesn't drop below 0
 -> END

@@ -36,6 +36,7 @@ No, it’s not easy. But nothing worth doing is. Just remember, every decision h
     -> Keep_In_Mind
 
 * Yeah, but sometimes it feels like I can’t control anything.
+~ troubleQuestStarted = true
     -> Feels_Out_Of_Control
 
 // Follow-up: Keep_In_Mind
@@ -157,10 +158,10 @@ Just remember, the longer you drift, the harder it is to steer back.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
 -> END

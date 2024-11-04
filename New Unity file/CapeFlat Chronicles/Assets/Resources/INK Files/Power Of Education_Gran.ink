@@ -14,8 +14,6 @@ School might not seem like the most important thing, but trust me, it can change
 
 // Branch: Studying_Hard
 = Studying_Hard
-That’s good to hear. But studying isn’t enough if you’re not focused. Are you focusing on the right things?
-
 * I’m doing well in math and science. Those seem like my ticket out of here.
     -> Math_Science
 
@@ -31,7 +29,10 @@ That’s the kind of thinking you need. Those subjects will open doors for you. 
 // Sub-Branch: Trying_Get_By
 = Trying_Get_By
 It’s okay if it’s hard. The important thing is you’re trying. But trying won’t be enough forever. You’ve got to push yourself.
--> END
+
+* Maybe I need to commit to a study goal.
+~ communityQuestStarted = true
+    -> Start_Study_Quest
 
 // Branch: School_Waste
 = School_Waste
@@ -75,13 +76,39 @@ Motivation won’t always be there, but discipline needs to be. If you wait for 
 Focus is like a muscle. The more you train it, the stronger it gets. Don’t give up on yourself.
 -> END
 
+// Quest Start: Study Quest
+= Start_Study_Quest
+That’s a good idea. Try setting aside time to study, or visit the Community Center for some guidance. But remember, if you’re tempted to go elsewhere, like the gang area, it may affect your focus.
+-> END
+
+// Options for Quest Completion
+* {communityQuestStarted} Go to the Community Center for guidance.
+    -> Complete_Study_Quest_Success
+
+* {communityQuestStarted} Head to the Gang Area instead.
+    -> Complete_Study_Quest_Failure
+
+= Complete_Study_Quest_Success
+You made the right choice by seeking guidance. It’s not always easy, but it’s the right step toward a brighter future.
+~ EduStat += 1
+~ communityQuestStarted = false
+~ communityQuestCompleted = true
+-> END
+
+= Complete_Study_Quest_Failure
+You’ve chosen to spend your time in the gang area. Every choice shapes your future; make sure it’s one you can live with.
+~ GangStat += 1
+~ communityQuestStarted = false
+~ communityQuestCompleted = true
+-> END
+
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
 -> END

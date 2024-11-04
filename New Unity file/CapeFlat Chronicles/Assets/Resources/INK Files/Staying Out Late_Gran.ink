@@ -113,13 +113,13 @@ Take your time. Sometimes the right choice becomes clearer when you give it spac
 Feeling lost is normal, my child. The world is confusing, and it’s easy to get off track. But staying out there won’t help you find yourself. What do you think will?
 
 * Maybe I need some guidance. I don’t know what I’m doing.
-    -> Need_Guidance
+    -> Guidance
 
 * I don’t know if there’s an answer for me.
     -> No_Answer
 
-// Sub-Branch: Need_Guidance
-= Need_Guidance
+// Sub-Branch: Guidance
+= Guidance
 That’s the first step: admitting you don’t have all the answers. I’m here for you. We can figure this out together.
 -> AddEdu
 -> END
@@ -172,10 +172,8 @@ There’s always time, my child. As long as you keep moving forward, you’ll fi
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
 -> END

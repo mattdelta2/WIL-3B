@@ -153,13 +153,39 @@ Don’t close yourself off, no matter how hard things get.
 -> AddGang
 -> END
 
+// Quest Activation: Triggered by "Feeling_Lost" or "On_My_Own"
+~ supportQuestStarted = true
+
+// Quest Information
+= supportQuest_Info
+When feeling overwhelmed, you can choose to visit the **Community Center** or **Gran’s House** to seek support, gaining **EduStat**. Alternatively, visiting the **Gang Area** signifies your independence, granting **GangStat**.
+
+// Completion Based on Location
+* {supportQuestStarted} Go to the Community Center or Gran's House.
+    -> Complete_Support_Quest_Success
+
+* {supportQuestStarted} Head to the Gang Area.
+    -> Complete_Support_Quest_Failure
+
+= Complete_Support_Quest_Success
+You’ve chosen to seek support from family or the community. This reliance on others gives you strength.
+~ EduStat += 1
+~ supportQuestStarted = false
+-> END
+
+= Complete_Support_Quest_Failure
+You’ve opted to manage things alone, turning to the gang for a sense of belonging. This choice shapes your path.
+~ GangStat += 1
+~ supportQuestStarted = false
+-> END
+
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
 -> END

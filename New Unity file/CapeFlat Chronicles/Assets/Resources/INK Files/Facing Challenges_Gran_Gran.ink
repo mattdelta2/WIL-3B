@@ -62,6 +62,7 @@ It’s okay to feel overwhelmed. Everyone does at some point. The trick is to ta
     -> Letting_People_Down
 
 * I don’t know if I’m on the right path.
+~ influenceQuestStarted = true
     -> Not_Sure_Path
 
 // Sub-Branch: Letting_People_Down
@@ -70,18 +71,37 @@ You’re not letting anyone down. The only person you need to prove yourself to 
 -> AddEdu
 -> END
 
-// Sub-Branch: Not_Sure_Path
+// Quest Start: Influence Quest
 = Not_Sure_Path
-It’s okay to question your path, but don’t let that doubt stop you from moving forward. You’ll find your way.
+It’s okay to question your path, but don’t let that doubt stop you from moving forward. Here’s something to try: go to the Community Center for some perspective. Or, if you’re feeling lost, you could talk to those on the street, but remember, each choice has consequences.
+-> END
+
+// Options for Quest Completion
+* {influenceQuestStarted} Visit the Community Center for guidance.
+    -> Influence_Quest_Community_Center
+
+* {influenceQuestStarted} Spend time in the gang area instead.
+    -> Influence_Quest_Gang_Area
+
+= Influence_Quest_Community_Center
+The Community Center offers you a sense of purpose and guidance. This path may not be easy, but it helps you build toward a better future.
+~ EduStat += 1
+~ influenceQuestStarted = false
+-> END
+
+= Influence_Quest_Gang_Area
+The gang area offers a different sense of belonging, one that may make things feel easier now but comes with its own risks and costs.
+~ GangStat += 1
+~ influenceQuestStarted = false
 -> END
 
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
 -> END

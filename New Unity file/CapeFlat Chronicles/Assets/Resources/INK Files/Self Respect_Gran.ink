@@ -14,41 +14,30 @@ People will try to pull you in all directions. It’s easy to lose yourself in t
 
 // Branch: Do_Whats_Right
 = Do_Whats_Right
-That’s exactly what you need to do. Self-respect is the foundation for everything else. What does respecting yourself mean to you?
+That’s exactly what you need to do. Self-respect is the foundation for everything else. If you’re serious, show me by choosing your path carefully. Go where you feel your values belong.
 
-* It means not letting others take advantage of me or pull me into things I don’t want to do.
-    -> Know_Worth
+* I’ll go to the Community Center to focus on what matters.
+    ~ standingFirmQuestStarted = true
+    -> Community_Center_Choice
 
-* I’m not sure yet. I just know I need to be true to myself.
-    -> True_To_Self
+* I’ll head to the Gang Area and see what’s out there.
+    ~ standingFirmQuestStarted = true
+    -> Gang_Area_Choice
 
-// Sub-Branch: Know_Worth
-= Know_Worth
-Good. You know your worth, and you need to protect it. Don’t let anyone drag you down.
--> AddEdu
+// Quest Locations for Standing Firm Quest
+= Community_Center_Choice
+You chose to seek guidance. Sometimes, the right environment makes all the difference in holding true to yourself.
+~ EduStat += 1
+~ standingFirmQuestStarted = false
 -> END
 
-// Sub-Branch: True_To_Self
-= True_To_Self
-That’s a good start. You’ll figure it out as you go, but always keep that in mind. Your values should guide your actions.
-
-* I’ll do my best.
-    -> Do_My_Best
-
-* It’s hard sometimes, though.
-    -> Hard_Sometimes
-
-// Follow-up: Do_My_Best
-= Do_My_Best
-Good. That’s all anyone can ask.
--> AddEdu
+= Gang_Area_Choice
+You’ve decided to go your own way, even if it’s the harder road. Just remember, loyalty can sometimes pull you away from who you truly are.
+~ GangStat += 1
+~ standingFirmQuestStarted = false
 -> END
 
-// Follow-up: Hard_Sometimes
-= Hard_Sometimes
-It is, but staying true to yourself will always be worth it.
--> END
-
+// Additional Dialogue Branches for Self-Respect
 // Branch: Go_With_Flow
 = Go_With_Flow
 No choice? There’s always a choice. Going with the flow might seem easier, but it can lead you to places you don’t want to be. Are you sure that’s what you want?
@@ -80,6 +69,18 @@ But it’s worth everything when it comes to protecting who you are.
 -> AddGang
 -> END
 
+// Branch: Hard_To_Stand_Firm
+= Hard_To_Stand_Firm
+I know it’s hard. Life can feel like it’s crumbling sometimes, but that’s when you need your inner strength the most. If you really want to stand strong, go to the place that best supports your values.
+
+* I’ll visit the Community Center to get grounded.
+    ~ standingFirmQuestStarted = true
+    -> Community_Center_Choice
+
+* I’ll check out the Gang Area instead.
+    ~ standingFirmQuestStarted = true
+    -> Gang_Area_Choice
+    
 // Sub-Branch: Avoid_Trouble
 = Avoid_Trouble
 Avoiding trouble is smart, but you don’t need to compromise who you are. There’s a way to stay true to yourself without making enemies.
@@ -101,65 +102,14 @@ Good. Assertiveness is a sign of strength.
 It’s worth trying. It will help you grow.
 -> END
 
-// Branch: Hard_To_Stand_Firm
-= Hard_To_Stand_Firm
-I know it’s hard. Life can feel like it’s crumbling sometimes, but that’s when you need your inner strength the most. How are you holding up?
-
-* I’m barely managing, but I’m trying.
-    -> Barely_Managing
-
-* I feel like I’m losing myself.
-    -> Losing_Self
-
-// Sub-Branch: Barely_Managing
-= Barely_Managing
-Trying is good. It’s all anyone can ask of you. But don’t lose sight of who you are in the struggle.
-
-* I’ll keep going.
-    -> Keep_Going
-
-* I’m not sure how long I can hold on.
-    -> Hold_On
-
-// Follow-up: Keep_Going
-= Keep_Going
-That’s the spirit. Keep moving forward.
--> AddEdu
--> END
-
-// Follow-up: Hold_On
-= Hold_On
-Take things one day at a time. You’re stronger than you think.
--> END
-
-// Sub-Branch: Losing_Self
-= Losing_Self
-You haven’t lost yourself yet, but if you keep letting others dictate your path, you will. Take back control, while you still can.
-
-* I’ll think about what you said.
-    -> Think_About_It
-
-* It’s too late for that, Gran.
-    -> Too_Late
-
-// Follow-up: Think_About_It
-= Think_About_It
-Just remember, every day is a new chance to make different choices.
--> END
-
-// Follow-up: Too_Late
-= Too_Late
-It’s never too late to start respecting yourself. Don’t give up.
--> AddGang
--> END
 
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
 -> END

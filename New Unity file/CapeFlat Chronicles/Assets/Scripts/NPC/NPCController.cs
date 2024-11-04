@@ -5,6 +5,7 @@ public class NPCController : MonoBehaviour
     public string npcName;
     public TextAsset[] dialogues; // Array of Ink JSON files for this NPC
     public int currentDialogueIndex = 0;
+    public string questName; // New field to specify the quest associated with this NPC
 
     private bool isPlayerInRange = false;
 
@@ -23,18 +24,21 @@ public class NPCController : MonoBehaviour
 
     public void StartInteraction()
     {
-        // Start the dialogue using DialogueManager
         if (DialogueManager.Instance != null && currentDialogueIndex < dialogues.Length)
         {
             DialogueManager.Instance.StartDialogue(dialogues[currentDialogueIndex], npcName);
+
+            // Start the quest if it’s not started yet
+            if (!QuestManager.instance.IsQuestStarted(questName) && !QuestManager.instance.IsQuestCompleted(questName))
+            {
+                QuestManager.instance.StartQuest(questName);
+            }
         }
         else
         {
             Debug.LogWarning("DialogueManager instance not found or no more dialogues left.");
         }
     }
-
-
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -51,7 +55,7 @@ public class NPCController : MonoBehaviour
             Debug.Log("Player exited NPC area: " + npcName);
             isPlayerInRange = false;
 
-            if (DialogueManager.Instance.IsDialoguePlaying())  // Only call if dialogue is still playing
+            if (DialogueManager.Instance.IsDialoguePlaying())
             {
                 DialogueManager.Instance.EndDialogue();
             }
