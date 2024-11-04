@@ -225,7 +225,7 @@ GameObject:
   - component: {fileID: 303740872}
   - component: {fileID: 303740871}
   m_Layer: 0
-  m_Name: GangArea
+  m_Name: Grans House
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
