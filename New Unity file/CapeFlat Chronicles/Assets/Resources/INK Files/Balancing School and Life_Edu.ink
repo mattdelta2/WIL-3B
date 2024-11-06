@@ -1,6 +1,6 @@
 INCLUDE Global.ink
 
-// Normal dialogue
+// Dialogue 1: Balancing Life and School
 Balancing life and school can be challenging. How do you manage everything on your plate?
 
 * I try to make a schedule and stick to it.
@@ -69,7 +69,12 @@ Balancing life and school can be challenging. How do you manage everything on yo
 
 = Complete_Teacher_Quest
 ~ teacherQuestCompleted = true
-You’re doing great! Keep up the hard work, and it will all pay off.
+Great job! A study mentor has appearedy—visit them for additional tips.
+-> Spawn_Study_Mentor_NPC
+-> END
+
+= Spawn_Study_Mentor_NPC
+~ studyMentorSpawned = true // Flag to trigger NPC spawn in the game
 -> END
 
 // Quest completed response
@@ -77,14 +82,19 @@ You’re doing great! Keep up the hard work, and it will all pay off.
 I'm so happy to hear the study plan is helping you. Stay dedicated, and remember I'm here if you need further support.
 -> END
 
+// Interaction with Study Mentor NPC
+= Mentor_NPC_Interaction
+You talk to the study mentor, and they give you valuable tips to improve your focus.
+~ EduStat += 1
+-> END
+
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat -= 1
-~ GangStat = MAX(GangStat, 0)
+~ GangStat = MIN(GangStat - 1, 0)
 -> END
 
 = AddGang
-~ EduStat -= 1
-~ EduStat = MAX(EduStat, 0)
 ~ GangStat += 1
+~ EduStat = MIN(EduStat - 1, 0)
 -> END

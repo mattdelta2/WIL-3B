@@ -35,7 +35,14 @@ Daai’s risky, bru. On die streets, die moment kan maak of breek jou.
 
 // Branch: Don’t_Care_Consequences
 = Dont_Care_Consequences
-Jy gaan care when die streets kom for jou. Jy maak ‘n plan nou, of jy gaan regret it.
+Jy gaan care when die streets kom for jou. Prove it by grabbing something I need. This item will show if jy regtig kan deal with die consequences.
+
+~ choicesQuestStarted = true
+-> choicesQuest_Info
+
+// Quest Information
+= choicesQuest_Info
+To prove your willingness to deal with consequences, go to the **Empty Lot** and interact with the spray can there. Completing this action will increase **GangStat**. Ignoring the quest will impact your standing.
 
 * I’ll take whatever comes.
     -> Take_Whatever_Comes

@@ -7,7 +7,6 @@ Hey bru, jy weet die life hier on the Flats is tough, né? You gotta keep your h
     -> Keep_Out_Of_Trouble
 
 * The streets are calling me. I’m ready for whatever.
-~ gangQuestStarted = false
     -> Streets_Calling
 
 * I’m not sure what to do.
@@ -41,11 +40,8 @@ Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t 
 * I’m ready for anything.
     -> Ready_For_Anything
 
-* {gangQuestStarted == false} How can I prove myself?
+* How can I prove myself?
     -> Start_Gang_Quest
-
-* {gangQuestStarted == true} What’s next in proving myself?
-    -> Next_Steps_In_Quest
 
 // Sub-Branch: Ready_For_Anything
 = Ready_For_Anything
@@ -66,31 +62,24 @@ Better do it soon, anders jy gaan klaar wees.
 -> AddGang
 -> END
 
-// Quest Start: Gang Quest
+// Quest Start: Gang Test Quest
 = Start_Gang_Quest
-Aweh, I like that spirit. If jy really want to join us, I have a small job for you. Let’s see if jy kan handle die pressure.
+Aweh, I like that spirit. I’ve got a test for you. Go to the **Abbandoned Car** and bring back the red spray can there. Let’s see if jy kan handle it.
 ~ gangQuestStarted = true
-* What’s next in proving myself?
-    -> Next_Steps_In_Quest
--> END
+-> gangQuest_Info
 
-// Branch: Next Steps in Quest
-= Next_Steps_In_Quest
-Good, so you’re in. You’ll need to show some skills. I want you to go get something for me. Go find the white box for me 
-* I’ll get it done.
-    -> Quest_In_Progress
-
-// Quest In Progress
-= Quest_In_Progress
-Just remember, loyalty is key. Don’t let anyone down. Return to me once you’re finished.
--> AddGang
--> END
+// Quest Information
+= gangQuest_Info
+To prove yourself, visit the **Abandoned Building** and retrieve the red spray can. Returning with it will boost **GangStat**. Failing or avoiding the task will impact your progress with us.
+-> END // This line ensures the quest information flow ends properly
 
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
+~ GangStat = MIN(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
+~ EduStat = MIN(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END

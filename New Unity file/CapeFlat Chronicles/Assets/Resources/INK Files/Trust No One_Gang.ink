@@ -20,7 +20,8 @@ Ja, dis slim, maar watch out, even those jy dink is close, kan turn on jou.
     -> Be_Careful
 
 * I trust people until they give me a reason not to.
-    -> Trust_Until_Reason
+    ~ trustQuestCompleted = true
+    -> Start_Trust_Quest
 
 // Sub-Branch: Be_Careful
 = Be_Careful
@@ -28,9 +29,32 @@ Good. Stay wakker, anders jy gaan catch a knife in die back.
 -> AddEdu
 -> END
 
-// Sub-Branch: Trust_Until_Reason
-= Trust_Until_Reason
-Daai’s dangerous, bru. On die streets, reasons kom mos too late. Watch jou back.
+// Quest Start: Trust Quest
+= Start_Trust_Quest
+To prove your loyalty, go find **The Contact** in the **Alley**. Speak to them to show you understand the rules of the streets.
+~ trustQuestCompleted = true
+-> trustQuest_Info
+
+// Quest Information
+= trustQuest_Info
+Your mission is to find **The Contact** in the **Alley** and talk to them. Completing this task will increase your **GangStat**. Avoiding the task will limit your progress with us.
+
+* {trustQuestCompleted} Find and speak to The Contact.
+    -> Complete_Trust_Quest_Success
+
+* {trustQuestCompleted} Decide not to meet The Contact.
+    -> Complete_Trust_Quest_Failure
+
+= Complete_Trust_Quest_Success
+The Contact acknowledges your loyalty. You've shown you understand the importance of trust and survival.
+~ GangStat += 1
+~ trustQuestCompleted = false
+-> END
+
+= Complete_Trust_Quest_Failure
+By avoiding The Contact, you’ve shown hesitation. In this game, that could cost you.
+~ GangStat = MAX(GangStat - 1, 0) // Decreases GangStat if quest is avoided
+~ trustQuestCompleted = false
 -> END
 
 // Branch: Don’t_Trust_Anyone
@@ -38,13 +62,8 @@ Daai’s dangerous, bru. On die streets, reasons kom mos too late. Watch jou bac
 Ja, mos. Trust gaan jou laat klaar maak. Jy moet stay sharp.
 
 * I know. I’m always watching.
-    -> Always_Watching
-
-// Sub-Branch: Always_Watching
-= Always_Watching
-Good. Jy gaan need that, bru, 'cause die game is rough.
--> AddGang
--> END
+    ~ trustQuestCompleted = true
+    -> Start_Trust_Quest
 
 // Branch: Haven’t_Thought_About_Trust
 = Havent_Thought_About_Trust
@@ -61,10 +80,10 @@ Better jy figure it out quick. Trust maak ‘n big difference here.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MIN(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MIN(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END

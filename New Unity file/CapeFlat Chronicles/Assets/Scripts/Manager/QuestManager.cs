@@ -1,5 +1,6 @@
 using UnityEngine;
 using Ink.Runtime;
+using System.Collections.Generic;
 
 public class QuestManager : MonoBehaviour
 {
@@ -7,7 +8,12 @@ public class QuestManager : MonoBehaviour
 
     private Story currentStory;
     public GameObject itemPrefab;
+    public GameObject npcPrefab; // Prefab for optional NPC interaction
     private GameObject spawnedItem;
+    private GameObject spawnedNPC;
+
+    // Dictionary to track each NPC's quests and their statuses
+    private Dictionary<string, Dictionary<string, bool>> npcQuests = new Dictionary<string, Dictionary<string, bool>>();
 
     private void Awake()
     {
@@ -35,19 +41,82 @@ public class QuestManager : MonoBehaviour
         }
     }
 
-    // Start a quest for a specific quest name
-    public void StartQuest(string questName)
+    // Start a quest for a specific NPC and quest name
+    public void StartQuest(string npcName, string questName)
     {
+        if (!npcQuests.ContainsKey(npcName))
+        {
+            npcQuests[npcName] = new Dictionary<string, bool>();
+        }
+
         if (currentStory != null && currentStory.variablesState != null)
         {
             currentStory.variablesState[$"{questName}Started"] = true;
-            Debug.Log($"{questName} quest started.");
-            SpawnItem(questName); // Spawn the item related to the quest if needed
+            npcQuests[npcName][$"{questName}Started"] = true;
+            Debug.Log($"{questName} quest started for {npcName}.");
+
+            // Spawn quest item or NPC if needed
+            if (questName == "teacherQuest")
+            {
+                SpawnItem(questName);
+                SpawnNPCForQuest(questName); // Optional NPC for additional interaction
+            }
+            else
+            {
+                SpawnItem(questName); // Spawn item as usual
+            }
         }
         else
         {
             Debug.LogWarning("QuestManager could not start quest: currentStory or variablesState is null.");
         }
+    }
+
+    // Complete a quest for a specific NPC and quest name
+    public void CompleteQuest(string npcName, string questName)
+    {
+        if (npcQuests.ContainsKey(npcName) && npcQuests[npcName].ContainsKey($"{questName}Started") && npcQuests[npcName][$"{questName}Started"])
+        {
+            if (currentStory != null && currentStory.variablesState != null)
+            {
+                currentStory.variablesState[$"{questName}Completed"] = true;
+                npcQuests[npcName][$"{questName}Completed"] = true;
+
+                // Update stats based on quest type
+                UpdateStatsBasedOnQuest(questName);
+
+                Debug.Log($"Quest '{questName}' completed for {npcName}.");
+
+                // Destroy spawned NPC if quest is completed
+                if (spawnedNPC != null)
+                {
+                    Destroy(spawnedNPC);
+                    spawnedNPC = null;
+                }
+            }
+            else
+            {
+                Debug.LogWarning("CompleteQuest failed: currentStory or variablesState is null.");
+            }
+        }
+        else
+        {
+            Debug.LogWarning($"Quest '{questName}' is already completed or not recognized for {npcName}.");
+        }
+    }
+
+    // Check if a quest is started for a specific NPC
+    public bool IsQuestStarted(string npcName, string questName)
+    {
+        return npcQuests.ContainsKey(npcName) && npcQuests[npcName].ContainsKey($"{questName}Started") &&
+               npcQuests[npcName][$"{questName}Started"];
+    }
+
+    // Check if a quest is completed for a specific NPC
+    public bool IsQuestCompleted(string npcName, string questName)
+    {
+        return npcQuests.ContainsKey(npcName) && npcQuests[npcName].ContainsKey($"{questName}Completed") &&
+               npcQuests[npcName][$"{questName}Completed"];
     }
 
     // Spawn the quest item at specific locations based on the quest name
@@ -70,6 +139,22 @@ public class QuestManager : MonoBehaviour
         }
     }
 
+    // Spawn an NPC for quests requiring additional interaction
+    private void SpawnNPCForQuest(string questName)
+    {
+        if (spawnedNPC == null && npcPrefab != null)
+        {
+            Vector3 npcSpawnPosition = GetNPCSpawnPositionForQuest(questName);
+            spawnedNPC = Instantiate(npcPrefab, npcSpawnPosition, Quaternion.identity);
+            QuestNPC questNPC = spawnedNPC.GetComponent<QuestNPC>();
+            if (questNPC != null)
+            {
+                questNPC.questName = questName;
+                Debug.Log("NPC spawned for quest: " + questNPC.questName);
+            }
+        }
+    }
+
     // Determine spawn positions for items based on quest name
     private Vector3 GetSpawnPositionForQuest(string questName)
     {
@@ -81,56 +166,35 @@ public class QuestManager : MonoBehaviour
                 return new Vector3(3, 0, 0); // Example location for support quest item
             case "dreamsQuest":
                 return new Vector3(-2, 0, 0); // Example location for dreams quest item
+            case "teacherQuest":
+                return new Vector3(4, 1, 0); // Location for teacher quest item
             default:
                 return Vector3.zero; // Default position if no specific location
         }
     }
 
-    // Complete a quest for a specific quest name
-    public void CompleteQuest(string questName)
+    // Determine spawn positions for NPCs based on quest name
+    private Vector3 GetNPCSpawnPositionForQuest(string questName)
     {
-        if (!IsQuestCompleted(questName))
+        switch (questName)
         {
-            if (currentStory != null && currentStory.variablesState != null)
-            {
-                currentStory.variablesState[$"{questName}Completed"] = true;
-
-                // Update stats based on quest type
-                if (questName == "gangQuest")
-                {
-                    GameManager.instance.IncrementStat("GangStat");
-                    int updatedGangStat = GameManager.instance.GetStat("GangStat");
-                    DialogueManager.Instance.gangStatText.text = $"Gang: {updatedGangStat}";
-                }
-                else if (questName == "supportQuest" || questName == "dreamsQuest")
-                {
-                    GameManager.instance.IncrementStat("EduStat");
-                    int updatedEduStat = GameManager.instance.GetStat("EduStat");
-                    DialogueManager.Instance.educationStatText.text = $"Edu: {updatedEduStat}";
-                }
-
-                Debug.Log($"Quest '{questName}' completed and stats updated.");
-            }
-            else
-            {
-                Debug.LogWarning("CompleteQuest failed: currentStory or variablesState is null.");
-            }
-        }
-        else
-        {
-            Debug.LogWarning($"Quest '{questName}' is already completed or not recognized.");
+            case "teacherQuest":
+                return new Vector3(6, 2, 0); // Example location for teacher mentor NPC
+            default:
+                return Vector3.zero; // Default position if no specific NPC spawn location
         }
     }
 
-    public bool IsQuestStarted(string questName)
+    // Update stats based on quest completion type
+    private void UpdateStatsBasedOnQuest(string questName)
     {
-        return currentStory != null && currentStory.variablesState[$"{questName}Started"] != null &&
-               (bool)currentStory.variablesState[$"{questName}Started"];
-    }
-
-    public bool IsQuestCompleted(string questName)
-    {
-        return currentStory != null && currentStory.variablesState[$"{questName}Completed"] != null &&
-               (bool)currentStory.variablesState[$"{questName}Completed"];
+        if (questName == "gangQuest")
+        {
+            GameManager.instance.IncrementStat("GangStat");
+        }
+        else if (questName == "supportQuest" || questName == "dreamsQuest" || questName == "trustQuest" || questName == "teacherQuest")
+        {
+            GameManager.instance.IncrementStat("EduStat");
+        }
     }
 }
