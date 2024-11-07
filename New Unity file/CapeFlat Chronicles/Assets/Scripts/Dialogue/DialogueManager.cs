@@ -9,7 +9,6 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
-    // Reference to GameManager set via the Inspector
     [SerializeField] private GameManager gameManager;
 
     [Header("UI Elements")]
@@ -44,7 +43,6 @@ public class DialogueManager : MonoBehaviour
         if (dialogueUI != null) dialogueUI.SetActive(false);
         foreach (Button button in optionButtons) button.gameObject.SetActive(false);
 
-        // Check if GameManager reference is assigned
         if (gameManager == null)
         {
             Debug.LogWarning("GameManager is not assigned in DialogueManager. Please assign it in the Inspector.");
@@ -144,10 +142,11 @@ public class DialogueManager : MonoBehaviour
         Choice selectedChoice = currentStory.currentChoices[choiceIndex];
         Debug.Log($"Player selected choice: {selectedChoice.text}");
 
-        if (selectedChoice.text == "I’ll get it done.")
+        NPCController npcController = FindObjectOfType<NPCController>();
+        if (npcController != null && !QuestManager.instance.IsQuestStarted(npcController.npcName, npcController.questName))
         {
-            questManager.StartQuest("gangQuest");
-            Debug.Log("Quest initiation choice detected, starting 'gangQuest'.");
+            QuestManager.instance.StartQuest(npcController.npcName, npcController.questName);
+            Debug.Log($"Quest initiation choice detected, starting quest for {npcController.npcName}.");
         }
 
         currentStory.ChooseChoiceIndex(choiceIndex);
@@ -174,7 +173,6 @@ public class DialogueManager : MonoBehaviour
             else
                 Debug.LogWarning("educationStatText is not assigned.");
 
-            // Update GameManager stats
             if (gameManager != null)
             {
                 gameManager.SetStat("GangStat", gangValue);
@@ -190,7 +188,6 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("currentStory or variablesState is null in UpdateStats.");
         }
     }
-
 
     private int GetInkVariable(string variableName)
     {

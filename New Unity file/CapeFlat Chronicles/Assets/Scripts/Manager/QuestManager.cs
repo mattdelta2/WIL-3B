@@ -1,6 +1,8 @@
 using UnityEngine;
 using Ink.Runtime;
 using System.Collections.Generic;
+using System;
+
 
 public class QuestManager : MonoBehaviour
 {
@@ -120,13 +122,14 @@ public class QuestManager : MonoBehaviour
     }
 
     // Spawn the quest item at specific locations based on the quest name
+    // Spawn the quest item at specific locations based on the quest name
     private void SpawnItem(string questName)
     {
         if (spawnedItem == null && itemPrefab != null)
         {
             Vector3 spawnPosition = GetSpawnPositionForQuest(questName);
             spawnedItem = Instantiate(itemPrefab, spawnPosition, Quaternion.identity);
-            QuestItem questItem = spawnedItem.GetComponent<QuestItem>();
+            QuestInteractable questItem = spawnedItem.GetComponent<QuestInteractable>(); // Updated to QuestInteractable
             if (questItem != null)
             {
                 questItem.questName = questName;
@@ -138,6 +141,7 @@ public class QuestManager : MonoBehaviour
             Debug.LogWarning("Item prefab not set or item already spawned.");
         }
     }
+
 
     // Spawn an NPC for quests requiring additional interaction
     private void SpawnNPCForQuest(string questName)

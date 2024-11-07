@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 movement;
 
     private NPCController nearbyNPC;  // Reference to the nearby NPC
-    private QuestItem nearbyQuestItem; // Reference to the nearby quest item
+    private QuestInteractable nearbyQuestItem; // Reference to the nearby quest item
     private bool canMove = true;  // Flag to control player movement
 
     void Start()
@@ -64,7 +64,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.CompareTag("QuestItem")) // Check for quest item
         {
-            nearbyQuestItem = other.GetComponent<QuestItem>();
+            nearbyQuestItem = other.GetComponent<QuestInteractable>();
             Debug.Log("Player entered quest item area: " + other.name);
         }
     }

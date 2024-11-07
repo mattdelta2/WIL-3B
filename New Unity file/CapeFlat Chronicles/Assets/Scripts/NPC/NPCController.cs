@@ -5,7 +5,7 @@ public class NPCController : MonoBehaviour
     public string npcName;
     public TextAsset[] dialogues; // Array of Ink JSON files for this NPC
     public int currentDialogueIndex = 0;
-    public string questName; // New field to specify the quest associated with this NPC
+    public string questName; // Field to specify the quest associated with this NPC
 
     private bool isPlayerInRange = false;
 
@@ -29,9 +29,9 @@ public class NPCController : MonoBehaviour
             DialogueManager.Instance.StartDialogue(dialogues[currentDialogueIndex], npcName);
 
             // Start the quest if it’s not started yet
-            if (!QuestManager.instance.IsQuestStarted(questName) && !QuestManager.instance.IsQuestCompleted(questName))
+            if (!QuestManager.instance.IsQuestStarted(npcName, questName) && !QuestManager.instance.IsQuestCompleted(npcName, questName))
             {
-                QuestManager.instance.StartQuest(questName);
+                QuestManager.instance.StartQuest(npcName, questName);
             }
         }
         else
