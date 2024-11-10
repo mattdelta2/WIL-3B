@@ -24,6 +24,7 @@ VAR teacherQuestCompleted = false      // Placeholder for Teacher's quest
 VAR studyMentorSpawned = false
 
 
+
 // Future Expansion: Community Member Quests
 VAR communityQuestStarted = false      // Placeholder for Community Member's quest status
 VAR communityQuestCompleted = false    // Placeholder for Community Member's quest completion

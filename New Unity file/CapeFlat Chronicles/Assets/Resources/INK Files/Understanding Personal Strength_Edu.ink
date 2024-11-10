@@ -1,8 +1,6 @@
- INCLUDE Global.ink
- 
- 
- 
- Understanding your strengths is important. It helps you know what you’re good at and where you can grow. What do you think your greatest strength is?
+INCLUDE Global.ink
+
+Understanding your strengths is important. It helps you know what you’re good at and where you can grow. What do you think your greatest strength is?
 
 * I’m a good listener, and people trust me.
     -> Good_Listener
@@ -14,7 +12,7 @@
     -> Unsure_About_Strengths
 
 = Good_Listener
- Being a good listener is a valuable skill. People need others they can rely on. How do you use that skill to help others?
+Being a good listener is a valuable skill. People need others they can rely on. How do you use that skill to help others?
 
 * I offer advice when people need it.
     -> Offer_Advice
@@ -23,32 +21,48 @@
     -> Just_Listen
 
 = Offer_Advice
- Offering advice can be helpful, but remember that sometimes people just need to be heard. Balance both approaches, and you’ll help even more.
+Offering advice can be helpful, but remember that sometimes people just need to be heard. Balance both approaches, and you’ll help even more.
 -> END
 
 = Just_Listen
- That’s great. Sometimes listening is all someone needs. Keep being there for others, and you’ll make a real difference.
+That’s great. Sometimes listening is all someone needs. Keep being there for others, and you’ll make a real difference.
 -> END
 
 = Problem_Solver
- Problem-solving is a strong skill to have. Do you use it more in school, at home, or with friends?
+Problem-solving is a strong skill to have. Would you like to try solving a problem I have for you?
 
-* Mostly in school, when I have tough assignments.
-    -> School_Problems
+* Yes, I’ll give it a try.
+    -> Solve_Problem
 
-* I try to help my family solve issues when they come up.
-    -> Family_Problems
+* No, I don’t think I need to.
+    -> Refuse_Problem
 
-= School_Problems
- Using problem-solving skills in school will take you far. Don’t shy away from the challenging assignments—they’re what help you grow.
+= Solve_Problem
+Great! Here’s a question: If you have 15 books and you give 3 to each of your friends until you’re left with none, how many friends did you give books to?
+
+* Answer: 5 friends.
+    -> Correct_Answer
+
+* Answer: 3 friends.
+    -> Incorrect_Answer
+
+= Correct_Answer
+Well done! You’ve shown great problem-solving skills. Keep it up, and you’ll go far.
+-> AddEdu
 -> END
 
-= Family_Problems
- Helping your family with problems shows maturity and compassion. Keep being a strong support system for them.
+= Incorrect_Answer
+Not quite, but that’s okay. Keep practicing, and you’ll get better with each problem.
+-> AddEdu
+-> END
+
+= Refuse_Problem
+I understand, but remember, stepping away from challenges can sometimes limit your growth. Consider trying next time.
+-> AddGang
 -> END
 
 = Unsure_About_Strengths
- It’s okay if you’re not sure yet. We all have strengths, even if they’re not always obvious. What do others say you’re good at?
+It’s okay if you’re not sure yet. We all have strengths, even if they’re not always obvious. What do others say you’re good at?
 
 * People say I’m reliable.
     -> Reliable
@@ -57,22 +71,19 @@
     -> Not_Asked_Others
 
 = Reliable
- Being reliable is a fantastic strength. People need someone they can count on, and that’s you. Keep being dependable—it will take you far.
+Being reliable is a fantastic strength. People need someone they can count on, and that’s you. Keep being dependable—it will take you far.
 -> END
 
 = Not_Asked_Others
- Maybe it’s time to ask. Sometimes others see things in us that we don’t see in ourselves. You might be surprised by the answers.
+Maybe it’s time to ask. Sometimes others see things in us that we don’t see in ourselves. You might be surprised by the answers.
 -> END
 
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0)
+-> END
 
-=AddEdu
-~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
-
-=AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0)
+-> END
