@@ -1,5 +1,4 @@
- INCLUDE Global.ink
- 
+INCLUDE Global.ink
  
  Developing healthy habits can make a big difference in your daily life. What habits are you trying to develop?
 
@@ -77,16 +76,27 @@ Teacher: Using a planner is a great way to stay organized. It helps you see what
 Teacher: Procrastination is something we all struggle with. Start by tackling small tasks first—they build momentum and help you move forward.
 -> END
 
+// Quest Integration: Healthy Choices Quest
+* {healthyChoicesQuestStarted == false} I’d like some help in sticking to a healthy habit.
+    -> Start_HealthyChoices_Quest
 
+= Start_HealthyChoices_Quest
+Teacher: That’s wonderful! Let’s choose one small change you can focus on for a week. What habit would you like to commit to?
+~ healthyChoicesQuestStarted = true
+-> END
+
+// Quest completion within another dialogue or a follow-up
+= Complete_HealthyChoices_Quest
+~ healthyChoicesQuestCompleted = true
+Teacher: Well done! Committing to a healthy habit, even if it’s small, shows real discipline. I’m proud of you!
+-> AddEdu
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

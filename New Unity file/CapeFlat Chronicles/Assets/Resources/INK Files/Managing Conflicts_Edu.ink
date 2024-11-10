@@ -1,4 +1,5 @@
-INCLUDE Global.ink 
+INCLUDE Global.ink
+
  
  Conflict is a part of life, but how you manage it can make all the difference. How do you usually deal with conflicts?
 
@@ -62,15 +63,27 @@ Teacher: Feeling blamed can trigger defensiveness, but try to focus on the issue
 Teacher: Nobody likes being wrong, but admitting when you’re wrong is a sign of strength. It shows you’re willing to learn and grow.
 -> END
 
+// Quest Integration: Conflict Resolution Quest
+* {conflictResolutionQuestStarted == false} I’d like to get better at handling conflicts.
+    -> Start_ConflictResolution_Quest
+
+= Start_ConflictResolution_Quest
+Teacher: Great! Why don’t you try actively listening in your next conflict? Really focus on the other person’s perspective before sharing your own.
+~ conflictResolutionQuestStarted = true
+-> END
+
+// Upon completion of conflict resolution
+= Complete_ConflictResolution_Quest
+~ conflictResolutionQuestCompleted = true
+You successfully applied the conflict resolution technique and learned the importance of listening first. Well done!
+-> AddEdu
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

@@ -59,19 +59,30 @@ Teacher: That’s the spirit. Defy the expectations others set for you. Show the
 -> END
 
 = No_Self_Expectations
-Teacher: It’s important to set expectations for yourself, even if they’re small. Start by setting one simple goal and working towards it.
+Teacher: It’s important to set expectations for yourself, even if they’re small. Would you be willing to set a simple goal to work toward?
+
+* Yes, I’ll set a goal for my next assignment.
+    -> Accept_Goal_Setting
+
+* I’m not ready to set any goals yet.
+    -> Decline_Goal_Setting
+
+= Accept_Goal_Setting
+Teacher: That’s a great start! Setting even a small goal can help you build confidence over time.
+-> AddEdu
 -> END
 
-
+= Decline_Goal_Setting
+Teacher: I understand. When you’re ready, consider setting a goal. It could make a difference.
+-> AddGang
+-> END
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

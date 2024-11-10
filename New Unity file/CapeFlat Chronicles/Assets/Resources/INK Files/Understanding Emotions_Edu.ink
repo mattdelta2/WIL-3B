@@ -1,6 +1,7 @@
-INCLUDE Global.ink 
+INCLUDE Global.ink
+
  
- Understanding your emotions is important. How do you usually deal with your emotions?
+Understanding your emotions is important. How do you usually deal with your emotions?
 
 * I bottle them up and try not to think about them.
     -> Bottle_Up_Emotions
@@ -22,11 +23,11 @@ INCLUDE Global.ink
 
 = Havent_Thought_About_It
  It’s okay if you haven’t thought about it before, but consider finding a way to let those emotions out. It could make a big difference.
--> END
+-> Emotional_Reflection_Quest
 
 = Hard_To_Express
  Expressing emotions can be tough, especially if you’re not used to it. Start small—maybe write them down or talk to someone you trust.
--> END
+-> Emotional_Reflection_Quest
 
 = Feel_Emotions
  That’s a healthy approach. It’s important to acknowledge what you feel without letting it dictate your actions. What helps you stay in control?
@@ -39,11 +40,11 @@ INCLUDE Global.ink
 
 = Deep_Breaths
  Breathing exercises are a great way to stay calm. They help you refocus and regain control.
--> END
+-> Emotional_Reflection_Quest
 
 = Feelings_Pass
  Reminding yourself that emotions are temporary is a powerful tool. It helps put things in perspective.
--> END
+-> Emotional_Reflection_Quest
 
 = Talk_About_Emotions
  Talking about your emotions can be very helpful. Who do you usually talk to when you’re feeling overwhelmed?
@@ -56,20 +57,40 @@ INCLUDE Global.ink
 
 = Talk_To_FriendS
  Friends can be a great source of comfort. It’s important to have people you trust who will listen to you.
--> END
+-> Emotional_Reflection_Quest
 
 = Talk_To_Family
  Family can provide support that helps you through tough times. Keep leaning on them when you need to.
+-> Emotional_Reflection_Quest
+
+// Emotional Reflection Quest
+= Emotional_Reflection_Quest
+ The teacher asks you to reflect on how you handle emotions. Will you take a moment to think deeply, or move on?
+
+* Reflect on my emotions and see if I need to change.
+    ~ emotionalQuestCompleted = true
+    -> Self_Reflection
+    -> AddEdu
+
+* I don’t think I need to change anything.
+    ~ emotionalQuestCompleted = true
+    -> No_Change
+    -> AddGang
+
+= Self_Reflection
+ Reflecting on your emotions can help you grow and approach things differently. It’s a strong step forward.
+-> END
+
+= No_Change
+ Choosing to stay the same is okay, too. Sometimes we only learn by doing things our way.
 -> END
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

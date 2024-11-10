@@ -12,20 +12,22 @@ INCLUDE Global.ink
     -> Ask_For_Help
 
 = Stay_Calm
- Staying calm is a valuable skill. It allows you to think clearly. Can you think of a recent situation where staying calm helped?
+ Staying calm is a valuable skill. It allows you to think clearly. Imagine this: A friend blames you for something you didn’t do. Do you stay calm and try to resolve it, or avoid them for a while?
 
-* I stayed calm during a family argument.
-    -> Family_Argument
+* I’d stay calm and talk to them.
+    -> Resolve_With_Talk
 
-* I kept my cool when things got difficult in school.
-    -> School_Difficulty
+* I’d avoid them until things cool down.
+    -> Avoid_Them
 
-= Family_Argument
- Family can be challenging at times, but maintaining your composure shows real strength.
+= Resolve_With_Talk
+ That’s a mature approach. Facing the issue directly shows responsibility.
+-> AddEdu
 -> END
 
-= School_Difficulty
- School can be overwhelming, but staying calm will help you succeed even in stressful times.
+= Avoid_Them
+ Avoiding the problem can make it worse. Consider facing issues openly when you’re ready.
+-> AddGang
 -> END
 
 = Ignore_Problems
@@ -46,30 +48,30 @@ INCLUDE Global.ink
 -> END
 
 = Ask_For_Help
- Asking for help shows wisdom, not weakness. We all need support at times. Who do you usually turn to?
+ Asking for help shows wisdom, not weakness. We all need support at times. Imagine this: You’re struggling with a project and your friend offers help. Do you accept their help or try to do it alone?
 
-* I turn to my friends for support.
-    -> Friends_Support
+* I’d accept the help.
+    -> Accept_Help
 
-* I usually ask my family for help.
-    -> Family_Support
+* I’d try to handle it alone.
+    -> Handle_Alone
 
-= Friends_Support
- Having friends you can rely on is a great source of strength. Don’t be afraid to lean on them when needed.
+= Accept_Help
+ Accepting help shows that you understand the value of collaboration.
+-> AddEdu
 -> END
 
-= Family_Support
- Family support can be invaluable. Always remember that seeking help when needed is a sign of strength, not weakness.
+= Handle_Alone
+ Doing things alone can build independence, but remember that collaboration can make things easier.
+-> AddGang
 -> END
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

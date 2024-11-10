@@ -1,5 +1,4 @@
- INCLUDE Global.ink
- 
+INCLUDE Global.ink
  
  Criticism can be hard to take, but it’s a big part of growing and improving. How do you usually handle criticism?
 
@@ -63,14 +62,34 @@
  Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
 -> END
 
+// Quest Integration: Constructive Criticism Quest
+* {constructiveCriticismQuestStarted == false} Could you give me an example of constructive criticism?
+    -> Start_Constructive_Criticism_Quest
+
+= Start_Constructive_Criticism_Quest
+Teacher: Of course. Let’s say I noticed you tend to rush through your work. Taking more time could help you improve your accuracy. Would you be open to practicing this?
+~ constructiveCriticismQuestStarted = true
+* Yes, I’ll work on being more mindful.
+    -> Accept_Criticism_Quest
+* No, I don’t think it’s necessary.
+    -> Decline_Criticism_Quest
+
+= Accept_Criticism_Quest
+Teacher: Great! Being open to feedback will help you grow. Let’s check in next time to see how it’s going.
+~ constructiveCriticismQuestCompleted = true
+-> AddEdu
+
+= Decline_Criticism_Quest
+Teacher: That’s okay. Remember, learning to accept feedback can be challenging, but it’s always beneficial in the long run.
+~ constructiveCriticismQuestCompleted = false
+-> AddGang
+
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

@@ -1,4 +1,4 @@
- INCLUDE Global.ink
+INCLUDE Global.ink
  
  
  Leadership is an important skill, even if you don’t see yourself in a formal leadership role. How do you feel about being a leader?
@@ -20,6 +20,20 @@
 
 * Someone who takes charge and gets things done.
     -> Take_Charge_Leader
+
+ "If you’re interested in developing your leadership skills, here’s a challenge: Imagine you’re leading a group, and two members have conflicting ideas. How would you handle it?"
+
+* I’d listen to both ideas and try to find a compromise.
+    -> AddEdu
+    Teacher: That’s a wise approach. Leaders need to balance different perspectives.
+
+* I’d go with the idea I believe is better and tell the other person to accept it.
+    -> AddGang
+    Teacher: Sometimes decisiveness is necessary, but it’s important not to shut people out.
+
+* I’d avoid taking sides and let them sort it out on their own.
+    Teacher: Leadership means taking responsibility. Avoiding conflict can create more issues down the line.
+-> END
 
 = Listener_Leader
  Absolutely. A great leader listens and helps others grow. Focus on supporting those around you, and leadership will come naturally.
@@ -92,12 +106,10 @@
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
+~GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

@@ -1,6 +1,5 @@
 INCLUDE Global.ink
 
-
  Life will always have setbacks. Resilience is about bouncing back even when things get tough. How do you deal with setbacks?
 
 * I try to stay positive and keep pushing forward.
@@ -17,9 +16,11 @@ INCLUDE Global.ink
 
 * I remind myself why I started in the first place.
     -> Remind_Why_Started
+    -> AddEdu  // Rewarding the positive outlook with an EduStat increase
 
 * I think about how good it will feel to overcome the challenge.
     -> Think_About_Reward
+    -> AddEdu  // Visualizing success also rewards EduStat
 
 = Remind_Why_Started
  Remembering your reasons for starting is powerful. It keeps you focused on what’s truly important.
@@ -34,6 +35,7 @@ INCLUDE Global.ink
 
 * I talk to people who encourage me.
     -> Encouraging_People
+    -> AddEdu  // Seeking support shows resilience, so it increases EduStat
 
 * I take a break and give myself time.
     -> Take_Break
@@ -44,6 +46,7 @@ INCLUDE Global.ink
 
 = Take_Break
  Taking a break is sometimes the best thing you can do. Just remember to come back stronger.
+-> AddGang  // Taking a break instead of directly facing challenges adds to GangStat
 -> END
 
 = Learn_From_Situation
@@ -51,9 +54,11 @@ INCLUDE Global.ink
 
 * I learned that I need to manage my time better.
     -> Time_Management
+    -> AddEdu  // Recognizing self-improvement goals rewards EduStat
 
 * I learned not to be afraid of asking for help.
     -> Ask_For_HelP
+    -> AddEdu  // Asking for help indicates growth and resilience, increasing EduStat
 
 = Time_Management
  Time management is a crucial skill. It’s great that you’ve identified it as an area for improvement.
@@ -63,16 +68,12 @@ INCLUDE Global.ink
  Knowing when to ask for help is a sign of strength, not weakness. Remember, no one gets through life alone.
 -> END
 
-
-
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
+~GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

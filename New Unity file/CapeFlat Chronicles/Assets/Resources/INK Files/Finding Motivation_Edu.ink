@@ -1,6 +1,4 @@
 INCLUDE Global.ink
-.
-
 
 Finding motivation is tough, especially when things seem hopeless. What keeps you motivated?
 
@@ -30,6 +28,9 @@ Finding motivation is tough, especially when things seem hopeless. What keeps yo
 * Maybe I should give that a try.
     -> Give_Try
 
+* {smallWinsQuestStarted == false} Could you help me set a small goal?
+    -> Start_SmallWins_Quest
+
 = Pointless_Goals
  It might seem pointless, but achieving even the smallest goals can give you a sense of progress. Don’t underestimate the power of small wins.
 -> END
@@ -38,15 +39,30 @@ Finding motivation is tough, especially when things seem hopeless. What keeps yo
  That’s the spirit. Start small, and you’ll build momentum. Even tiny steps will bring you closer to your goals.
 -> END
 
+// Quest Integration: Small Wins Quest
+= Start_SmallWins_Quest
+Teacher: I’d be happy to help you set a small, manageable goal. Let’s start with something simple that you can accomplish this week.
+~ smallWinsQuestStarted = true
+* Yes, I’ll give it a try.
+    -> Accept_SmallWins_Quest
+* No, I don’t think I need this.
+    -> Decline_SmallWins_Quest
+
+= Accept_SmallWins_Quest
+Teacher: Great! Even the smallest win can make a big difference. Let’s check in next time to see how it’s going.
+~ smallWinsQuestCompleted = true
+-> AddEdu
+
+= Decline_SmallWins_Quest
+Teacher: That’s okay. Just remember, it’s often the little things that make the biggest difference over time.
+-> AddGang
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

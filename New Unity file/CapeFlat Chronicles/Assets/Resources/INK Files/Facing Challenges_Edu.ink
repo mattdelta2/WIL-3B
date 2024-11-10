@@ -1,7 +1,6 @@
- INCLUDE Global.ink
- 
- 
- Life’s full of challenges. What matters is how you respond to them. Are you facing any challenges right now?
+INCLUDE Global.ink
+
+Life’s full of challenges. What matters is how you respond to them. Are you facing any challenges right now?
 
 * I’m struggling with keeping up with my studies.
     -> Struggling_With_Studies
@@ -38,6 +37,9 @@
 * I’m just trying to keep my head above water.
     -> Keep_Head_Above_Water
 
+* {stayFocusedQuestStarted == false} Can you help me find a way to stay focused on school?
+    -> Start_StayFocused_Quest
+
 = Friends_Pulling
  Those kinds of friends will drag you down. You need to focus on what’s best for you.
 -> END
@@ -45,6 +47,24 @@
 = Keep_Head_Above_Water
  That’s all you can do sometimes, but don’t lose sight of what’s important.
 -> END
+
+// Start Stay Focused Quest
+= Start_StayFocused_Quest
+Teacher: Of course. Staying focused can be hard, but setting small goals can help. Let’s work together to set up a study routine.
+~ stayFocusedQuestStarted = true
+* Yes, that sounds like a good plan.
+    -> Accept_StayFocused_Quest
+* I don’t think I can do this right now.
+    -> Decline_StayFocused_Quest
+
+= Accept_StayFocused_Quest
+Teacher: Great! Start with one small goal every day, and build from there. We’ll check in to see how it’s going.
+~ stayFocusedQuestCompleted = true
+-> AddEdu
+
+= Decline_StayFocused_Quest
+Teacher: That’s okay. Just remember, a little effort each day goes a long way in the end.
+-> AddGang
 
 = Not_Good_Enough
  That’s a dangerous mindset. You are good enough, but you need to believe that. What’s making you feel this way?
@@ -62,14 +82,13 @@
 = Too_Many_Mistakes
  Mistakes don’t define you. What you do after them does.
 -> END
+
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

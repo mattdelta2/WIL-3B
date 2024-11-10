@@ -22,6 +22,27 @@ VAR standingFirmQuestStarted = false   // Quest that involves staying strong ami
 VAR teacherQuestStarted = false        // Placeholder for Teacher's quest status
 VAR teacherQuestCompleted = false      // Placeholder for Teacher's quest 
 VAR studyMentorSpawned = false
+VAR empathyQuestStarted = false
+VAR empathyQuestCompleted = false
+VAR emotionalQuestCompleted = false
+VAR timeManagementQuestCompleted = false
+VAR teacherPriorityQuestCompleted  =false 
+VAR teacherPriorityQuestStarted = false
+VAR teacherGoalQuestStarted = false
+VAR teacherGoalQuestCompleted = false
+VAR conflictResolutionQuestStarted = false
+VAR conflictResolutionQuestCompleted = false
+VAR lifeChoicesQuestStarted = false
+VAR lifeChoicesQuestCompleted = false
+VAR healthyChoicesQuestStarted = false
+VAR healthyChoicesQuestCompleted = false
+VAR constructiveCriticismQuestStarted = false
+VAR constructiveCriticismQuestCompleted = false
+VAR smallWinsQuestStarted = false
+VAR smallWinsQuestCompleted = false
+VAR stayFocusedQuestStarted = false
+VAR stayFocusedQuestCompleted = false
+
 
 
 

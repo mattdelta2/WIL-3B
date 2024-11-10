@@ -9,7 +9,7 @@ It’s important to set goals for yourself. Without goals, you’re just driftin
     -> No_Goals
 
 = Graduate_Job
- That’s a solid goal. What kind of job are you aiming for?
+That’s a solid goal. What kind of job are you aiming for?
 
 * Something in engineering, maybe. I like building things.
     -> Engineering
@@ -18,15 +18,18 @@ It’s important to set goals for yourself. Without goals, you’re just driftin
     -> Not_Sure_Yet
 
 = Engineering
- That’s a great goal. Engineering can open many doors for you.
+That’s a great goal. Engineering can open many doors for you.
+  
+  * {teacherGoalQuestStarted == false} Could you help me set up a plan to achieve this?
+      -> Start_Teacher_Goal_Quest
 -> END
 
 = Not_Sure_Yet
- That’s okay. What matters is that you’re thinking about the future.
+That’s okay. What matters is that you’re thinking about the future.
 -> END
 
 = No_Goals
- That’s dangerous thinking. If you don’t have goals, you’re letting life happen to you. Why don’t you have any goals?
+That’s dangerous thinking. If you don’t have goals, you’re letting life happen to you. Why don’t you have any goals?
 
 * I don’t see the point. Nothing ever changes here.
     -> Nothing_Changes
@@ -35,23 +38,50 @@ It’s important to set goals for yourself. Without goals, you’re just driftin
     -> No_Matter
 
 = Nothing_Changes
- Nothing changes because too many people think like that. Be different.
+Nothing changes because too many people think like that. Be different.
+-> AddGang
 -> END
 
 = No_Matter
- Every goal matters. Without them, you’ll never move forward.
+Every goal matters. Without them, you’ll never move forward.
+-> AddGang
 -> END
 
+// Start Teacher Goal Quest
+= Start_Teacher_Goal_Quest
+Alright, let’s break it down. First, what’s one thing you can do now that will help you work towards this goal?
 
+~ teacherGoalQuestStarted = true
 
-=AddEdu
-~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
+* I could study harder and focus on science and math.
+    -> Study_Hard_Plan
 
-=AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+* I’m not sure. It all feels overwhelming.
+    -> Overwhelmed_Plan
+
+= Study_Hard_Plan
+That’s a great start. Focusing on your studies will set you up for success in engineering. Keep going, and you’ll see the results.
+-> AddEdu
+-> Complete_Teacher_Goal_Quest
+
+= Overwhelmed_Plan
+It’s okay to feel overwhelmed. Start small—one step at a time. Even small actions will add up.
+-> AddGang
+-> Complete_Teacher_Goal_Quest
+
+// Quest Completion
+= Complete_Teacher_Goal_Quest
+~ teacherGoalQuestCompleted = true
+You’re on the right path. Remember, goals are achieved one step at a time. I’ll be here to support you.
+-> END
+
+// Stat Adjustments
+= AddEdu
+~ EduStat += 1
+~ GangStat = MIN(GangStat, 0)
+-> END
+
+= AddGang
+~ EduStat = MIN(EduStat, 0)
+~ GangStat += 1
+-> END

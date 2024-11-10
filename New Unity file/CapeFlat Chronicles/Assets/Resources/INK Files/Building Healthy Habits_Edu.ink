@@ -1,6 +1,6 @@
-INCLUDE Global.ink 
- 
- Building healthy habits is key to success. What are some habits you’re working on?
+INCLUDE Global.ink
+
+Building healthy habits is key to success. What are some habits you’re working on?
 
 * I’m trying to get better at managing my time.
     -> Time_Management_Habit
@@ -56,21 +56,41 @@ INCLUDE Global.ink
 
 = Eating_Healthier
  Eating healthier can make a big difference in how you feel. Start small—maybe add more fruits and vegetables to your meals. Every step counts.
- ->AddEdu 
+->AddEdu
 -> END
 
 = More_Sleep
  Sleep is crucial for your health and well-being. Try setting a bedtime and sticking to it—it will help you feel more rested.
+->AddEdu
+-> END
+
+ "Here’s a challenge: start small by either adding more fruits and vegetables to your meals or setting a consistent bedtime. How do you think this could benefit you?"
+
+* I think eating healthier could give me more energy.
+    -> AddEdu
+    Teacher: "Absolutely! The right nutrition can make a big difference in how you feel every day."
+    -> HabitBuildingChallenge_Complete
+
+* Getting more sleep would definitely help me feel better.
+    -> AddEdu
+    Teacher: "Sleep is essential. Even an extra hour can make a huge difference in your energy levels and focus."
+    -> HabitBuildingChallenge_Complete
+
+* I’m not sure if small changes will make a difference.
+    -> AddGang
+    Teacher: "Sometimes the smallest steps lead to the biggest changes. Don’t underestimate the impact of a single habit."
+    -> END
+
+= HabitBuildingChallenge_Complete
+Teacher: "Well done. Starting small is the key to building lasting habits. Keep at it, and you’ll see positive changes!"
 -> END
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
+~GangStat = MIN(GangStat,0)
+-> END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

@@ -1,4 +1,4 @@
- INCLUDE Global.ink
+INCLUDE Global.ink
  
  Stress is something we all have to deal with, but how you handle it can make all the difference. What do you do when you’re stressed?
 
@@ -13,16 +13,28 @@
 
 = Exercise
  That’s a great way to relieve stress. Physical activity can really help you manage your emotions.
--> END
+
+ "Here’s a challenge: next time you’re stressed, try adding a new form of exercise, like stretching or yoga. How do you think that might help you?"
+
+* I think it could help me stay even more relaxed.
+    -> AddEdu
+    Teacher: "Absolutely. Finding new ways to stay calm and focused can be very empowering."
+    -> StressReflection_Complete
+
+* I’m not sure if it will make much difference.
+    Teacher: "It might surprise you. Sometimes the smallest changes make the biggest impact."
+    -> END
 
 = Bottle_It_Up
  Bottling things up can be dangerous in the long run. It’s important to find healthy ways to let that stress out. Have you thought about trying something different?
 
 * I’ve thought about it, but it’s hard to change.
     -> Hard_To_Change
+    -> AddGang  // Bottling up and resistance to change can result in GangStat increase
 
 * Not really. I don’t know what else to do.
     -> No_Alternatives
+    -> AddGang  // Avoiding alternatives also increases GangStat
 
 = Hard_To_Change
  Change is always hard, but it’s worth it. Start with small steps—you’ll get there.
@@ -34,17 +46,22 @@
 
 = Talk_To_Friends
  Talking to someone you trust can be one of the best ways to handle stress. I’m glad you have people to support you.
+-> AddEdu  // Positive approach to stress management rewarded with EduStat increase
+-> END
+
+= StressReflection_Complete
+
+Teacher: "Well done. Taking on challenges, even small ones, builds resilience. You’re on the right path."
+-> AddEdu
 -> END
 
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
+~GangStat = MIN(GangStat,0)
+-> END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

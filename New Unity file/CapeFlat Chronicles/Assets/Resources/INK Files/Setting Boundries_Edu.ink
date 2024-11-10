@@ -1,7 +1,6 @@
- INCLUDE Global.ink
- 
- 
- Setting boundaries is important for your well-being, whether it’s with friends, family, or work. How do you handle setting boundaries?
+INCLUDE Global.ink
+
+Setting boundaries is important for your well-being, whether it’s with friends, family, or work. How do you handle setting boundaries?
 
 * I struggle with saying no to people.
     -> Struggle_Saying_No
@@ -13,7 +12,7 @@
     -> Good_At_Boundaries
 
 = Struggle_Saying_No
- Saying no can be difficult, especially when you want to help others. It’s important to remember that taking care of yourself is just as important. Have you tried practicing saying no in low-stakes situations?
+Saying no can be difficult, especially when you want to help others. It’s important to remember that taking care of yourself is just as important. Have you tried practicing saying no in low-stakes situations?
 
 * I’ve tried, but it makes me feel guilty.
     -> Feel_Guilty
@@ -22,32 +21,34 @@
     -> Dislike_Disappointing
 
 = Feel_Guilty
- It’s normal to feel guilty at first, but remember, setting boundaries is about respecting your own needs. You can’t pour from an empty cup.
+It’s normal to feel guilty at first, but remember, setting boundaries is about respecting your own needs. You can’t pour from an empty cup.
 -> END
 
 = Dislike_Disappointing
- Disappointing people can be hard, but you can’t please everyone. True friends and family will understand when you need space.
+Disappointing people can be hard, but you can’t please everyone. True friends and family will understand when you need space.
 -> END
 
 = Boundaries_Not_Respected
- It can be really tough when people don’t respect your boundaries. Have you talked to them about how important those boundaries are to you?
+It can be really tough when people don’t respect your boundaries. Let’s imagine a scenario: Someone repeatedly interrupts your study time, even after you've asked for space. Would you calmly reinforce your boundary, or would you let it slide?
 
-* I’ve tried, but they don’t seem to listen.
-    -> Tried_Talk_No_Listen
+* I’d reinforce my boundary calmly.
+    -> Reinforce_Boundary
 
-* No, I’m worried about how they’ll react.
-    -> Worried_About_Reaction
+* I’d probably let it slide to avoid conflict.
+    -> Let_It_Slide
 
-= Tried_Talk_No_Listen
- Sometimes, people need time to adjust. Keep reinforcing your boundaries calmly and consistently. You deserve to have your needs respected.
+= Reinforce_Boundary
+That’s great! Standing firm while staying calm shows a lot of maturity. Remember, your time and well-being are worth respecting.
+-> AddEdu
 -> END
 
-= Worried_About_Reaction
- It’s understandable to worry about their reaction, but your well-being is important. You can start small—set a minor boundary and see how it goes.
+= Let_It_Slide
+Avoiding conflict is natural, but just remember that your needs matter too. Practicing this can help you feel more in control of your boundaries.
+-> AddGang
 -> END
 
 = Good_At_Boundaries
- That’s great! Being able to set boundaries is a valuable skill. What do you find most helpful when communicating your boundaries?
+That’s great! Being able to set boundaries is a valuable skill. What do you find most helpful when communicating your boundaries?
 
 * Being direct and honest about what I need.
     -> Direct_Honest
@@ -56,22 +57,19 @@
     -> Give_Reasons
 
 = Direct_Honest
- Being direct and honest is the best way to communicate boundaries. It leaves little room for misunderstanding and shows you respect yourself.
+Being direct and honest is the best way to communicate boundaries. It leaves little room for misunderstanding and shows you respect yourself.
 -> END
 
 = Give_Reasons
- Giving reasons can help others understand why the boundary is important to you. Just remember, you don’t always owe an explanation—it’s enough that it’s your boundary.
+Giving reasons can help others understand why the boundary is important to you. Just remember, you don’t always owe an explanation—it’s enough that it’s your boundary.
 -> END
-
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

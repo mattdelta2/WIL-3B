@@ -1,6 +1,6 @@
- INCLUDE Global.ink
- 
- Confidence isn’t something that just happens; it’s built over time. How do you feel about your confidence levels?
+INCLUDE Global.ink
+
+Confidence isn’t something that just happens; it’s built over time. How do you feel about your confidence levels?
 
 * I feel pretty confident in myself, most of the time.
     -> Confident_Most_Of_Time
@@ -37,12 +37,37 @@
 * When I’m trying something I’ve never done before.
     -> New_Experiences
 
+ "Here’s a challenge for you: Next time you’re in a situation where you feel nervous, take a moment to breathe and remind yourself of one thing you’re good at. How do you think that would help?"
+
+* I think it would help me feel a bit more confident.
+    -> AddEdu
+    Teacher: "Exactly. Reminding yourself of your strengths can give you a boost when you need it most."
+    -> ConfidenceChallenge_Complete
+
+* I’m not sure, but I could give it a try.
+    -> AddEdu
+    Teacher: "Trying new strategies, even small ones, can make a big difference in building confidence."
+    -> ConfidenceChallenge_Complete
+
 = Public_Speaking
  Public speaking can be nerve-wracking, but it’s a skill that can be learned over time. Practice and preparation can make all the difference.
 -> END
 
 = New_Experiences
  New experiences are always challenging, but each one helps you grow. With each new thing you try, your confidence will increase bit by bit.
+ 
+  "Here’s a challenge for you: Next time you’re in a situation where you feel nervous, take a moment to breathe and remind yourself of one thing you’re good at. How do you think that would help?"
+
+* I think it would help me feel a bit more confident.
+    -> AddEdu
+    Teacher: "Exactly. Reminding yourself of your strengths can give you a boost when you need it most."
+    -> ConfidenceChallenge_Complete
+
+* I’m not sure, but I could give it a try.
+    -> AddEdu
+    Teacher: "Trying new strategies, even small ones, can make a big difference in building confidence."
+    -> ConfidenceChallenge_Complete
+
 -> END
 
 = Fake_Confidence
@@ -62,15 +87,16 @@
  Confidence starts within. You have to remind yourself of your strengths and accept your weaknesses. That’s the first step toward building genuine confidence.
 -> END
 
+= ConfidenceChallenge_Complete
+Teacher: "Well done. Taking small steps to remind yourself of your strengths is a great way to build confidence."
+-> END
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
+~GangStat = MIN(GangStat,0)
+-> END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

@@ -62,14 +62,27 @@ INCLUDE Global.ink
  Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
 -> END
 
+// Quest Integration: Life Choices Quest
+* {lifeChoicesQuestStarted == false} I’d like to learn more about making good choices.
+    -> Start_LifeChoices_Quest
+
+= Start_LifeChoices_Quest
+Teacher: Great! Let’s start with a small exercise. Imagine you have to choose between studying for an exam or helping a friend with something important. What would you choose and why?
+~ lifeChoicesQuestStarted = true
+-> END
+
+// Quest completion within another dialogue or a follow-up
+= Complete_LifeChoices_Quest
+~ lifeChoicesQuestCompleted = true
+Your thoughtful answer shows you’re learning to weigh your choices carefully. Well done!
+-> AddEdu
+
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

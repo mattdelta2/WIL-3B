@@ -1,4 +1,5 @@
-INCLUDE Global.ink 
+INCLUDE Global.ink
+
  
  Managing your time well is crucial for success. How do you usually manage your time?
 
@@ -22,10 +23,33 @@ INCLUDE Global.ink
 
 = Urgent_Tasks
  Prioritizing urgent tasks can keep you on track, but remember not to overwhelm yourself. Balance is key.
--> END
+
+* Could you try creating a schedule for your next big assignment?
+    -> Plan_Assignment
 
 = Smaller_Tasks
  Starting with smaller tasks can help build momentum. Just make sure you don’t leave the big ones for too long.
+
+* Could you try creating a schedule for your next big assignment?
+    -> Plan_Assignment
+
+= Plan_Assignment
+ I want you to try organizing your time for the next assignment. Would you be willing to make a quick schedule?
+
+* Yes, I’ll try making a schedule.
+    -> Accept_Schedule_Challenge
+
+* No, I think I’ll just handle it as it comes.
+    -> Decline_Schedule_Challenge
+
+= Accept_Schedule_Challenge
+ Great! Making even a basic plan will help you manage your time better.
+-> AddEdu
+-> END
+
+= Decline_Schedule_Challenge
+ It’s your choice, but remember, having a plan could make things a lot easier.
+-> AddGang
 -> END
 
 = Procrastinated
@@ -62,16 +86,12 @@ INCLUDE Global.ink
  Planning can be as simple as making a list of what you need to do. Start with a few key tasks and add more as you go.
 -> END
 
-
-
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
 ~ GangStat = MIN(GangStat,0)
-->END
+-> END
 
 =AddGang
-~EduStat -= 1
 ~ EduStat = MIN(EduStat,0)
 ~GangStat += 1
-->END
+-> END

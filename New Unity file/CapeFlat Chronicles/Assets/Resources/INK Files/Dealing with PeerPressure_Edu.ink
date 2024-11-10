@@ -1,7 +1,6 @@
 INCLUDE Global.ink
 
-
- Peer pressure can be tough, especially around here. How do you handle it?
+Peer pressure can be tough, especially around here. How do you handle it?
 
 * I try to stay away from people who bring me down.
     -> Stay_Away
@@ -27,25 +26,27 @@ INCLUDE Global.ink
     -> Too_Difficult
 
 * You’re right, I need to work on that.
-    -> Work_On_That
+    -> Strengthen_Resolve
 
 = Too_Difficult
  I know it’s tough. But remember, you’re stronger than you think. You don’t have to face this alone—there are people who want to help.
 -> END
 
-= Work_On_That
- That’s the attitude. It takes time, but every little bit of resistance helps you grow stronger.
+= Strengthen_Resolve
+ Good. Here’s a challenge for you: the next time you feel peer pressure, pause and ask yourself, "Is this choice true to who I want to become?"
+
+- If you practice this, you’ll find that standing up for yourself gets easier over time.
+
+->AddEdu
 -> END
 
 
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
+~GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END

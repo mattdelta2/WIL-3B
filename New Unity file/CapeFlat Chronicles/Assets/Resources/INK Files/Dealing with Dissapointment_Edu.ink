@@ -1,6 +1,6 @@
- INCLUDE Global.ink
+INCLUDE Global.ink
  
- Disappointment is something we all face at one point or another. It’s how we handle it that matters. How do you usually deal with disappointment?
+Disappointment is something we all face at one point or another. It’s how we handle it that matters. How do you usually deal with disappointment?
 
 * I try to move on as quickly as possible.
     -> Move_On_Quickly
@@ -14,18 +14,24 @@
 = Move_On_Quickly
  Moving on quickly can help you avoid being stuck in negative feelings. But it’s also important to take the time to understand why you’re disappointed, so you can learn from it.
 
-* I guess I could take a little more time to reflect.
-    -> Reflect_On_Disappointment
+ "Here’s a challenge for you: think about a recent disappointment. How do you think you could approach it differently next time?"
 
-* I don’t like dwelling on negative things.
-    -> Avoid_Negativity
+    * I could reflect on what went wrong and plan better.
+        -> AddEdu
+        Teacher: "That’s a great approach. Planning and reflection can turn setbacks into valuable lessons."
+        -> ResilienceReflection
 
-= Reflect_On_Disappointment
- Reflecting doesn’t mean dwelling. It just means understanding why things didn’t work out and using that knowledge to grow. It can be powerful.
--> END
+    * I’ll just try to move on faster and not dwell on it.
+        Teacher: "Moving on is important, but remember, understanding why things didn’t work out can be just as valuable."
+        -> END
 
-= Avoid_Negativity
- It’s good to want to avoid negativity, but sometimes facing those negative feelings head-on helps us grow. It’s about finding a balance.
+    * It’s hard to think about setbacks—I’d rather forget them.
+        -> AddGang
+        Teacher: "I understand that feeling, but avoiding disappointment might mean missing out on learning experiences."
+        -> END
+
+= ResilienceReflection
+Teacher: "Well done. Reflecting on setbacks is a valuable skill that will serve you well."
 -> END
 
 = Dwell_On_It
@@ -62,16 +68,12 @@
  Feeling like you let yourself down can be even harder, but remember, setbacks are a part of life. What matters is how you get back up and keep going.
 -> END
 
-
-
 =AddEdu
 ~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
+~GangStat = MIN(GangStat,0)
 ->END
 
 =AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
+~EduStat = MIN(EduStat,0)
 ~GangStat += 1
 ->END
