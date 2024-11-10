@@ -22,7 +22,7 @@ VAR standingFirmQuestStarted = false   // Quest that involves staying strong ami
 VAR teacherQuestStarted = false        // Placeholder for Teacher's quest status
 VAR teacherQuestCompleted = false      // Placeholder for Teacher's quest 
 VAR studyMentorSpawned = false
-completion
+
 
 // Future Expansion: Community Member Quests
 VAR communityQuestStarted = false      // Placeholder for Community Member's quest status

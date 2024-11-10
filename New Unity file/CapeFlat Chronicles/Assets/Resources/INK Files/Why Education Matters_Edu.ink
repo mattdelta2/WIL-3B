@@ -1,7 +1,6 @@
 INCLUDE Global.ink
-// First dialogue: Why Education Matters
- Do you know why education matters? It’s not just about passing tests. It’s about building your future, giving yourself options. Do you understand that?
 
+Do you know why education matters? It’s not just about passing tests. It’s about building your future, giving yourself options. Do you understand that?
 
 * I get it, miss. I’m trying to focus and learn as much as I can.
     -> I_Get_It
@@ -13,26 +12,49 @@ INCLUDE Global.ink
     -> Hard_To_Stay_Motivated
 
 = I_Get_It
- Good. Focus will take you far. What are you enjoying most about your studies?
+Good. Focus will take you far. What are you enjoying most about your studies?
 
 * Math, because it feels like it’s building a foundation for my future.
-    -> MATH
+    -> MATH_QUEST_START
 
 * I’m still figuring it out, but I’m doing my best.
     -> Unsure
 
-= MATH
- That’s the spirit. You’ll need that kind of mindset to succeed.
+// Start of the Math Focus Quest
+= MATH_QUEST_START
+That's the spirit! Since you’re interested in math, let’s test your skills with a quick question.
 
+What is the answer to this: 5 + 3 x 2?
+
+* 11
+    -> Correct_Answer
+
+* 16
+    -> Incorrect_Answer
+
+* 13
+    -> Incorrect_Answer
+
+= Correct_Answer
+Well done! You’ve got a good understanding of math fundamentals. Keep practicing like this, and it will help you in many areas of life.
+-> MathQuestCompleted
+
+= Incorrect_Answer
+Close, but remember the order of operations. Multiplication comes before addition, so the correct answer was 11.
+-> MathQuestCompleted
+
+= MathQuestCompleted
+~ teacherQuestCompleted = true
+~ EduStat += 1
+You completed the Math Focus quest and gained a deeper understanding of math. Keep up the hard work, and don’t hesitate to come back if you have more questions.
 -> END
 
 = Unsure
- You don’t need to have it all figured out yet, but keep pushing forward.
-
+You don’t need to have it all figured out yet, but keep pushing forward.
 -> END
 
 = Waste_Of_Time
- A waste? You think the streets will give you a better future? Where do you think you’ll end up if you don’t commit to your education?
+A waste? You think the streets will give you a better future? Where do you think you’ll end up if you don’t commit to your education?
 
 * I guess I’ll end up like everyone else around here, stuck.
     -> Stuck
@@ -41,17 +63,15 @@ INCLUDE Global.ink
     -> Survive
 
 = Stuck
- That’s exactly what will happen if you don’t change your mindset.
-
+That’s exactly what will happen if you don’t change your mindset.
 -> END
 
 = Survive
- Surviving isn’t enough. You have to think about what comes next.
-
+Surviving isn’t enough. You have to think about what comes next.
 -> END
 
 = Hard_To_Stay_Motivated
- I get that. Motivation isn’t always easy to find, but you need to push through. What’s been holding you back?
+I get that. Motivation isn’t always easy to find, but you need to push through. What’s been holding you back?
 
 * It’s hard to see the point sometimes.
     -> Hard_To_See_Point
@@ -60,25 +80,21 @@ INCLUDE Global.ink
     -> Overwhelmed
 
 = Hard_To_See_Point
- If you can’t see the point, then you need to change your perspective.
-
+If you can’t see the point, then you need to change your perspective.
 -> END
 
 = Overwhelmed
- That’s normal, but don’t let it stop you from moving forward.
-
-
+That’s normal, but don’t let it stop you from moving forward.
 -> END
 
+= AddEdu
+~ EduStat += 1
+~ GangStat -= 1
+~ GangStat = MAX(GangStat, 0)
+-> END
 
-=AddEdu
-~EduStat += 1
-~GangStat -= 1
-~ GangStat = MIN(GangStat,0)
-->END
-
-=AddGang
-~EduStat -= 1
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ EduStat -= 1
+~ EduStat = MAX(EduStat, 0)
+~ GangStat += 1
+-> END
