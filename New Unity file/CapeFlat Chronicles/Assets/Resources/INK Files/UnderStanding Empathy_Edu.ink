@@ -12,7 +12,7 @@ Empathy is about understanding what others are going through. It can be hard, bu
     -> Focused_On_Self
 
 = Try_To_Understand
- That’s a good mindset. Being willing to try makes a big difference. When was the last time you showed empathy towards someone?
+That’s a good mindset. Being willing to try makes a big difference. When was the last time you showed empathy towards someone?
 
 * I listened to a friend who was having a tough time.
     -> Listened_To_Friend
@@ -21,18 +21,18 @@ Empathy is about understanding what others are going through. It can be hard, bu
     -> Tried_To_Help
 
 = Listened_To_Friend
- Listening can mean the world to someone in pain. You don’t always have to solve the problem—sometimes, just being there is enough.
+Listening can mean the world to someone in pain. You don’t always have to solve the problem—sometimes, just being there is enough.
 ~ empathyQuestStarted = true
 -> Empathy_Quest
 
 = Tried_To_Help
- Trying to help others is admirable, but remember, sometimes listening is the best help you can give. Keep it up.
+Trying to help others is admirable, but remember, sometimes listening is the best help you can give. Keep it up.
 ~ empathyQuestStarted = true
 -> Empathy_Quest
 
 // Empathy Quest
 = Empathy_Quest
- Empathy is a skill that grows with practice. Here’s a scenario: imagine a friend is going through a hard time. How would you respond?
+Empathy is a skill that grows with practice. Here’s a scenario: imagine a friend is going through a hard time. How would you respond?
 
 * I would listen and let them share their feelings.
     ~ empathyQuestCompleted = true
@@ -43,17 +43,17 @@ Empathy is about understanding what others are going through. It can be hard, bu
     -> Show_Help
 
 = Show_Listening
- That’s a compassionate response. Sometimes, listening is the most helpful thing we can do.
+That’s a compassionate response. Sometimes, listening is the most helpful thing we can do.
 -> AddEdu
 -> END
 
 = Show_Help
- It’s thoughtful to offer help, but remember that not everyone wants advice. Sometimes just being there is enough.
+It’s thoughtful to offer help, but remember that not everyone wants advice. Sometimes just being there is enough.
 -> AddEdu
 -> END
 
 = Struggle_With_Empathy
- That’s okay, empathy doesn’t come easily to everyone. It’s something you can build with practice. What do you find most challenging about it?
+That’s okay, empathy doesn’t come easily to everyone. It’s something you can build with practice. What do you find most challenging about it?
 
 * I don’t always know what to say.
     -> Not_Know_What_To_Say
@@ -62,15 +62,15 @@ Empathy is about understanding what others are going through. It can be hard, bu
     -> Not_Understand_Why
 
 = Not_Know_What_To_Say
- You don’t always have to say anything. Just being there and showing you care is often enough. Words aren’t always necessary.
+You don’t always have to say anything. Just being there and showing you care is often enough. Words aren’t always necessary.
 -> END
 
 = Not_Understand_Why
- People are complicated, and their feelings aren’t always logical. The key to empathy is to accept their feelings without needing to fully understand them.
+People are complicated, and their feelings aren’t always logical. The key to empathy is to accept their feelings without needing to fully understand them.
 -> END
 
 = Focused_On_Self
- It’s natural to focus on yourself, especially when things are tough. But helping others can also help you feel better. Have you ever tried putting someone else first?
+It’s natural to focus on yourself, especially when things are tough. But helping others can also help you feel better. Have you ever tried putting someone else first?
 
 * Not really. I’m too focused on my own problems.
     -> Too_Focused_On_Self
@@ -79,19 +79,19 @@ Empathy is about understanding what others are going through. It can be hard, bu
     -> Try_Putting_Others_First
 
 = Too_Focused_On_Self
- That’s understandable. It’s hard to think about others when you’re struggling. But empathy can bring perspective and even help you solve your own problems.
+That’s understandable. It’s hard to think about others when you’re struggling. But empathy can bring perspective and even help you solve your own problems.
 -> END
 
 = Try_Putting_Others_First
- That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
+That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
 -> END    
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
-->END
+= AddEdu
+~ EduStat += 1
+~ GangStat = MIN(GangStat - 1, 0)
+-> END
 
-=AddGang
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MIN(EduStat - 1, 0)
+-> END

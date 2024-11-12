@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+// Dialogue: Understanding Strengths
 Understanding your strengths is important. It helps you know what you’re good at and where you can grow. What do you think your greatest strength is?
 
 * I’m a good listener, and people trust me.
@@ -78,6 +79,7 @@ Being reliable is a fantastic strength. People need someone they can count on, a
 Maybe it’s time to ask. Sometimes others see things in us that we don’t see in ourselves. You might be surprised by the answers.
 -> END
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
 ~ GangStat = MAX(GangStat - 1, 0)

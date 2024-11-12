@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+// Dialogue: Importance of Education
 Do you know why education matters? It’s not just about passing tests. It’s about building your future, giving yourself options. Do you understand that?
 
 * I get it, miss. I’m trying to focus and learn as much as I can.
@@ -87,14 +88,13 @@ If you can’t see the point, then you need to change your perspective.
 That’s normal, but don’t let it stop you from moving forward.
 -> END
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat -= 1
-~ GangStat = MAX(GangStat, 0)
+~ GangStat = MIN(GangStat - 1, 0)
 -> END
 
 = AddGang
-~ EduStat -= 1
-~ EduStat = MAX(EduStat, 0)
 ~ GangStat += 1
+~ EduStat = MIN(EduStat - 1, 0)
 -> END
