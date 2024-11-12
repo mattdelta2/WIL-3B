@@ -16,21 +16,20 @@ Jy dink jy kan rise above die Flats, bru? Hier maak die life jou or breek jou. W
 = Rise_With_Plan
 Aweh, ek hoor jou. Maar die Flats gaan nie make dit easy nie, bru.
 
-* I’m prepared for the struggle.
-    -> Prepared_For_Struggle
+ "Here’s a test of jou plan: Imagine jy’re faced with ‘n quick choice—stay loyal or take a shortcut that could risk jou reputation. What’s jou move?"
 
-* I’m still figuring out how to get out of here.
-    -> Figuring_Out
+* I’d stay loyal, even if it takes longer.
+    -> AddEdu
+     "Respect, bru. Daai kind loyalty gaan jou ver bring, maar hou jou plan strong."
+    -> Rise_Above_Challenge_Complete
 
-// Sub-Branch: Prepared_For_Struggle
-= Prepared_For_Struggle
-Good, maar onthou, jy gaan need more than just ‘n plan.
--> AddEdu
--> END
+* I’d take the shortcut, as long as it gets me out.
+    -> AddGang
+     "Jy’s mos bold, maar onthou, shortcuts kom met risk. Die Flats onthou jou choices."
+    -> Rise_Above_Challenge_Complete
 
-// Sub-Branch: Figuring_Out
-= Figuring_Out
-Jy moet find jou way vinnig, bru. Die Flats gaan nie laat jou rise so easy nie.
+= Rise_Above_Challenge_Complete
+ "Die Flats is hard, maar jou plan gaan jou dra if jy bly committed. Jy gaan die consequences face one day."
 -> END
 
 // Branch: Any_Means_Necessary

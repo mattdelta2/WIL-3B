@@ -35,22 +35,22 @@ Daai’s risky, bru. On die streets, die moment kan maak of breek jou.
 
 // Branch: Don’t_Care_Consequences
 = Dont_Care_Consequences
-Jy gaan care when die streets kom for jou. Prove it by grabbing something I need. This item will show if jy regtig kan deal with die consequences.
+Jy gaan care when die streets kom for jou.
 
-~ choicesQuestStarted = true
--> choicesQuest_Info
+"Let’s test jou commitment. Here’s a challenge for you: imagine jy’re at die **Empty Lot** met ‘n spray can in jou hand. Would jy go through with tagging die wall, knowing die risks?"
 
-// Quest Information
-= choicesQuest_Info
-To prove your willingness to deal with consequences, go to the **Empty Lot** and interact with the spray can there. Completing this action will increase **GangStat**. Ignoring the quest will impact your standing.
+* I’ll do it. I don’t mind taking risks.
+    -> AddGang
+     "Aweh, that’s die spirit. Just remember, each mark you make comes with ‘n price."
+    -> Choices_Task_Complete
 
-* I’ll take whatever comes.
-    -> Take_Whatever_Comes
+* No, I’d rather not risk it.
+    -> AddEdu
+     "Smart choice. Knowing when not to act is just as powerful as acting."
+    -> Choices_Task_Complete
 
-// Sub-Branch: Take_Whatever_Comes
-= Take_Whatever_Comes
-Aweh, ons gaan sien. Die game gaan jou test.
--> AddGang
+= Choices_Task_Complete
+ "Remember, die Flats gaan test jou commitment each time jy act or choose not to. That’s life here."
 -> END
 
 // Branch: Figuring_Out_Choices

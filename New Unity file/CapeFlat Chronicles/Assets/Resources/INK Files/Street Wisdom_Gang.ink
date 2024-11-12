@@ -16,21 +16,20 @@ Die Flats gaan teach jou, bru. Jy gaan learn die hard way if jy nie wakker bly n
 = Learning_Fast
 Aweh, jy moet learn quick, anders die Flats gaan mos maak a fool van jou.
 
-* I’m ready to keep learning.
-    -> Keep_Learning
+"Here’s a challenge: imagine jy have to teach a younger kid about surviving die Flats. How would jy do it?"
 
-* I’m still figuring out how things work here.
-    -> Figuring_Out_How_Things_Work
+* I’d show them what to watch out for and keep them safe.
+    -> AddEdu
+     "Good, bru. Knowledge is mos power, especially hier."
+    -> Wisdom_Task_Complete
 
-// Sub-Branch: Keep_Learning
-= Keep_Learning
-Good. Just onthou, die lesson gaan never end nie.
--> AddEdu
--> END
+* I’d tell them to be tough and trust no one.
+    -> AddGang
+     "Ja, so moet dit wees. Die Flats gaan mos teach jou to be wary."
+    -> Wisdom_Task_Complete
 
-// Sub-Branch: Figuring_Out_How_Things_Work
-= Figuring_Out_How_Things_Work
-Jy moet learn fast, bru. Die Flats gaan mos nie wait for jou nie.
+= Wisdom_Task_Complete
+ "Remember, bru, learning from die Flats is nie just about yourself—it’s about knowing what keeps jy and jou people safe."
 -> END
 
 // Branch: Don’t_Need_Lessons

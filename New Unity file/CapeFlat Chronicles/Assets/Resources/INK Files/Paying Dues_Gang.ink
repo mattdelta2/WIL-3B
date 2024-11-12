@@ -16,21 +16,20 @@ Hier in die game, jy moet pay jou dues. Niks kom mos for free nie. Hoe’s jy pa
 = Working_For_Everything
 Aweh, dis ‘n strong move. Jy gaan need to fight for jou place.
 
-* I’m ready for whatever comes.
-    -> Ready_For_Whatever
+"Here’s a challenge: Imagine jy have to earn something valuable by putting in hard work. Would jy take that route?"
 
-* I haven’t paid my dues yet, but I’m working on it.
-    -> Working_On_Paying_Dues
+* Yes, I’d work hard for it, even if it takes time.
+    -> AddEdu
+     "Good. Daai’s die mindset jy gaan nodig hê to make it here."
+    -> Dues_Task_Complete
 
-// Sub-Branch: Ready_For_Whatever
-= Ready_For_Whatever
-Good, just onthou die streets gaan take more than jy give.
--> AddEdu
--> END
+* No, I’d rather take shortcuts and get it done quickly.
+    -> AddGang
+     "Shortcuts gaan jou win for now, but onthou they come with ‘n price."
+    -> Dues_Task_Complete
 
-// Sub-Branch: Working_On_Paying_Dues
-= Working_On_Paying_Dues
-Jy better hurry, bru. Jy gaan need to pay soon, anders jy gaan klaar wees.
+= Dues_Task_Complete
+ "Respect, bru. Whether jy hustle or take shortcuts, onthou everyone has dues to pay."
 -> END
 
 // Branch: Take_What_I_Want_No_Pay

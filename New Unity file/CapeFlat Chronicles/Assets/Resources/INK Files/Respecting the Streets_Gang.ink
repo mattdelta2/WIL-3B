@@ -16,21 +16,20 @@ Die streets, bru, hulle gaan respect van niemand nie. Jy moet maak hulle respect
 = Earn_Respect_Smart_Choices
 Aweh, dis ‘n strong move, maar die streets gaan test jou.
 
-* I’m ready for the test.
-    -> Ready_For_Test
+"Here’s a test for jou, bru: Imagine jy have to choose between helping someone or ignoring them to protect yourself. What’s jou choice?"
 
-* I’m not sure how to earn respect yet.
-    -> Not_Sure_How_To_Earn_Respect
+* I’d help them and earn respect through my actions.
+    -> AddEdu
+     "That’s respect, bru. Helping others kan show die streets jy het die guts to do what’s right."
+    -> RespectStreets_TaskComplete
 
-// Sub-Branch: Ready_For_Test
-= Ready_For_Test
-Good, maar onthou, die Flats don’t care about jou plans.
--> AddEdu
--> END
+* I’d ignore them and focus on my own survival.
+    -> AddGang
+     "A true survivor’s move, bru. Die streets gaan respect jou for looking out for number one."
+    -> RespectStreets_TaskComplete
 
-// Sub-Branch: Not_Sure_How_To_Earn_Respect
-= Not_Sure_How_To_Earn_Respect
-Jy gaan learn, bru. Die Flats gaan mos teach jou die hard way.
+= RespectStreets_TaskComplete
+ "Respect is nie net ‘n word nie, bru. It’s earned through every choice jy maak."
 -> END
 
 // Branch: Take_Respect_By_Force

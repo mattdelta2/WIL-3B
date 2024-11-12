@@ -20,8 +20,7 @@ Ja, dis slim, maar watch out, even those jy dink is close, kan turn on jou.
     -> Be_Careful
 
 * I trust people until they give me a reason not to.
-    ~ trustQuestCompleted = true
-    -> Start_Trust_Quest
+    -> Trust_People_First
 
 // Sub-Branch: Be_Careful
 = Be_Careful
@@ -29,32 +28,23 @@ Good. Stay wakker, anders jy gaan catch a knife in die back.
 -> AddEdu
 -> END
 
-// Quest Start: Trust Quest
-= Start_Trust_Quest
-To prove your loyalty, go find **The Contact** in the **Alley**. Speak to them to show you understand the rules of the streets.
-~ trustQuestCompleted = true
--> trustQuest_Info
+= Trust_People_First
+ "Interessant, maar die Flats gaan test jou trust."
 
-// Quest Information
-= trustQuest_Info
-Your mission is to find **The Contact** in the **Alley** and talk to them. Completing this task will increase your **GangStat**. Avoiding the task will limit your progress with us.
+"Here’s a challenge for you: Imagine jy have to show jy’re loyal. Would jy be willing to take a risk?"
 
-* {trustQuestCompleted} Find and speak to The Contact.
-    -> Complete_Trust_Quest_Success
+* Yes, I’d take the risk to prove my loyalty.
+    -> AddGang
+     "Goed, loyalty is key. Maar onthou, trust kan gevaarlik wees."
+    -> Trust_Quest_Complete
 
-* {trustQuestCompleted} Decide not to meet The Contact.
-    -> Complete_Trust_Quest_Failure
+* No, I’d rather play it safe and not risk too much.
+    -> AddEdu
+     "Wise choice. Staying cautious gaan jou out of trouble hou."
+    -> Trust_Quest_Complete
 
-= Complete_Trust_Quest_Success
-The Contact acknowledges your loyalty. You've shown you understand the importance of trust and survival.
-~ GangStat += 1
-~ trustQuestCompleted = false
--> END
-
-= Complete_Trust_Quest_Failure
-By avoiding The Contact, you’ve shown hesitation. In this game, that could cost you.
-~ GangStat = MAX(GangStat - 1, 0) // Decreases GangStat if quest is avoided
-~ trustQuestCompleted = false
+= Trust_Quest_Complete
+ "Whether jy take risks or not, onthou die Flats gaan jou test. Stay wakker."
 -> END
 
 // Branch: Don’t_Trust_Anyone
@@ -62,8 +52,12 @@ By avoiding The Contact, you’ve shown hesitation. In this game, that could cos
 Ja, mos. Trust gaan jou laat klaar maak. Jy moet stay sharp.
 
 * I know. I’m always watching.
-    ~ trustQuestCompleted = true
-    -> Start_Trust_Quest
+    -> Always_Watching
+
+= Always_Watching
+Good. Die Flats respect mense wat wakker bly. Maar jy moet ook leer om met mense te werk as jy wil oorleef.
+-> AddGang
+-> END
 
 // Branch: Haven’t_Thought_About_Trust
 = Havent_Thought_About_Trust

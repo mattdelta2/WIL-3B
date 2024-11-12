@@ -16,21 +16,20 @@ Jy weet mos, hier’s ‘n code wat jy moet live by on die Flats. Respect, loyal
 = Own_Code_Respect_Rules
 Aweh, maar onthou, die Flats don’t care about jou code. Jy better play by die rules, anders dit gaan hard wees.
 
-* I know when to follow the rules.
-    -> Know_When_To_Follow_Rules
+"Here’s a question: imagine jy moet choose between staying true to jou code or bending die rules to survive. What would jy do?"
 
-* I’m still figuring out what my code is.
-    -> Figuring_Out_Code
+* I’d stick to my code no matter what.
+    -> AddEdu
+     "Respect, bru. Sticking to jou code shows strength. Die streets gaan leer om jou te respect."
+    -> StreetCode_TaskComplete
 
-// Sub-Branch: Know_When_To_Follow_Rules
-= Know_When_To_Follow_Rules
-Good, just maak sure jy ready for die game.
--> AddEdu
--> END
+* I’d bend the rules if it means survival.
+    -> AddGang
+     "Dis practical, bru. Die Flats gaan mos nie worry oor jou code if jy nie oorleef nie."
+    -> StreetCode_TaskComplete
 
-// Sub-Branch: Figuring_Out_Code
-= Figuring_Out_Code
-Jy gaan need ‘n code quick. Jy gaan klaar wees sonder daai.
+= StreetCode_TaskComplete
+ "Remember, bru, die code is nie net ‘n idea nie. It’s how jy carry yourself op die Flats."
 -> END
 
 // Branch: Follow_No_Rules

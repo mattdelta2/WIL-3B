@@ -19,18 +19,29 @@ Ek like daai, maar die right way is nie altyd die easiest way. Jy gaan hustle.
 * I know, but I’ll work hard for it.
     -> Work_Hard_For_It
 
-* I don’t know if I care about respect.
-    -> Dont_Care_Respect
+* Maybe respect is too difficult to get the "right way."
+    -> Respect_Is_Hard_Quest
 
-// Sub-Branch: Work_Hard_For_It
 = Work_Hard_For_It
 Hou aan daai hustle, maar onthou, stay sharp.
 -> AddEdu
 -> END
 
-// Sub-Branch: Don’t_Care_Respect
-= Dont_Care_Respect
-As jy nie care nie, die streets gaan nie care for you nie. Better find something jy respect.
+= Respect_Is_Hard_Quest
+"Here’s something to test jou grit: Go to **the park at night** and leave a message for the gang—just to show jy’s not scared to be seen. Are you up for it?"
+
+* I’ll do it. Respect moet earned word.
+    -> AddGang
+     "Good, jy moet wees braaf on die streets."
+    -> QuestComplete_Respect
+
+* No, it’s not worth the risk.
+    -> AddEdu
+     "Wise choice—respect can also mean knowing jou limits."
+    -> QuestComplete_Respect
+
+= QuestComplete_Respect
+ "Remember, respect goes both ways. Jy earn dit in different ways, but don’t forget jou roots."
 -> END
 
 // Branch: Take_Respect_Any_Way
@@ -61,10 +72,10 @@ Better hurry up. Die game wait vir niks.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-
+~ GangStat = MIN(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-
+~ EduStat = MIN(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END

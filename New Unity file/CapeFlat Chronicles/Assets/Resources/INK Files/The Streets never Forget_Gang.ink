@@ -16,21 +16,20 @@ Jy weet mos, bru, die streets forget niks. Alles wat jy do kom back vir jou. Hoe
 = Face_Whatever_Comes
 Aweh, dis die right mindset, maar onthou, die Flats gaan maak sure jy face dit head-on.
 
-* I’m ready for it.
-    -> Ready_For_It
+ "Here’s a test: imagine jy’s in a tight spot en jy moet choose between jou safety and helping ‘n broer in need. What would jy do?"
 
-* I’m not sure if I’m ready for the consequences yet.
-    -> Not_Sure_About_Consequences
+* I’d help my broer, no matter the risk.
+    -> AddEdu
+     "Respect, bru. Loyalty maak die bond stronger, maar jy moet altyd watch die cost."
+    -> Streets_Remember_Challenge_Complete
 
-// Sub-Branch: Ready_For_It
-= Ready_For_It
-Good, maar jy gaan have to stay strong, bru.
--> AddEdu
--> END
+* I’d prioritize my own safety.
+    -> AddGang
+     "Ja, sometimes jy moet kijk after jouself first, maar daai gaan come back one day."
+    -> Streets_Remember_Challenge_Complete
 
-// Sub-Branch: Not_Sure_About_Consequences
-= Not_Sure_About_Consequences
-Jy moet klaar wees, bru. Die Flats gaan wait for nobody.
+= Streets_Remember_Challenge_Complete
+ "Die streets onthou elke choice, bru. Make sure jy gereed is vir die day when die past come knocking."
 -> END
 
 // Branch: Don’t_Care_What_Comes_Back

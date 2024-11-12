@@ -37,13 +37,20 @@ Daai’s dangerous. If jy slack, die life gaan leave jou behind.
 = Take_What_I_Want
 Ja, maar jy better watch jou back, bru. Jy vat too much, people gaan come for you.
 
-* I can handle it.
-    -> Can_Handle_It
+"Here’s a challenge for jou hustle: imagine jy’re at die **old warehouse** with a choice to take some valuable supplies. Would jy take it, knowing it might bring attention?"
 
-// Sub-Branch: Can_Handle_It
-= Can_Handle_It
-Ons gaan sien, bru. Just don’t let jou hustle make enemies.
--> AddGang
+* I’ll take it. I’m not scared of the risks.
+    -> AddGang
+    Gang Leader: "Aweh, jy praat mos. But onthou, die Flats gaan remember jou actions."
+    -> Hustle_Task_Complete
+
+* No, I’ll wait for a better time.
+    -> AddEdu
+    Gang Leader: "Slim move. Patience is also part van die hustle game, my bru."
+    -> Hustle_Task_Complete
+
+= Hustle_Task_Complete
+Gang Leader: "Remember, bru, jy hustle defines jou future. Maak seker jy balance dit reg."
 -> END
 
 // Branch: Don’t_Know_Hustle

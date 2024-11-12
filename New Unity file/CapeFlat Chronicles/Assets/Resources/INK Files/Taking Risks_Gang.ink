@@ -16,21 +16,20 @@ On die Flats, jy moet neem risks, but jy moet know when to pull back. Wat’s jo
 = Calculated_Risks
 Aweh, daai’s ‘n smart move. Reckless gaan mos maak jy klaar vinnig.
 
-* I don’t take risks unless I know it’s worth it.
-    -> Dont_Take_Unless_Worth
+"Let’s put that to the test: imagine jy have to retrieve something valuable while dodging trouble. What would jy do?"
 
-* I’m still learning when to take risks.
-    -> Learning_When_To_Take_Risks
+* I’d plan my route carefully and go when it’s quiet.
+    -> AddEdu
+     "Slim move, bru. Daai strategy gaan jou mos uit die moeilikheid hou."
+    -> Risk_Task_Complete
 
-// Sub-Branch: Don’t_Take_Unless_Worth
-= Dont_Take_Unless_Worth
-Good thinking, bru. Keep daai mindset.
--> AddEdu
--> END
+* I’d go straight for it. No time for overthinking.
+    -> AddGang
+     "Bold move, maar onthou jy can’t always charge in. Timing is alles."
+    -> Risk_Task_Complete
 
-// Sub-Branch: Learning_When_To_Take_Risks
-= Learning_When_To_Take_Risks
-Jy moet learn fast. Die Flats gaan maak jy choose quick.
+= Risk_Task_Complete
+ "Respect, bru. Whether jy go careful or bold, jy moet always be ready for die consequences."
 -> END
 
 // Branch: Risk_Everything

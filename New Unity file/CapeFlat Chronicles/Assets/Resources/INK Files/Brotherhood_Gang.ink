@@ -16,21 +16,32 @@ Ons praat altyd van brotherhood on die streets, bru. Maar brotherhood kom met di
 = Trust_And_Loyalty
 Aweh, bru. Maar onthou, brotherhood is nie just about loyalty, maar die sacrifices jy moet maak.
 
-* I’m willing to make those sacrifices for my brothers.
-    -> Willing_To_Sacrifice
+ "Let’s test jou loyalty. Say ‘n brother asks jou to take the blame for something small he did, to keep him safe. Wat maak jy?"
 
-* I’m not sure what brotherhood means to me yet.
-    -> Not_Sure_What_Brotherhood_Means
+* I’d take the blame. That’s what loyalty is about.
+    -> Take_Blamed_Task
+     "Respect, bru. That’s loyalty. You’ve earned jou place here."
+    -> Brotherhood_Quest_Complete
 
-// Sub-Branch: Willing_To_Sacrifice
-= Willing_To_Sacrifice
-Good, maar jy better wees ready for die weight wat kom met daai.
+* No, I can’t risk my own safety like that.
+    -> No_Blamed_Task
+     "Fair, but onthou, loyalty goes both ways. Just know waar jy stand."
+    -> Brotherhood_Quest_Complete
+
+= Brotherhood_Quest_Complete
+ "Remember, brotherhood is more than words—it’s action."
+-> END
+
+// Sub-Branch: Take_Blamed_Task
+= Take_Blamed_Task
+Good choice, bru. Jy showed jy can be trusted. Ons gaan onthou dit in the future.
 -> AddEdu
 -> END
 
-// Sub-Branch: Not_Sure_What_Brotherhood_Means
-= Not_Sure_What_Brotherhood_Means
-Jy gaan find uit vinnig, bru. Die Flats gaan teach jou what brotherhood really is.
+// Sub-Branch: No_Blamed_Task
+= No_Blamed_Task
+Ek verstaan. Just onthou, sometimes brotherhood means taking risks.
+-> AddGang
 -> END
 
 // Branch: Brotherhood_To_Use_People

@@ -24,13 +24,27 @@ Aweh, that’s the plan. But maak ‘n plan quick quick, 'cause trouble don’t 
 
 // Sub-Branch: Focused_On_School
 = Focused_On_School
-Good good, maar don’t let them catch you slipping, bru. 
+Good good, maar don’t let them catch you slipping, bru. School is important, maar jy moet nie vergeet waar jy vandaan kom nie. You’ll have to balance the two.
 -> AddEdu
 -> END
 
 // Sub-Branch: Don’t_Know_If_Handle
 = Dont_Know_If_Handle
-You better maak ‘n plan or the streets gaan maak jou plan for you, you check?
+You better maak ‘n plan or the streets gaan maak jou plan for you, you check? But hey, you want a small task to see if you can handle die pressure?
+    
+* Yeah, give me something to prove myself.
+    -> Small_Task
+
+* No, I need to focus on school.
+    -> Focus_School_No_Task
+
+= Small_Task
+Goed, here’s what you do: Go find die **old bench by the basketball court** and bring me the bottle under it. It’s nothing big, but it’s about showing jy kan handle even the small things.
+-> AddGang
+-> END
+
+= Focus_School_No_Task
+Alright, maar onthou, the streets don’t wait. Jy better be ready when the time comes.
 -> END
 
 // Branch: Streets_Calling
@@ -41,11 +55,16 @@ Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t 
     -> Ready_For_Anything
 
 * How can I prove myself?
-    -> Start_Gang_Quest
+    -> Small_Gang_Task
 
 // Sub-Branch: Ready_For_Anything
 = Ready_For_Anything
-Jy praat mos nou, but jy moet prove it, ek sê.
+Jy praat mos nou, but jy moet prove it, ek sê. Here’s something to test jy: Go to **Dino’s Corner** and bring back the red bandana that’s hanging there. Just a small show of loyalty.
+-> AddGang
+-> END
+
+= Small_Gang_Task
+Aweh, I like that spirit. Go to **Dino’s Corner** and bring back the red bandana that’s hanging there. Show you’re serious, bru.
 -> AddGang
 -> END
 
@@ -56,22 +75,18 @@ Tsek with the doubt, my bru. Jy moet focus, anders jy gaan net drown in die chao
 * I’ll figure it out.
     -> Figure_It_Out
 
-// Sub-Branch: Figure_It_Out
+* Maybe you’re right. I need to see what I’m made of.
+    -> Explore_Self_Task
+
 = Figure_It_Out
 Better do it soon, anders jy gaan klaar wees.
 -> AddGang
 -> END
 
-// Quest Start: Gang Test Quest
-= Start_Gang_Quest
-Aweh, I like that spirit. I’ve got a test for you. Go to the **Abbandoned Car** and bring back the red spray can there. Let’s see if jy kan handle it.
-~ gangQuestStarted = true
--> gangQuest_Info
-
-// Quest Information
-= gangQuest_Info
-To prove yourself, visit the **Abandoned Building** and retrieve the red spray can. Returning with it will boost **GangStat**. Failing or avoiding the task will impact your progress with us.
--> END // This line ensures the quest information flow ends properly
+= Explore_Self_Task
+Aweh, nou jy praat. Here’s what you do: go to the **old bus stop** and bring back the chalk there. Small tasks test jy nerves, you feel me?
+-> AddGang
+-> END
 
 // Stat Adjustments
 = AddEdu

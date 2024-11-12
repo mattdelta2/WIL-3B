@@ -19,13 +19,20 @@ Hier op die Flats, bru, mense lose hulle self quick. Jy moet stay strong, anders
 = Stick_To_Values
 Aweh, dis ‘n goeie mindset, maar die Flats gaan push jou limits, bru.
 
-* I’m ready for the challenge.
-    -> Ready_For_Challenge
+ "Let’s test daai values van jou: If jy promise to stay true no matter what, jy kan’t break it. Gaan jy die oath vat?"
 
-// Sub-Branch: Ready_For_Challenge
-= Ready_For_Challenge
-Good, maar onthou, stay true is nie always easy nie.
--> AddEdu
+* Yes, I swear to stick to my values.
+    -> AddEdu
+     "Goed, bru. Die Flats gaan respect jou for staying true. Maar onthou, dis nie ‘n maklike path nie."
+    -> Prove_Yourself_QuestComplete
+
+* I can’t make that promise. I need to stay flexible to survive.
+    -> AddGang
+     "Fair enough. Die Flats gaan require sacrifices from jy, bru. Jy moet always stay wakker."
+    -> Prove_Yourself_QuestComplete
+
+= Prove_Yourself_QuestComplete
+ "On die Flats, jy gaan get tested every day. Make sure jy weet wie jy is, before die Flats maak die choice vir jou."
 -> END
 
 // Branch: Not_Sure_True

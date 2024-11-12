@@ -37,13 +37,20 @@ Jy better start caring, bru. On die streets, without respect, jy’s niks.
 = Fight_Anyone_Disrespect
 Ja, maar jy moet pick jou fights wisely. Die wrong fight gaan maak jy klaar.
 
-* I’m not scared of anyone.
-    -> Not_Scared
+"Here’s a challenge: imagine someone disrespects jou in front of others. How would jy handle it to keep jou respect without causing too much chaos?"
 
-// Sub-Branch: Not_Scared
-= Not_Scared
-Ja, jy praat groot. Let’s see if jy back dit up.
--> AddGang
+* I’d confront them directly, make sure they know I don’t back down.
+    -> AddGang
+     "Aweh, jy’s mos serious. But onthou, die Flats gaan onthou jou actions."
+    -> Fight_Respect_Complete
+
+* I’d ignore them, showing that I’m above their disrespect.
+    -> AddEdu
+     "Slim move. Sometimes showing restraint is more powerful."
+    -> Fight_Respect_Complete
+
+= Fight_Respect_Complete
+ "Good. Die Flats gaan test jou, but remember, respect comes with every choice jy make."
 -> END
 
 // Branch: Figuring_Out_Respect

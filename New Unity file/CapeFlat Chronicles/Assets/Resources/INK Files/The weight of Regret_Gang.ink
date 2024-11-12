@@ -16,21 +16,39 @@ Jy weet mos, bru, regret is ‘n heavy thing. Some mense live hulle hele life me
 = No_Regrets_Choices
 Aweh, daai’s die way to go, maar onthou, soms kan die wrong choice still creep up on jou.
 
-* I’ll make sure I make the right choices.
-    -> Right_Choices
+ "Here’s a test for jou thinking: If jy had to choose between letting go or holding onto something painful, wat gaan jy choose?"
 
-* I haven’t figured out how to avoid regret.
-    -> Havent_Figured_Avoid_Regret
+* I’d let it go. Holding onto regret will just weigh me down.
+    -> AddEdu
+     "Goed, bru. Knowing when to let go is ‘n skill op itself."
+    -> Regret_Test_Complete
 
-// Sub-Branch: Right_Choices
-= Right_Choices
-Good, bru, maar jy moet stay alert. Die Flats maak plans without jou input.
--> AddEdu
--> END
+* I’d hold onto it to remind myself not to repeat mistakes.
+    -> AddGang
+     "Interesting choice, bru. Maar onthou, regret kan ook ‘n chain wees."
+    -> Regret_Test_Complete
 
-// Sub-Branch: Haven’t_Figured_Avoid_Regret
-= Havent_Figured_Avoid_Regret
-Jy gaan have to, bru. Regret kan maak ‘n big mess van jou life.
+= Regret_Test_Complete
+ "On die Flats, regret kom vinnig. Make sure jy kan live met jou choices."
+
+-> Face_The_Past_Quest
+
+// Quest: Face the Past
+= Face_The_Past_Quest
+ "Here’s ‘n challenge: Think back to one thing jy regret the most, and imagine what jy would do differently. Wat gaan jy choose?" 
+
+* I’d confront it head-on, making sure I wouldn’t repeat it.
+    -> AddEdu
+    "Aweh, daai’s die way to face it. Soms facing jou past make jou stronger."
+    -> Quest_Complete
+
+* I’d avoid it altogether. The past is better left alone.
+    -> AddGang
+    "Interesting choice, bru. Maar onthou, the past kan sometimes find jou."
+    -> Quest_Complete
+
+= Quest_Complete
+ "Op die Flats, jy gaan kry reminders of jou past choices. Make sure jy know hoe to live met jou decisions."
 -> END
 
 // Branch: Don’t_Care_Regrets

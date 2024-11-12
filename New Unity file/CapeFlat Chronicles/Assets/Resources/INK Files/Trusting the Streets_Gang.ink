@@ -16,21 +16,20 @@ Hier op die Flats, bru, jy kan niks trust nie, maar jy moet still navigate die l
 = Trust_No_One_Eyes_Open
 Aweh, dis ‘n goeie move, maar jy moet always expect die unexpected.
 
-* I’m ready for anything.
-    -> Ready_For_Anything
+ "Here’s a test of jou street sense: imagine jy’re meeting someone who could help you out, but they might not be trustworthy. How jy gaan handle dit?"
 
-* I’m still learning who I can and can’t trust.
-    -> Still_Learning_Trust
+* I’d keep my distance but hear them out.
+    -> AddEdu
+     "Slim move, bru. Daai’s hoe jy survive op die Flats."
+    -> Trust_Test_Complete
 
-// Sub-Branch: Ready_For_Anything
-= Ready_For_Anything
-Good, maar onthou, die game kan change vinnig.
--> AddEdu
--> END
+* I’d confront them directly. Let them know I’m not scared.
+    -> AddGang
+     "Jy’s bold, maar onthou, die wrong move gaan get jou in die end."
+    -> Trust_Test_Complete
 
-// Sub-Branch: Still_Learning_Trust
-= Still_Learning_Trust
-Jy moet figure daai vinnig uit, bru. Die wrong trust gaan maak klaar met jou.
+= Trust_Test_Complete
+ "Jy gaan need daai street sense to make jou way. Die Flats gaan keep testing jou trust."
 -> END
 
 // Branch: No_Trust_No_Care

@@ -16,21 +16,20 @@ Jy moet face fear in die Flats, bru. Jy gaan sink if jy nie ready is nie. Hoe de
 = Face_Fear_Head_On
 Aweh, dis goeie thinking. Jy moet strong bly, bru, maar fear kom vir almal.
 
-* I’m ready for it.
-    -> Ready_For_Fear
+ "Let’s see how jy handle fear. Imagine jy have to walk through die darkest alley in die Flats. Wat’s jou move?"
 
-* Fear still gets to me sometimes.
-    -> Fear_Still_Gets_To_Me
+* I’d keep my head high and walk with confidence.
+    -> AddEdu
+     "Good move, bru. Fear respect confidence, but jy moet watch jou back."
+    -> Fear_Challenge_Complete
 
-// Sub-Branch: Ready_For_Fear
-= Ready_For_Fear
-Good, maar onthou, jy gaan face dit wanneer jy nie expect nie.
--> AddEdu
--> END
+* I’d stay low, making sure no one can spot me.
+    -> AddGang
+     "Smart, jy weet how to survive. But onthou, jy can’t always hide."
+    -> Fear_Challenge_Complete
 
-// Sub-Branch: Fear_Still_Gets_To_Me
-= Fear_Still_Gets_To_Me
-Daai’s normal, maar jy moet stay strong, anders fear gaan control jou.
+= Fear_Challenge_Complete
+ "Facing fear is part of die game, bru. Die Flats gaan maak sure jy test jou strength."
 -> END
 
 // Branch: No_Fear

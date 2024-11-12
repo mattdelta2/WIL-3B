@@ -16,21 +16,20 @@ Hier op die streets, jy moet maak ‘n name vir jou. Of die Flats gaan maak ‘n
 = True_To_Self
 Aweh, bru. Maar onthou, staying true is nie always easy nie. Die Flats gaan test jou.
 
-* I’m ready for whatever they throw at me.
-    -> Ready_For_Challenge
+ "Here’s ‘n quick test: Jy’s faced with ‘n choice—someone disrespects jou, but handling it could cause trouble. How jy gaan approach dit?"
 
-* I’m not sure how to make a name for myself yet.
-    -> Not_Sure_Name
+* I’d let it go. A name isn’t worth unnecessary fights.
+    -> AddEdu
+     "Dis wysheid, bru. Jy build jou name deur die battles jy kies."
+    -> Name_Test_Complete
 
-// Sub-Branch: Ready_For_Challenge
-= Ready_For_Challenge
-Good, maar onthou, die Flats gaan nie make it easy nie.
--> AddEdu
--> END
+* I’d stand up and make sure they know my name.
+    -> AddGang
+     "Jy praat groot, maar onthou, die Flats gaan altyd kyk of jy serious is."
+    -> Name_Test_Complete
 
-// Sub-Branch: Not_Sure_Name
-= Not_Sure_Name
-Jy moet find jou way vinnig. Die Flats gaan nie wait vir jou nie.
+= Name_Test_Complete
+ "Jy gaan learn vinnig dat every move jou name build or break."
 -> END
 
 // Branch: Any_Means_Necessary_Name

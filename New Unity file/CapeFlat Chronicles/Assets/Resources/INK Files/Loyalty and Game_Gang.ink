@@ -16,21 +16,20 @@ Hier op die Flats, loyalty is alles. Jy moet stay loyal, anders jy gaan klaar we
 = Loyal_To_People_With_Back
 Aweh, so dit moet wees. Maar onthou, jy better weet wie’s really loyal.
 
-* I know who I can trust.
-    -> Know_Who_To_Trust
+"Here’s a scenario: Imagine one of jou close friends gets into trouble and needs jou help. Wat maak jy?"
 
-* I’m not sure who I can trust yet.
-    -> Not_Sure_Who_To_Trust
+* I’d stand by them, no matter what.
+    -> AddGang
+    "Good. Loyalty is mos about sticking together, through thick en thin."
+    -> Loyalty_Task_Complete
 
-// Sub-Branch: Know_Who_To_Trust
-= Know_Who_To_Trust
-Good, maar keep jou circle klein. Te veel loyalty kan maak ‘n fool van jou.
--> AddEdu
--> END
+* I’d help if I thought it was worth it.
+    -> AddEdu
+    "Daai’s ‘n smart move. Loyalty’s nie blind nie, bru. Jy moet think carefully."
+    -> Loyalty_Task_Complete
 
-// Sub-Branch: Not_Sure_Who_To_Trust
-= Not_Sure_Who_To_Trust
-Jy moet figure dit out quick. Die Flats gaan show jou who’s real and who’s fake.
+= Loyalty_Task_Complete
+"Onthou, loyalty maak jou stronger, maar jy moet weet wie deserves jou loyalty."
 -> END
 
 // Branch: Loyalty_Not_For_Me

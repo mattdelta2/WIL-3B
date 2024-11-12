@@ -16,21 +16,20 @@ On die Flats, jy moet take control van jou life, bru, or die streets gaan contro
 = Taking_Control_Of_Future
 Aweh, dis ‘n goeie move, maar onthou, die Flats gaan test jou.
 
-* I’m ready for the test.
-    -> Ready_For_Test
+ "Here’s a challenge: Imagine jy moet choose tussen jou future en something close to jou heart. Would jy sacrifice something valuable to keep control?"
 
-* I’m not sure how to take control yet.
-    -> Unsure_About_Control
+* I’d make the sacrifice if it means securing my future.
+    -> AddEdu
+     "Goeie choice, bru. Die Flats gaan reward daai dedication."
+    -> Control_Challenge_Complete
 
-// Sub-Branch: Ready_For_Test
-= Ready_For_Test
-Good. Just onthou, control is nie permanent nie.
--> AddEdu
--> END
+* I’m not sure if I’m ready for such a cost.
+    -> AddGang
+     "Ja, die Flats gaan force jy to face die reality eventually."
+    -> Control_Challenge_Complete
 
-// Sub-Branch: Unsure_About_Control
-= Unsure_About_Control
-Jy gaan need to learn vinnig, bru. Die Flats gaan nie wait for jou nie.
+= Control_Challenge_Complete
+ "Control gaan always come met 'n cost, maar jy moet weet waar jy staan."
 -> END
 
 // Branch: Control_At_Any_Cost

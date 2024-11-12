@@ -16,21 +16,20 @@ Jy weet mos, bru, fear is 'n tool. Die strong gebruik fear, maar jy moet nie laa
 = Dont_Let_Fear_Control
 Daai’s goeie thinking. Jy moet keep jou kop skoon, anders fear gaan mos eat jou alive.
 
-* I stay focused, no matter what.
-    -> Stay_Focused
+"Imagine jy staan voor die biggest threat hier in die Flats. Hoe sou jy jou fear gebruik of hanteer?"
 
-* I don’t know how to deal with fear.
-    -> Dont_Know_Deal_With_Fear
+* I’d confront it head-on, showing I’m not afraid.
+    -> AddGang
+     "Aweh, dis mos guts. Maar onthou, die Flats kyk altyd, bru."
+    -> Fear_Task_Complete
 
-// Sub-Branch: Stay_Focused
-= Stay_Focused
-Aweh. Stay daai way, bru. Fear is 'n killer.
--> AddEdu
--> END
+* I’d control my fear, staying calm and focused.
+    -> AddEdu
+     "Daai’s slim. Keep jou mind steady; die Flats respects calm onder pressure."
+    -> Fear_Task_Complete
 
-// Sub-Branch: Don’t_Know_Deal_With_Fear
-= Dont_Know_Deal_With_Fear
-Jy gaan need to face dit. Die streets gaan maak sure jy voel dit eventually.
+= Fear_Task_Complete
+ "Jy’s reg. Die Flats gaan jou fear test. Just don’t let jou emotions control jou moves."
 -> END
 
 // Branch: Use_Fear

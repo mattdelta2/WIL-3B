@@ -16,21 +16,26 @@ Power kom met a price, bru. Jy gaan have to decide if jy klaar vir daai price. H
 = Control_Own_Destiny
 Aweh, maar onthou, controlling jou destiny kom met die weight of responsibility.
 
-* I’m ready for it.
-    -> Ready_For_Responsibility
+ "Here’s a challenge: Imagine you’ve gained that control. What would you sacrifice to keep it?"
 
-* I’m not sure how much power I want yet.
-    -> Not_Sure_How_Much_Power
+* I’d sacrifice my time and energy.
+    -> Sacrifice_Time_Energy
 
-// Sub-Branch: Ready_For_Responsibility
-= Ready_For_Responsibility
-Good, maar jy moet stay sharp. Power maak enemies.
+* I’d give up anything, even people close to me.
+    -> Sacrifice_People
+
+= Sacrifice_Time_Energy
+ "Smart choice, bru. Time and effort is what keeps die power balanced."
 -> AddEdu
--> END
+-> Power_Quest_Complete
 
-// Sub-Branch: Not_Sure_How_Much_Power
-= Not_Sure_How_Much_Power
-Jy gaan need to find out vinnig, bru. Power wait nie vir niemand nie.
+= Sacrifice_People
+ "Ja, maar onthou, losing people kan make die power feel hollow."
+-> AddGang
+-> Power_Quest_Complete
+
+= Power_Quest_Complete
+ "Remember, power is 'n heavy thing. Stay sharp as jy chase it."
 -> END
 
 // Branch: All_The_Power

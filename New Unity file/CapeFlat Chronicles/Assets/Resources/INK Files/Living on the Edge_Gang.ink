@@ -16,21 +16,20 @@ Die Flats is nie vir die weak nie, bru. Jy moet live op die edge, or jy gaan kla
 = Push_Hard_With_Limits
 Aweh, jy moet know when to pull back. Jy gaan burn out if jy nie careful is nie.
 
-* I keep my head clear.
-    -> Keep_Head_Clear
+"Hier’s ‘n challenge: imagine jy moet prove jy limits. Jy’s at the **Edge of the Rooftop**—do jy step closer, or play it safe?"
 
-* I’m not sure how far to push yet.
-    -> Not_Sure_How_Far_To_Push
+* I’d step closer to prove I’m not scared.
+    -> AddGang
+     "Brave, bru. Maar onthou, one wrong step, and jy’s klaar."
+    -> EdgeQuest_Complete
 
-// Sub-Branch: Keep_Head_Clear
-= Keep_Head_Clear
-Good, bru. Just onthou, die edge is closer than jy dink.
--> AddEdu
--> END
+* I’d play it safe and stay back.
+    -> AddEdu
+     "Smart move, bru. Die Flats gaan respect jy for staying cautious."
+    -> EdgeQuest_Complete
 
-// Sub-Branch: Not_Sure_How_Far_To_Push
-= Not_Sure_How_Far_To_Push
-Jy gaan find out soon, bru. Die Flats gaan maak sure of daai.
+= EdgeQuest_Complete
+ "Whether jy push forward or hold back, onthou die Flats gaan test jy every step."
 -> END
 
 // Branch: Push_Until_Nothing_Left

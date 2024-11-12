@@ -16,21 +16,20 @@ Op die streets, jy praat van forgiveness, maar nie almal deserve dit nie. Wat’
 = Give_Second_Chances
 Aweh, maar onthou, jy moet choose wisely wie jy forgive.
 
-* I’ll be careful with who I trust.
-    -> Careful_With_Trust
+ "Let’s put daai mindset to the test: Imagine iemand betrayed jou, but they ask for forgiveness. Would jy forgive or keep jou distance?"
 
-* I’m not sure about forgiveness yet.
-    -> Unsure_About_Forgiveness
+* I’d give them another chance, but watch them closely.
+    -> AddEdu
+     "Slim move, bru. Forgiveness with caution can show strength."
+    -> Forgiveness_Challenge_Complete
 
-// Sub-Branch: Careful_With_Trust
-= Careful_With_Trust
-Good. Die wrong trust kan maak klaar met jou.
--> AddEdu
--> END
+* I’d keep my distance, forgiveness or not.
+    -> AddGang
+     "Ja, jy weet mos. Trust moet earned wees, nie given nie."
+    -> Forgiveness_Challenge_Complete
 
-// Sub-Branch: Unsure_About_Forgiveness
-= Unsure_About_Forgiveness
-Jy moet decide vinnig, bru. Die Flats gaan force daai decision on jou.
+= Forgiveness_Challenge_Complete
+ "Remember, forgiveness kan bring peace, maar blind forgiveness gaan bring trouble."
 -> END
 
 // Branch: Don’t_Forgive_Easily

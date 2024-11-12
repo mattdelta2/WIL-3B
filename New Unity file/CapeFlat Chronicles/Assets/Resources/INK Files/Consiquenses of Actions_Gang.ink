@@ -16,21 +16,26 @@ Elke action het consequences, bru. Jy weet dit mos. Wat’s jou view on die choi
 = Think_Before_Acting
 Dis goed, maar onthou, soms kom die consequences langer af, bru.
 
-* I’m ready for whatever comes later.
-    -> Ready_For_Later_Consequences
+ "Here’s ‘n small reflection challenge: think about jou last big decision. Was the outcome worth it?"
 
-* I don’t always think about the consequences.
-    -> Dont_Always_Think
+* Yes, it was worth it.
+    -> Worth_It_Outcome
 
-// Sub-Branch: Ready_For_Later_Consequences
-= Ready_For_Later_Consequences
-Good, maar die Flats gaan maak jou face every consequence.
+* No, I could have thought more carefully.
+    -> Careful_Thought_Outcome
+
+= Worth_It_Outcome
+ "Respect, bru. It’s important to stand by jou choices."
 -> AddEdu
--> END
+-> Consequences_Reflection_Complete
 
-// Sub-Branch: Don’t_Always_Think
-= Dont_Always_Think
-Jy gaan have to start. Die Flats gaan nie wait for jou om te think nie.
+= Careful_Thought_Outcome
+ "Smart thinking. Jy kan always learn from jou last moves."
+-> AddEdu
+-> Consequences_Reflection_Complete
+
+= Consequences_Reflection_Complete
+ "Remember, die Flats gaan remind jou of jou choices. Stay sharp."
 -> END
 
 // Branch: Deal_With_Consequences_Later

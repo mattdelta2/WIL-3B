@@ -16,21 +16,20 @@ Jy weet mos, bru, die Flats is ‘n game. Jy moet play to win, or jy gaan klaar 
 = Playing_Smart
 Aweh, dis how jy survive. Just onthou, die game is nooit over nie.
 
-* I’m always planning my next move.
-    -> Always_Planning
+"Here’s a challenge for jou, bru: imagine jy moet make a tough decision, choosing between safety or a risky win. Wat maak jy?"
 
-* I’m not sure what my next move is yet.
-    -> Not_Sure_Next_Move
+* I’d play it safe and secure my position.
+    -> AddEdu
+     "Smart, bru. Sometimes die safest play keeps jou in die game longer."
+    -> WinningTheGame_TaskComplete
 
-// Sub-Branch: Always_Planning
-= Always_Planning
-Good. Stay steps ahead, anders die game gaan maak mos moves on you.
--> AddEdu
--> END
+* I’d take the risk for a bigger reward.
+    -> AddGang
+     "That’s bold, bru. Just onthou, die bigger die risk, die bigger die fall."
+    -> WinningTheGame_TaskComplete
 
-// Sub-Branch: Not_Sure_Next_Move
-= Not_Sure_Next_Move
-Jy moet maak jou move quick, bru. Die game wait vir niemand.
+= WinningTheGame_TaskComplete
+ "Every move jy maak in die game tell. Just onthou, jy play nie net for jou nie, maar for survival."
 -> END
 
 // Branch: Win_At_All_Cost
