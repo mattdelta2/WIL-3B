@@ -62,7 +62,7 @@ It’s okay to feel overwhelmed. Everyone does at some point. The trick is to ta
     -> Letting_People_Down
 
 * I don’t know if I’m on the right path.
-~ influenceQuestStarted = true
+
     -> Not_Sure_Path
 
 // Sub-Branch: Letting_People_Down
@@ -77,22 +77,22 @@ It’s okay to question your path, but don’t let that doubt stop you from movi
 -> END
 
 // Options for Quest Completion
-* {influenceQuestStarted} Visit the Community Center for guidance.
+*  Visit the Community Center for guidance.
     -> Influence_Quest_Community_Center
 
-* {influenceQuestStarted} Spend time in the gang area instead.
+*  Spend time in the gang area instead.
     -> Influence_Quest_Gang_Area
 
 = Influence_Quest_Community_Center
 The Community Center offers you a sense of purpose and guidance. This path may not be easy, but it helps you build toward a better future.
 ~ EduStat += 1
-~ influenceQuestStarted = false
+
 -> END
 
 = Influence_Quest_Gang_Area
 The gang area offers a different sense of belonging, one that may make things feel easier now but comes with its own risks and costs.
 ~ GangStat += 1
-~ influenceQuestStarted = false
+
 -> END
 
 // Stat Adjustments

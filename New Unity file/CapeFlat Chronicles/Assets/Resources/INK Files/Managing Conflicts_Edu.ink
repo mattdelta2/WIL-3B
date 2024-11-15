@@ -64,17 +64,17 @@ Teacher: Nobody likes being wrong, but admitting when you’re wrong is a sign o
 -> END
 
 // Quest Integration: Conflict Resolution Quest
-* {conflictResolutionQuestStarted == false} I’d like to get better at handling conflicts.
+*  I’d like to get better at handling conflicts.
     -> Start_ConflictResolution_Quest
 
 = Start_ConflictResolution_Quest
 Teacher: Great! Why don’t you try actively listening in your next conflict? Really focus on the other person’s perspective before sharing your own.
-~ conflictResolutionQuestStarted = true
+
 -> END
 
 // Upon completion of conflict resolution
 = Complete_ConflictResolution_Quest
-~ conflictResolutionQuestCompleted = true
+
 You successfully applied the conflict resolution technique and learned the importance of listening first. Well done!
 -> AddEdu
 

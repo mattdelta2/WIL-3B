@@ -13,15 +13,15 @@ Balancing life and school can be challenging. How do you manage everything on yo
     -> Constantly_Overwhelmed
 
 // Quest-specific option
-* {teacherQuestStarted == false} Could you help me with a study plan?
+*  Could you help me with a study plan?
     -> Start_Teacher_Quest
 
 // Quest in-progress dialogue
-* {teacherQuestStarted == true && teacherQuestCompleted == false} I tried the study plan, but I'm still struggling.
+*  I tried the study plan, but I'm still struggling.
     -> Quest_Help_Progress
 
 // Dialogue options based on quest completion
-* {teacherQuestCompleted == true} Thanks for your help with the study plan; it's really working!
+* Thanks for your help with the study plan; it's really working!
     -> Quest_Completed_Response
 
 = Make_Schedule
@@ -56,7 +56,7 @@ That’s a great first step. Support from others can make all the difference whe
 // Start Teacher Quest
 = Start_Teacher_Quest
 I'm glad you're interested in a study plan! Let’s create a simple one together.
-~ teacherQuestStarted = true
+
 -> Teacher_Quest_Advice
 
 = Teacher_Quest_Advice
@@ -84,7 +84,7 @@ Hang in there! Let’s review and adjust the plan to better fit your schedule.
 
 = Complete_Teacher_Quest
 Well done on sticking with it! Remember, consistency will make a huge difference.
-~ teacherQuestCompleted = true
+
 -> END
 
 // Quest completed response

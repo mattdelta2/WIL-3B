@@ -37,7 +37,7 @@ Life’s full of challenges. What matters is how you respond to them. Are you fa
 * I’m just trying to keep my head above water.
     -> Keep_Head_Above_Water
 
-* {stayFocusedQuestStarted == false} Can you help me find a way to stay focused on school?
+*  Can you help me find a way to stay focused on school?
     -> Start_StayFocused_Quest
 
 = Friends_Pulling
@@ -51,7 +51,7 @@ Life’s full of challenges. What matters is how you respond to them. Are you fa
 // Start Stay Focused Quest
 = Start_StayFocused_Quest
 Teacher: Of course. Staying focused can be hard, but setting small goals can help. Let’s work together to set up a study routine.
-~ stayFocusedQuestStarted = true
+
 * Yes, that sounds like a good plan.
     -> Accept_StayFocused_Quest
 * I don’t think I can do this right now.
@@ -59,7 +59,7 @@ Teacher: Of course. Staying focused can be hard, but setting small goals can hel
 
 = Accept_StayFocused_Quest
 Teacher: Great! Start with one small goal every day, and build from there. We’ll check in to see how it’s going.
-~ stayFocusedQuestCompleted = true
+
 -> AddEdu
 
 = Decline_StayFocused_Quest

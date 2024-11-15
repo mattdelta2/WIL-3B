@@ -82,22 +82,22 @@ You’re doing more than you know. But if you ever feel like you’re falling sh
 -> familyQuest_Info
 
 // Quest Completion Based on Location
-* {familyQuestStarted} Visit the Family House to embrace family obligations.
+*  Visit the Family House to embrace family obligations.
     -> Complete_Family_Quest_Success
 
-* {familyQuestStarted} Go to the Gang Area to prioritize independence.
+*  Go to the Gang Area to prioritize independence.
     -> Complete_Family_Quest_Failure
 
 = Complete_Family_Quest_Success
 You’ve chosen to embrace your family responsibilities, recognizing the importance of those who support you.
 ~ EduStat += 1
-~ familyQuestStarted = false
+
 -> END
 
 = Complete_Family_Quest_Failure
 You’ve chosen to focus on self-reliance and independence, accepting the risks and challenges of going it alone.
 ~ GangStat += 1
-~ familyQuestStarted = false
+
 -> END
 
 // Stat Adjustments

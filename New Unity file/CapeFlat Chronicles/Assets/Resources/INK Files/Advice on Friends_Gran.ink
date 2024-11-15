@@ -17,7 +17,7 @@ I’ve seen you with some new faces lately. Be careful about who you surround yo
 That might be true, but are they lifting you up, or are they keeping you where you are? It’s important to have people around who challenge you to be better.
 
 * They push me to try harder.
-    ~ influenceQuestStarted = true
+    
     -> Try_Harder
 
 * They’re just helping me survive.
@@ -38,7 +38,7 @@ Survival’s important, but it’s not enough. You need to thrive. Don’t settl
 Trust is important, but loyalty can be dangerous if it’s blind. Have they earned your trust, or are you giving it too easily?
 
 * I trust them because I don’t have anyone else.
-    ~ influenceQuestStarted = true
+   
     -> No_One_Else
 
 * I think they’ve earned it, but I’ll be careful.
@@ -59,7 +59,7 @@ Being careful is good. Just don’t let loyalty blind you to their faults.
 If you’re questioning it, that’s already a sign you’re not sure. Sometimes, deep down, we know when people aren’t right for us. What are you worried about?
 
 * I think they might be pulling me in the wrong direction.
-    ~ influenceQuestStarted = true
+    
     -> Wrong_Direction
 
 * I don’t know if I’m ready to walk away from them yet.
@@ -85,22 +85,22 @@ Head to the gang area to stay loyal to your friends.
 -> END
 
 // Completion of Influence Quest
-* {influenceQuestStarted} Go to the Community Center.
+*  Go to the Community Center.
     -> Influence_Quest_Complete_Edu
 
-* {influenceQuestStarted} Go to the Gang Area.
+*  Go to the Gang Area.
     -> Influence_Quest_Complete_Gang
 
 = Influence_Quest_Complete_Edu
 You made a choice to seek positive influences. It’s hard, but this step could change everything.
 ~ EduStat += 1
-~ influenceQuestStarted = false
+
 -> END
 
 = Influence_Quest_Complete_Gang
 You’ve chosen loyalty over change. Just remember, every decision has consequences.
 ~ GangStat += 1
-~ influenceQuestStarted = false
+
 -> END
 
 // Stat Adjustments
