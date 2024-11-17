@@ -64,12 +64,13 @@ Being direct and honest is the best way to communicate boundaries. It leaves lit
 Giving reasons can help others understand why the boundary is important to you. Just remember, you don’t always owe an explanation—it’s enough that it’s your boundary.
 -> END
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
-=AddGang
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

@@ -35,12 +35,13 @@ Setbacks happen to everyone, but how we react to them defines our path. How do y
  Taking time to regroup can be wise. Sometimes, stepping away gives us the clarity we need to succeed.
 -> END
 
-=AddEdu
-~EduStat += 1
-~GangStat = MIN(GangStat,0)
-->END
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
+-> END
 
-=AddGang
-~EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
+-> END
+

@@ -78,12 +78,13 @@ Teacher: Great! Why don’t you try actively listening in your next conflict? Re
 You successfully applied the conflict resolution technique and learned the importance of listening first. Well done!
 -> AddEdu
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
-=AddGang
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

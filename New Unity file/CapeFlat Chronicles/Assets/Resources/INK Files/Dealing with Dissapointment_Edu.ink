@@ -68,12 +68,13 @@ Teacher: "Well done. Reflecting on setbacks is a valuable skill that will serve 
  Feeling like you let yourself down can be even harder, but remember, setbacks are a part of life. What matters is how you get back up and keep going.
 -> END
 
-=AddEdu
-~EduStat += 1
-~GangStat = MIN(GangStat,0)
-->END
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
+-> END
 
-=AddGang
-~EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
+-> END
+

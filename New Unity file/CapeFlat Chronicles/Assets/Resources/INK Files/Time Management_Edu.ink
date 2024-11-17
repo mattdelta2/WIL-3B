@@ -111,10 +111,11 @@ Not ready to commit? That’s okay. Sometimes it takes time to build the confide
 
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MAX(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MAX(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

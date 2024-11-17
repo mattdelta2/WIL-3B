@@ -66,10 +66,11 @@ Ons gaan sien, bru, maar die Flats gaan show jou.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

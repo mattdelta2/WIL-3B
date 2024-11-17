@@ -28,11 +28,7 @@ public class NPCController : MonoBehaviour
         {
             DialogueManager.Instance.StartDialogue(dialogues[currentDialogueIndex], npcName);
 
-            // Start the quest if it’s not started yet
-            if (!QuestManager.instance.IsQuestStarted(npcName, questName) && !QuestManager.instance.IsQuestCompleted(npcName, questName))
-            {
-                QuestManager.instance.StartQuest(npcName, questName);
-            }
+
         }
         else
         {

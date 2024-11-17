@@ -89,13 +89,13 @@ Teacher: "Well done. Every step towards building trust is progress. Keep going!"
  Trust is hard, especially if you’ve been hurt before. Building trust takes time, and that’s okay. Start by letting people earn your trust little by little.
 -> END
 
-
-=AddEdu
-~EduStat += 1
-~GangStat = MIN(GangStat,0)
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
-=AddGang
-~EduStat = MIN(EduStat,0)
-~GangStat += 1
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

@@ -88,13 +88,12 @@ Aweh, nou jy praat. Here’s what you do: go to the **old bus stop** and bring b
 -> AddGang
 -> END
 
-// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0) // Keeps GangStat from going below zero
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0) // Keeps EduStat from going below zero
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END

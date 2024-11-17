@@ -83,12 +83,13 @@ Teacher: That’s okay. Just remember, a little effort each day goes a long way 
  Mistakes don’t define you. What you do after them does.
 -> END
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
-->END
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
+-> END
 
-=AddGang
-~EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
+-> END
+

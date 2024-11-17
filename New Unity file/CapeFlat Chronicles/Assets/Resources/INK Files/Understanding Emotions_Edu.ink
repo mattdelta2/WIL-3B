@@ -84,13 +84,13 @@ Reflecting on your emotions can help you grow and approach things differently. I
 = No_Change
 Choosing to stay the same is okay, too. Sometimes we only learn by doing things our way.
 -> END
-
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MAX(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MAX(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

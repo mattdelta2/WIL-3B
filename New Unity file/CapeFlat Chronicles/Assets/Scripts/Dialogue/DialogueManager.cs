@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     public List<Button> optionButtons;
     public TextMeshProUGUI gangStatText;
     public TextMeshProUGUI educationStatText;
-    public QuestManager questManager;
+
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -52,7 +52,7 @@ public class DialogueManager : MonoBehaviour
     public void StartDialogue(TextAsset inkJSON, string npcName)
     {
         currentStory = new Story(inkJSON.text);
-        questManager.SetCurrentStory(currentStory);
+
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
         npcNameText.text = npcName;
@@ -142,19 +142,13 @@ public class DialogueManager : MonoBehaviour
         Choice selectedChoice = currentStory.currentChoices[choiceIndex];
         Debug.Log($"Player selected choice: {selectedChoice.text}");
 
-        NPCController npcController = FindObjectOfType<NPCController>();
-        if (npcController != null && !QuestManager.instance.IsQuestStarted(npcController.npcName, npcController.questName))
-        {
-            QuestManager.instance.StartQuest(npcController.npcName, npcController.questName);
-            Debug.Log($"Quest initiation choice detected, starting quest for {npcController.npcName}.");
-        }
-
         currentStory.ChooseChoiceIndex(choiceIndex);
         awaitingPlayerChoice = false;
 
         UpdateStats();
         ContinueStory();
     }
+
 
     public void UpdateStats()
     {
@@ -244,8 +238,7 @@ public class DialogueManager : MonoBehaviour
             Debug.LogWarning("educationStatText is not assigned in the DialogueManager.");
         if (gameManager == null)
             Debug.LogWarning("GameManager is not assigned in the DialogueManager. Please assign it in the Inspector.");
-        if (questManager == null)
-            Debug.LogWarning("QuestManager is not assigned in the DialogueManager.");
+
 
         if (gameManager != null)
         {

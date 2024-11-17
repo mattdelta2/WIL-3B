@@ -141,10 +141,11 @@ Don’t close yourself off, no matter how hard things get.
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MAX(GangStat, 0)
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MAX(EduStat, 0)
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

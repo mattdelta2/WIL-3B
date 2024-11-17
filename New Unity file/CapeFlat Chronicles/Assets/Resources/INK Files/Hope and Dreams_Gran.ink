@@ -132,10 +132,11 @@ You’ve chosen the path of survival, focusing on immediate needs rather than as
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

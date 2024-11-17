@@ -172,8 +172,11 @@ There’s always time, my child. As long as you keep moving forward, you’ll fi
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
+~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
 -> END
 
 = AddGang
 ~ GangStat += 1
+~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
+

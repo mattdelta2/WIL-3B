@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 movement;
 
-    private NPCController nearbyNPC;  // Reference to the nearby NPC
-    private QuestInteractable nearbyQuestItem; // Reference to the nearby quest item
-    private bool canMove = true;  // Flag to control player movement
+    private NPCController nearbyNPC; // Reference to the nearby NPC
+    
+    private bool canMove = true; // Flag to control player movement
 
     void Start()
     {
@@ -28,25 +28,14 @@ public class PlayerMovement : MonoBehaviour
             movement = Vector2.zero; // Stop player movement
         }
 
-        // Detect interaction input (e.g., pressing "E") and call NPC interaction or quest item interaction
-        if (Input.GetKeyDown(KeyCode.E))
+        // Detect interaction input (e.g., pressing "E") and call NPC interaction
+        if (Input.GetKeyDown(KeyCode.E) && nearbyNPC != null)
         {
-            if (nearbyNPC != null)
-            {
-                Debug.Log("Player pressed E for NPC");
-                nearbyNPC.StartInteraction();  // Trigger interaction with the NPC
-                SetCanMove(false);  // Stop player movement while interacting
-            }
-            else if (nearbyQuestItem != null)
-            {
-                Debug.Log("Player pressed E for quest item");
-                nearbyQuestItem.Interact();  // Trigger interaction with the quest item
-                                             // You can choose to stop movement here, but it will be reset in the QuestItem interact method
-                                             // SetCanMove(false); 
-            }
+            Debug.Log("Player pressed E for NPC");
+            nearbyNPC.StartInteraction(); // Trigger interaction with the NPC
+            SetCanMove(false); // Stop player movement while interacting
         }
     }
-
 
     void FixedUpdate()
     {
@@ -62,25 +51,15 @@ public class PlayerMovement : MonoBehaviour
             nearbyNPC = other.GetComponent<NPCController>();
             Debug.Log("Player entered NPC area: " + other.name);
         }
-        else if (other.CompareTag("QuestItem")) // Check for quest item
-        {
-            nearbyQuestItem = other.GetComponent<QuestInteractable>();
-            Debug.Log("Player entered quest item area: " + other.name);
-        }
     }
 
-    // When the player exits the trigger areas, clear the references
+    // When the player exits the NPC's trigger area, clear the reference
     void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("NPC") && nearbyNPC != null)
         {
             Debug.Log("Player exited NPC area: " + nearbyNPC.npcName);
             nearbyNPC = null;
-        }
-        else if (other.CompareTag("QuestItem") && nearbyQuestItem != null)
-        {
-            Debug.Log("Player exited quest item area: " + nearbyQuestItem.gameObject.name);
-            nearbyQuestItem = null;
         }
     }
 
