@@ -1,5 +1,6 @@
 INCLUDE Global.ink
- 
+
+// Dialogue: Understanding Your Emotions
 Understanding your emotions is important. How do you usually deal with your emotions?
 
 * I bottle them up and try not to think about them.
@@ -67,12 +68,12 @@ Family can provide support that helps you through tough times. Keep leaning on t
 The teacher asks you to reflect on how you handle emotions. Will you take a moment to think deeply, or move on?
 
 * Reflect on my emotions and see if I need to change.
-    ~ emotionalQuestCompleted = true
+
     -> Self_Reflection
     -> AddEdu
 
 * I don’t think I need to change anything.
-    ~ emotionalQuestCompleted = true
+
     -> No_Change
     -> AddGang
 
@@ -86,10 +87,10 @@ Choosing to stay the same is okay, too. Sometimes we only learn by doing things 
 
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0)
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0)
 -> END

@@ -12,15 +12,17 @@ Finding motivation is tough, especially when things seem hopeless. What keeps yo
     -> Struggle_Motivation
 
 = Family_Motivation
- Family can be a powerful source of motivation. Keep their support close and use it to push through tough times.
+Family can be a powerful source of motivation. Keep their support close and use it to push through tough times.
+-> AddEdu
 -> END
 
 = Future_Motivation
- Imagining a better future is an excellent motivator. The more you work towards it, the clearer that vision will become.
+Imagining a better future is an excellent motivator. The more you work towards it, the clearer that vision will become.
+-> AddEdu
 -> END
 
 = Struggle_Motivation
- It’s okay to struggle. You’re not alone, and many people feel the same way. Have you tried setting smaller, achievable goals to get started?
+It’s okay to struggle. You’re not alone, and many people feel the same way. Have you tried setting smaller, achievable goals to get started?
 
 * I’ve thought about it, but it feels pointless sometimes.
     -> Pointless_Goals
@@ -28,41 +30,45 @@ Finding motivation is tough, especially when things seem hopeless. What keeps yo
 * Maybe I should give that a try.
     -> Give_Try
 
-* {smallWinsQuestStarted == false} Could you help me set a small goal?
+* Could you help me set a small goal?
     -> Start_SmallWins_Quest
 
 = Pointless_Goals
- It might seem pointless, but achieving even the smallest goals can give you a sense of progress. Don’t underestimate the power of small wins.
+It might seem pointless, but achieving even the smallest goals can give you a sense of progress. Don’t underestimate the power of small wins.
+-> AddGang
 -> END
 
 = Give_Try
- That’s the spirit. Start small, and you’ll build momentum. Even tiny steps will bring you closer to your goals.
+That’s the spirit. Start small, and you’ll build momentum. Even tiny steps will bring you closer to your goals.
+-> AddEdu
 -> END
 
-// Quest Integration: Small Wins Quest
 = Start_SmallWins_Quest
-Teacher: I’d be happy to help you set a small, manageable goal. Let’s start with something simple that you can accomplish this week.
-~ smallWinsQuestStarted = true
+Sure, let’s set a small, manageable goal together. Let’s start with something simple that you can accomplish this week.
+
 * Yes, I’ll give it a try.
     -> Accept_SmallWins_Quest
+
 * No, I don’t think I need this.
     -> Decline_SmallWins_Quest
 
 = Accept_SmallWins_Quest
-Teacher: Great! Even the smallest win can make a big difference. Let’s check in next time to see how it’s going.
-~ smallWinsQuestCompleted = true
+Great! Even the smallest win can make a big difference. Let’s check in next time to see how it’s going.
 -> AddEdu
+-> END
 
 = Decline_SmallWins_Quest
-Teacher: That’s okay. Just remember, it’s often the little things that make the biggest difference over time.
+That’s okay. Just remember, it’s often the little things that make the biggest difference over time.
 -> AddGang
+-> END
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
-->END
+// Stat Adjustments
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn’t drop below 0
+-> END
 
-=AddGang
-~EduStat = MIN(EduStat,0)
-~GangStat += 1
-->END
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn’t drop below 0
+-> END

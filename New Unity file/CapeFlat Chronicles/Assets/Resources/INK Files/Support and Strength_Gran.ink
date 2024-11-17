@@ -22,13 +22,11 @@ I’ll always be here for you. But you need to remember that support is a two-wa
 * I’m struggling, but I’m managing.
     -> Struggling_Managing
 
-// Sub-Branch: Staying_Focused
 = Staying_Focused
 That’s good. Focus will keep you grounded. But don’t forget to lean on your family when things get hard.
 -> AddEdu
 -> END
 
-// Sub-Branch: Struggling_Managing
 = Struggling_Managing
 It’s okay to struggle. But don’t let pride stop you from asking for help when you need it.
 
@@ -38,13 +36,11 @@ It’s okay to struggle. But don’t let pride stop you from asking for help whe
 * I’ll try to handle it on my own for now.
     -> Handle_Alone
 
-// Follow-up: Ask_For_Help
 = Ask_For_Help
 Good. Asking for help is a strength, not a weakness.
 -> AddEdu
 -> END
 
-// Follow-up: Handle_Alone
 = Handle_Alone
 Sometimes you need to rely on others, even if it’s hard.
 -> END
@@ -59,7 +55,6 @@ On your own? You’re never truly alone, not with family behind you. But if you 
 * I don’t need anyone else’s help. I can take care of myself.
     -> Dont_Need_Help
 
-// Sub-Branch: Don’t_Be_A_Burden
 = Dont_Be_A_Burden
 You’re never a burden. That’s what family’s for, to help lift you up when you’re down. Don’t close yourself off from us.
 
@@ -69,18 +64,15 @@ You’re never a burden. That’s what family’s for, to help lift you up when 
 * I’ll think about it.
     -> Think_About_It
 
-// Follow-up: Be_More_Open
 = Be_More_Open
 Good. It’s important to share the load when things get tough.
 -> AddEdu
 -> END
 
-// Follow-up: Think_About_It
 = Think_About_It
 That’s all I ask. Just consider letting us in.
 -> END
 
-// Sub-Branch: Don’t_Need_Help
 = Dont_Need_Help
 That kind of thinking will lead you down a lonely path. Don’t let pride get in the way of accepting help when you need it.
 
@@ -90,12 +82,10 @@ That kind of thinking will lead you down a lonely path. Don’t let pride get in
 * I don’t need anyone’s help, Gran.
     -> No_Help_Needed
 
-// Follow-up: Maybe_Right
 = Maybe_Right
 Just remember, it’s okay to lean on others from time to time.
 -> END
 
-// Follow-up: No_Help_Needed
 = No_Help_Needed
 Carrying everything alone will wear you down. Don’t be afraid to reach out.
 -> AddGang
@@ -111,7 +101,6 @@ It’s okay to feel lost sometimes. We all do. But that’s when you need to rel
 * I feel like nothing I do is good enough.
     -> Not_Good_Enough
 
-// Sub-Branch: Feels_Too_Much
 = Feels_Too_Much
 It’s okay to not have all the answers. But don’t let that feeling overwhelm you. You’ve got a support system, use it.
 
@@ -121,18 +110,15 @@ It’s okay to not have all the answers. But don’t let that feeling overwhelm 
 * I’ll handle it the best I can.
     -> Handle_Best_Can
 
-// Follow-up: Lean_On_Gran
 = Lean_On_Gran
 Good. You’re not alone, remember that.
 -> AddEdu
 -> END
 
-// Follow-up: Handle_Best_Can
 = Handle_Best_Can
 That’s all you can do, but don’t be afraid to ask for support when needed.
 -> END
 
-// Sub-Branch: Not_Good_Enough
 = Not_Good_Enough
 Don’t ever think that. You’re good enough, more than good enough. But if you keep carrying that weight alone, it’ll crush you. Let us help.
 
@@ -142,50 +128,23 @@ Don’t ever think that. You’re good enough, more than good enough. But if you
 * I don’t think anyone can help me now.
     -> No_Help_Needed_Now
 
-// Follow-up: Start_Leaning
 = Start_Leaning
 Good. Let us share the load.
+-> AddEdu
 -> END
 
-// Follow-up: No_Help_Needed_Now
 = No_Help_Needed_Now
 Don’t close yourself off, no matter how hard things get.
 -> AddGang
 -> END
 
-// Quest Activation: Triggered by "Feeling_Lost" or "On_My_Own"
-~ supportQuestStarted = true
-
-// Quest Information
-= supportQuest_Info
-When feeling overwhelmed, you can choose to visit the **Community Center** or **Gran’s House** to seek support, gaining **EduStat**. Alternatively, visiting the **Gang Area** signifies your independence, granting **GangStat**.
-
-// Completion Based on Location
-* {supportQuestStarted} Go to the Community Center or Gran's House.
-    -> Complete_Support_Quest_Success
-
-* {supportQuestStarted} Head to the Gang Area.
-    -> Complete_Support_Quest_Failure
-
-= Complete_Support_Quest_Success
-You’ve chosen to seek support from family or the community. This reliance on others gives you strength.
-~ EduStat += 1
-~ supportQuestStarted = false
--> END
-
-= Complete_Support_Quest_Failure
-You’ve opted to manage things alone, turning to the gang for a sense of belonging. This choice shapes your path.
-~ GangStat += 1
-~ supportQuestStarted = false
--> END
-
 // Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn't drop below 0
+~ GangStat = MAX(GangStat, 0)
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn't drop below 0
+~ EduStat = MAX(EduStat, 0)
 -> END

@@ -28,10 +28,10 @@ Sizwe: Jy’s gotta watch, not listen. Words mean niks hier. Actions praat. Chec
 * Makes sense. I’ll keep my eyes open.
     -> Acknowledge_Wisdom
 
-// Sub-Branch: Acknowledge_Wisdom
 = Acknowledge_Wisdom
 Sizwe: Good. Jy kan’t afford to be blind out here. And onthou, those who push you to the edge, they’ll leave jy hanging.
--> CompleteTrustQuest_Success
+-> AddGang
+-> END
 
 // Branch: Don’t Trust Anyone
 = Dont_Trust_Anyone
@@ -43,15 +43,15 @@ Sizwe: Slim, bru. Trust no one and no one can hurt jou. But onthou, jy can’t s
 * Maybe. But that day isn’t today.
     -> Not_Today
 
-// Sub-Branch: Self_Reliance
 = Self_Reliance
 Sizwe: Mos, jy think so. But life will humble jou, quick quick. Be careful jy don’t burn all die bridges.
--> CompleteTrustQuest_Failure
+-> AddGang
+-> END
 
-// Sub-Branch: Not_Today
 = Not_Today
 Sizwe: Alright. Just onthou, isolation maak jou an easy target. No one’s watching jou back.
--> CompleteTrustQuest_Failure
+-> AddGang
+-> END
 
 // Branch: Just_Here_Because_Told
 = Just_Here_Because_Told
@@ -60,20 +60,18 @@ Sizwe: You think jy’s wasting jou time, huh? Ek gaan tell jou this: Jou attitu
 * Alright. I’ll listen.
     -> Decide_To_Listen
 
-// Sub-Branch: Decide_To_Listen
 = Decide_To_Listen
 Sizwe: Good. If jy don’t trust die right people, jy gaan find out die hard way. Mark my words, bru.
--> CompleteTrustQuest_Success
-
-// Quest Completion Outcomes
-= CompleteTrustQuest_Success
-~ trustQuestCompleted = true
-~ GangStat += 1
-Sizwe nods approvingly as you leave, his words lingering in your mind, warning you of the risks and rewards of trust.
+-> AddGang
 -> END
 
-= CompleteTrustQuest_Failure
-~ trustQuestCompleted = true
-~ GangStat -= 1
-Sizwe watches you go with a wary eye, shaking his head slightly as if he knows the danger that awaits.
+// Stat Adjustments
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat, 0) // Ensures GangStat doesn’t drop below 0
+-> END
+
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat, 0) // Ensures EduStat doesn’t drop below 0
 -> END

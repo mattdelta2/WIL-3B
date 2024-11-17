@@ -14,10 +14,10 @@ Setting priorities is important to stay on track. How do you set your priorities
 
 = Focus_On_Urgent
 That’s a good way to stay organized. Just make sure you don’t get overwhelmed by too much urgency.
-  
-  * {teacherPriorityQuestStarted == false} Could you guide me through a prioritization exercise?
-      -> Start_Teacher_Priority_Quest
-  
+
+* Could you guide me through a prioritization exercise?
+    -> Start_Teacher_Priority_Quest
+
 -> END
 
 = Easiest_First
@@ -31,8 +31,6 @@ It’s helpful to come up with a plan for prioritizing. Even something simple, l
 // Start Teacher Priority Quest
 = Start_Teacher_Priority_Quest
 Great! Let's try a quick exercise. Imagine you have three tasks: a math assignment due tomorrow, reading a chapter for English due in two days, and preparing for a science quiz next week. What would you prioritize first?
-
-~ teacherPriorityQuestStarted = true
 
 * I’d start with the math assignment, then read for English, and finally prepare for the quiz.
     -> Prioritize_Effectively
@@ -54,7 +52,7 @@ That’s a start, but it’s essential to focus on immediate priorities first. K
 
 // Quest Completion
 = Complete_Teacher_Priority_Quest
-~ teacherPriorityQuestCompleted = true
+Great work on the exercise! Prioritizing effectively takes practice, but you’re on the right track.
 -> END
 
 // Stat Adjustments

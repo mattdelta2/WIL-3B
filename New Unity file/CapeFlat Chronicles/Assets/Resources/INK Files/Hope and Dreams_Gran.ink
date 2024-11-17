@@ -12,12 +12,6 @@ You used to tell me about your dreams, about all the things you wanted to do. Do
 * I don’t think about it much anymore, Gran.
     -> Not_Thinking_About_It
 
-// Quest Information: Displayed after certain choices
-= dreamsQuest_Info
-Reflecting on your dreams, you can choose to visit the **Community Center** or **Library** to foster your ambitions, increasing **EduStat**. Alternatively, visiting the **Gang Area** reflects a decision to stay in survival mode, increasing **GangStat**.
-~ dreamsQuestStarted = true
--> END
-
 // Branch: Making_Dreams_Happen
 = Making_Dreams_Happen
 That’s the spirit. Dreams keep us going when everything else seems impossible. What’s your biggest dream now?
@@ -32,7 +26,7 @@ That’s the spirit. Dreams keep us going when everything else seems impossible.
 = Live_Without_Fear
 I understand. And you can do that. You’re smart, and with enough hard work, you can build a life outside these streets.
 -> AddEdu
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Sub-Branch: Something_Better
 = Something_Better
@@ -48,12 +42,12 @@ Better is good, but don’t stop there. Aim for something that makes you proud. 
 = Make_A_Difference
 That’s a wonderful goal. You can do it if you keep your focus.
 -> AddEdu
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Follow-up: Figuring_It_Out
 = Figuring_It_Out
 Take your time, but keep moving forward. You’ll find your path.
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Branch: Dreams_Are_Waste
 = Dreams_Are_Waste
@@ -69,12 +63,12 @@ Time to waste? Dreams aren’t a waste of time. They’re what give you a purpos
 = Focus_On_Surviving
 Surviving is not enough. You’re worth more than just getting by. I don’t want to see you trapped in that cycle.
 -> AddGang
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Sub-Branch: Stop_Caring
 = Stop_Caring
 That’s dangerous, my child. If you stop caring about the future, it slips away from you. Don’t let it.
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Branch: Not_Thinking_About_It
 = Not_Thinking_About_It
@@ -90,7 +84,7 @@ Why not? What’s stopped you from dreaming? Did something happen to make you lo
 = Too_Uncertain
 Life’s always uncertain, but if you don’t make a plan, someone else will make one for you. You need to take control.
 -> AddGang
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Sub-Branch: Getting_Through_The_Day
 = Getting_Through_The_Day
@@ -106,30 +100,33 @@ Getting through the day is fine, but you need to keep one eye on tomorrow. You�
 = Think_More_About_Future
 Good. Focusing on the future will help you build a better life.
 -> AddEdu
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
 // Follow-up: Day_By_Day
 = Day_By_Day
 Take things at your own pace, but don’t lose sight of what’s ahead.
--> dreamsQuest_Info
+-> Reflect_On_Dreams
 
-// Quest Completion Based on Location
-* {dreamsQuestStarted} Visit the Community Center or Library to inspire your dreams.
+// Reflection: Updated Quest Completion
+= Reflect_On_Dreams
+Gran: Remember, my child, every decision you make shapes the path you’re walking. Are you building towards a better future or just trying to get by?
+
+* I’ll focus on building a future that inspires me.
     -> Complete_Dreams_Quest_Success
 
-* {dreamsQuestStarted} Go to the Gang Area to focus on survival.
+* Right now, I just need to survive and see what happens next.
     -> Complete_Dreams_Quest_Failure
 
 = Complete_Dreams_Quest_Success
 You’ve chosen to nurture your dreams, seeking inspiration and a brighter future.
 ~ EduStat += 1
-~ dreamsQuestStarted = false
+
 -> END
 
 = Complete_Dreams_Quest_Failure
 You’ve chosen the path of survival, focusing on immediate needs rather than aspirations.
 ~ GangStat += 1
-~ dreamsQuestStarted = false
+
 -> END
 
 // Stat Adjustments

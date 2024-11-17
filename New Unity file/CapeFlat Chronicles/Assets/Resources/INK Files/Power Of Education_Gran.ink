@@ -31,7 +31,6 @@ That’s the kind of thinking you need. Those subjects will open doors for you. 
 It’s okay if it’s hard. The important thing is you’re trying. But trying won’t be enough forever. You’ve got to push yourself.
 
 * Maybe I need to commit to a study goal.
-~ communityQuestStarted = true
     -> Start_Study_Quest
 
 // Branch: School_Waste
@@ -79,27 +78,21 @@ Focus is like a muscle. The more you train it, the stronger it gets. Don’t giv
 // Quest Start: Study Quest
 = Start_Study_Quest
 That’s a good idea. Try setting aside time to study, or visit the Community Center for some guidance. But remember, if you’re tempted to go elsewhere, like the gang area, it may affect your focus.
--> END
 
-// Options for Quest Completion
-* {communityQuestStarted} Go to the Community Center for guidance.
+* Go to the Community Center for guidance.
     -> Complete_Study_Quest_Success
 
-* {communityQuestStarted} Head to the Gang Area instead.
+* Head to the Gang Area instead.
     -> Complete_Study_Quest_Failure
 
 = Complete_Study_Quest_Success
 You made the right choice by seeking guidance. It’s not always easy, but it’s the right step toward a brighter future.
 ~ EduStat += 1
-~ communityQuestStarted = false
-~ communityQuestCompleted = true
 -> END
 
 = Complete_Study_Quest_Failure
 You’ve chosen to spend your time in the gang area. Every choice shapes your future; make sure it’s one you can live with.
 ~ GangStat += 1
-~ communityQuestStarted = false
-~ communityQuestCompleted = true
 -> END
 
 // Stat Adjustments

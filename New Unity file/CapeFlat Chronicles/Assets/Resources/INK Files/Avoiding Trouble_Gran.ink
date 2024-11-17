@@ -25,6 +25,7 @@ That’s good to hear. But trouble doesn’t always come when you expect it. Som
 // Sub-Branch: Avoiding_Wrong_People
 = Avoiding_Wrong_People
 That’s wise. Keep your distance from those who bring nothing but chaos. You’re too good for that life.
+You feel reassured knowing you’re making decisions to protect yourself.
 -> AddEdu
 -> END
 
@@ -36,18 +37,18 @@ No, it’s not easy. But nothing worth doing is. Just remember, every decision h
     -> Keep_In_Mind
 
 * Yeah, but sometimes it feels like I can’t control anything.
-~ troubleQuestStarted = true
     -> Feels_Out_Of_Control
 
 // Follow-up: Keep_In_Mind
 = Keep_In_Mind
 Good. It’s important to stay mindful.
+Your focus will guide you through tough situations.
 -> AddEdu
 -> END
 
 // Follow-up: Feels_Out_Of_Control
 = Feels_Out_Of_Control
-It’s hard when things feel beyond your control, but your choices still matter.
+It’s hard when things feel beyond your control, but your choices still matter. Take it one step at a time.
 -> END
 
 // Branch: Trouble_Finds_Me
@@ -72,13 +73,13 @@ I understand the instinct to defend yourself, but not every fight is worth fight
 
 // Follow-up: Take_Care_Of_Myself
 = Take_Care_Of_Myself
-That’s true, but sometimes that confidence can lead you into more trouble.
+That’s true, but sometimes that confidence can lead you into more trouble. Don’t let pride cloud your judgment.
 -> AddGang
 -> END
 
 // Follow-up: Should_Be_Careful
 = Should_Be_Careful
-Being cautious is a strength. Keep working on that.
+Being cautious is a strength. Keep working on that. You’re taking a step in the right direction.
 -> END
 
 // Sub-Branch: Walk_Away
@@ -93,13 +94,13 @@ Walking away is never easy. It takes more strength to avoid a fight than to star
 
 // Follow-up: Try_Walk_Away
 = Try_Walk_Away
-Good. That’s the best approach, even when it’s hard.
+Good. That’s the best approach, even when it’s hard. You’re showing real courage.
 -> AddEdu
 -> END
 
 // Follow-up: Can’t_Avoid
 = Cant_Avoid
-I understand. Just remember to pick your battles wisely.
+I understand. Just remember to pick your battles wisely. Not all fights are worth the cost.
 -> END
 
 // Branch: Just_Making_It_Through
@@ -124,13 +125,13 @@ Keeping to yourself is good, but don’t isolate yourself too much. You need a s
 
 // Follow-up: Stay_Close_To_Care
 = Stay_Close_To_Care
-Good. Those who care about you are worth holding on to.
+Good. Those who care about you are worth holding on to. Their support will help you grow stronger.
 -> AddEdu
 -> END
 
 // Follow-up: Don’t_Need_Anyone
 = Dont_Need_Anyone
-Sometimes we all need support, even if we don’t realize it.
+Sometimes we all need support, even if we don’t realize it. Be careful not to push others away.
 -> AddGang
 -> END
 
@@ -146,13 +147,13 @@ Be careful with that approach. Life might take you places you never intended to 
 
 // Follow-up: Rethink_Strategy
 = Rethink_Strategy
-It’s good to plan ahead. A clear path can keep you out of trouble.
+It’s good to plan ahead. A clear path can keep you out of trouble. Your careful planning is a step toward a better future.
 -> AddEdu
 -> END
 
 // Follow-up: Figure_It_Out_Eventually
 = Figure_It_Out_Eventually
-Just remember, the longer you drift, the harder it is to steer back.
+Just remember, the longer you drift, the harder it is to steer back. Don’t wait too long to take control.
 -> END
 
 // Stat Adjustments

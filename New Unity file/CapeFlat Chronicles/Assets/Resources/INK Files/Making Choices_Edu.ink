@@ -1,6 +1,7 @@
 INCLUDE Global.ink
 
- Life is full of choices, and every decision you make can affect your future. How do you decide what's the right choice?
+// Dialogue: Life is full of choices
+Life is full of choices, and every decision you make can affect your future. How do you decide what's the right choice?
 
 * I weigh the pros and cons before making a decision.
     -> Weighing_Pros_Cons
@@ -12,7 +13,7 @@ INCLUDE Global.ink
     -> Go_With_Flow
 
 = Weighing_Pros_Cons
- That’s a wise approach. Thinking carefully helps avoid regret. Do you have any recent decisions you’re proud of?
+That’s a wise approach. Thinking carefully helps avoid regret. Do you have any recent decisions you’re proud of?
 
 * I decided to focus more on my studies.
     -> Focus_Studies
@@ -21,15 +22,15 @@ INCLUDE Global.ink
     -> Help_Family
 
 = Focus_Studies
- That’s great. Education can open so many opportunities if you dedicate yourself to it.
+That’s great. Education can open so many opportunities if you dedicate yourself to it.
 -> END
 
 = Help_Family
- Helping family is important. Balancing your responsibilities shows maturity.
+Helping family is important. Balancing your responsibilities shows maturity.
 -> END
 
 = Follow_Instincts
- Following your instincts can lead to interesting experiences, but it’s important to balance it with reason. Have you made any risky choices recently?
+Following your instincts can lead to interesting experiences, but it’s important to balance it with reason. Have you made any risky choices recently?
 
 * Yes, and it ended up working out well.
     -> Risk_Worked
@@ -38,15 +39,15 @@ INCLUDE Global.ink
     -> Risk_Failed
 
 = Risk_Worked
- Sometimes taking risks can lead to rewards. Just remember to weigh the consequences carefully.
+Sometimes taking risks can lead to rewards. Just remember to weigh the consequences carefully.
 -> END
 
 = Risk_Failed
- It’s okay to make mistakes. We learn the most from our failures.
+It’s okay to make mistakes. We learn the most from our failures.
 -> END
 
 = Go_With_Flow
- Going with the flow is easy, but without direction, you may end up somewhere you didn’t want to be. Have you considered planning more?
+Going with the flow is easy, but without direction, you may end up somewhere you didn’t want to be. Have you considered planning more?
 
 * I think I should start making more plans.
     -> Start_Planning
@@ -55,34 +56,33 @@ INCLUDE Global.ink
     -> No_Plans
 
 = Start_Planning
- Planning doesn’t guarantee success, but it does help you stay prepared for challenges. It’s worth trying.
+Planning doesn’t guarantee success, but it does help you stay prepared for challenges. It’s worth trying.
 -> END
 
 = No_Plans
- Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
+Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
 -> END
 
 // Quest Integration: Life Choices Quest
-* {lifeChoicesQuestStarted == false} I’d like to learn more about making good choices.
+* I’d like to learn more about making good choices.
     -> Start_LifeChoices_Quest
 
 = Start_LifeChoices_Quest
 Teacher: Great! Let’s start with a small exercise. Imagine you have to choose between studying for an exam or helping a friend with something important. What would you choose and why?
-~ lifeChoicesQuestStarted = true
+
 -> END
 
 // Quest completion within another dialogue or a follow-up
 = Complete_LifeChoices_Quest
-~ lifeChoicesQuestCompleted = true
 Your thoughtful answer shows you’re learning to weigh your choices carefully. Well done!
 -> AddEdu
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
+= AddEdu
+~ EduStat += 1
+~ GangStat = MIN(GangStat, 0)
 -> END
 
-=AddGang
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
+= AddGang
+~ EduStat = MIN(EduStat, 0)
+~ GangStat += 1
 -> END

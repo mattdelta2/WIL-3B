@@ -1,5 +1,6 @@
 INCLUDE Global.ink
-// Second dialogue: Setting Goals
+
+// Second Dialogue: Setting Goals
 It’s important to set goals for yourself. Without goals, you’re just drifting. Do you have any goals right now?
 
 * I want to graduate and get a job that helps me leave this place.
@@ -19,9 +20,10 @@ That’s a solid goal. What kind of job are you aiming for?
 
 = Engineering
 That’s a great goal. Engineering can open many doors for you.
-  
-  * {teacherGoalQuestStarted == false} Could you help me set up a plan to achieve this?
-      -> Start_Teacher_Goal_Quest
+
+* Could you help me set up a plan to achieve this?
+    -> Start_Teacher_Goal_Quest
+
 -> END
 
 = Not_Sure_Yet
@@ -51,8 +53,6 @@ Every goal matters. Without them, you’ll never move forward.
 = Start_Teacher_Goal_Quest
 Alright, let’s break it down. First, what’s one thing you can do now that will help you work towards this goal?
 
-~ teacherGoalQuestStarted = true
-
 * I could study harder and focus on science and math.
     -> Study_Hard_Plan
 
@@ -71,7 +71,6 @@ It’s okay to feel overwhelmed. Start small—one step at a time. Even small ac
 
 // Quest Completion
 = Complete_Teacher_Goal_Quest
-~ teacherGoalQuestCompleted = true
 You’re on the right path. Remember, goals are achieved one step at a time. I’ll be here to support you.
 -> END
 

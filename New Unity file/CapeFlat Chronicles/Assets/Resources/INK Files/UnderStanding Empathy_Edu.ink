@@ -1,5 +1,6 @@
 INCLUDE Global.ink
  
+// Dialogue: Empathy
 Empathy is about understanding what others are going through. It can be hard, but it’s a key skill in life. How empathetic do you think you are?
 
 * I try my best to understand what others are feeling.
@@ -22,24 +23,20 @@ That’s a good mindset. Being willing to try makes a big difference. When was t
 
 = Listened_To_Friend
 Listening can mean the world to someone in pain. You don’t always have to solve the problem—sometimes, just being there is enough.
-~ empathyQuestStarted = true
--> Empathy_Quest
+-> Empathy_Reflection
 
 = Tried_To_Help
 Trying to help others is admirable, but remember, sometimes listening is the best help you can give. Keep it up.
-~ empathyQuestStarted = true
--> Empathy_Quest
+-> Empathy_Reflection
 
-// Empathy Quest
-= Empathy_Quest
+// Empathy Reflection Quest
+= Empathy_Reflection
 Empathy is a skill that grows with practice. Here’s a scenario: imagine a friend is going through a hard time. How would you respond?
 
 * I would listen and let them share their feelings.
-    ~ empathyQuestCompleted = true
     -> Show_Listening
 
 * I would try to solve their problem for them.
-    ~ empathyQuestCompleted = true
     -> Show_Help
 
 = Show_Listening
@@ -86,12 +83,13 @@ That’s understandable. It’s hard to think about others when you’re struggl
 That’s a great approach. Even small acts of kindness can make a big difference, both for others and for yourself.
 -> END    
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0) // Ensures GangStat doesn't drop below 0
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0) // Ensures EduStat doesn't drop below 0
 -> END

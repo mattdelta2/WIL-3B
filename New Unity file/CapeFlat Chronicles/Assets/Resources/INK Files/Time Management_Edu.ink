@@ -1,5 +1,6 @@
 INCLUDE Global.ink
- 
+
+// Dialogue: Managing Your Time
 Managing your time well is essential, especially with everything you’re juggling. How do you usually manage your time?
 
 * I try to make a schedule and stick to it.
@@ -93,12 +94,10 @@ That’s understandable. Eliminating distractions takes practice, but keep at it
 The teacher suggests trying a time management challenge. Will you commit to following a schedule for a week?
 
 * Yes, I’ll give it a try.
-    ~ timeManagementQuestCompleted = true
     -> Quest_Commit
     -> AddEdu
 
 * No, I don’t think I can stick to it.
-    ~ timeManagementQuestCompleted = true
     -> Quest_Decline
     -> AddGang
 
@@ -112,10 +111,10 @@ Not ready to commit? That’s okay. Sometimes it takes time to build the confide
 
 = AddEdu
 ~ EduStat += 1
-~ GangStat = MIN(GangStat - 1, 0)
+~ GangStat = MAX(GangStat - 1, 0)
 -> END
 
 = AddGang
 ~ GangStat += 1
-~ EduStat = MIN(EduStat - 1, 0)
+~ EduStat = MAX(EduStat - 1, 0)
 -> END

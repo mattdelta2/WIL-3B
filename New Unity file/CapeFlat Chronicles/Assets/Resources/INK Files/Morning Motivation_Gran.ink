@@ -35,15 +35,13 @@ It’s okay to feel that way. We all do. The important thing is that you don’t
 * I think I just need to get my head clear.
     -> Head_Clear
 
-// Sub-Branch: Tutor_Help
 = Tutor_Help
 Just remember, you’re not alone in this. I’m here for you. Even when things get tough, I’m here to support you.
 -> AddEdu
 -> END
 
-// Sub-Branch: Head_Clear
 = Head_Clear
-Just remember, you’re not alone in this. I’m here for you. Even when things get tough, I’m here to support you.
+Sometimes clearing your head is the best thing you can do. Take the time to breathe, but don’t lose sight of your goals.
 -> END
 
 // Branch: Streets_Calling
@@ -64,39 +62,13 @@ Your own way? I understand that, but you need to think about the long term. The 
     -> Can_Handle
 
 * Maybe you’re right, but it feels like the only option sometimes.
-~ communityQuestStarted = false
     -> Feels_Only_Option
 
-// Sub-Branch: Can_Handle
 = Can_Handle
 The streets can seem like a quick way, but they come with their own costs. You’re worth more than what they offer.
 -> AddGang
 -> END
 
-// Sub-Branch: Dont_Know_If_Handle
-= Dont_Know_If_Handle
-It’s okay to feel unsure, but you can’t let doubt control your path. Sometimes, taking a step back to reassess things can make a big difference.
-
-* Maybe I need to go to the Community Center and clear my head.
-~ communityQuestStarted = true
-    -> Start_Community_Center_Quest
--> END
-
-// Branch: Not_Sure_What_To_Do
-= Not_Sure_What_To_Do
-It’s okay not to have all the answers. You’re still figuring things out. But you need to start making decisions, otherwise, the world will make them for you.
-
-* Maybe I need to visit the Community Center for some guidance.
-~ communityQuestStarted = true
-    -> Start_Community_Center_Quest
-
-// Quest Start: Community Center Quest
-= Start_Community_Center_Quest
-I think that’s a good idea. The people there might be able to give you a different perspective. Go and see what they have to say at the Community Center.
--> AddEdu
--> END
-
-// Sub-Branch: Feels_Only_Option
 = Feels_Only_Option
 I get that. The world can feel like it’s closing in on you. But you’ve got to know that there are other ways, even if they’re harder to see.
 
@@ -109,19 +81,16 @@ I get that. The world can feel like it’s closing in on you. But you’ve got t
 * I don’t know. I’m just taking it one day at a time.
     -> One_Day_At_A_Time
 
-// Sub-Branch: Just_Survive
 = Just_Survive
 Survival is a start, but there’s more to life than just surviving. You have a chance to build something for yourself. Don't lose sight of that.
 -> AddGang
 -> END
 
-// Sub-Branch: Better_Life
 = Better_Life
 I’m glad to hear that. You don’t need to have it all figured out, but having a goal can help guide your choices.
 -> AddEdu
 -> END
 
-// Sub-Branch: One_Day_At_A_Time
 = One_Day_At_A_Time
 You say that, but every day you don’t make a choice, the world makes one for you. You can’t afford to drift, my child. What’s stopping you from making a decision now?
 
@@ -131,23 +100,33 @@ You say that, but every day you don’t make a choice, the world makes one for y
 * I don’t want to feel trapped by one path.
     -> Trapped_By_Path
 
-// Sub-Branch: Scared_Of_Failure
 = Scared_Of_Failure
 That’s understandable. Everyone’s afraid of failure. But making no decision is the same as making the wrong one. You need to face that fear.
 
 * I guess you’re right. I’ll think about it.
     -> Think_About_It
 
-// Sub-Branch: Think_About_It
 = Think_About_It
 I’m glad you’re open to it. Life is about making choices, even the hard ones.
 -> AddEdu
 -> END
 
-// Sub-Branch: Trapped_By_Path
 = Trapped_By_Path
 I get that. But sometimes committing to a path, even if it feels limiting, is what gives you freedom later. You have to sacrifice some things to gain others.
 -> AddGang
+-> END
+
+= Dont_Know_If_Handle
+It’s okay to feel unsure, but you can’t let doubt control your path. Sometimes, taking a step back to reassess things can make a big difference.
+
+* Maybe I need to go to the Community Center and clear my head.
+    -> Start_Community_Center_Quest
+-> END
+
+// Quest Start: Community Center Quest
+= Start_Community_Center_Quest
+I think that’s a good idea. The people there might be able to give you a different perspective. Go and see what they have to say at the Community Center.
+-> AddEdu
 -> END
 
 // Stat Adjustments

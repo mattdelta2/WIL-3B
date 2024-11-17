@@ -1,6 +1,6 @@
 INCLUDE Global.ink
  
- Developing healthy habits can make a big difference in your daily life. What habits are you trying to develop?
+Developing healthy habits can make a big difference in your daily life. What habits are you trying to develop?
 
 * I’m trying to exercise regularly.
     -> Exercise_Regularly
@@ -77,26 +77,44 @@ Teacher: Procrastination is something we all struggle with. Start by tackling sm
 -> END
 
 // Quest Integration: Healthy Choices Quest
-* {healthyChoicesQuestStarted == false} I’d like some help in sticking to a healthy habit.
+* I’d like some help in sticking to a healthy habit.
     -> Start_HealthyChoices_Quest
 
 = Start_HealthyChoices_Quest
 Teacher: That’s wonderful! Let’s choose one small change you can focus on for a week. What habit would you like to commit to?
-~ healthyChoicesQuestStarted = true
--> END
 
-// Quest completion within another dialogue or a follow-up
+* Exercise more often.
+    -> Commit_Exercise
+
+* Eat healthier meals.
+    -> Commit_HealthyEating
+
+* Focus on better time management.
+    -> Commit_TimeManagement
+
+= Commit_Exercise
+Teacher: Great choice! Let’s start with a short daily routine. We’ll check in next week to see how it’s going.
+-> Complete_HealthyChoices_Quest
+
+= Commit_HealthyEating
+Teacher: Wonderful! Try incorporating one healthier meal a day and see how it makes you feel.
+-> Complete_HealthyChoices_Quest
+
+= Commit_TimeManagement
+Teacher: Excellent! Start with planning your day ahead each evening. It’ll make a big difference.
+-> Complete_HealthyChoices_Quest
+
 = Complete_HealthyChoices_Quest
-~ healthyChoicesQuestCompleted = true
 Teacher: Well done! Committing to a healthy habit, even if it’s small, shows real discipline. I’m proud of you!
 -> AddEdu
 
-=AddEdu
-~EduStat += 1
-~ GangStat = MIN(GangStat,0)
+// Stat Adjustments
+= AddEdu
+~ EduStat += 1
+~ GangStat = MAX(GangStat, 0)
 -> END
 
-=AddGang
-~ EduStat = MIN(EduStat,0)
-~GangStat += 1
+= AddGang
+~ GangStat += 1
+~ EduStat = MAX(EduStat, 0)
 -> END

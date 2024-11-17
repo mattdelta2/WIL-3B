@@ -45,7 +45,7 @@ Close, but remember the order of operations. Multiplication comes before additio
 -> MathQuestCompleted
 
 = MathQuestCompleted
-~ teacherQuestCompleted = true
+
 ~ EduStat += 1
 You completed the Math Focus quest and gained a deeper understanding of math. Keep up the hard work, and don’t hesitate to come back if you have more questions.
 -> END
