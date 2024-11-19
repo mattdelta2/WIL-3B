@@ -256,16 +256,24 @@ PrefabInstance:
       value: GangEnding, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 7197714360661710197, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a964df840c5b0804b92c81185941a7d6, type: 3}
+    - target: {fileID: 7197714360661710197, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197714360661710197, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
       propertyPath: m_Color.b
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7197714360661710197, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
       propertyPath: m_Color.g
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7197714360661710197, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
       propertyPath: m_Color.r
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7409838308492201341, guid: e9dde699a4ea9c64dbc14accb194760f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
