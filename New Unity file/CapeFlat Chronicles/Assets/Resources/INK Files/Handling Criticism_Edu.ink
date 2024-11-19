@@ -1,5 +1,6 @@
 INCLUDE Global.ink
 
+// Dialogue 17: Handling Criticism
 Criticism can be hard to take, but it’s a big part of growing and improving. How do you usually handle criticism?
 
 * I try to learn from it and improve.
@@ -22,10 +23,12 @@ That’s a healthy approach. Learning from criticism will help you grow faster. 
 
 = Work_On_Focus
 Focus is an important skill, and working on it shows maturity. Keep at it—it’ll take you far.
+-> AddEdu
 -> END
 
 = AskFor_Help
 Knowing when to ask for help is a strength, not a weakness. It takes courage to reach out, so keep practicing that.
+-> AddEdu
 -> END
 
 = Feel_Upset
@@ -39,10 +42,12 @@ Feeling upset is natural, but it’s important not to let it stop you from liste
 
 = NotGood_Enough
 Remember, criticism isn’t about your worth—it’s about helping you improve. The people who criticize often want to see you succeed.
+-> AddEdu
 -> END
 
 = Pointing_Out_Flaws
 Nobody likes hearing about their flaws, but being aware of them is the first step to overcoming them. It’s all about growth.
+-> AddEdu
 -> END
 
 = Get_Defensive
@@ -56,10 +61,12 @@ It’s easy to feel defensive when someone points out what we need to work on, b
 
 = Dont_Like_Admitting
 It takes a lot of courage to admit when we’re wrong, but it’s also the key to getting better. Mistakes are part of learning.
+-> AddGang
 -> END
 
 = Feel_Attacked
 Criticism can feel personal, but it’s usually meant to help you improve. Try to focus on the message, not the way it makes you feel.
+-> AddGang
 -> END
 
 // Quest Integration: Constructive Criticism Quest
@@ -71,6 +78,7 @@ Teacher: Of course. Let’s say I noticed you tend to rush through your work. Ta
 
 * Yes, I’ll work on being more mindful.
     -> Accept_Criticism_Quest
+
 * No, I don’t think it’s necessary.
     -> Decline_Criticism_Quest
 
@@ -92,4 +100,3 @@ Teacher: That’s okay. Remember, learning to accept feedback can be challenging
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

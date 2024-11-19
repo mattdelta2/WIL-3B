@@ -20,12 +20,12 @@ Aweh, so dit moet wees. Maar onthou, jy better weet wie’s really loyal.
 
 * I’d stand by them, no matter what.
     -> AddGang
-    "Good. Loyalty is mos about sticking together, through thick en thin."
+     "Good. Loyalty is mos about sticking together, through thick en thin."
     -> Loyalty_Task_Complete
 
 * I’d help if I thought it was worth it.
     -> AddEdu
-    "Daai’s ‘n smart move. Loyalty’s nie blind nie, bru. Jy moet think carefully."
+     "Daai’s ‘n smart move. Loyalty’s nie blind nie, bru. Jy moet think carefully."
     -> Loyalty_Task_Complete
 
 = Loyalty_Task_Complete
@@ -39,20 +39,18 @@ Jy praat mos kak, bru. Without loyalty, jy gaan klaar wees. Jy gaan see die hard
 * I’ll do what I want.
     -> Do_What_I_Want
 
-// Sub-Branch: Do_What_I_Want
 = Do_What_I_Want
 Ons gaan sien, bru. Die streets gaan make an example of you.
 -> AddGang
 -> END
 
-// Branch: Haven’t_Thought_About_Loyalty
+// Branch: Haven’t Thought About Loyalty
 = Havent_Thought_About_Loyalty
 Jy better start thinking. Loyalty is die key to surviving.
 
 * I’ll figure it out.
     -> Figure_It_Out_Loyalty
 
-// Sub-Branch: Figure_It_Out_Loyalty
 = Figure_It_Out_Loyalty
 Just don’t figure dit out too late, anders jy gaan kry dit hard.
 -> END
@@ -67,4 +65,3 @@ Just don’t figure dit out too late, anders jy gaan kry dit hard.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

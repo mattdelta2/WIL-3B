@@ -12,7 +12,7 @@ Hey bru, jy weet die life hier on the Flats is tough, né? You gotta keep your h
 * I’m not sure what to do.
     -> Not_Sure_What_To_Do
 
-// Branch: Keep_Out_Of_Trouble
+// Branch: Keep Out of Trouble
 = Keep_Out_Of_Trouble
 Aweh, that’s the plan. But maak ‘n plan quick quick, 'cause trouble don’t wait, my broe.
 
@@ -22,13 +22,11 @@ Aweh, that’s the plan. But maak ‘n plan quick quick, 'cause trouble don’t 
 * I don’t know if I can handle it all.
     -> Dont_Know_If_Handle
 
-// Sub-Branch: Focused_On_School
 = Focused_On_School
 Good good, maar don’t let them catch you slipping, bru. School is important, maar jy moet nie vergeet waar jy vandaan kom nie. You’ll have to balance the two.
 -> AddEdu
 -> END
 
-// Sub-Branch: Don’t_Know_If_Handle
 = Dont_Know_If_Handle
 You better maak ‘n plan or the streets gaan maak jou plan for you, you check? But hey, you want a small task to see if you can handle die pressure?
     
@@ -47,7 +45,7 @@ Goed, here’s what you do: Go find die **old bench by the basketball court** an
 Alright, maar onthou, the streets don’t wait. Jy better be ready when the time comes.
 -> END
 
-// Branch: Streets_Calling
+// Branch: Streets Calling
 = Streets_Calling
 Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t back out easy.
 
@@ -57,7 +55,6 @@ Dis so, bru. But jy better remember, this life kom met a price, né. Jy can’t 
 * How can I prove myself?
     -> Small_Gang_Task
 
-// Sub-Branch: Ready_For_Anything
 = Ready_For_Anything
 Jy praat mos nou, but jy moet prove it, ek sê. Here’s something to test jy: Go to **Dino’s Corner** and bring back the red bandana that’s hanging there. Just a small show of loyalty.
 -> AddGang
@@ -68,7 +65,7 @@ Aweh, I like that spirit. Go to **Dino’s Corner** and bring back the red banda
 -> AddGang
 -> END
 
-// Branch: Not_Sure_What_To_Do
+// Branch: Not Sure What to Do
 = Not_Sure_What_To_Do
 Tsek with the doubt, my bru. Jy moet focus, anders jy gaan net drown in die chaos.
 
@@ -88,6 +85,7 @@ Aweh, nou jy praat. Here’s what you do: go to the **old bus stop** and bring b
 -> AddGang
 -> END
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
 ~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero

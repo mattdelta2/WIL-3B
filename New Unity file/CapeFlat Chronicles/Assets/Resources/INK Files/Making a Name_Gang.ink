@@ -29,30 +29,28 @@ Aweh, bru. Maar onthou, staying true is nie always easy nie. Die Flats gaan test
     -> Name_Test_Complete
 
 = Name_Test_Complete
- "Jy gaan learn vinnig dat every move jou name build or break."
+"Jy gaan learn vinnig dat every move jou name build or break."
 -> END
 
-// Branch: Any_Means_Necessary_Name
+// Branch: Any Means Necessary Name
 = Any_Means_Necessary_Name
 Ja, maar die wrong means gaan maak enemies, bru. Jy beter wees ready for die cost.
 
 * I’m not worried about enemies.
     -> Not_Worried
 
-// Sub-Branch: Not_Worried
 = Not_Worried
 Ons gaan sien, bru. Die Flats gaan remind jou quickly.
 -> AddGang
 -> END
 
-// Branch: Don’t_Care_Name
+// Branch: Don’t Care Name
 = Dont_Care_Name
 Jy gaan care when die streets forget jou. Jy gaan kry die lesson vinnig.
 
 * We’ll see.
     -> We_Will_See
 
-// Sub-Branch: We_Will_See
 = We_Will_See
 Ja, ons gaan.
 -> END
@@ -67,4 +65,3 @@ Ja, ons gaan.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

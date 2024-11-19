@@ -1,7 +1,5 @@
 INCLUDE Global.ink
 
-
-
 // Dialogue 23: Defining Success
 Success doesn’t look the same for everyone. It’s important to define what it means for you. What do you think success is?
 

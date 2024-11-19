@@ -12,7 +12,7 @@ Jy weet mos, bru, fear is 'n tool. Die strong gebruik fear, maar jy moet nie laa
 * I’m still learning how to deal with fear.
     -> Learning_To_Deal_With_Fear
 
-// Branch: Don’t_Let_Fear_Control
+// Branch: Don’t Let Fear Control
 = Dont_Let_Fear_Control
 Daai’s goeie thinking. Jy moet keep jou kop skoon, anders fear gaan mos eat jou alive.
 
@@ -32,27 +32,27 @@ Daai’s goeie thinking. Jy moet keep jou kop skoon, anders fear gaan mos eat jo
  "Jy’s reg. Die Flats gaan jou fear test. Just don’t let jou emotions control jou moves."
 -> END
 
-// Branch: Use_Fear
+// Branch: Use Fear
 = Use_Fear
 Ja, maar onthou, fear kan turn on jou quick. Better jy don’t rely on dit too much.
 
 * I know how to handle it.
     -> Handle_Fear
 
-// Sub-Branch: Handle_Fear
+// Sub-Branch: Handle Fear
 = Handle_Fear
 Ons gaan sien, bru. Fear is nie jou vriend nie.
 -> AddGang
 -> END
 
-// Branch: Learning_To_Deal_With_Fear
+// Branch: Learning To Deal With Fear
 = Learning_To_Deal_With_Fear
 Jy gaan learn quick. Die Flats gaan force you to face fear.
 
 * I’ll handle it when it comes.
     -> Handle_It_When_Comes
 
-// Sub-Branch: Handle_It_When_Comes
+// Sub-Branch: Handle It When It Comes
 = Handle_It_When_Comes
 Just maak sure jy handle it, anders fear gaan run jou.
 -> END
@@ -67,4 +67,3 @@ Just maak sure jy handle it, anders fear gaan run jou.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

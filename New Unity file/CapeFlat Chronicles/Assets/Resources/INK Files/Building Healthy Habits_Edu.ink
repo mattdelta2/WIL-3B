@@ -12,7 +12,7 @@ Building healthy habits is key to success. What are some habits you’re working
     -> No_Current_Habits
 
 = Time_Management_Habit
- That’s a great habit to build. Time management helps you achieve more without feeling overwhelmed. How are you working on it?
+That’s a great habit to build. Time management helps you achieve more without feeling overwhelmed. How are you working on it?
 
 * I’m using a planner to schedule my day.
     -> Using_Planner
@@ -21,15 +21,15 @@ Building healthy habits is key to success. What are some habits you’re working
     -> Setting_Daily_Goals
 
 = Using_Planner
- A planner is an excellent tool. It keeps you organized and accountable. Keep at it, and you’ll see improvements.
+A planner is an excellent tool. It keeps you organized and accountable. Keep at it, and you’ll see improvements.
 -> END
 
 = Setting_Daily_Goals
- Setting daily goals is a great way to stay on track. Small wins every day add up to big achievements.
+Setting daily goals is a great way to stay on track. Small wins every day add up to big achievements.
 -> END
 
 = Exercise_Habit
- Exercise is a wonderful habit. It keeps you healthy and also helps manage stress. What kind of exercise are you focusing on?
+Exercise is a wonderful habit. It keeps you healthy and also helps manage stress. What kind of exercise are you focusing on?
 
 * I’m trying to go for a run every day.
     -> Running_Every_Day
@@ -38,15 +38,15 @@ Building healthy habits is key to success. What are some habits you’re working
     -> Home_Workouts
 
 = Running_Every_Day
- Running is a great way to stay fit. It’s tough at first, but the more you stick to it, the easier it will get. Keep pushing yourself.
+Running is a great way to stay fit. It’s tough at first, but the more you stick to it, the easier it will get. Keep pushing yourself.
 -> END
 
 = Home_Workouts
- Home workouts are perfect when you don’t have time for the gym. Consistency is what matters most—keep going!
+Home workouts are perfect when you don’t have time for the gym. Consistency is what matters most—keep going!
 -> END
 
 = No_Current_Habits
- That’s okay, but building healthy habits can really make life easier. Is there anything you’d like to work on?
+That’s okay, but building healthy habits can really make life easier. Is there anything you’d like to work on?
 
 * I’d like to eat healthier.
     -> Eating_Healthier
@@ -55,16 +55,17 @@ Building healthy habits is key to success. What are some habits you’re working
     -> More_Sleep
 
 = Eating_Healthier
- Eating healthier can make a big difference in how you feel. Start small—maybe add more fruits and vegetables to your meals. Every step counts.
-->AddEdu
+Eating healthier can make a big difference in how you feel. Start small—maybe add more fruits and vegetables to your meals. Every step counts.
+-> AddEdu
 -> END
 
 = More_Sleep
- Sleep is crucial for your health and well-being. Try setting a bedtime and sticking to it—it will help you feel more rested.
-->AddEdu
+Sleep is crucial for your health and well-being. Try setting a bedtime and sticking to it—it will help you feel more rested.
+-> AddEdu
 -> END
 
- "Here’s a challenge: start small by either adding more fruits and vegetables to your meals or setting a consistent bedtime. How do you think this could benefit you?"
+= HabitBuildingChallenge
+Here’s a challenge: start small by either adding more fruits and vegetables to your meals or setting a consistent bedtime. How do you think this could benefit you?
 
 * I think eating healthier could give me more energy.
     -> AddEdu
@@ -85,6 +86,7 @@ Building healthy habits is key to success. What are some habits you’re working
 Teacher: "Well done. Starting small is the key to building lasting habits. Keep at it, and you’ll see positive changes!"
 -> END
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
 ~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
@@ -94,4 +96,3 @@ Teacher: "Well done. Starting small is the key to building lasting habits. Keep 
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

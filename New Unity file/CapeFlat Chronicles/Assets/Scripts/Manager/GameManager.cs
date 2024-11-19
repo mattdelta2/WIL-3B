@@ -6,50 +6,46 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
-    // Event to notify UI updates for stats
     public event Action OnStatsUpdated;
 
-    // Store NPC dialogue progress
     public Dictionary<string, int> npcDialogueProgress = new Dictionary<string, int>();
 
-    // Store game stats
     private Dictionary<string, int> gameStats = new Dictionary<string, int>()
     {
         { "GangStat", 0 },
         { "EduStat", 0 }
     };
 
-    void Awake()
+    private void Awake()
     {
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(gameObject);  // Ensures this persists across scenes
+            DontDestroyOnLoad(gameObject);
         }
-        else
+        else if (instance != this)
         {
-            Destroy(gameObject);  // Prevent duplicates
+            Destroy(gameObject);
         }
     }
 
     public int GetStat(string statName)
     {
-        if (gameStats.ContainsKey(statName))
-            return gameStats[statName];
-        return 0; // Default to 0 if the stat does not exist
+        return gameStats.ContainsKey(statName) ? gameStats[statName] : 0;
     }
 
     public void SetStat(string statName, int value)
     {
         if (gameStats.ContainsKey(statName))
         {
-            gameStats[statName] = value;
+            gameStats[statName] = Mathf.Max(0, value);
         }
         else
         {
-            gameStats.Add(statName, value);
+            gameStats.Add(statName, Mathf.Max(0, value));
         }
-        OnStatsUpdated?.Invoke();  // Trigger the event to update UI
+
+        OnStatsUpdated?.Invoke();
     }
 
     public void IncrementStat(string statName)
@@ -62,7 +58,15 @@ public class GameManager : MonoBehaviour
         {
             gameStats[statName] = 1;
         }
-        Debug.Log($"{statName} incremented. New value: {gameStats[statName]}");
-        OnStatsUpdated?.Invoke();  // Trigger the event to update UI
+
+        OnStatsUpdated?.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        if (instance == this)
+        {
+            instance = null;
+        }
     }
 }

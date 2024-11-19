@@ -12,7 +12,7 @@ Op die streets, jy praat van forgiveness, maar nie almal deserve dit nie. Wat’
 * I don’t believe in forgiveness.
     -> Dont_Believe_In_Forgiveness
 
-// Branch: Give_Second_Chances
+// Branch: Give Second Chances
 = Give_Second_Chances
 Aweh, maar onthou, jy moet choose wisely wie jy forgive.
 
@@ -32,30 +32,44 @@ Aweh, maar onthou, jy moet choose wisely wie jy forgive.
  "Remember, forgiveness kan bring peace, maar blind forgiveness gaan bring trouble."
 -> END
 
-// Branch: Don’t_Forgive_Easily
+// Branch: Don’t Forgive Easily
 = Dont_Forgive_Easily
 Ja, daai’s fair, maar onthou, keeping grudges gaan maak die life harder vir jou.
 
-* I’ll handle it.
-    -> Handle_Grudges
+ "Imagine jy sien iemand wat hurt jou asking for help. Wat maak jy?"
 
-// Sub-Branch: Handle_Grudges
-= Handle_Grudges
-Ons gaan sien, bru. Grudges weigh heavy.
--> AddGang
+* I’d help them, but only because it’s the right thing to do.
+    -> AddEdu
+     "Good, bru. Helping without forgetting is powerful."
+    -> Grudge_Challenge_Complete
+
+* I’d walk away. It’s not my problem.
+    -> AddGang
+     "Ja, maar onthou, the Flats onthou ook jou moves."
+    -> Grudge_Challenge_Complete
+
+= Grudge_Challenge_Complete
+ "Grudges maak jou heavy, bru. Maar jy moet find jou balance."
 -> END
 
-// Branch: Don’t_Believe_In_Forgiveness
+// Branch: Don’t Believe in Forgiveness
 = Dont_Believe_In_Forgiveness
 Jy gaan need to learn how to forgive, bru, anders die hate gaan consume jou.
 
-* I’ll deal with it.
-    -> Deal_With_No_Forgiveness
+ "Imagine jy kry 'n chance om revenge te vat. Sou jy dit vat, or sou jy walk away?"
 
-// Sub-Branch: Deal_With_No_Forgiveness
-= Deal_With_No_Forgiveness
-Ja, jy gaan. Maar die Flats gaan show jou die cost.
--> AddGang
+* I’d take revenge. They deserve it.
+    -> AddGang
+     "Ja, maar onthou, revenge kom met ‘n price."
+    -> No_Forgiveness_Challenge_Complete
+
+* I’d walk away. It’s not worth my time.
+    -> AddEdu
+     "Goed, bru. Walking away from revenge is true strength."
+    -> No_Forgiveness_Challenge_Complete
+
+= No_Forgiveness_Challenge_Complete
+ "Die Flats gaan altyd toets jou, bru. Maar onthou, hate gaan nie jou peace bring nie."
 -> END
 
 // Stat Adjustments
@@ -68,4 +82,3 @@ Ja, jy gaan. Maar die Flats gaan show jou die cost.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

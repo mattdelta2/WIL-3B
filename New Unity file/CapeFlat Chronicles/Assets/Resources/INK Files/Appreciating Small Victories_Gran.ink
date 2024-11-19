@@ -1,6 +1,5 @@
 INCLUDE Global.ink
 
-
 // Dialogue: Appreciating Small Victories
 Sometimes life feels like a never-ending race, but it’s the small steps that get you to the finish line. Do you take the time to appreciate your small victories?
 
@@ -84,7 +83,6 @@ Staying positive is no small feat. It takes courage to hold onto hope when thing
 -> AddEdu
 -> END
 
-
 = AddEdu
 ~ EduStat += 1
 ~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
@@ -94,5 +92,3 @@ Staying positive is no small feat. It takes courage to hold onto hope when thing
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-
-
