@@ -55,12 +55,12 @@ Confrontation can be intimidating, but setting boundaries doesn’t have to be a
 Boundaries are crucial for healthy relationships. Consider what you need to feel safe and respected. What’s stopping you from setting boundaries?
 
 * I don’t know where to start.
-    -> Don’t_Know_Start
+    -> Dont_Know_Start
 
 * I feel like I don’t deserve boundaries.
     -> Feel_Undeserving
 
-= Don’t_Know_Start
+= Dont_Know_Start
 Start with small steps, like identifying situations where you feel uncomfortable. From there, communicate your needs clearly.
 -> AddEdu
 -> END

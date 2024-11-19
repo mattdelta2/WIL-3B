@@ -35,12 +35,12 @@ It’s never too late to start! Even just a few moments a day can make a big dif
 Bottling up your stress might seem easier in the moment, but it can take a toll on you later. Why do you think you keep it inside?
 
 * I don’t want to bother anyone with my problems.
-    -> Don’t_Want_To_Bother
+    -> Dont_Want_To_Bother
 
 * I feel like nobody would understand.
     -> Feel_Misunderstood
 
-= Don’t_Want_To_Bother
+= Dont_Want_To_Bother
 You’re never a burden to the people who care about you. Sharing can lighten the load.
 -> AddEdu
 -> END

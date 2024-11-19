@@ -58,14 +58,14 @@ I’m sorry to hear that. It’s essential to reach out for help when you need i
     -> No_One_Understands
 
 * I don’t know how to ask for help.
-    -> Don’t_Know_How_To_Ask
+    -> Dont_Know_How_To_Ask
 
 = No_One_Understands
 Feeling misunderstood is tough, but there are people who want to help you—sometimes it just takes finding the right person.
 -> AddGang
 -> END
 
-= Don’t_Know_How_To_Ask
+= Dont_Know_How_To_Ask
 Asking for help can feel hard, but starting with someone you trust makes a big difference. You’re not alone.
 -> AddGang
 -> END

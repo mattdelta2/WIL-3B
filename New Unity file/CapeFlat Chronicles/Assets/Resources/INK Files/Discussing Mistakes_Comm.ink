@@ -40,14 +40,14 @@ That’s common, but acknowledging mistakes can prevent future issues. What make
     -> Embarrassed_By_Mistakes
 
 * I don’t know how to deal with them.
-    -> Don’t_Know_How
+    -> Dont_Know_How
 
 = Embarrassed_By_Mistakes
 It’s natural to feel embarrassed, but mistakes are part of being human. Facing them with courage can help you grow.
 -> AddEdu
 -> END
 
-= Don’t_Know_How
+= Dont_Know_How
 Not knowing how to deal with mistakes can feel overwhelming, but taking small steps to reflect can make it easier.
 -> AddEdu
 -> END

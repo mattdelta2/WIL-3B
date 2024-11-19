@@ -57,12 +57,12 @@ Practical skills are always useful. They can make your daily life easier and giv
 Skills are essential for success in many areas of life. What makes you feel like they don’t matter?
 
 * I don’t see how they’ll help me in the long run.
-    -> Don’t_See_The_Value
+    -> Dont_See_The_Value
 
 * I think people succeed more because of luck than skills.
     -> Success_Is_Luck
 
-= Don’t_See_The_Value
+= Dont_See_The_Value
 Skills might seem unimportant now, but they build the foundation for future opportunities. Try focusing on one small skill to start with.
 -> AddEdu
 -> END
