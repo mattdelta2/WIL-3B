@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject settingsPanel;
+    public GameObject mainPanel;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,18 @@ public class MainMenu : MonoBehaviour
     public void Play()
     {
         SceneManager.LoadScene("Grans house");
+    }
+
+    public void SettingsShown()
+    {
+        mainPanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void backtomain()
+    {
+        mainPanel.SetActive(true);
+        settingsPanel.SetActive(false);
     }
 
 
