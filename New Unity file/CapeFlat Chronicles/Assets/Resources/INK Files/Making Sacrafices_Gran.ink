@@ -22,6 +22,9 @@ That’s a wise choice. Time is precious, and how you use it shapes your future.
 * Supporting my family and helping them however I can.
     -> Focus_On_Family
 
+* Exploring ways to better myself outside of school.
+    -> Focus_On_Self
+
 = Focus_On_Education
 Education is a powerful tool. Sacrificing free time now can lead to opportunities that change your life.
 -> AddEdu
@@ -29,6 +32,11 @@ Education is a powerful tool. Sacrificing free time now can lead to opportunitie
 
 = Focus_On_Family
 Helping your family is noble, but don’t lose sight of your own dreams. Balance is important.
+-> AddEdu
+-> END
+
+= Focus_On_Self
+Finding ways to better yourself is a lifelong journey. That’s a smart use of your time.
 -> AddEdu
 -> END
 
@@ -42,6 +50,9 @@ I understand, my child. Sacrifice can be exhausting, especially when it feels li
 * I’ve let go of my dreams to survive.
     -> Let_Go_Of_Dreams
 
+* I feel like I’ve sacrificed everything and gained nothing.
+    -> Sacrificed_Everything
+
 = Sacrificed_Happiness
 It’s hard to always put others first. You deserve happiness too. Don’t forget that your well-being matters.
 -> AddEdu
@@ -50,6 +61,11 @@ It’s hard to always put others first. You deserve happiness too. Don’t forge
 = Let_Go_Of_Dreams
 Letting go of your dreams doesn’t mean they’re gone forever. It’s never too late to start chasing them again.
 -> AddEdu
+-> END
+
+= Sacrificed_Everything
+Feeling like you’ve gained nothing is tough, but sometimes, sacrifices lay the foundation for future rewards. Keep going.
+-> AddGang
 -> END
 
 // Branch: No Sacrifices
@@ -62,6 +78,9 @@ Life is short, but that doesn’t mean you shouldn’t work for something better
 * Probably not, but I don’t want to feel like I’m losing everything.
     -> Afraid_To_Lose
 
+* I don’t care about goals. I’ll just take life as it comes.
+    -> Take_Life_As_It_Comes
+
 = Live_In_The_Moment
 Enjoying the moment is important, but don’t forget that the choices you make today shape your tomorrow.
 -> AddGang
@@ -70,6 +89,11 @@ Enjoying the moment is important, but don’t forget that the choices you make t
 = Afraid_To_Lose
 Sacrifices don’t mean losing everything, my child. Sometimes they’re just stepping stones to something greater.
 -> AddEdu
+-> END
+
+= Take_Life_As_It_Comes
+Living without direction can be freeing, but it might also leave you unprepared for challenges ahead.
+-> AddGang
 -> END
 
 // Stat Adjustments
@@ -82,4 +106,3 @@ Sacrifices don’t mean losing everything, my child. Sometimes they’re just st
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

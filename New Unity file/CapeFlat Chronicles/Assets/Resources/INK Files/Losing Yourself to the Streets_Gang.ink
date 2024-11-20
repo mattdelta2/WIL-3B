@@ -1,7 +1,7 @@
 INCLUDE Global.ink
 
 // Dialogue 30: Losing Yourself to the Streets
-Hier op die Flats, bru, mense lose hulle self quick. Jy moet stay strong, anders die streets gaan swallow jou. Hoe gaan jy stay true to yourself?
+Hier op die Flats, bru, mense lose hulle self vinnig. Jy moet stay strong, anders die streets gaan swallow jou. Hoe gaan jy stay true to yourself?
 
 * I’ll stick to my values, no matter what.
     -> Stick_To_Values
@@ -12,58 +12,45 @@ Hier op die Flats, bru, mense lose hulle self quick. Jy moet stay strong, anders
 * I’ll do whatever it takes to survive, even if I lose myself.
     -> Lose_Myself_Survive
 
-* I haven’t thought about it much.
-    -> Havent_Thought_Much
-
-// Branch: Stick_To_Values
+// Branch: Stick To Values
 = Stick_To_Values
 Aweh, dis ‘n goeie mindset, maar die Flats gaan push jou limits, bru.
 
- "Let’s test daai values van jou: If jy promise to stay true no matter what, jy kan’t break it. Gaan jy die oath vat?"
+ "Let’s test daai values van jou: Imagine jy staan voor ‘n situation waar jy moet kies tussen jou morals en jou survival. Wat gaan jy kies?"
 
-* Yes, I swear to stick to my values.
+* I’d stick to my morals, no matter what.
     -> AddEdu
-     "Goed, bru. Die Flats gaan respect jou for staying true. Maar onthou, dis nie ‘n maklike path nie."
-    -> Prove_Yourself_QuestComplete
+     "Goed, bru. Dis nie ‘n maklike path nie, maar die Flats gaan respect dit."
+    -> Values_Challenge_Complete
 
-* I can’t make that promise. I need to stay flexible to survive.
+* I’d bend the rules to survive.
     -> AddGang
-     "Fair enough. Die Flats gaan require sacrifices from jy, bru. Jy moet always stay wakker."
-    -> Prove_Yourself_QuestComplete
+     "Jy praat wys. Die Flats vereis flexibility, maar onthou die price wat jy betaal."
+    -> Values_Challenge_Complete
 
-= Prove_Yourself_QuestComplete
- "On die Flats, jy gaan get tested every day. Make sure jy weet wie jy is, before die Flats maak die choice vir jou."
+= Values_Challenge_Complete
+ "Die Flats gaan jou test, bru. Maar jy moet weet: wie jy is, is die enigste ding wat jy altyd het."
 -> END
 
-// Branch: Not_Sure_True
+// Branch: Not Sure True
 = Not_Sure_True
-Jy moet figure dit vinnig uit. Die Flats gaan nie wait vir jou nie.
+Jy moet vinnig uitfigure wie jy is. Die Flats gaan nie wag nie, bru. Take small steps to discover yourself.
+
+* I’ll try to figure it out before it’s too late.
+    -> Try_To_Discover
+
+= Try_To_Discover
+Good, bru. Maar onthou, die streets gaan test jou elke keer wat jy doubt.
 -> END
 
-// Branch: Lose_Myself_Survive
+// Branch: Lose Myself Survive
 = Lose_Myself_Survive
-Jy praat groot, maar die cost van losing yourself is te high, bru. Jy gaan regret dit.
+Dis ‘n dangerous path, bru. Die price van losing yourself is hoër as wat jy dink.
 
-* I’ll handle it.
-    -> Handle_Lose
-
-// Sub-Branch: Handle_Lose
-= Handle_Lose
-Ons gaan sien, maar die Flats gaan nie forgive maklik nie.
--> AddGang
--> END
-
-// Branch: Haven’t_Thought_Much
-= Havent_Thought_Much
-Jy moet start thinking. Die streets gaan maak jou forget wie jy is if jy nie watch uit nie.
-
-* I’ll figure it out.
-    -> Figure_It_Out
-
-// Sub-Branch: Figure_It_Out
-= Figure_It_Out
-Better jy do, bru, anders jy gaan klaar wees.
--> END
+* I’ll take the risks. Survival is all that matters.
+    -> AddGang
+     "Fair enough, bru. Maar die Flats gaan maak sure jy feel daai sacrifices."
+    -> END
 
 // Stat Adjustments
 = AddEdu
@@ -75,4 +62,3 @@ Better jy do, bru, anders jy gaan klaar wees.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

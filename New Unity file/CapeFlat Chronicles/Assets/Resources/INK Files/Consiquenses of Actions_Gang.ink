@@ -16,7 +16,7 @@ Elke action het consequences, bru. Jy weet dit mos. Wat’s jou view on die choi
 = Think_Before_Acting
 Dis goed, maar onthou, soms kom die consequences langer af, bru.
 
- "Here’s ‘n small reflection challenge: think about jou last big decision. Was the outcome worth it?"
+Here’s ‘n small reflection challenge: think about jou last big decision. Was the outcome worth it?
 
 * Yes, it was worth it.
     -> Worth_It_Outcome
@@ -25,30 +25,36 @@ Dis goed, maar onthou, soms kom die consequences langer af, bru.
     -> Careful_Thought_Outcome
 
 = Worth_It_Outcome
- "Respect, bru. It’s important to stand by jou choices."
+Respect, bru. It’s important to stand by jou choices.
 -> AddEdu
 -> Consequences_Reflection_Complete
 
 = Careful_Thought_Outcome
- "Smart thinking. Jy kan always learn from jou last moves."
+Smart thinking. Jy kan always learn from jou last moves.
 -> AddEdu
 -> Consequences_Reflection_Complete
 
 = Consequences_Reflection_Complete
- "Remember, die Flats gaan remind jou of jou choices. Stay sharp."
+Remember, die Flats gaan remind jou of jou choices. Stay sharp.
 -> END
 
 // Branch: Deal_With_Consequences_Later
 = Deal_With_Consequences_Later
-Ja, maar onthou, sometimes die consequences kom vinnig, bru.
+Ja, maar onthou, sometimes die consequences kom vinnig, bru. Are you ready?
 
 * I’ll handle them.
     -> Handle_Consequences
 
-// Sub-Branch: Handle_Consequences
+* Maybe I’m not as ready as I thought.
+    -> Not_Ready
+
 = Handle_Consequences
 Ons gaan sien, maar jy better klaar wees.
 -> AddGang
+-> END
+
+= Not_Ready
+Dis fair, bru. Better to prepare now than regret later.
 -> END
 
 // Branch: Don’t_Care_About_Consequences
@@ -58,10 +64,16 @@ Jy gaan care when die Flats maak sure jy pay. Jy gaan learn daai lesson.
 * We’ll see.
     -> See_Consequences
 
-// Sub-Branch: See_Consequences
+* I don’t think the Flats can teach me anything.
+    -> Reject_Consequences
+
 = See_Consequences
 Ja, die Flats gaan teach jou die hard way.
 -> AddGang
+-> END
+
+= Reject_Consequences
+Careful with daai thinking, bru. Die Flats het ‘n way of proving their point.
 -> END
 
 // Stat Adjustments
@@ -74,4 +86,3 @@ Ja, die Flats gaan teach jou die hard way.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

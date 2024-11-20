@@ -17,7 +17,6 @@ I’ve seen you with some new faces lately. Be careful about who you surround yo
 That might be true, but are they lifting you up, or are they keeping you where you are? It’s important to have people around who challenge you to be better.
 
 * They push me to try harder.
-    
     -> Try_Harder
 
 * They’re just helping me survive.
@@ -38,7 +37,6 @@ Survival’s important, but it’s not enough. You need to thrive. Don’t settl
 Trust is important, but loyalty can be dangerous if it’s blind. Have they earned your trust, or are you giving it too easily?
 
 * I trust them because I don’t have anyone else.
-   
     -> No_One_Else
 
 * I think they’ve earned it, but I’ll be careful.
@@ -59,7 +57,6 @@ Being careful is good. Just don’t let loyalty blind you to their faults.
 If you’re questioning it, that’s already a sign you’re not sure. Sometimes, deep down, we know when people aren’t right for us. What are you worried about?
 
 * I think they might be pulling me in the wrong direction.
-    
     -> Wrong_Direction
 
 * I don’t know if I’m ready to walk away from them yet.
@@ -78,29 +75,20 @@ It’s hard to walk away from people, especially when you feel connected to them
 // Quest Options for Influence Quest
 = Start_Influence_Quest_Community
 Go to the Community Center to find better influences.
--> END
+-> Influence_Quest_Community
 
 = Start_Influence_Quest_Gang
 Head to the gang area to stay loyal to your friends.
--> END
+-> Influence_Quest_Gang
 
-// Completion of Influence Quest
-*  Go to the Community Center.
-    -> Influence_Quest_Complete_Edu
-
-*  Go to the Gang Area.
-    -> Influence_Quest_Complete_Gang
-
-= Influence_Quest_Complete_Edu
+= Influence_Quest_Community
 You made a choice to seek positive influences. It’s hard, but this step could change everything.
 ~ EduStat += 1
-
 -> END
 
-= Influence_Quest_Complete_Gang
+= Influence_Quest_Gang
 You’ve chosen loyalty over change. Just remember, every decision has consequences.
 ~ GangStat += 1
-
 -> END
 
 = AddEdu
@@ -112,4 +100,3 @@ You’ve chosen loyalty over change. Just remember, every decision has consequen
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

@@ -19,21 +19,57 @@ That’s a great approach! Being approachable can help you form meaningful conne
 * I make an effort to talk to new people.
     -> Networking_Benefit
 
-// Sub-Branch: Networking_Benefit
+* I focus on maintaining the connections I already have.
+    -> Maintaining_Connections
+
 = Networking_Benefit
-Good for you! Networking is valuable.
+Good for you! Networking is valuable. It helps you grow personally and professionally.
+-> AddEdu
+-> END
+
+= Maintaining_Connections
+That’s important, too. Strong existing connections are the foundation of a good network.
 -> AddEdu
 -> END
 
 // Branch: Shy_Approach
 = Shy_Approach
-That’s common! Starting small, like saying hi, can help you build confidence.
+That’s common! Starting small, like saying hi, can help you build confidence. What’s one thing you’d like to improve?
+
+* I’d like to feel more confident talking to others.
+    -> Improve_Confidence
+
+* I’d like to have at least one close friend I can trust.
+    -> Build_Trust
+
+= Improve_Confidence
+Confidence grows with practice. Try starting conversations with small, casual topics—it gets easier over time.
+-> AddEdu
+-> END
+
+= Build_Trust
+Building trust takes time, but it’s worth it. Find people who share your values, and the connections will come naturally.
+-> AddEdu
 -> END
 
 // Branch: No_Connection
 = No_Connection
 I understand. Just remember, having support can make a big difference in tough times.
+
+* I don’t think I need anyone’s help.
+    -> Independent_Approach
+
+* Maybe I should try opening up more.
+    -> Consider_Opening_Up
+
+= Independent_Approach
+It’s okay to value independence, but don’t shut people out completely. You might need support someday.
 -> AddGang
+-> END
+
+= Consider_Opening_Up
+That’s a good realization. Opening up takes time, but it’s a step toward building meaningful connections.
+-> AddEdu
 -> END
 
 // Stat Adjustments
@@ -46,4 +82,3 @@ I understand. Just remember, having support can make a big difference in tough t
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

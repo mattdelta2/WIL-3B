@@ -1934,6 +1934,50 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1489455573}
     m_Modifications:
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_fontSize
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_margin.w
+      value: 5.3525615
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_margin.x
+      value: -14.981827
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_margin.y
+      value: 0.13844106
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_margin.z
+      value: -315.81693
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_fontSizeMin
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_lineSpacing
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 377293245072821530, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_enableAutoSizing
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921561964433766606, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3793828056029535532, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -5,7 +5,7 @@ public class NPCController : MonoBehaviour
     public string npcName;
     public TextAsset[] dialogues; // Array of Ink JSON files for this NPC
     public int currentDialogueIndex = 0;
-    public string questName; // Field to specify the quest associated with this NPC
+    
 
     private bool isPlayerInRange = false;
 

@@ -12,6 +12,7 @@ Life is full of choices, and every decision you make can affect your future. How
 * I don’t think much about it, I just go with the flow.
     -> Go_With_Flow
 
+// Branch: Weighing Pros and Cons
 = Weighing_Pros_Cons
 That’s a wise approach. Thinking carefully helps avoid regret. Do you have any recent decisions you’re proud of?
 
@@ -23,12 +24,15 @@ That’s a wise approach. Thinking carefully helps avoid regret. Do you have any
 
 = Focus_Studies
 That’s great. Education can open so many opportunities if you dedicate yourself to it.
+-> AddEdu
 -> END
 
 = Help_Family
 Helping family is important. Balancing your responsibilities shows maturity.
+-> AddEdu
 -> END
 
+// Branch: Follow Instincts
 = Follow_Instincts
 Following your instincts can lead to interesting experiences, but it’s important to balance it with reason. Have you made any risky choices recently?
 
@@ -40,12 +44,15 @@ Following your instincts can lead to interesting experiences, but it’s importa
 
 = Risk_Worked
 Sometimes taking risks can lead to rewards. Just remember to weigh the consequences carefully.
+-> AddGang
 -> END
 
 = Risk_Failed
 It’s okay to make mistakes. We learn the most from our failures.
+-> AddGang
 -> END
 
+// Branch: Go With the Flow
 = Go_With_Flow
 Going with the flow is easy, but without direction, you may end up somewhere you didn’t want to be. Have you considered planning more?
 
@@ -57,10 +64,12 @@ Going with the flow is easy, but without direction, you may end up somewhere you
 
 = Start_Planning
 Planning doesn’t guarantee success, but it does help you stay prepared for challenges. It’s worth trying.
+-> AddEdu
 -> END
 
 = No_Plans
 Just be careful that you don’t drift too far from where you want to be. A little planning can go a long way.
+-> AddGang
 -> END
 
 // Quest Integration: Life Choices Quest
@@ -70,13 +79,14 @@ Just be careful that you don’t drift too far from where you want to be. A litt
 = Start_LifeChoices_Quest
 Teacher: Great! Let’s start with a small exercise. Imagine you have to choose between studying for an exam or helping a friend with something important. What would you choose and why?
 
--> END
+-> Complete_LifeChoices_Quest
 
 // Quest completion within another dialogue or a follow-up
 = Complete_LifeChoices_Quest
 Your thoughtful answer shows you’re learning to weigh your choices carefully. Well done!
 -> AddEdu
 
+// Stat Adjustments
 = AddEdu
 ~ EduStat += 1
 ~ GangStat = MAX(GangStat - 1, 0) // Keeps GangStat from going below zero
@@ -86,4 +96,3 @@ Your thoughtful answer shows you’re learning to weigh your choices carefully. 
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

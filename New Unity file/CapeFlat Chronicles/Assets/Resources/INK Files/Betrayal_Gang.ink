@@ -22,13 +22,11 @@ Good, bru, maar onthou, trust moet wees earned, nie given nie.
 * I haven’t thought much about betrayal.
     -> Havent_Thought_About_Betrayal
 
-// Sub-Branch: Worth_Loyalty
 = Worth_Loyalty
 Good, keep jou circle small, die rest gaan look to betray.
 -> AddEdu
 -> END
 
-// Sub-Branch: Haven’t_Thought_About_Betrayal
 = Havent_Thought_About_Betrayal
 Jy gaan have to, bru. Die Flats gaan teach jou real quick who’s loyal.
 -> END
@@ -40,7 +38,6 @@ Ja, maar onthou, die knife jy vat out gaan mos come back vir jou.
 * I’ll take that chance.
     -> Take_Chance_With_Betrayal
 
-// Sub-Branch: Take_Chance_With_Betrayal
 = Take_Chance_With_Betrayal
 Ons gaan sien, bru. Betrayal maak enemies vinnig.
 -> AddGang
@@ -53,7 +50,6 @@ Jy dink so, maar die right person gaan find jou trust. Jy moet stay wakker, bru.
 * I’ll handle it.
     -> Handle_Trust
 
-// Sub-Branch: Handle_Trust
 = Handle_Trust
 Just make sure jy handle dit before die knife come out.
 -> END
@@ -68,4 +64,3 @@ Just make sure jy handle dit before die knife come out.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

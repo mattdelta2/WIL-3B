@@ -29,13 +29,13 @@ Sizwe: Jy’s gotta watch, not listen. Words mean niks hier. Actions praat. Chec
     -> Acknowledge_Wisdom
 
 = Acknowledge_Wisdom
-Sizwe: Good. Jy kan’t afford to be blind out here. And onthou, those who push you to the edge, they’ll leave jy hanging.
+Sizwe: Good. Jy kan’t afford to be blind out here. And onthou, those who push you to the edge, they’ll leave jou hanging.
 -> AddGang
 -> END
 
 // Branch: Don’t Trust Anyone
 = Dont_Trust_Anyone
-Sizwe: Slim, bru. Trust no one and no one can hurt jou. But onthou, jy can’t survive alleen. Someday, jy gaan need somebody.
+Sizwe: Slim, bru. Trust no one and no one can hurt jou. But onthou, jy kan’t survive alleen. Someday, jy gaan need somebody.
 
 * I don’t need anyone.
     -> Self_Reliance
@@ -75,4 +75,3 @@ Sizwe: Good. If jy don’t trust die right people, jy gaan find out die hard way
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

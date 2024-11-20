@@ -12,27 +12,63 @@ Developing skills is essential for your future. What skills are you currently wo
 * I don’t think skills matter much.
     -> Skills_Dont_Matter
 
-// Branch: Improve_Communication
+// Branch: Improve Communication
 = Improve_Communication
-That’s a valuable skill! Have you considered joining a public speaking club?
+That’s a valuable skill! Good communication can open many doors. How are you working on improving it?
 
-* I haven’t, but I might.
-    -> Public_Speaking_Club
+* I’m practicing speaking in front of others.
+    -> Practicing_Speaking
 
-// Sub-Branch: Public_Speaking_Club
-= Public_Speaking_Club
-Great! It can build confidence and improve your communication.
+* I’m trying to listen more and understand others better.
+    -> Improving_Listening
+
+= Practicing_Speaking
+Practicing public speaking is a great way to build confidence. Joining a club or group can help you refine your skills.
 -> AddEdu
 -> END
 
-// Branch: No_Specific_Skills
-= No_Specific_Skills
-That’s okay! It might help to explore different activities to find what you enjoy.
+= Improving_Listening
+Listening is just as important as speaking. Understanding others strengthens relationships and improves teamwork.
+-> AddEdu
 -> END
 
-// Branch: Skills_Don’t_Matter
+// Branch: No Specific Skills
+= No_Specific_Skills
+That’s okay! It might help to explore different activities to find what you enjoy. What interests you the most right now?
+
+* Learning something creative, like art or music.
+    -> Creative_Skills
+
+* Gaining practical skills, like cooking or budgeting.
+    -> Practical_Skills
+
+= Creative_Skills
+Creative skills can be both fulfilling and valuable. They also give you a way to express yourself.
+-> AddEdu
+-> END
+
+= Practical_Skills
+Practical skills are always useful. They can make your daily life easier and give you more independence.
+-> AddEdu
+-> END
+
+// Branch: Skills Don’t Matter
 = Skills_Dont_Matter
-Skills are essential for success in many areas of life. Consider what interests you!
+Skills are essential for success in many areas of life. What makes you feel like they don’t matter?
+
+* I don’t see how they’ll help me in the long run.
+    -> Dont_See_The_Value
+
+* I think people succeed more because of luck than skills.
+    -> Success_Is_Luck
+
+= Dont_See_The_Value
+Skills might seem unimportant now, but they build the foundation for future opportunities. Try focusing on one small skill to start with.
+-> AddEdu
+-> END
+
+= Success_Is_Luck
+Luck can play a role, but skills are what help you take advantage of opportunities when they come. Consider starting small and see where it leads.
 -> AddGang
 -> END
 
@@ -46,4 +82,3 @@ Skills are essential for success in many areas of life. Consider what interests 
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-

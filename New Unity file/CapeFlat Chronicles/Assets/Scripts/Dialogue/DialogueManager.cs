@@ -9,6 +9,7 @@ public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager Instance;
 
+    [Header("Dependencies")]
     [SerializeField] private GameManager gameManager;
 
     [Header("UI Elements")]
@@ -18,7 +19,6 @@ public class DialogueManager : MonoBehaviour
     public List<Button> optionButtons;
     public TextMeshProUGUI gangStatText;
     public TextMeshProUGUI educationStatText;
-
 
     private Story currentStory;
     private bool dialogueIsPlaying;
@@ -40,27 +40,36 @@ public class DialogueManager : MonoBehaviour
     void Start()
     {
         dialogueIsPlaying = false;
-        if (dialogueUI != null) dialogueUI.SetActive(false);
-        foreach (Button button in optionButtons) button.gameObject.SetActive(false);
+        dialogueUI?.SetActive(false);
+
+        foreach (Button button in optionButtons)
+        {
+            button.gameObject.SetActive(false);
+        }
 
         if (gameManager == null)
         {
-            Debug.LogWarning("GameManager is not assigned in DialogueManager. Please assign it in the Inspector.");
+            Debug.LogWarning("GameManager is not assigned in DialogueManager. Attempting to find it...");
+            gameManager = FindObjectOfType<GameManager>();
+
+            if (gameManager == null)
+            {
+                Debug.LogError("GameManager could not be found in the scene.");
+            }
         }
     }
 
     public void StartDialogue(TextAsset inkJSON, string npcName)
     {
         currentStory = new Story(inkJSON.text);
-
         dialogueIsPlaying = true;
         dialogueUI.SetActive(true);
         npcNameText.text = npcName;
 
         InjectStatsIntoInk();
 
-        PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null) playerMovement.SetCanMove(false);
+        var playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement?.SetCanMove(false);
 
         DebugStats("Dialogue Started");
         ContinueStory();
@@ -72,18 +81,19 @@ public class DialogueManager : MonoBehaviour
         SaveStatsToGameManager();
         DebugStats("Dialogue Ended");
 
-        if (dialogueUI != null) dialogueUI.SetActive(false);
+        dialogueUI?.SetActive(false);
         ClearButtons();
 
-        NPCController npcController = FindObjectOfType<NPCController>();
+        var npcController = FindObjectOfType<NPCController>();
         if (npcController != null && npcController.currentDialogueIndex < npcController.dialogues.Length - 1)
         {
             npcController.currentDialogueIndex++;
         }
 
         currentStory = null;
-        PlayerMovement playerMovement = FindObjectOfType<PlayerMovement>();
-        if (playerMovement != null) playerMovement.SetCanMove(true);
+
+        var playerMovement = FindObjectOfType<PlayerMovement>();
+        playerMovement?.SetCanMove(true);
     }
 
     private void ContinueStory()
@@ -95,7 +105,10 @@ public class DialogueManager : MonoBehaviour
             DisplayChoices();
 
             awaitingPlayerChoice = currentStory.currentChoices.Count > 0;
-            if (!awaitingPlayerChoice) StartCoroutine(AutoAdvanceDialogue());
+            if (!awaitingPlayerChoice)
+            {
+                StartCoroutine(AutoAdvanceDialogue());
+            }
 
             UpdateStats();
         }
@@ -109,38 +122,43 @@ public class DialogueManager : MonoBehaviour
     {
         awaitingPlayerChoice = false;
         yield return new WaitForSeconds(autoAdvanceDelay);
-        if (dialogueIsPlaying && !awaitingPlayerChoice) ContinueStory();
+        if (dialogueIsPlaying && !awaitingPlayerChoice)
+        {
+            ContinueStory();
+        }
     }
 
     private void DisplayChoices()
     {
+        ClearButtons();
         List<Choice> currentChoices = currentStory.currentChoices;
 
-        for (int i = 0; i < currentChoices.Count; i++)
+        for (int i = 0; i < optionButtons.Count; i++)
         {
-            Button button = optionButtons[i];
-            button.gameObject.SetActive(true);
+            if (i < currentChoices.Count)
+            {
+                Button button = optionButtons[i];
+                button.gameObject.SetActive(true);
+                button.GetComponentInChildren<TextMeshProUGUI>().text = currentChoices[i].text;
 
-            TextMeshProUGUI buttonText = button.GetComponentInChildren<TextMeshProUGUI>();
-            if (buttonText != null) buttonText.text = currentChoices[i].text;
-
-            int choiceIndex = i;
-            button.onClick.RemoveAllListeners();
-            button.onClick.AddListener(() => ChooseStoryChoice(choiceIndex));
-        }
-
-        for (int i = currentChoices.Count; i < optionButtons.Count; i++)
-        {
-            optionButtons[i].gameObject.SetActive(false);
+                int choiceIndex = i;
+                button.onClick.RemoveAllListeners();
+                button.onClick.AddListener(() => ChooseStoryChoice(choiceIndex));
+            }
+            else
+            {
+                optionButtons[i].gameObject.SetActive(false);
+            }
         }
     }
 
     private void ChooseStoryChoice(int choiceIndex)
     {
-        if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count) return;
-
-        Choice selectedChoice = currentStory.currentChoices[choiceIndex];
-        Debug.Log($"Player selected choice: {selectedChoice.text}");
+        if (choiceIndex < 0 || choiceIndex >= currentStory.currentChoices.Count)
+        {
+            Debug.LogWarning("Choice index out of range.");
+            return;
+        }
 
         currentStory.ChooseChoiceIndex(choiceIndex);
         awaitingPlayerChoice = false;
@@ -149,7 +167,6 @@ public class DialogueManager : MonoBehaviour
         ContinueStory();
     }
 
-
     public void UpdateStats()
     {
         if (currentStory != null && currentStory.variablesState != null)
@@ -157,25 +174,11 @@ public class DialogueManager : MonoBehaviour
             int gangValue = GetInkVariable("GangStat");
             int eduValue = GetInkVariable("EduStat");
 
-            if (gangStatText != null)
-                gangStatText.text = $"Gang: {gangValue}";
-            else
-                Debug.LogWarning("gangStatText is not assigned.");
+            gangStatText.text = $"Gang: {gangValue}";
+            educationStatText.text = $"Education: {eduValue}";
 
-            if (educationStatText != null)
-                educationStatText.text = $"Education: {eduValue}";
-            else
-                Debug.LogWarning("educationStatText is not assigned.");
-
-            if (gameManager != null)
-            {
-                gameManager.SetStat("GangStat", gangValue);
-                gameManager.SetStat("EduStat", eduValue);
-            }
-            else
-            {
-                Debug.LogWarning("GameManager instance is null in UpdateStats.");
-            }
+            gameManager?.SetStat("GangStat", gangValue);
+            gameManager?.SetStat("EduStat", eduValue);
         }
         else
         {
@@ -191,13 +194,14 @@ public class DialogueManager : MonoBehaviour
         }
         catch
         {
+            Debug.LogWarning($"Variable '{variableName}' not found in Ink story.");
             return 0;
         }
     }
 
     private void InjectStatsIntoInk()
     {
-        if (gameManager != null)
+        if (gameManager != null && currentStory != null)
         {
             currentStory.variablesState["GangStat"] = gameManager.GetStat("GangStat");
             currentStory.variablesState["EduStat"] = gameManager.GetStat("EduStat");
@@ -206,7 +210,7 @@ public class DialogueManager : MonoBehaviour
 
     private void SaveStatsToGameManager()
     {
-        if (gameManager != null)
+        if (gameManager != null && currentStory != null)
         {
             gameManager.SetStat("GangStat", GetInkVariable("GangStat"));
             gameManager.SetStat("EduStat", GetInkVariable("EduStat"));
@@ -225,34 +229,18 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (Button button in optionButtons)
         {
-            button.gameObject.SetActive(false);
-            button.onClick.RemoveAllListeners();
+            if (button != null)
+            {
+                button.gameObject.SetActive(false);
+                button.onClick.RemoveAllListeners();
+            }
         }
     }
 
-    private void OnEnable()
-    {
-        if (gangStatText == null)
-            Debug.LogWarning("gangStatText is not assigned in the DialogueManager.");
-        if (educationStatText == null)
-            Debug.LogWarning("educationStatText is not assigned in the DialogueManager.");
-        if (gameManager == null)
-            Debug.LogWarning("GameManager is not assigned in the DialogueManager. Please assign it in the Inspector.");
 
+    public bool IsDialoguePlaying()
+{
+    return dialogueIsPlaying;
+}
 
-        if (gameManager != null)
-        {
-            if (gangStatText != null)
-                gangStatText.text = $"Gang: {gameManager.GetStat("GangStat")}";
-            if (educationStatText != null)
-                educationStatText.text = $"Education: {gameManager.GetStat("EduStat")}";
-        }
-    }
-
-    void OnDisable()
-    {
-        gameManager.OnStatsUpdated -= UpdateStats;
-    }
-
-    public bool IsDialoguePlaying() => dialogueIsPlaying;
 }

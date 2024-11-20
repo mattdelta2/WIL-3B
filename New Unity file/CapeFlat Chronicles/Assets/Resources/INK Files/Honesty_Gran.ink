@@ -22,13 +22,11 @@ That’s the best you can do, and it’s enough. Everyone makes mistakes, but wh
 * I’ve been making bad decisions, but I want to turn things around.
     -> Turn_Things_Around
 
-// Sub-Branch: Need_To_Focus
 = Need_To_Focus
 It’s never too late to change, but don’t wait too long. The more you drift, the harder it is to come back.
 -> AddEdu
 -> Reflect_On_Honesty
 
-// Sub-Branch: Turn_Things_Around
 = Turn_Things_Around
 That’s a big step, admitting that. The road to change is hard, but it’s worth walking.
 
@@ -38,13 +36,11 @@ That’s a big step, admitting that. The road to change is hard, but it’s wort
 * I’m not sure how, but I’ll try.
     -> Not_Sure_How
 
-// Follow-up: Better_Choices
 = Better_Choices
 Good. Change starts with one choice at a time.
 -> AddEdu
 -> Reflect_On_Honesty
 
-// Follow-up: Not_Sure_How
 = Not_Sure_How
 It’s okay to take things slowly. The important part is that you’re trying.
 -> Reflect_On_Honesty
@@ -59,13 +55,11 @@ It might not seem like a big deal now, but mistakes pile up if you don’t learn
 * Maybe, but I try not to dwell on them.
     -> Not_Dwell
 
-// Sub-Branch: Move_On
 = Move_On
 That’s dangerous thinking. Mistakes should be lessons. If you keep ignoring them, one day they’ll catch up with you.
 -> AddGang
 -> Reflect_On_Honesty
 
-// Sub-Branch: Not_Dwell
 = Not_Dwell
 There’s a balance. Don’t let your mistakes weigh you down, but don’t dismiss them either.
 -> Reflect_On_Honesty
@@ -80,7 +74,6 @@ Honesty with yourself is the hardest kind. We all want to believe we’re doing 
 * I’m not sure who I am anymore.
     -> Not_Sure_Who_I_Am
 
-// Sub-Branch: Scared_Of_Failing
 = Scared_Of_Failing
 It’s okay to be scared, but pretending won’t help you in the long run. Facing that fear is the only way forward.
 
@@ -90,18 +83,15 @@ It’s okay to be scared, but pretending won’t help you in the long run. Facin
 * It’s hard, but I’ll work on it.
     -> Work_On_It
 
-// Follow-up: Honest_With_Self
 = Honest_With_Self
 Good. Honesty with yourself is a step towards growth.
 -> AddEdu
 -> Reflect_On_Honesty
 
-// Follow-up: Work_On_It
 = Work_On_It
 That’s a great place to start. Little by little, you’ll get there.
 -> Reflect_On_Honesty
 
-// Sub-Branch: Not_Sure_Who_I_Am
 = Not_Sure_Who_I_Am
 You’re still you, but the more you lie to yourself, the further you drift from who you really are. Don’t lose yourself.
 -> AddGang
@@ -139,4 +129,3 @@ You’ve chosen avoidance, turning away from the difficult path of honesty.
 ~ GangStat += 1
 ~ EduStat = MAX(EduStat - 1, 0) // Keeps EduStat from going below zero
 -> END
-
