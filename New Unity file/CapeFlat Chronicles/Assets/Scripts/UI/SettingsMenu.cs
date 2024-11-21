@@ -17,14 +17,19 @@ public class SettingsMenu : MonoBehaviour
     {
         
     }
+    
     public void Volume(float volume)
     {
         Debug.Log(volume);
-        audioMixer.SetFloat("mastervolume", volume);
+        audioMixer.SetFloat("Master", volume);
+    }
+    public void MusicVolume(float volume)
+    {
+        audioMixer.SetFloat("Music", volume);
     }
     public void SFXVolume(float volume)
     {
-        audioMixer.SetFloat("Music", volume);
+        audioMixer.SetFloat("Effects", volume);
     }
     
 }
