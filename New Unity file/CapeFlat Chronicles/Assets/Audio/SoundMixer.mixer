@@ -1,5 +1,19 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!244 &-9171296411866501891
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: cc80c89de43e36541a2bf8a3117c9ede
+  m_EffectName: Attenuation
+  m_MixLevel: da83b953a95aa484cabcacc35ea2f74c
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
 --- !u!244 &-9049141564847163318
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -66,6 +80,25 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &-3415418458930673118
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Background noise
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 7b4a7c06769a16f479637f6fedc8c207
+  m_Children: []
+  m_Volume: 61599c1a6d5a0c843894de68c15b88a9
+  m_Pitch: b0889ee01461ffc4b8ec8160690eccaf
+  m_Send: 00000000000000000000000000000000
+  m_Effects:
+  - {fileID: -9171296411866501891}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!241 &24100000
 AudioMixerController:
   m_ObjectHideFlags: 0
@@ -82,6 +115,8 @@ AudioMixerController:
   m_EnableSuspend: 1
   m_UpdateMode: 0
   m_ExposedParameters:
+  - guid: 61599c1a6d5a0c843894de68c15b88a9
+    name: MyExposedParam
   - guid: 8da4aa080e7118e44a44ae89d67a8443
     name: Dialogue
   - guid: cb957651eb7d9bc4e9c6c0ba5cf24bbc
@@ -96,6 +131,7 @@ AudioMixerController:
     - 5c1444744a6d57d4194ca4343abbdccf
     - a48e59fe09ca1504ba68bd5b6299f1a8
     - 869d9d4601faf804c94fae4e0479728b
+    - 7b4a7c06769a16f479637f6fedc8c207
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -112,6 +148,7 @@ AudioMixerGroupController:
   - {fileID: -5578831403908417359}
   - {fileID: 1312992754426790412}
   - {fileID: -7890994036507664054}
+  - {fileID: -3415418458930673118}
   m_Volume: f59dc711524b9964fba536e0b215b26a
   m_Pitch: 1611a7d00285efd4cbb97428f89c6485
   m_Send: 00000000000000000000000000000000

@@ -1515,6 +1515,14 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3705136422882262602, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 3705136422882262602, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30
+      objectReference: {fileID: 0}
     - target: {fileID: 3793828056029535532, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1598,6 +1606,26 @@ PrefabInstance:
     - target: {fileID: 4024172904679270011, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
       propertyPath: m_Name
       value: UI Prefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4024172904679270011, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453518548950006119, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 7453518548950006119, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175032957227286086, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -160
+      objectReference: {fileID: 0}
+    - target: {fileID: 8175032957227286086, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 8526501590861554889, guid: 2a05afa156c5ab9408fa8fa12f625781, type: 3}
       propertyPath: m_fontSize
