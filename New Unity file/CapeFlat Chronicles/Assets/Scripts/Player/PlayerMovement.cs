@@ -10,6 +10,13 @@ public class PlayerMovement : MonoBehaviour
     
     private bool canMove = true; // Flag to control player movement
 
+    private Animator animator;
+
+    private void Awake()
+    {
+        animator = GetComponent<Animator>();
+    }
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,6 +29,14 @@ public class PlayerMovement : MonoBehaviour
             // Capture player movement input
             movement.x = Input.GetAxisRaw("Horizontal");
             movement.y = Input.GetAxisRaw("Vertical");
+
+            animator.SetFloat("Vertical", movement.x); 
+            animator.SetFloat("Horizontal", movement.y);
+            animator.SetFloat("Speed", movement.sqrMagnitude);
+            
+
+
+
         }
         else
         {
