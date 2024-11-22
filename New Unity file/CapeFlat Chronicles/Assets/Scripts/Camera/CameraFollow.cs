@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    [SerializeField] private Transform target; // The player's transform
+    /*[SerializeField] private Transform target; // The player's transform
     [SerializeField] private float smoothing = 0.125f; // Smoothness of the camera movement
 
     [SerializeField] private Vector2 minBounds; // Minimum x and y for the camera
@@ -36,5 +36,20 @@ public class CameraFollow : MonoBehaviour
 
         // Update camera position
         transform.position = smoothedPosition;
+    }*/
+    public Transform target;
+    public float smoothing = .125f;
+
+    private Vector3 offset;
+
+    void Start()
+    {
+        offset = transform.position - target.position;
+    }
+
+    void FixedUpdate()
+    {
+        Vector3 targetCamPos = target.position + offset;
+        transform.position = Vector3.Lerp(transform.position, targetCamPos, smoothing * Time.deltaTime);
     }
 }
