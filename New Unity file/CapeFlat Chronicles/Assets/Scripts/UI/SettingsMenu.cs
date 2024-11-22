@@ -32,4 +32,19 @@ public class SettingsMenu : MonoBehaviour
         audioMixer.SetFloat("Effects", volume);
     }
 
+    public GameObject settingsPanel;
+    public GameObject mainPanel;
+
+    public void SettingsShown()
+    {
+        mainPanel.SetActive(false);
+        settingsPanel.SetActive(true);
+    }
+
+    public void backtomain()
+    {
+        mainPanel.SetActive(true);
+        settingsPanel.SetActive(false);
+    }
+
 }
